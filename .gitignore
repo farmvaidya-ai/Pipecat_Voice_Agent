@@ -1,0 +1,16 @@
+.env
+service-account.json
+venv/
+__pycache__/
+**/__pycache__/
+*.pyc
+logs/
+session_log*.log
+.claude/settings.local.json
+caller_memory/
+chonkie_rag/cache/
+bot_processors/scraper_daemon.pid
+bot_processors/scraper_daemon_log.txt
+bot_processors/scraper_daemon_log.txt.err
+bot_processors/scraper_log.txt
+

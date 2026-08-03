@@ -39,12 +39,6 @@ _USER_AGENT = (
     "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
 )
 
-_TABLE_COLUMNS = [
-    "state", "district", "market", "commodity_group", "commodity",
-    "variety", "grade", "min_price", "max_price", "modal_price",
-    "price_unit", "price_date",
-]
-
 # Agmarknet started requiring a captcha on every "Go" submission (as of
 # 2026-07-31 — last_known_prices.json has real data up to 30-07-2026, then
 # every scrape that morning silently returned 0 rows because the query never
@@ -65,7 +59,7 @@ _ocr_reader = None
 # detach first resolves in ~1-2s in the normal case; the explicit short
 # timeout on the click itself is only a fallback for the rare case where the
 # overlay never clears, so a stuck query fails in seconds instead of 30s and
-# hands off to scrape_nationwide's existing per-commodity recovery sooner.
+# hands off to scrape_all's existing per-commodity recovery sooner.
 _OVERLAY_SELECTOR = "div.fixed.inset-0.bg-black.bg-opacity-30.backdrop-blur-sm"
 _GO_CLICK_TIMEOUT_MS = 15000
 
@@ -220,37 +214,15 @@ def _pick(page: Page, label_text: str, option_text: str) -> None:
     )
 
 
-def _scrape_visible_results(page: Page) -> list[dict[str, str]]:
+def _scrape_visible_results_dynamic(page: Page) -> list[dict[str, str]]:
     """Reads every row of the results table, paging through with the
     "Next page" button (the site only ever offers 10 rows/page, no larger
-    page-size option) until it's disabled or absent."""
-    rows: list[dict[str, str]] = []
-    while True:
-        table = page.locator("table")
-        if table.count() == 0:
-            break
-        trs = table.locator("tbody tr")
-        for i in range(trs.count()):
-            cells = trs.nth(i).locator("td").all_inner_texts()
-            if len(cells) == len(_TABLE_COLUMNS):
-                rows.append(dict(zip(_TABLE_COLUMNS, (c.strip() for c in cells))))
-
-        next_btn = page.locator('button[title="Next page"]')
-        if next_btn.count() == 0 or next_btn.get_attribute("disabled") is not None:
-            break
-        next_btn.click()
-        page.wait_for_timeout(1000)
-    return rows
-
-
-def _scrape_visible_results_dynamic(page: Page) -> list[dict[str, str]]:
-    """Same paging logic as _scrape_visible_results, but reads column names
-    from the table's own header row instead of assuming the fixed 12-column
-    Price-only layout — needed for "Both" mode, whose column count and names
-    differ. The thead there has two rows: a grouping row ("COMMODITY INFO" /
-    "PRICE INFO" / "ARRIVAL INFO", 3 cells) above the real per-column header
-    row — only the last thead row's cell count matches each body row's <td>
-    count, so that's the one to read."""
+    page-size option) until it's disabled or absent. Reads column names from
+    the table's own header row rather than assuming a fixed layout — needed
+    for "Both" mode. The thead there has two rows: a grouping row
+    ("COMMODITY INFO" / "PRICE INFO" / "ARRIVAL INFO", 3 cells) above the
+    real per-column header row — only the last thead row's cell count
+    matches each body row's <td> count, so that's the one to read."""
     rows: list[dict[str, str]] = []
     table = page.locator("table")
     if table.count() == 0:
@@ -277,10 +249,10 @@ def _scrape_visible_results_dynamic(page: Page) -> list[dict[str, str]]:
 
 def _row_to_result(row: dict[str, str]) -> dict | None:
     """Converts one scraped table row into a last_known_prices.json entry.
-    scrape_all()/scrape_single() now drive the form in "Both" mode (see
+    scrape_all()/scrape_single() drive the form in "Both" mode (see
     _open_daily_price_form), so `row` comes from the dynamic header-driven
-    reader and its keys are the site's own column labels ("State/UT",
-    "Min Price", ...), not the old fixed lowercase _TABLE_COLUMNS names.
+    reader (_scrape_visible_results_dynamic) and its keys are the site's own
+    column labels ("State/UT", "Min Price", ...).
     Arrival Quantity/Unit are only added to the result when the site
     actually reported a number for them — "NR" ("not reported") and blank
     are both common and shouldn't produce a fake "0" arrival figure the bot
@@ -324,10 +296,10 @@ def _row_to_result(row: dict[str, str]) -> dict | None:
 
 def _open_daily_price_form(page: Page, mode: str = "Price") -> None:
     """Navigation shared by every entry point that drives the live form:
-    scrape_all(), scrape_single(), harvest_commodity_reference(), and
-    scrape_nationwide(). mode is one of the "Price/Arrivals*" dropdown's own
-    three options: "Price", "Arrival", or "Both" (a combined table with both
-    price and arrival columns per row)."""
+    scrape_all(), scrape_single(), and harvest_commodity_reference(). mode
+    is one of the "Price/Arrivals*" dropdown's own three options: "Price",
+    "Arrival", or "Both" (a combined table with both price and arrival
+    columns per row)."""
     page.goto("https://agmarknet.gov.in/home", wait_until="networkidle", timeout=60000)
     page.wait_for_timeout(1500)
     page.click("text=Price & Arrival Reports")
@@ -449,7 +421,7 @@ def scrape_all(resume: bool = False) -> dict[str, dict]:
     entire run's progress since nothing was written until scrape_all()
     returned. A single commodity's dropdown pick failing is logged and
     skipped (form reopened and re-picked to recover) rather than aborting
-    the whole run, same recovery scrape_nationwide() uses.
+    the whole run.
 
     resume=True skips any crop_keyword that already has at least one entry
     dated today in last_known_prices.json — for relaunching after a crash
@@ -541,142 +513,6 @@ def scrape_single(state: str, group: str, commodity: str, crop_keyword: str) -> 
         result = _scrape_state_crop(page, state, group, commodity, crop_keyword)
         browser.close()
     return result
-
-
-# Separate, opt-in nationwide export — NOT part of scrape_all()/the
-# scheduled daemon, and does not touch last_known_prices.json or anything
-# bot_processors.price_lookup reads. Run manually via
-# `python -m bot_processors.agmarknet_scraper --nationwide`. Uses the
-# "All States/UTs" State/UT option so one query per commodity returns
-# every state/district/market's rows at once, instead of looping 36
-# states x ~604 commodities.
-_NATIONWIDE_OUTPUT_PATH = Path(__file__).parent / "nationwide_prices.jsonl"
-
-
-def _scrape_commodity_nationwide(page: Page, group: str, commodity: str, dynamic: bool = False) -> list[dict[str, str]]:
-    """Runs one Commodity query against the already-open form with
-    State/UT fixed to "All States/UTs" (picked once by the caller before
-    looping), so a single query returns every state's rows for this
-    commodity. Returns raw table rows, unconverted — this feeds a
-    nationwide export, not the live bot's per-kg cache. dynamic selects the
-    header-driven reader (needed for "Both" mode, whose columns differ from
-    the fixed 12-column Price-only layout)."""
-    _pick(page, "Commodity Group*", group)
-    _pick(page, "Commodity*", commodity)
-    page.keyboard.press("Escape")
-    page.wait_for_timeout(400)
-    _click_go(page)
-    page.wait_for_timeout(500)
-
-    reader = _scrape_visible_results_dynamic if dynamic else _scrape_visible_results
-    rows = reader(page)
-    if not rows:
-        page.wait_for_timeout(1500)
-        _click_go(page)
-        page.wait_for_timeout(500)
-        rows = reader(page)
-
-    logger.info(f"🌾 agmarknet_scraper: [nationwide] {commodity} -> {len(rows)} rows")
-    return rows
-
-
-def _load_nationwide_done() -> set[str]:
-    """Reads which "group::commodity" combos are already recorded in
-    nationwide_prices.jsonl, so a restarted run resumes instead of
-    re-scraping hours of already-done commodities from scratch."""
-    done: set[str] = set()
-    if not _NATIONWIDE_OUTPUT_PATH.exists():
-        return done
-    with _NATIONWIDE_OUTPUT_PATH.open("r", encoding="utf-8") as f:
-        for line in f:
-            line = line.strip()
-            if not line:
-                continue
-            record = json.loads(line)
-            done.add(f"{record['_group']}::{record['_commodity']}")
-    return done
-
-
-def scrape_nationwide(resume: bool = True, mode: str = "Price") -> None:
-    """Walks every Commodity Group x Commodity Agmarknet tracks (~604
-    combos, from load_commodity_reference()) in one browser session, with
-    State/UT fixed to "All States/UTs" for the whole run — picked once,
-    not per commodity, since it's independent of the Commodity Group/
-    Commodity cascade. Writes each commodity's rows to
-    nationwide_prices.jsonl immediately after scraping it (append, one
-    JSON object per line) rather than holding everything in memory until
-    the end — a run that takes hours can't safely risk losing all its
-    progress to a late crash or a killed process.
-
-    mode is one of the "Price/Arrivals*" dropdown's own three options:
-    "Price" (default, 12 fixed columns, the original behavior), "Arrival",
-    or "Both" (a combined table with both price and arrival columns per
-    row — reads columns dynamically off the table's own header since it
-    differs from the Price-only layout). resume's "already done" check is
-    purely by group/commodity combo, so switching mode on a file scraped
-    under a different mode requires starting from an empty
-    nationwide_prices.jsonl (a mismatched-schema resume would silently skip
-    commodities without ever fetching the new mode's columns for them).
-
-    A single commodity's dropdown pick failing (the site's cascading
-    search-selects are occasionally flaky — see _pick's docstring) is
-    logged and skipped rather than aborting the whole run; the form is
-    re-opened and State/UT re-picked once to recover a clean state before
-    continuing to the next commodity, without restarting the browser.
-    """
-    reference = load_commodity_reference()
-    total = sum(len(v) for v in reference.values())
-    done = _load_nationwide_done() if resume else set()
-    if done:
-        logger.info(f"⏭️ agmarknet_scraper: [nationwide] resuming — {len(done)}/{total} commodities already done")
-
-    dynamic = mode != "Price"
-    done_count = len(done)
-    with sync_playwright() as p, _NATIONWIDE_OUTPUT_PATH.open("a", encoding="utf-8") as out:
-        browser = p.chromium.launch(headless=True, args=["--ignore-certificate-errors"])
-        page = browser.new_page(
-            viewport={"width": 1400, "height": 1000},
-            ignore_https_errors=True,
-            user_agent=_USER_AGENT,
-        )
-        _open_daily_price_form(page, mode=mode)
-        _pick(page, "State/UT*", "All States/UTs")
-
-        for group, commodities in reference.items():
-            for commodity in commodities:
-                combo_key = f"{group}::{commodity}"
-                if combo_key in done:
-                    continue
-
-                try:
-                    rows = _scrape_commodity_nationwide(page, group, commodity, dynamic=dynamic)
-                except Exception:
-                    logger.opt(exception=True).warning(
-                        f"⚠️ agmarknet_scraper: [nationwide] failed on {group}/{commodity}, "
-                        "reloading form and skipping"
-                    )
-                    try:
-                        _open_daily_price_form(page, mode=mode)
-                        _pick(page, "State/UT*", "All States/UTs")
-                    except Exception:
-                        logger.opt(exception=True).error(
-                            "⚠️ agmarknet_scraper: [nationwide] form recovery failed, aborting run"
-                        )
-                        raise
-                    continue
-
-                out.write(json.dumps({"_group": group, "_commodity": commodity, "rows": rows}, ensure_ascii=False) + "\n")
-                out.flush()
-                done_count += 1
-                logger.info(f"📊 agmarknet_scraper: [nationwide] {done_count}/{total} commodities done")
-                time.sleep(1.5)
-
-        browser.close()
-
-    logger.info(
-        f"✅ agmarknet_scraper: [nationwide] finished — {done_count}/{total} commodities "
-        f"scraped to {_NATIONWIDE_OUTPUT_PATH}"
-    )
 
 
 # Full Agmarknet commodity taxonomy (group -> [commodity, ...]), harvested
@@ -801,9 +637,5 @@ if __name__ == "__main__":
         harvest_commodity_reference()
     elif "--harvest-states" in sys.argv:
         harvest_state_reference()
-    elif "--nationwide-both" in sys.argv:
-        scrape_nationwide(mode="Both")
-    elif "--nationwide" in sys.argv:
-        scrape_nationwide()
     else:
         save_scraped(scrape_all(resume="--resume" in sys.argv))

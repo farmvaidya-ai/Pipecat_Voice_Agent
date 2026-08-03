@@ -267,10 +267,12 @@ def make_get_price(serializer=None):
         """Get the current mandi (market) price for a commodity.
 
         Call this whenever the caller asks what a crop, vegetable, fruit,
-        spice, or other agricultural commodity is currently selling for.
-        Only call this once you know the commodity, the state, and the
-        district or nearby town — if the caller hasn't given one of these
-        yet, do not call this function; ask for whichever is missing first.
+        spice, or other agricultural commodity is currently selling for, or
+        how much of it arrived at the market (arrival_qty/arrival_unit are
+        included in the result when the market reported one). Only call
+        this once you know the commodity, the state, and the district or
+        nearby town — if the caller hasn't given one of these yet, do not
+        call this function; ask for whichever is missing first.
         If the caller names a well-known city, town, or district and you
         already know which state it's in, fill in the state yourself
         instead of asking — only ask the caller which state if you are
@@ -307,7 +309,7 @@ def make_get_price(serializer=None):
         exec_ms = int((time.monotonic() - _t0) * 1000)
 
         if result:
-            await params.result_callback({
+            response = {
                 "commodity": result["commodity"],
                 "market": result["market"],
                 "district": result["district"],
@@ -317,7 +319,11 @@ def make_get_price(serializer=None):
                 "min_per_kg": result["min_per_kg"],
                 "max_per_kg": result["max_per_kg"],
                 "stale": result["stale"],
-            })
+            }
+            if "arrival_qty" in result:
+                response["arrival_qty"] = result["arrival_qty"]
+                response["arrival_unit"] = result["arrival_unit"]
+            await params.result_callback(response)
         else:
             await params.result_callback({
                 "error": (

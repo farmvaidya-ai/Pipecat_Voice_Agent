@@ -17,18 +17,16 @@ from pathlib import Path
 from openpyxl import Workbook
 from openpyxl.utils import get_column_letter
 
-from bot_processors.agmarknet_scraper import _NATIONWIDE_OUTPUT_PATH, _TABLE_COLUMNS
-
-_COLUMNS = _TABLE_COLUMNS
+from bot_processors.agmarknet_scraper import _NATIONWIDE_OUTPUT_PATH
 
 
 def export_to_xlsx(output_path: Path) -> int:
-    wb = Workbook()
-    ws = wb.active
-    ws.title = "nationwide_prices"
-    ws.append(_COLUMNS)
-
-    count = 0
+    # Column set isn't fixed ahead of time: a Price-only run has 12 columns,
+    # a Both-mode run has 15 (adds Arrival Quantity/Unit/Date). Read every
+    # row first so the header reflects whichever mode actually produced this
+    # file, in the order first seen.
+    records: list[dict] = []
+    columns: list[str] = []
     with _NATIONWIDE_OUTPUT_PATH.open("r", encoding="utf-8") as f:
         for line in f:
             line = line.strip()
@@ -36,15 +34,25 @@ def export_to_xlsx(output_path: Path) -> int:
                 continue
             record = json.loads(line)
             for row in record["rows"]:
-                ws.append([row.get(col) for col in _COLUMNS])
-                count += 1
+                records.append(row)
+                for col in row:
+                    if col not in columns:
+                        columns.append(col)
 
-    for i, col in enumerate(_COLUMNS, start=1):
+    wb = Workbook()
+    ws = wb.active
+    ws.title = "nationwide_prices"
+    ws.append(columns)
+
+    for row in records:
+        ws.append([row.get(col) for col in columns])
+
+    for i, col in enumerate(columns, start=1):
         ws.column_dimensions[get_column_letter(i)].width = max(len(col) + 2, 14)
     ws.freeze_panes = "A2"
 
     wb.save(output_path)
-    return count
+    return len(records)
 
 
 if __name__ == "__main__":

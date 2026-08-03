@@ -13,4 +13,6 @@ bot_processors/scraper_daemon.pid
 bot_processors/scraper_daemon_log.txt
 bot_processors/scraper_daemon_log.txt.err
 bot_processors/scraper_log.txt
+bot_processors/*_run.log
+~$*.xlsx
 

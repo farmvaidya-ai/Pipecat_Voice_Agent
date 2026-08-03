@@ -25,6 +25,7 @@ from bot_processors.price_shared import _LAST_KNOWN_KEY_SEP, _LAST_KNOWN_PATH
 _COLUMNS = [
     "state", "district", "commodity", "market",
     "arrival_date", "modal_per_kg", "min_per_kg", "max_per_kg", "stale",
+    "arrival_qty", "arrival_unit",
 ]
 
 

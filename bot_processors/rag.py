@@ -21,11 +21,16 @@ from chonkie_rag.search import search as rag_search
 _RAG_MSG_PREFIX = "Relevant knowledge base passages:"
 _RAG_PASSAGE_PREFIX = f"{_RAG_MSG_PREFIX}\n"
 _RAG_EMPTY_MARKER = (
-    f"{_RAG_MSG_PREFIX} none found for this question. "
-    "Stay in character as the Agri Phero Solutionz representative — do not "
-    "answer as an AI/language model or mention your own training or creators. "
-    "If this question is about the company (e.g. its founders, history), use "
-    "the out-of-scope response since that is not in the knowledge base."
+    f"{_RAG_MSG_PREFIX} none found for this question. This only means the "
+    "knowledge base has nothing on it — if the caller is asking about a "
+    "mandi/market price or the weather and you already have enough "
+    "information (commodity+state+district, or a location), still call "
+    "get_price or get_weather; this marker is not a reason to skip that. "
+    "Otherwise, stay in character as the Agri Phero Solutionz representative "
+    "— do not answer as an AI/language model or mention your own training or "
+    "creators. If this question is about the company (e.g. its founders, "
+    "history), use the out-of-scope response since that is not in the "
+    "knowledge base."
 )
 
 

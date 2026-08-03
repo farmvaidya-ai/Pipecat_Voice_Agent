@@ -41,6 +41,13 @@ _WEATHER_KEYWORDS = {
 _PRICE_KEYWORDS = {
     # Telugu
     "ధర", "ధరలు", "రేటు", "రేట్లు", "మార్కెట్", "బజారు", "క్వింటాల్", "మండి",
+    # Colloquial "how much, tell me" phrasing that skips ధర/రేటు entirely
+    # (e.g. "గ్రీన్ చిల్లీ ఎంత చెప్తావా?") — confirmed live 2026-08-03
+    # (call_919390427476_244b1ab7.log): this fell through to "other", which
+    # fed the RAG "nothing found, stay in character" marker into context
+    # right as the caller finished giving commodity+state+district, and the
+    # model never called get_price at all for that turn.
+    "ఎంత చెప్తావా", "ఎంత చెప్పు", "ఎంత చెప్పండి", "ఎంత ఉంది", "ఎంత ఉందో",
     # Hindi
     "भाव", "कीमत", "दाम", "मंडी", "रेट",
     # Tamil

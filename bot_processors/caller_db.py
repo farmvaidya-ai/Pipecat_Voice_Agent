@@ -37,6 +37,58 @@ async def record_call(phone_number: str) -> int:
         return 0
 
 
+async def get_location(phone_number: str) -> dict | None:
+    """This caller's verbally confirmed farming location (state/district/
+    pincode), if the location-capture flow has ever completed for them —
+    see bot_processors/location_lookup.py. None if never confirmed."""
+    if not phone_number:
+        return None
+    try:
+        pool = get_pool()
+        async with pool.acquire() as conn:
+            row = await conn.fetchrow(
+                "SELECT confirmed_state, confirmed_district, confirmed_pincode "
+                "FROM dim_contacts WHERE phone_number = $1",
+                phone_number,
+            )
+        if row is None or not row["confirmed_district"]:
+            return None
+        return {
+            "state": row["confirmed_state"],
+            "district": row["confirmed_district"],
+            "pincode": row["confirmed_pincode"],
+        }
+    except Exception:
+        logger.opt(exception=True).warning(f"⚠️ caller_db: failed to load location for {phone_number}")
+        return None
+
+
+async def save_location(phone_number: str, state: str, district: str, pincode: str) -> bool:
+    """Persists the caller's verbally confirmed state/district/pincode
+    (dim_contacts row already exists by the time this is called — record_call
+    upserts it at call start, before any tool call can happen) so later calls
+    from this number can skip the location-capture flow entirely."""
+    if not phone_number or not district:
+        return False
+    try:
+        pool = get_pool()
+        async with pool.acquire() as conn:
+            await conn.execute(
+                """
+                UPDATE dim_contacts
+                SET confirmed_state = $2, confirmed_district = $3, confirmed_pincode = $4,
+                    location_confirmed_at = NOW()
+                WHERE phone_number = $1
+                """,
+                phone_number, state, district, pincode or None,
+            )
+        logger.info(f"📍 caller_db: saved location for {phone_number} — {district}, {state}")
+        return True
+    except Exception:
+        logger.opt(exception=True).warning(f"⚠️ caller_db: failed to save location for {phone_number}")
+        return False
+
+
 async def update_contact_name(phone_number: str, name: str) -> None:
     """Sets dim_contacts.name once it's known (from caller_memory's saved
     summary) — record_call() runs before that name is available (it's

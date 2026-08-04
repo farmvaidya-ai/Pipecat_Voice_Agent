@@ -8,14 +8,28 @@
 -- INTEGER CHECK (0/1).
 
 -- Caller registry — tracks which phone numbers have called before, their
--- name (if known), and how many times.
+-- name (if known), how many times, and (once verbally confirmed via the
+-- location-capture flow — see bot_processors/location_lookup.py) which
+-- Agmarknet district they farm in, so later calls don't need to ask again.
 CREATE TABLE IF NOT EXISTS dim_contacts (
-    phone_number TEXT PRIMARY KEY,
-    name         TEXT,
-    first_seen   TIMESTAMPTZ NOT NULL,
-    last_seen    TIMESTAMPTZ NOT NULL,
-    call_count   INTEGER NOT NULL DEFAULT 0
+    phone_number          TEXT PRIMARY KEY,
+    name                  TEXT,
+    first_seen            TIMESTAMPTZ NOT NULL,
+    last_seen             TIMESTAMPTZ NOT NULL,
+    call_count            INTEGER NOT NULL DEFAULT 0,
+    confirmed_state       TEXT,
+    confirmed_district    TEXT,
+    confirmed_pincode     TEXT,
+    location_confirmed_at TIMESTAMPTZ
 );
+
+-- dim_contacts predates the caller-location-confirmation feature -- these
+-- backfill the columns on any database created before they existed
+-- (CREATE TABLE IF NOT EXISTS above is a no-op once the table already exists).
+ALTER TABLE dim_contacts ADD COLUMN IF NOT EXISTS confirmed_state TEXT;
+ALTER TABLE dim_contacts ADD COLUMN IF NOT EXISTS confirmed_district TEXT;
+ALTER TABLE dim_contacts ADD COLUMN IF NOT EXISTS confirmed_pincode TEXT;
+ALTER TABLE dim_contacts ADD COLUMN IF NOT EXISTS location_confirmed_at TIMESTAMPTZ;
 
 -- One row per phone call — the parent record everything else hangs off of.
 CREATE TABLE IF NOT EXISTS fact_sessions (

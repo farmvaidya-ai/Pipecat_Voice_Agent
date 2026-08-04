@@ -118,10 +118,11 @@ from bot_processors.rag import RAGInjector
 from bot_processors.context_trimmer import ContextTrimmer
 from bot_processors.price_lookup import make_get_price
 from bot_processors.weather_lookup import make_get_weather
+from bot_processors.location_lookup import make_confirm_location, make_save_caller_location
 from bot_processors.outbound_call import trigger_customer_first_call
 from bot_processors.caller_memory import load_latest_summary, note_from_summary, build_template_greeting
 from bot_processors.caller_summarizer import summarize_and_save_call, build_llm_greeting
-from bot_processors.caller_db import record_call, update_contact_name
+from bot_processors.caller_db import record_call, update_contact_name, get_location
 from bot_processors.db_pool import init_pool, close_pool
 from bot_processors.voice_agent_db import init_schema
 from bot_processors.call_db import start_call, end_call, save_conversation_messages
@@ -601,14 +602,18 @@ async def run_bot(websocket: WebSocket, session_id: str, sink_ref: list):
         # automatically when TTSSpeakFrame is spoken, so adding it here caused a
         # duplicate model turn that confused the LLM.
     ]
-    # get_weather/get_price are real LLM tool calls (see
-    # bot_processors/weather_lookup.py, bot_processors/price_lookup.py) —
+    # get_weather/get_price/confirm_location/save_caller_location are real
+    # LLM tool calls (see bot_processors/weather_lookup.py,
+    # bot_processors/price_lookup.py, bot_processors/location_lookup.py) —
     # each closed over this call's serializer purely so tool-call outcomes
     # can still be logged with the right call_id; the LLM only ever sees
-    # get_weather(location: str) / get_price(commodity, state, district).
+    # get_weather(location: str) / get_price(commodity, state, district) /
+    # confirm_location(pincode, place, state) / save_caller_location(district, state, pincode).
     get_weather = make_get_weather(serializer)
     get_price = make_get_price(serializer)
-    context = LLMContext(messages, tools=[get_weather, get_price])
+    confirm_location = make_confirm_location(serializer)
+    save_caller_location = make_save_caller_location(serializer)
+    context = LLMContext(messages, tools=[get_weather, get_price, confirm_location, save_caller_location])
 
     # Pending "are you there?" grace-period task, set while we're waiting to
     # see if the caller responds to the idle warning (see on_idle_timeout
@@ -873,13 +878,15 @@ async def run_bot(websocket: WebSocket, session_id: str, sink_ref: list):
             sink_ref[0] = _rename_call_log(session_id, sink_ref[0], serializer.caller_number)
         _call_start_dt = datetime.now(timezone.utc)
         # record_call/start_call are just bookkeeping writes — neither depends
-        # on, nor is depended on by, load_latest_summary, so run all three
-        # concurrently instead of paying their DB round trips one after
-        # another before the (already-slow) LLM greeting call can even start.
-        _, _, latest = await asyncio.gather(
+        # on, nor is depended on by, load_latest_summary/get_location, so run
+        # all four concurrently instead of paying their DB round trips one
+        # after another before the (already-slow) LLM greeting call can even
+        # start.
+        _, _, latest, location = await asyncio.gather(
             record_call(serializer.caller_number),
             start_call(serializer.call_id, serializer.caller_number, _call_start_dt),
             load_latest_summary(serializer.caller_number),
+            get_location(serializer.caller_number),
         )
         greeting_text = BOT_GREETING
         if latest and latest.get("name"):
@@ -900,6 +907,23 @@ async def run_bot(websocket: WebSocket, session_id: str, sink_ref: list):
                 f"🧠 Injected returning-caller context for {serializer.caller_number} "
                 f"— from call_id={latest['call_id'] or 'n/a'} at {latest['timestamp']}, "
                 f"name={latest['name'] or 'unknown'}\nSummary used: {latest['summary']}"
+            )
+
+        if location:
+            pincode_note = f" (pincode {location['pincode']})" if location.get("pincode") else ""
+            context.add_message({
+                "role": "system",
+                "content": (
+                    f"This caller's confirmed farming location is {location['district']}, "
+                    f"{location['state']}{pincode_note}. Use this automatically as the "
+                    "district/state for get_price and get_weather whenever the caller doesn't "
+                    "name a different place this turn — do not run the location-capture flow "
+                    "or ask for their location again unless they mention a different place."
+                ),
+            })
+            logger.info(
+                f"📍 Injected confirmed location for {serializer.caller_number}: "
+                f"{location['district']}, {location['state']}"
             )
 
     @transport.event_handler("on_client_connected")

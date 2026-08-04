@@ -1,0 +1,7866 @@
+[
+  {
+    "state": "Andaman and Nicobar",
+    "district": "North and Middle Andaman",
+    "market": "Diglipur Vegetable Market (Subhashgram)",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Anakapally",
+    "market": "Anakapally APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Anakapally",
+    "market": "Payakaraopeta APMC",
+    "latitude": 17.3642403,
+    "longitude": 82.5572144,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Ananthapuramu",
+    "market": "Gooti APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Ananthapuramu",
+    "market": "Guntakal APMC",
+    "latitude": 15.1630454,
+    "longitude": 77.3768702,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Ananthapuramu",
+    "market": "RAYADURG APMC",
+    "latitude": 14.6999394,
+    "longitude": 76.850043,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Ananthapuramu",
+    "market": "Rapthadu APMC",
+    "latitude": 14.6182095,
+    "longitude": 77.6039103,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Annamayya",
+    "market": "Guramkonda Sub-yard of AMC Valmikipuram",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Annamayya",
+    "market": "Lakkireddipally APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Annamayya",
+    "market": "Piler APMC",
+    "latitude": 13.6625987,
+    "longitude": 78.9280785,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Bapatla",
+    "market": "Bapatla APMC",
+    "latitude": 15.9052608,
+    "longitude": 80.4680501,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Bapatla",
+    "market": "Kuchinapudi APMC",
+    "latitude": 15.9621623,
+    "longitude": 80.7488726,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Bapatla",
+    "market": "Parchur APMC",
+    "latitude": 15.9838408,
+    "longitude": 80.3359897,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Chittor",
+    "market": "Nagari APMC",
+    "latitude": 13.3206306,
+    "longitude": 79.5852938,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Chittor",
+    "market": "Palamaner APMC",
+    "latitude": 13.1490375,
+    "longitude": 78.7292763,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Dr.B.R.A.Konaseema",
+    "market": "Amalapuram APMC",
+    "latitude": 16.5877653,
+    "longitude": 82.0138319,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Dr.B.R.A.Konaseema",
+    "market": "Ambajipeta APMC",
+    "latitude": 16.6067176,
+    "longitude": 81.9478683,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Dr.B.R.A.Konaseema",
+    "market": "Mummidivaram APMC",
+    "latitude": 16.6442012,
+    "longitude": 82.1078853,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "East Godavari",
+    "market": "Anaparthy APMC",
+    "latitude": 16.900486,
+    "longitude": 81.9751745,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "East Godavari",
+    "market": "Gopalapuram APMC",
+    "latitude": 17.2388526,
+    "longitude": 81.7835263,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Eluru",
+    "market": "Denduluru APMC",
+    "latitude": 16.7817255,
+    "longitude": 81.1807255,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Eluru",
+    "market": "Kaikaluru APMC",
+    "latitude": 16.5883257,
+    "longitude": 81.2919326,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Eluru",
+    "market": "Polavaram APMC",
+    "latitude": 17.3233553,
+    "longitude": 81.5777079,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Guntur",
+    "market": "Mangalagiri APMC",
+    "latitude": 16.4318209,
+    "longitude": 80.5688069,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Guntur",
+    "market": "Phirangipuram APMC",
+    "latitude": 16.2923128,
+    "longitude": 80.2618841,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Guntur",
+    "market": "Ponnur APMC",
+    "latitude": 16.0811457,
+    "longitude": 80.5369917,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Guntur",
+    "market": "Prathipadu APMC",
+    "latitude": 16.1828531,
+    "longitude": 80.3335507,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Kakinada",
+    "market": "Jaggampet APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Kakinada",
+    "market": "Tuni APMC",
+    "latitude": 17.3614675,
+    "longitude": 82.5467956,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Krishna",
+    "market": "Divi (HQ-Avanigadda) APMC",
+    "latitude": 17.933364,
+    "longitude": 83.4786296,
+    "geocode_status": "geo_outlier"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Krishna",
+    "market": "Gudiwada APMC",
+    "latitude": 16.4347597,
+    "longitude": 80.9914406,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Krishna",
+    "market": "Movva (HQ-Kuchipudi) APMC",
+    "latitude": 16.2253146,
+    "longitude": 80.9153783,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Kurnool",
+    "market": "Alur APMC",
+    "latitude": 15.4276919,
+    "longitude": 77.257826,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Kurnool",
+    "market": "Kodumur APMC",
+    "latitude": 15.6694267,
+    "longitude": 77.8743657,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Kurnool",
+    "market": "Kurnool APMC",
+    "latitude": 15.8309251,
+    "longitude": 78.0425373,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Markapuram",
+    "market": "Cumbum APMC",
+    "latitude": 15.5862083,
+    "longitude": 79.1148164,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Markapuram",
+    "market": "Podili APMC",
+    "latitude": 15.6060134,
+    "longitude": 79.6114995,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "NTR",
+    "market": "Jaggayyapeta APMC",
+    "latitude": 16.8930111,
+    "longitude": 80.098646,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "NTR",
+    "market": "Mylavaram APMC",
+    "latitude": 16.7612039,
+    "longitude": 80.6418168,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "NTR",
+    "market": "Nandigama APMC",
+    "latitude": 16.7734733,
+    "longitude": 80.2855279,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "NTR",
+    "market": "Tiruvuru APMC",
+    "latitude": 17.1132968,
+    "longitude": 80.6107396,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Nandyal",
+    "market": "Allagadda APMC",
+    "latitude": 15.1333484,
+    "longitude": 78.51254,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Nandyal",
+    "market": "Atmakur (Nandyal District) APMC",
+    "latitude": 15.9149208,
+    "longitude": 78.7079658,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Nandyal",
+    "market": "Koilkunta APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Palnadu",
+    "market": "Chilakaluripet APMC",
+    "latitude": 16.0949502,
+    "longitude": 80.1658779,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Palnadu",
+    "market": "Gurazala APMC",
+    "latitude": 16.5589293,
+    "longitude": 79.6368235,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Palnadu",
+    "market": "Macharla APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Palnadu",
+    "market": "Narasaraopet APMC",
+    "latitude": 16.2389242,
+    "longitude": 80.0472879,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Palnadu",
+    "market": "Rompicherla APMC",
+    "latitude": 16.2104931,
+    "longitude": 79.9091632,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Parvathipuram Manyam",
+    "market": "Kurupam APMC",
+    "latitude": 18.8661101,
+    "longitude": 83.5541837,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Parvathipuram Manyam",
+    "market": "Palakonda APMC",
+    "latitude": 18.6036798,
+    "longitude": 83.7559931,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Polavaram",
+    "market": "Rampachodvaram APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Prakasam",
+    "market": "Addanki APMC",
+    "latitude": 15.8110285,
+    "longitude": 79.9737896,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Prakasam",
+    "market": "Darsi APMC",
+    "latitude": 15.7694505,
+    "longitude": 79.6776541,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Prakasam",
+    "market": "Maddipadu APMC",
+    "latitude": 15.6208452,
+    "longitude": 80.0225194,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "SPSR Nellore",
+    "market": "Kavali APMC",
+    "latitude": 14.9133894,
+    "longitude": 79.9925655,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "SPSR Nellore",
+    "market": "Rapur APMC",
+    "latitude": 14.2006961,
+    "longitude": 79.5336017,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "SPSR Nellore",
+    "market": "Sarvepalli APMC",
+    "latitude": 14.2925091,
+    "longitude": 79.9735549,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Sri Sathya Sai",
+    "market": "Hindupur APMC",
+    "latitude": 13.8306127,
+    "longitude": 77.492635,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Sri Sathya Sai",
+    "market": "Madakasira APMC",
+    "latitude": 13.9405457,
+    "longitude": 77.272588,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Sri Sathya Sai",
+    "market": "Penukonda APMC",
+    "latitude": 14.0846808,
+    "longitude": 77.5966537,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Srikakulam",
+    "market": "Amadalavalasa APMC",
+    "latitude": 18.4111443,
+    "longitude": 83.8993345,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Srikakulam",
+    "market": "Etcherla APMC",
+    "latitude": 18.2434441,
+    "longitude": 83.864398,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Srikakulam",
+    "market": "Palasa APMC",
+    "latitude": 18.7719133,
+    "longitude": 84.4096945,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Tirupathi",
+    "market": "Naidupet APMC",
+    "latitude": 13.9289179,
+    "longitude": 79.8327094,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Tirupathi",
+    "market": "Pakala APMC",
+    "latitude": 13.4490487,
+    "longitude": 79.1148903,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Tirupathi",
+    "market": "Railway Koduru APMC",
+    "latitude": 13.9573959,
+    "longitude": 79.3487522,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Tirupathi",
+    "market": "Thiruchanur APMC",
+    "latitude": 13.6199511,
+    "longitude": 79.4578616,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Tirupathi",
+    "market": "Venkatagiri APMC",
+    "latitude": 13.957582,
+    "longitude": 79.5809332,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Vijayanagaram",
+    "market": "Bobbili APMC",
+    "latitude": 18.5748202,
+    "longitude": 83.3522594,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Vijayanagaram",
+    "market": "Kothavalasa APMC",
+    "latitude": 17.8958429,
+    "longitude": 83.1837095,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Vijayanagaram",
+    "market": "Vijayanagaram APMC",
+    "latitude": 18.1141255,
+    "longitude": 83.4114389,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Visakhapatnam",
+    "market": "Bhimunipatnam APMC",
+    "latitude": 17.8907979,
+    "longitude": 83.4557924,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Visakhapatnam",
+    "market": "Pendurthi APMC",
+    "latitude": 17.821358,
+    "longitude": 83.206582,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Visakhapatnam",
+    "market": "Visakhapatnam APMC",
+    "latitude": 17.6935526,
+    "longitude": 83.2921297,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "West Godavari",
+    "market": "Attili APMC",
+    "latitude": 16.6716486,
+    "longitude": 81.6013033,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "YSR Kadapa",
+    "market": "Jammalamadugu APMC",
+    "latitude": 14.8473457,
+    "longitude": 78.382172,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "YSR Kadapa",
+    "market": "Kamalapuram APMC",
+    "latitude": 14.5962938,
+    "longitude": 78.6704194,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "YSR Kadapa",
+    "market": "Rajampet APMC",
+    "latitude": 14.1987099,
+    "longitude": 79.1110344,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "YSR Kadapa",
+    "market": "Simhadhripuram APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "YSR Kadapa",
+    "market": "Yerraguntla APMC",
+    "latitude": 14.6435681,
+    "longitude": 78.5338218,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Assam",
+    "district": "Darrang",
+    "market": "Balugaon APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Assam",
+    "district": "Hailakandi",
+    "market": "Harbartganj Daily Market APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Assam",
+    "district": "Hojai",
+    "market": "Gandhimaidan SMY, Hojai",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Assam",
+    "district": "Kamrup",
+    "market": "Fancy Bazaar APMC",
+    "latitude": 26.1799322,
+    "longitude": 91.7362163,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Assam",
+    "district": "Kamrup",
+    "market": "Pamohi(Garchuk) APMC",
+    "latitude": 26.1071807,
+    "longitude": 91.6324615,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Assam",
+    "district": "Kamrup",
+    "market": "Sontoli APMC",
+    "latitude": 26.1425108,
+    "longitude": 91.1319667,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Assam",
+    "district": "Kamrup",
+    "market": "Uparhali Pmy APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Assam",
+    "district": "Nagaon",
+    "market": "Ambagan APMC",
+    "latitude": 26.517897,
+    "longitude": 92.854152,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Assam",
+    "district": "Nagaon",
+    "market": "Dhing APMC",
+    "latitude": 26.4449658,
+    "longitude": 92.5268228,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Assam",
+    "district": "Sonitpur",
+    "market": "Dhekiajuli APMC",
+    "latitude": 26.7301754,
+    "longitude": 92.4785068,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Assam",
+    "district": "Tinsukia",
+    "market": "Tinsukia Market",
+    "latitude": 27.4879722,
+    "longitude": 95.3601855,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Bihar",
+    "district": "Chhapra",
+    "market": "Chhapra APMC",
+    "latitude": 25.7784105,
+    "longitude": 84.7514507,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Bihar",
+    "district": "East Champaran/ Motihari",
+    "market": "Chakia APMC",
+    "latitude": 24.9300309,
+    "longitude": 84.1381073,
+    "geocode_status": "geo_outlier"
+  },
+  {
+    "state": "Bihar",
+    "district": "East Champaran/ Motihari",
+    "market": "Raxaul APMC",
+    "latitude": 26.9868738,
+    "longitude": 84.8447219,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Bihar",
+    "district": "Khagaria",
+    "market": "Khagaria APMC",
+    "latitude": 25.5206018,
+    "longitude": 86.4268497,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Bihar",
+    "district": "Kishanganj",
+    "market": "Bahadurganj APMC",
+    "latitude": 26.2702242,
+    "longitude": 87.8372763,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Bihar",
+    "district": "Madhubani",
+    "market": "Benipatti APMC",
+    "latitude": 26.4434731,
+    "longitude": 85.9104806,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Bihar",
+    "district": "Sheikhpura",
+    "market": "Barbigha APMC",
+    "latitude": 25.2069651,
+    "longitude": 85.7714707,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Bihar",
+    "district": "Siwan",
+    "market": "Maharjganj APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Bihar",
+    "district": "Supaul",
+    "market": "Triveniganj APMC",
+    "latitude": 26.1270382,
+    "longitude": 86.8872792,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Chandigarh",
+    "district": "Chandigarh",
+    "market": "Chandigarh (Grain/F&V) APMC",
+    "latitude": 30.7334421,
+    "longitude": 76.7797143,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Chattisgarh",
+    "district": "Durg",
+    "market": "Durg APMC",
+    "latitude": 21.1896499,
+    "longitude": 81.2851077,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Chattisgarh",
+    "district": "Jashpur",
+    "market": "Kotba APMC",
+    "latitude": 22.433646,
+    "longitude": 83.7396955,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Chattisgarh",
+    "district": "Jashpur",
+    "market": "Pathalgaon APMC",
+    "latitude": 22.5565847,
+    "longitude": 83.4586397,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Chattisgarh",
+    "district": "Kanker",
+    "market": "Bhanupratappur APMC",
+    "latitude": 20.3101345,
+    "longitude": 81.0717062,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Chattisgarh",
+    "district": "Kanker",
+    "market": "Charama APMC",
+    "latitude": 20.4929943,
+    "longitude": 81.3663339,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Chattisgarh",
+    "district": "Koriya",
+    "market": "Baikunthpur APMC",
+    "latitude": 23.2648727,
+    "longitude": 82.5599988,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Chattisgarh",
+    "district": "Narayanpur",
+    "market": "Narayanpur APMC",
+    "latitude": 19.7191529,
+    "longitude": 81.244411,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Chattisgarh",
+    "district": "Raipur",
+    "market": "Neora APMC",
+    "latitude": 21.5506694,
+    "longitude": 81.7948676,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Chattisgarh",
+    "district": "Surajpur",
+    "market": "Surajpur APMC",
+    "latitude": 23.212528,
+    "longitude": 82.8667246,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Goa",
+    "district": "North Goa",
+    "market": "Mapusa APMC",
+    "latitude": 15.590853,
+    "longitude": 73.8102146,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Gujarat",
+    "district": "Ahmedabad",
+    "market": "Sanad APMC",
+    "latitude": 23.0967086,
+    "longitude": 72.1087099,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Gujarat",
+    "district": "Amreli",
+    "market": "APMC Bagasara",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Gujarat",
+    "district": "Amreli",
+    "market": "Babra APMC",
+    "latitude": 21.8485451,
+    "longitude": 71.3036656,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Gujarat",
+    "district": "Amreli",
+    "market": "Damnagar APMC",
+    "latitude": 21.6950878,
+    "longitude": 71.5160345,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Gujarat",
+    "district": "Amreli",
+    "market": "Dhari APMC",
+    "latitude": 21.3280712,
+    "longitude": 71.0262213,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Gujarat",
+    "district": "Amreli",
+    "market": "Rajula APMC",
+    "latitude": 21.038617,
+    "longitude": 71.4438845,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Gujarat",
+    "district": "Amreli",
+    "market": "The Agricultural Produce Market Committee-Amreli",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Gujarat",
+    "district": "Anand",
+    "market": "Khambhat(Grain Market) APMC",
+    "latitude": 22.3166806,
+    "longitude": 72.6243126,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Gujarat",
+    "district": "Anand",
+    "market": "Khambhat(Veg Yard Khambhat) APMC",
+    "latitude": 22.3166806,
+    "longitude": 72.6243126,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Gujarat",
+    "district": "Banaskanth",
+    "market": "Deesa APMC",
+    "latitude": 24.2594977,
+    "longitude": 72.1803348,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Gujarat",
+    "district": "Banaskanth",
+    "market": "Dhanera APMC",
+    "latitude": 24.5036694,
+    "longitude": 72.0325116,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Gujarat",
+    "district": "Bharuch",
+    "market": "Ankleshwar APMC",
+    "latitude": 21.6293206,
+    "longitude": 72.9945103,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Gujarat",
+    "district": "Bhavnagar",
+    "market": "Bhavnagar APMC",
+    "latitude": 21.7718836,
+    "longitude": 72.1416449,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Gujarat",
+    "district": "Bhavnagar",
+    "market": "Taleja APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Gujarat",
+    "district": "Botad",
+    "market": "Botad APMC",
+    "latitude": 22.1686,
+    "longitude": 71.6685,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Gujarat",
+    "district": "Dahod",
+    "market": "Dahod APMC",
+    "latitude": 22.8358786,
+    "longitude": 74.2556823,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Gujarat",
+    "district": "Dahod",
+    "market": "Dahod(Veg. Market) APMC",
+    "latitude": 22.8358786,
+    "longitude": 74.2556823,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Gujarat",
+    "district": "Devbhumi Dwarka",
+    "market": "Jam Khambalia APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Gujarat",
+    "district": "Gandhinagar",
+    "market": "Dehgam APMC",
+    "latitude": 23.1640326,
+    "longitude": 72.8818319,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Gujarat",
+    "district": "Gandhinagar",
+    "market": "Kalol APMC",
+    "latitude": 23.2452165,
+    "longitude": 72.4966223,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Gujarat",
+    "district": "Gandhinagar",
+    "market": "Kalol(Veg,Market,Kalol) APMC",
+    "latitude": 23.2452165,
+    "longitude": 72.4966223,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Gujarat",
+    "district": "Gandhinagar",
+    "market": "Mansa(Manas Veg Yard) APMC",
+    "latitude": 23.425103,
+    "longitude": 72.6583024,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Gujarat",
+    "district": "Gir Somnath",
+    "market": "Veraval APMC",
+    "latitude": 20.9101099,
+    "longitude": 70.365279,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Gujarat",
+    "district": "Jamnagar",
+    "market": "Dhrol APMC",
+    "latitude": 22.5675674,
+    "longitude": 70.4164394,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Gujarat",
+    "district": "Jamnagar",
+    "market": "Jam Jodhpur APMC",
+    "latitude": 21.9066858,
+    "longitude": 70.0312555,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Gujarat",
+    "district": "Jamnagar",
+    "market": "Jamnagar APMC",
+    "latitude": 22.4732415,
+    "longitude": 70.0552102,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Gujarat",
+    "district": "Junagarh",
+    "market": "Bhesan APMC",
+    "latitude": 21.5527226,
+    "longitude": 70.7069913,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Gujarat",
+    "district": "Junagarh",
+    "market": "Junagadh APMC",
+    "latitude": 20.912055,
+    "longitude": 70.3640521,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Gujarat",
+    "district": "Junagarh",
+    "market": "Visavadar APMC",
+    "latitude": 21.3417058,
+    "longitude": 70.7534299,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Gujarat",
+    "district": "Kachchh",
+    "market": "Anjar APMC",
+    "latitude": 23.1194278,
+    "longitude": 70.0363797,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Gujarat",
+    "district": "Kheda",
+    "market": "Kapadvanj APMC",
+    "latitude": 23.0232402,
+    "longitude": 73.0727531,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Gujarat",
+    "district": "Kheda",
+    "market": "Nadiad APMC",
+    "latitude": 22.6895535,
+    "longitude": 72.8713603,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Gujarat",
+    "district": "Kheda",
+    "market": "Nadiyad(Chaklasi) APMC",
+    "latitude": 22.6918582,
+    "longitude": 72.9012671,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Gujarat",
+    "district": "Kheda",
+    "market": "Nadiyad(Piplag) APMC",
+    "latitude": 22.6918582,
+    "longitude": 72.9012671,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Gujarat",
+    "district": "Mehsana",
+    "market": "Kadi APMC",
+    "latitude": 23.297561,
+    "longitude": 72.329899,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Gujarat",
+    "district": "Mehsana",
+    "market": "Mehsana(Mehsana Veg) APMC",
+    "latitude": 23.608178,
+    "longitude": 72.3950947,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Gujarat",
+    "district": "Mehsana",
+    "market": "Visnagar APMC",
+    "latitude": 23.6160008,
+    "longitude": 72.4102275,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Gujarat",
+    "district": "Morbi",
+    "market": "APMC HALVAD",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Gujarat",
+    "district": "Morbi",
+    "market": "Morbi APMC",
+    "latitude": 22.8176662,
+    "longitude": 70.8345928,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Gujarat",
+    "district": "Narmada",
+    "market": "Rajpipla APMC",
+    "latitude": 21.878069,
+    "longitude": 73.5039695,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Gujarat",
+    "district": "Navsari",
+    "market": "Bilimora APMC",
+    "latitude": 20.7671693,
+    "longitude": 72.9693451,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Gujarat",
+    "district": "Panchmahals",
+    "market": "Morva Hafad APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Gujarat",
+    "district": "Patan",
+    "market": "Harij APMC",
+    "latitude": 23.6931596,
+    "longitude": 71.9008666,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Gujarat",
+    "district": "Patan",
+    "market": "Sami APMC",
+    "latitude": 23.6841533,
+    "longitude": 71.7781681,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Gujarat",
+    "district": "Patan",
+    "market": "Siddhpur APMC",
+    "latitude": 23.918279,
+    "longitude": 72.3681846,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Gujarat",
+    "district": "Porbandar",
+    "market": "Porbandar APMC",
+    "latitude": 21.6505229,
+    "longitude": 69.6565371,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Gujarat",
+    "district": "Rajkot",
+    "market": "Dhoraji APMC",
+    "latitude": 21.7220402,
+    "longitude": 70.4443401,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Gujarat",
+    "district": "Rajkot",
+    "market": "Gondal(Veg.market Gondal) APMC",
+    "latitude": 21.9721823,
+    "longitude": 70.7955235,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Gujarat",
+    "district": "Rajkot",
+    "market": "Jasdan APMC",
+    "latitude": 22.0399,
+    "longitude": 71.2046,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Gujarat",
+    "district": "Rajkot",
+    "market": "Jetpur(Dist.Rajkot) APMC",
+    "latitude": 21.7543725,
+    "longitude": 70.6189391,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Gujarat",
+    "district": "Rajkot",
+    "market": "Rajkot(Veg.Sub Yard) APMC",
+    "latitude": 22.3053263,
+    "longitude": 70.8028377,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Gujarat",
+    "district": "Sabarkantha",
+    "market": "Bayad APMC",
+    "latitude": 23.2248593,
+    "longitude": 73.2153042,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Gujarat",
+    "district": "Sabarkantha",
+    "market": "Himatnagar APMC",
+    "latitude": 23.5971246,
+    "longitude": 72.9588273,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Gujarat",
+    "district": "Sabarkantha",
+    "market": "Idar APMC",
+    "latitude": 23.8362255,
+    "longitude": 73.0114616,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Gujarat",
+    "district": "Surat",
+    "market": "Mahuva(Anaval) APMC",
+    "latitude": 21.0180294,
+    "longitude": 73.1388718,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Gujarat",
+    "district": "Surat",
+    "market": "Songadh APMC",
+    "latitude": 21.1702124,
+    "longitude": 73.5622874,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Gujarat",
+    "district": "Surat",
+    "market": "Surat APMC",
+    "latitude": 21.2094892,
+    "longitude": 72.8317058,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Gujarat",
+    "district": "Surendranagar",
+    "market": "Chotila APMC",
+    "latitude": 22.4243903,
+    "longitude": 71.1992399,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Gujarat",
+    "district": "Surendranagar",
+    "market": "Dasada Patadi APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Gujarat",
+    "district": "Surendranagar",
+    "market": "Dhragradhra APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Gujarat",
+    "district": "Surendranagar",
+    "market": "Vadhvan APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Gujarat",
+    "district": "Vadodara(Baroda)",
+    "market": "Padra APMC",
+    "latitude": 22.2412214,
+    "longitude": 73.0855259,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Haryana",
+    "district": "Ambala",
+    "market": "Naraingarh APMC",
+    "latitude": 30.4455761,
+    "longitude": 77.1256318,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Haryana",
+    "district": "Bhiwani",
+    "market": "Bhiwani APMC",
+    "latitude": 28.7931703,
+    "longitude": 76.1391283,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Haryana",
+    "district": "Faridabad",
+    "market": "Ballabhgarh APMC",
+    "latitude": 28.340002,
+    "longitude": 77.3164509,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Haryana",
+    "district": "Fatehabad",
+    "market": "Fatehabad APMC",
+    "latitude": 29.5118108,
+    "longitude": 75.4294164,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Haryana",
+    "district": "Gurgaon",
+    "market": "Gurgaon APMC",
+    "latitude": 28.4890874,
+    "longitude": 77.0111572,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Haryana",
+    "district": "Hissar",
+    "market": "Barwala(Hisar) APMC",
+    "latitude": 29.3611885,
+    "longitude": 75.9009576,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Haryana",
+    "district": "Hissar",
+    "market": "Hansi APMC",
+    "latitude": 29.140992,
+    "longitude": 75.9787139,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Haryana",
+    "district": "Jhajar",
+    "market": "Jhajjar APMC",
+    "latitude": 28.5964461,
+    "longitude": 76.6505366,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Haryana",
+    "district": "Jind",
+    "market": "Jind APMC",
+    "latitude": 29.3152073,
+    "longitude": 76.314082,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Haryana",
+    "district": "Jind",
+    "market": "Narwana APMC",
+    "latitude": 29.5830598,
+    "longitude": 76.0754066,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Haryana",
+    "district": "Jind",
+    "market": "Safidon APMC",
+    "latitude": 29.378315,
+    "longitude": 76.627283,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Haryana",
+    "district": "Kaithal",
+    "market": "Dhand APMC",
+    "latitude": 29.8791917,
+    "longitude": 76.6149956,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Haryana",
+    "district": "Karnal",
+    "market": "Gharaunda APMC",
+    "latitude": 29.5394114,
+    "longitude": 76.9388937,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Haryana",
+    "district": "Karnal",
+    "market": "Indri APMC",
+    "latitude": 29.8920575,
+    "longitude": 77.0910015,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Haryana",
+    "district": "Karnal",
+    "market": "Tarori APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Haryana",
+    "district": "Kurukshetra",
+    "market": "Ladwa APMC",
+    "latitude": 30.0346232,
+    "longitude": 77.0485926,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Haryana",
+    "district": "Kurukshetra",
+    "market": "Shahabad APMC",
+    "latitude": 30.1697115,
+    "longitude": 76.8675895,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Haryana",
+    "district": "Kurukshetra",
+    "market": "Thanesar APMC",
+    "latitude": 29.9930395,
+    "longitude": 76.8292228,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Haryana",
+    "district": "Mahendragarh-Narnaul",
+    "market": "Ateli APMC",
+    "latitude": 28.1006591,
+    "longitude": 76.2535322,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Haryana",
+    "district": "Mahendragarh-Narnaul",
+    "market": "Mohindergarh APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Haryana",
+    "district": "Mahendragarh-Narnaul",
+    "market": "Narnaul APMC",
+    "latitude": 28.0438456,
+    "longitude": 76.1062015,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Haryana",
+    "district": "Mewat",
+    "market": "FerozpurZirkha(Nagina) APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Haryana",
+    "district": "Mewat",
+    "market": "Punhana APMC",
+    "latitude": 27.8637502,
+    "longitude": 77.2051612,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Haryana",
+    "district": "Palwal",
+    "market": "Hassanpur APMC",
+    "latitude": 28.0173749,
+    "longitude": 77.4512004,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Haryana",
+    "district": "Panchkula",
+    "market": "New Grain Market , Panchkula APMC",
+    "latitude": 29.3664456,
+    "longitude": 76.9687391,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Haryana",
+    "district": "Panipat",
+    "market": "Madlauda APMC",
+    "latitude": 29.4022237,
+    "longitude": 76.8032637,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Haryana",
+    "district": "Panipat",
+    "market": "Panipat APMC",
+    "latitude": 29.3912753,
+    "longitude": 76.9771675,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Haryana",
+    "district": "Panipat",
+    "market": "Samalkha APMC",
+    "latitude": 29.230736,
+    "longitude": 77.0019919,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Haryana",
+    "district": "Rewari",
+    "market": "Kosli APMC",
+    "latitude": 28.3921086,
+    "longitude": 76.4501216,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Haryana",
+    "district": "Rewari",
+    "market": "Rewari APMC",
+    "latitude": 28.1956468,
+    "longitude": 76.6165179,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Haryana",
+    "district": "Rohtak",
+    "market": "Meham APMC",
+    "latitude": 28.9674025,
+    "longitude": 76.2953562,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Haryana",
+    "district": "Rohtak",
+    "market": "Rohtak APMC",
+    "latitude": 28.9010899,
+    "longitude": 76.5801935,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Haryana",
+    "district": "Rohtak",
+    "market": "Sampla APMC",
+    "latitude": 28.8192189,
+    "longitude": 76.7609033,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Haryana",
+    "district": "Sirsa",
+    "market": "Ellanabad APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Haryana",
+    "district": "Sirsa",
+    "market": "Sirsa APMC",
+    "latitude": 29.5372849,
+    "longitude": 75.0377649,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Haryana",
+    "district": "Sonipat",
+    "market": "Ganaur APMC",
+    "latitude": 29.1378351,
+    "longitude": 77.0202921,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Haryana",
+    "district": "Sonipat",
+    "market": "Gohana APMC",
+    "latitude": 29.1189406,
+    "longitude": 76.6705443,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Haryana",
+    "district": "Yamuna Nagar",
+    "market": "Chhachrauli APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Haryana",
+    "district": "Yamuna Nagar",
+    "market": "Jagadhri APMC",
+    "latitude": 30.1532045,
+    "longitude": 77.3011957,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Haryana",
+    "district": "Yamuna Nagar",
+    "market": "Sadhaura APMC",
+    "latitude": 30.416175,
+    "longitude": 77.224979,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Himachal Pradesh",
+    "district": "Bilaspur",
+    "market": "PMY Bilaspur",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Himachal Pradesh",
+    "district": "Chamba",
+    "market": "PMY Chamba",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Himachal Pradesh",
+    "district": "Hamirpur",
+    "market": "PMY Hamirpur",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Himachal Pradesh",
+    "district": "Hamirpur",
+    "market": "SMY Nadaun",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Himachal Pradesh",
+    "district": "Kangra",
+    "market": "PMY Kangra",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Himachal Pradesh",
+    "district": "Kangra",
+    "market": "SMY Baijnath",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Himachal Pradesh",
+    "district": "Kangra",
+    "market": "SMY Palampur",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Himachal Pradesh",
+    "district": "Kullu",
+    "market": "PMY Kullu",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Himachal Pradesh",
+    "district": "Kullu",
+    "market": "SMY Bandrol",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Himachal Pradesh",
+    "district": "Kullu",
+    "market": "SMY Bhuntar",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Himachal Pradesh",
+    "district": "Mandi",
+    "market": "SMY Dhanotu",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Himachal Pradesh",
+    "district": "Mandi",
+    "market": "SMY Jogindernagar",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Himachal Pradesh",
+    "district": "Shimla",
+    "market": "SMY Mehndli",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Himachal Pradesh",
+    "district": "Shimla",
+    "market": "SMY Rohroo",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Himachal Pradesh",
+    "district": "Sirmore",
+    "market": "SMY Rajgarh",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Himachal Pradesh",
+    "district": "Solan",
+    "market": "PMY Kather Solan",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Himachal Pradesh",
+    "district": "Solan",
+    "market": "SMY Nalagarh",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Himachal Pradesh",
+    "district": "Solan",
+    "market": "SMY Parwanoo",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Himachal Pradesh",
+    "district": "Solan",
+    "market": "SMY Wakhnaghat",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Himachal Pradesh",
+    "district": "Una",
+    "market": "PMY Una",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Himachal Pradesh",
+    "district": "Una",
+    "market": "SMY Santoshgarh",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Jammu and Kashmir",
+    "district": "Baramulla",
+    "market": "Sopore (Nowpora) (F&V)",
+    "latitude": 34.2869124,
+    "longitude": 74.4625673,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Jammu and Kashmir",
+    "district": "Ganderbal",
+    "market": "Market Administrative Committee Zazna",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Jammu and Kashmir",
+    "district": "Jammu",
+    "market": "MAC F&V Market Narwal Jammu",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Jammu and Kashmir",
+    "district": "Kathua",
+    "market": "Kathua (F&V)",
+    "latitude": 32.3765524,
+    "longitude": 75.5243044,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Jammu and Kashmir",
+    "district": "Kulgam",
+    "market": "Kulgam (F&V)",
+    "latitude": 33.6446899,
+    "longitude": 75.0188432,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Jammu and Kashmir",
+    "district": "Kupwara",
+    "market": "Handwara Kupwara (F&V)",
+    "latitude": 34.5296594,
+    "longitude": 74.2298167,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Jammu and Kashmir",
+    "district": "Rajouri",
+    "market": "Rajouri (Phaliana) (F&V)",
+    "latitude": 33.3772495,
+    "longitude": 74.3132332,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Jammu and Kashmir",
+    "district": "Udhampur",
+    "market": "Fruit and Vegetable Market Udhampur",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Karnataka",
+    "district": "Bagalkot",
+    "market": "Bagalkot APMC",
+    "latitude": 16.165288,
+    "longitude": 75.6603433,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Karnataka",
+    "district": "Bagalkot",
+    "market": "Hungund APMC",
+    "latitude": 16.06689,
+    "longitude": 76.059741,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Karnataka",
+    "district": "Belagavi",
+    "market": "Belgaum APMC",
+    "latitude": 15.8572666,
+    "longitude": 74.5069343,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Karnataka",
+    "district": "Bengaluru",
+    "market": "Bengaluru APMC",
+    "latitude": 12.9767936,
+    "longitude": 77.590082,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Karnataka",
+    "district": "Bengaluru",
+    "market": "Binny Mill (FF&V) Bengaluru APMC",
+    "latitude": 12.970623,
+    "longitude": 77.5662423,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Karnataka",
+    "district": "Bengaluru Rural",
+    "market": "Doddaballapur APMC",
+    "latitude": 13.2929583,
+    "longitude": 77.5431463,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Karnataka",
+    "district": "Bengaluru Rural",
+    "market": "Hoskote APMC",
+    "latitude": 13.073014,
+    "longitude": 77.7921381,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Karnataka",
+    "district": "Bengaluru South",
+    "market": "Channapatna APMC",
+    "latitude": 12.6593727,
+    "longitude": 77.2038931,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Karnataka",
+    "district": "Bengaluru South",
+    "market": "Ramanagara APMC",
+    "latitude": 12.7252766,
+    "longitude": 77.2804797,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Karnataka",
+    "district": "Bidar",
+    "market": "Basava Kalayana APMC",
+    "latitude": 17.8426595,
+    "longitude": 76.9433043,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Karnataka",
+    "district": "Bidar",
+    "market": "Humanabad APMC",
+    "latitude": 17.7715078,
+    "longitude": 77.1393693,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Karnataka",
+    "district": "Chamarajanagar",
+    "market": "Chamarajanagar APMC",
+    "latitude": 11.9346006,
+    "longitude": 76.9328209,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Karnataka",
+    "district": "Chamarajanagar",
+    "market": "Gundlupet APMC",
+    "latitude": 11.808496,
+    "longitude": 76.6916141,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Karnataka",
+    "district": "Chikkaballapur",
+    "market": "Bagepalli APMC",
+    "latitude": 13.7836611,
+    "longitude": 77.7972379,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Karnataka",
+    "district": "Chitradurga",
+    "market": "Holalkere APMC",
+    "latitude": 14.0428326,
+    "longitude": 76.1844875,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Karnataka",
+    "district": "Dakshina Kannada",
+    "market": "Bantwala APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Karnataka",
+    "district": "Dakshina Kannada",
+    "market": "Sulya APMC",
+    "latitude": 12.5576644,
+    "longitude": 75.3907575,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Karnataka",
+    "district": "Davangere",
+    "market": "Davangere APMC",
+    "latitude": 14.4679807,
+    "longitude": 75.9195682,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Karnataka",
+    "district": "Davangere",
+    "market": "Honnali APMC",
+    "latitude": 14.2389785,
+    "longitude": 75.6457434,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Karnataka",
+    "district": "Dharwad",
+    "market": "APMC Hubballi",
+    "latitude": 15.3936714,
+    "longitude": 75.0921536,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Karnataka",
+    "district": "Gadag",
+    "market": "Gadag APMC",
+    "latitude": 15.4221812,
+    "longitude": 75.6376639,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Karnataka",
+    "district": "Gadag",
+    "market": "Laxmeshwar APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Karnataka",
+    "district": "Haveri",
+    "market": "Hanagal APMC",
+    "latitude": 14.7653513,
+    "longitude": 75.1244336,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Karnataka",
+    "district": "Haveri",
+    "market": "Ranebennur APMC",
+    "latitude": 14.6165795,
+    "longitude": 75.6341529,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Karnataka",
+    "district": "Kalaburagi",
+    "market": "Kalaburagi APMC",
+    "latitude": 17.3310003,
+    "longitude": 76.8334228,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Karnataka",
+    "district": "Kodagu",
+    "market": "Gonikappal APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Karnataka",
+    "district": "Kodagu",
+    "market": "Madikeri APMC",
+    "latitude": 12.42149,
+    "longitude": 75.7387543,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Karnataka",
+    "district": "Kodagu",
+    "market": "Somvarpet APMC",
+    "latitude": 12.5971883,
+    "longitude": 75.8466865,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Karnataka",
+    "district": "Kolar",
+    "market": "Bangarpet APMC",
+    "latitude": 12.98822,
+    "longitude": 78.1812561,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Karnataka",
+    "district": "Koppal",
+    "market": "Gangavathi APMC",
+    "latitude": 15.4308872,
+    "longitude": 76.5319723,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Karnataka",
+    "district": "Koppal",
+    "market": "Kanakagiri APMC",
+    "latitude": 15.5696792,
+    "longitude": 76.4189879,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Karnataka",
+    "district": "Koppal",
+    "market": "Kustagi APMC",
+    "latitude": 15.7571579,
+    "longitude": 76.190682,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Karnataka",
+    "district": "Mandya",
+    "market": "K.R. Pet APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Karnataka",
+    "district": "Mandya",
+    "market": "Pandavapura APMC",
+    "latitude": 12.5011414,
+    "longitude": 76.6731501,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Karnataka",
+    "district": "Mysuru",
+    "market": "Periyapatna APMC",
+    "latitude": 12.3372494,
+    "longitude": 76.0988013,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Karnataka",
+    "district": "Raichur",
+    "market": "Lingasugur APMC",
+    "latitude": 16.1563,
+    "longitude": 76.5242,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Karnataka",
+    "district": "Raichur",
+    "market": "Raichur APMC",
+    "latitude": 16.1983225,
+    "longitude": 77.3527444,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Karnataka",
+    "district": "Raichur",
+    "market": "Sindhanur APMC",
+    "latitude": 15.7685584,
+    "longitude": 76.7549926,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Karnataka",
+    "district": "Shivamogga",
+    "market": "APMC THIRTHAHALLI",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Karnataka",
+    "district": "Shivamogga",
+    "market": "Bhadravathi APMC",
+    "latitude": 13.8502075,
+    "longitude": 75.7037863,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Karnataka",
+    "district": "Shivamogga",
+    "market": "Shikaripura APMC",
+    "latitude": 14.2639661,
+    "longitude": 75.3587796,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Karnataka",
+    "district": "Udupi",
+    "market": "Kundapura APMC",
+    "latitude": 13.6133737,
+    "longitude": 74.7286856,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Karnataka",
+    "district": "Udupi",
+    "market": "Udupi APMC",
+    "latitude": 13.3419169,
+    "longitude": 74.7473232,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Karnataka",
+    "district": "Uttara Kannada",
+    "market": "Kumta APMC",
+    "latitude": 14.4372403,
+    "longitude": 74.421244,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Karnataka",
+    "district": "Vijayanagara",
+    "market": "Hospet APMC",
+    "latitude": 15.266493,
+    "longitude": 76.3872297,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Karnataka",
+    "district": "Vijayapura",
+    "market": "Talikot APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Karnataka",
+    "district": "Vijayapura",
+    "market": "Vijayapura APMC",
+    "latitude": 16.8269911,
+    "longitude": 75.7175387,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Keralam",
+    "district": "Alappuzha",
+    "market": "Aroor Market",
+    "latitude": 9.8783108,
+    "longitude": 76.3038826,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Keralam",
+    "district": "Alappuzha",
+    "market": "Chengannur Market",
+    "latitude": 9.3182808,
+    "longitude": 76.6085318,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Keralam",
+    "district": "Alappuzha",
+    "market": "Cheriyanadu VFPCK Market",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Keralam",
+    "district": "Alappuzha",
+    "market": "Kayamkulam Market",
+    "latitude": 9.1723603,
+    "longitude": 76.500061,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Keralam",
+    "district": "Ernakulam",
+    "market": "Aluva Market",
+    "latitude": 10.1077682,
+    "longitude": 76.3568532,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Keralam",
+    "district": "Ernakulam",
+    "market": "Angamaly Market",
+    "latitude": 10.1910284,
+    "longitude": 76.3874109,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Keralam",
+    "district": "Ernakulam",
+    "market": "Karumaloor VFPCK Market",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Keralam",
+    "district": "Ernakulam",
+    "market": "Koovapadi VFPCK Market",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Keralam",
+    "district": "Ernakulam",
+    "market": "North Paravur Market",
+    "latitude": 10.1484083,
+    "longitude": 76.2249185,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Keralam",
+    "district": "Ernakulam",
+    "market": "Perumbavoor Market",
+    "latitude": 10.1147548,
+    "longitude": 76.4778152,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Keralam",
+    "district": "Ernakulam",
+    "market": "Thrippunithura Market",
+    "latitude": 9.9440256,
+    "longitude": 76.3489858,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Keralam",
+    "district": "Idukki",
+    "market": "Adimali Market",
+    "latitude": 10.0144274,
+    "longitude": 76.9554575,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Keralam",
+    "district": "Idukki",
+    "market": "Kattappana Market",
+    "latitude": 9.7561717,
+    "longitude": 77.1140611,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Keralam",
+    "district": "Idukki",
+    "market": "Munnar Market",
+    "latitude": 10.0869959,
+    "longitude": 77.0600915,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Keralam",
+    "district": "Idukki",
+    "market": "Thodupuzha Market",
+    "latitude": 9.8976798,
+    "longitude": 76.7134225,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Keralam",
+    "district": "Kannur",
+    "market": "Payyannur Market",
+    "latitude": 12.1511877,
+    "longitude": 75.256029,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Keralam",
+    "district": "Kannur",
+    "market": "Taliparamba Market",
+    "latitude": 12.0994756,
+    "longitude": 75.4705736,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Keralam",
+    "district": "Kannur",
+    "market": "Thalasserry Market",
+    "latitude": 11.7607698,
+    "longitude": 75.4821798,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Keralam",
+    "district": "Kasargod",
+    "market": "Manjeswaram Market",
+    "latitude": 12.6762495,
+    "longitude": 74.9723398,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Keralam",
+    "district": "Kollam",
+    "market": "Anchal Market",
+    "latitude": 8.9292657,
+    "longitude": 76.9065012,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Keralam",
+    "district": "Kollam",
+    "market": "Channapetta VFPCK Market",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Keralam",
+    "district": "Kollam",
+    "market": "Sasthamkotta Market",
+    "latitude": 9.0314647,
+    "longitude": 76.6009828,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Keralam",
+    "district": "Kottayam",
+    "market": "Athirampuzha Market",
+    "latitude": 9.6678442,
+    "longitude": 76.5328609,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Keralam",
+    "district": "Kottayam",
+    "market": "Avarma VFPCK Market",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Keralam",
+    "district": "Kottayam",
+    "market": "Ettumanoor VFPCK Market",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Keralam",
+    "district": "Kottayam",
+    "market": "Parathode VFPCK Market",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Keralam",
+    "district": "Kozhikode(Calicut)",
+    "market": "Kallachi Market",
+    "latitude": 11.6836738,
+    "longitude": 75.6645224,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Keralam",
+    "district": "Kozhikode(Calicut)",
+    "market": "Mukkom Market",
+    "latitude": 8.822364,
+    "longitude": 76.6462584,
+    "geocode_status": "geo_outlier"
+  },
+  {
+    "state": "Keralam",
+    "district": "Kozhikode(Calicut)",
+    "market": "Perambra Market",
+    "latitude": 11.559725,
+    "longitude": 75.7581231,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Keralam",
+    "district": "Malappuram",
+    "market": "Kodakkad VFPCK Market",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Keralam",
+    "district": "Malappuram",
+    "market": "Kottakkal Market",
+    "latitude": 11.0004806,
+    "longitude": 76.004758,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Keralam",
+    "district": "Malappuram",
+    "market": "Manjeri Market",
+    "latitude": 11.1202289,
+    "longitude": 76.1198109,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Keralam",
+    "district": "Palakad",
+    "market": "Palakkad Market",
+    "latitude": 10.7612447,
+    "longitude": 76.6165391,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Keralam",
+    "district": "Palakad",
+    "market": "Paliyamangalam VFPCK Market",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Keralam",
+    "district": "Palakad",
+    "market": "Pattambi Market",
+    "latitude": 10.8048616,
+    "longitude": 76.1780161,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Keralam",
+    "district": "Palakad",
+    "market": "vadakarapathy Market",
+    "latitude": 10.7775474,
+    "longitude": 76.8505759,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Keralam",
+    "district": "Pathanamthitta",
+    "market": "Omalloor Market",
+    "latitude": 9.2427057,
+    "longitude": 76.7558362,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Keralam",
+    "district": "Thirssur",
+    "market": "Chavakkad Market",
+    "latitude": 10.5243344,
+    "longitude": 76.0799391,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Keralam",
+    "district": "Thirssur",
+    "market": "Pazhayannur VFPCK Market",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Keralam",
+    "district": "Thiruvananthapuram",
+    "market": "Attingal Market",
+    "latitude": 8.6985965,
+    "longitude": 76.8134401,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Keralam",
+    "district": "Thiruvananthapuram",
+    "market": "Chala Market",
+    "latitude": 8.4830928,
+    "longitude": 76.952177,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Keralam",
+    "district": "Thiruvananthapuram",
+    "market": "Kattakada Market",
+    "latitude": 8.5072457,
+    "longitude": 77.0829921,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Keralam",
+    "district": "Thiruvananthapuram",
+    "market": "Neyyatinkara Market",
+    "latitude": 8.3994883,
+    "longitude": 77.087201,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Keralam",
+    "district": "Thiruvananthapuram",
+    "market": "Pappanchani VFPCK Market",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Keralam",
+    "district": "Thiruvananthapuram",
+    "market": "Parassala Market",
+    "latitude": 8.3428993,
+    "longitude": 77.1547766,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Keralam",
+    "district": "Wayanad",
+    "market": "Mananthavady Market",
+    "latitude": 11.8298756,
+    "longitude": 75.9418934,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Keralam",
+    "district": "Wayanad",
+    "market": "Pulpally Market",
+    "latitude": 11.7932652,
+    "longitude": 76.1643871,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Agar Malwa",
+    "market": "Agar(F&V) APMC",
+    "latitude": 23.7177382,
+    "longitude": 76.0194605,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Alirajpur",
+    "market": "Alirajpur APMC",
+    "latitude": 22.3050503,
+    "longitude": 74.3489718,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Alirajpur",
+    "market": "Jobat APMC",
+    "latitude": 22.4133257,
+    "longitude": 74.5648578,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Anupur",
+    "market": "Anuppur APMC",
+    "latitude": 23.0346179,
+    "longitude": 81.7510255,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Ashoknagar",
+    "market": "Ashoknagar APMC",
+    "latitude": 24.576189,
+    "longitude": 77.7302895,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Badwani",
+    "market": "Badwani APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Badwani",
+    "market": "Khetia APMC",
+    "latitude": 21.6730764,
+    "longitude": 74.5922518,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Badwani",
+    "market": "Sendhwa APMC",
+    "latitude": 21.6926813,
+    "longitude": 75.0978792,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Badwani",
+    "market": "Sendhwa(F&V) APMC",
+    "latitude": 21.6926813,
+    "longitude": 75.0978792,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Balaghat",
+    "market": "Katangi APMC",
+    "latitude": 21.7725576,
+    "longitude": 79.8038021,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Betul",
+    "market": "Betul APMC",
+    "latitude": 21.8971699,
+    "longitude": 77.9061703,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Betul",
+    "market": "Betul(F&V) APMC",
+    "latitude": 21.8971699,
+    "longitude": 77.9061703,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Bhind",
+    "market": "Alampur APMC",
+    "latitude": 26.0285634,
+    "longitude": 78.7934059,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Bhind",
+    "market": "Lahar APMC",
+    "latitude": 26.2048461,
+    "longitude": 78.9453521,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Bhopal",
+    "market": "Berasia APMC",
+    "latitude": 23.6299232,
+    "longitude": 77.4251686,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Bhopal",
+    "market": "Bhopal APMC",
+    "latitude": 23.2584857,
+    "longitude": 77.401989,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Chhatarpur",
+    "market": "Badamalhera APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Chhatarpur",
+    "market": "Chattarpur(F&V) APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Chhatarpur",
+    "market": "LavKush Nagar(Laundi) APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Chhindwara",
+    "market": "Amarwda APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Chhindwara",
+    "market": "Chaurai APMC",
+    "latitude": 22.0540694,
+    "longitude": 79.2452587,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Chhindwara",
+    "market": "Chhindwara APMC",
+    "latitude": 22.0578244,
+    "longitude": 78.9386203,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Damoh",
+    "market": "Javera APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Datia",
+    "market": "Datia APMC",
+    "latitude": 25.6689389,
+    "longitude": 78.4582309,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Dewas",
+    "market": "Bagli APMC",
+    "latitude": 22.6414301,
+    "longitude": 76.3490059,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Dewas",
+    "market": "Dewas APMC",
+    "latitude": 22.96363,
+    "longitude": 76.054867,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Dewas",
+    "market": "Hatpiplya(F&V) APMC",
+    "latitude": 22.8230048,
+    "longitude": 76.3693468,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Dhar",
+    "market": "Badnawar APMC",
+    "latitude": 23.0231263,
+    "longitude": 75.2065,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Dhar",
+    "market": "Dhamnod APMC",
+    "latitude": 22.2012828,
+    "longitude": 75.4768679,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Dhar",
+    "market": "Dhar APMC",
+    "latitude": 22.5972396,
+    "longitude": 75.306565,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Dhar",
+    "market": "Kukshi APMC",
+    "latitude": 22.2124514,
+    "longitude": 74.7598806,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Dhar",
+    "market": "Kukshi(F&V) APMC",
+    "latitude": 22.2124514,
+    "longitude": 74.7598806,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Dhar",
+    "market": "Manawar(F&V) APMC",
+    "latitude": 22.2693335,
+    "longitude": 75.4884626,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Dindori",
+    "market": "Dindori APMC",
+    "latitude": 22.9213356,
+    "longitude": 81.0808561,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Guna",
+    "market": "Aron APMC",
+    "latitude": 24.377318,
+    "longitude": 77.4206371,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Gwalior",
+    "market": "Dabra APMC",
+    "latitude": 25.8818881,
+    "longitude": 78.3305079,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Gwalior",
+    "market": "Lashkar APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Harda",
+    "market": "Harda APMC",
+    "latitude": 22.3390401,
+    "longitude": 77.1015504,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Harda",
+    "market": "Harda(F&V) APMC",
+    "latitude": 22.3390401,
+    "longitude": 77.1015504,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Harda",
+    "market": "Khirakiya APMC",
+    "latitude": 22.1534084,
+    "longitude": 76.8821612,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Harda",
+    "market": "Sirali(F&V) APMC",
+    "latitude": 22.1571274,
+    "longitude": 77.0621102,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Hoshangabad",
+    "market": "Banapura APMC",
+    "latitude": 22.470483,
+    "longitude": 77.4816889,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Hoshangabad",
+    "market": "Hoshangabad(F&V) APMC",
+    "latitude": 22.7529598,
+    "longitude": 77.7173261,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Indore",
+    "market": "Gautampura APMC",
+    "latitude": 23.0267776,
+    "longitude": 75.5287674,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Indore",
+    "market": "Indore APMC",
+    "latitude": 22.7203616,
+    "longitude": 75.8681996,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Indore",
+    "market": "Sanwer APMC",
+    "latitude": 22.9778614,
+    "longitude": 75.8466312,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Jabalpur",
+    "market": "Jabalpur APMC",
+    "latitude": 23.1701522,
+    "longitude": 79.9324505,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Jabalpur",
+    "market": "Paatan APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Jhabua",
+    "market": "Jhabua APMC",
+    "latitude": 22.760543,
+    "longitude": 74.6049526,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Jhabua",
+    "market": "Petlawad APMC",
+    "latitude": 23.0209586,
+    "longitude": 74.8071354,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Katni",
+    "market": "Katni APMC",
+    "latitude": 23.8339621,
+    "longitude": 80.392456,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Khandwa",
+    "market": "Harsood APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Khandwa",
+    "market": "Khandwa APMC",
+    "latitude": 21.8203752,
+    "longitude": 76.3555424,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Khandwa",
+    "market": "Khandwa(F&V) APMC",
+    "latitude": 21.8203752,
+    "longitude": 76.3555424,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Khandwa",
+    "market": "Sanawad(F&V) APMC",
+    "latitude": 22.1777783,
+    "longitude": 76.0737911,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Khargone",
+    "market": "Badwaha APMC",
+    "latitude": 25.0941883,
+    "longitude": 79.7003174,
+    "geocode_status": "geo_outlier"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Khargone",
+    "market": "Bedia APMC",
+    "latitude": 22.0992965,
+    "longitude": 75.9493561,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Khargone",
+    "market": "Bhikangaon APMC",
+    "latitude": 22.0189892,
+    "longitude": 76.1170825,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Mandla",
+    "market": "Krishi Upaj Mandi Samiti Bichhiya",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Mandla",
+    "market": "Mandla APMC",
+    "latitude": 22.597808,
+    "longitude": 80.3720781,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Mandsaur",
+    "market": "Daloda APMC",
+    "latitude": 23.9559753,
+    "longitude": 75.1041283,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Mandsaur",
+    "market": "Mandsaur APMC",
+    "latitude": 24.0682898,
+    "longitude": 75.0742388,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Morena",
+    "market": "Ambaha APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Morena",
+    "market": "Kailaras APMC",
+    "latitude": 26.2962054,
+    "longitude": 77.6200944,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Morena",
+    "market": "Morena APMC",
+    "latitude": 26.4909914,
+    "longitude": 77.9813656,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Morena",
+    "market": "Sabalgarh(F&V) APMC",
+    "latitude": 26.2485682,
+    "longitude": 77.4097285,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Narsinghpur",
+    "market": "Gadarwada APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Narsinghpur",
+    "market": "Gadarwara(F&V) APMC",
+    "latitude": 22.9003732,
+    "longitude": 78.7926881,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Narsinghpur",
+    "market": "Narsinghpur APMC",
+    "latitude": 22.9431778,
+    "longitude": 79.2142889,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Neemuch",
+    "market": "Javad APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Neemuch",
+    "market": "Manasa APMC",
+    "latitude": 24.4728129,
+    "longitude": 75.150867,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Neemuch",
+    "market": "Neemuch APMC",
+    "latitude": 24.4650023,
+    "longitude": 74.8689508,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Panna",
+    "market": "Ajaygarh APMC",
+    "latitude": 24.9029127,
+    "longitude": 80.2578736,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Raisen",
+    "market": "Bareli APMC",
+    "latitude": 23.2143044,
+    "longitude": 78.3615386,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Rajgarh",
+    "market": "Biaora APMC",
+    "latitude": 23.9140506,
+    "longitude": 76.9295366,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Rajgarh",
+    "market": "Narsinghgarh APMC",
+    "latitude": 23.709099,
+    "longitude": 77.088747,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Ratlam",
+    "market": "A lot APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Ratlam",
+    "market": "Jaora APMC",
+    "latitude": 23.6379392,
+    "longitude": 75.1281756,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Ratlam",
+    "market": "Jawra(F&V) APMC",
+    "latitude": 21.7888059,
+    "longitude": 78.0150086,
+    "geocode_status": "geo_outlier"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Ratlam",
+    "market": "Sailana APMC",
+    "latitude": 23.4559437,
+    "longitude": 74.9273527,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Rewa",
+    "market": "Baikunthpur APMC",
+    "latitude": 24.7319806,
+    "longitude": 81.4070688,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Sagar",
+    "market": "Deori APMC",
+    "latitude": 23.3855258,
+    "longitude": 79.0157224,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Sagar",
+    "market": "Rahatgarh APMC",
+    "latitude": 23.7926876,
+    "longitude": 78.3986974,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Sagar",
+    "market": "Sagar APMC",
+    "latitude": 23.8417793,
+    "longitude": 78.7466817,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Sagar",
+    "market": "Shahagarh APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Satna",
+    "market": "Amarpatan APMC",
+    "latitude": 24.3147323,
+    "longitude": 80.9721324,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Satna",
+    "market": "Mehar APMC",
+    "latitude": 23.9873061,
+    "longitude": 78.6617273,
+    "geocode_status": "geo_outlier"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Satna",
+    "market": "Nagod APMC",
+    "latitude": 24.5705157,
+    "longitude": 80.5867584,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Satna",
+    "market": "Ramnagar APMC",
+    "latitude": 24.6267083,
+    "longitude": 81.0572775,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Satna",
+    "market": "Satna APMC",
+    "latitude": 24.5751308,
+    "longitude": 80.8325721,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Sehore",
+    "market": "Ashta APMC",
+    "latitude": 23.0111323,
+    "longitude": 76.7198299,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Sehore",
+    "market": "Nasrullaganj APMC",
+    "latitude": 22.6860025,
+    "longitude": 77.2738024,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Shajapur",
+    "market": "Agar APMC",
+    "latitude": 23.7913656,
+    "longitude": 77.0768305,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Shajapur",
+    "market": "Kalapipal APMC",
+    "latitude": 23.3330597,
+    "longitude": 76.8350124,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Shajapur",
+    "market": "Nalkehda APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Shajapur",
+    "market": "Shujalpur APMC",
+    "latitude": 23.3805757,
+    "longitude": 76.7232104,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Shehdol",
+    "market": "Beohari APMC",
+    "latitude": 24.0005338,
+    "longitude": 81.3800132,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Shehdol",
+    "market": "Shahdol APMC",
+    "latitude": 23.3002343,
+    "longitude": 81.364771,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Sheopur",
+    "market": "Sheopurkalan APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Sheopur",
+    "market": "Vijaypur APMC",
+    "latitude": 26.0563684,
+    "longitude": 77.366184,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Shivpuri",
+    "market": "Badarwas APMC",
+    "latitude": 24.9717284,
+    "longitude": 77.5696602,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Shivpuri",
+    "market": "Kolaras APMC",
+    "latitude": 25.2232473,
+    "longitude": 77.6181948,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Singroli",
+    "market": "Singroli APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Ujjain",
+    "market": "Badnagar APMC",
+    "latitude": 23.0640179,
+    "longitude": 75.4493728,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Ujjain",
+    "market": "Tarana APMC",
+    "latitude": 23.3346118,
+    "longitude": 76.0447336,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Ujjain",
+    "market": "Ujjain(F&V) APMC",
+    "latitude": 23.1885131,
+    "longitude": 75.7716562,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Umariya",
+    "market": "Umariya APMC",
+    "latitude": 21.8446624,
+    "longitude": 78.9669579,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Vidisha",
+    "market": "Ganjbasoda APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Vidisha",
+    "market": "Vidisha APMC",
+    "latitude": 23.5208128,
+    "longitude": 77.8063184,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Ahilyanagar",
+    "market": "Ahilyanagar APMC",
+    "latitude": 19.092952,
+    "longitude": 74.7493451,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Ahilyanagar",
+    "market": "Akole APMC",
+    "latitude": 19.5419344,
+    "longitude": 74.0092582,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Ahilyanagar",
+    "market": "Jamkhed APMC",
+    "latitude": 18.6687506,
+    "longitude": 75.3523878,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Ahilyanagar",
+    "market": "Rahata APMC",
+    "latitude": 19.7170595,
+    "longitude": 74.4799561,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Ahilyanagar",
+    "market": "Shevgaon APMC",
+    "latitude": 19.3797171,
+    "longitude": 75.2954872,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Akola",
+    "market": "Akola APMC",
+    "latitude": 20.7116604,
+    "longitude": 77.002632,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Amarawati",
+    "market": "Amarawati APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Amarawati",
+    "market": "Amrawati(Frui & Veg. Market) APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Amarawati",
+    "market": "Anajngaon APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Amarawati",
+    "market": "Dhamngaon-Railway APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Beed",
+    "market": "Beed APMC",
+    "latitude": 18.9904059,
+    "longitude": 75.7542291,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Beed",
+    "market": "Gevrai APMC",
+    "latitude": 19.6281577,
+    "longitude": 76.3786697,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Buldhana",
+    "market": "Buldhana APMC",
+    "latitude": 20.4548493,
+    "longitude": 76.0955537,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Buldhana",
+    "market": "Deoulgaon Raja APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Chattrapati Sambhajinagar",
+    "market": "Chattrapati Sambhajinagar APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Chattrapati Sambhajinagar",
+    "market": "Paithan APMC",
+    "latitude": 19.5835563,
+    "longitude": 75.4302638,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Dharashiv",
+    "market": "Dharashiv APMC",
+    "latitude": 18.1853567,
+    "longitude": 76.0420253,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Dharashiv",
+    "market": "Murum APMC",
+    "latitude": 17.786978,
+    "longitude": 76.476106,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Dhule",
+    "market": "Dhule APMC",
+    "latitude": 20.898,
+    "longitude": 74.7732,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Jalgaon",
+    "market": "APMC CHOPADA",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Jalgaon",
+    "market": "Bhusaval APMC",
+    "latitude": 21.0472554,
+    "longitude": 75.7880594,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Jalgaon",
+    "market": "Jalgaon APMC",
+    "latitude": 21.0100695,
+    "longitude": 75.5696003,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Jalna",
+    "market": "Ambad (Vadigodri) APMC",
+    "latitude": 19.5654086,
+    "longitude": 75.7757012,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Kolhapur",
+    "market": "Kolhapur APMC",
+    "latitude": 16.7028412,
+    "longitude": 74.2405329,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Kolhapur",
+    "market": "Kolhapur(Laxmipuri) APMC",
+    "latitude": 16.7028412,
+    "longitude": 74.2405329,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Latur",
+    "market": "Ahmedpur APMC",
+    "latitude": 18.6962277,
+    "longitude": 76.9424531,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Latur",
+    "market": "Ausa APMC",
+    "latitude": 18.2510243,
+    "longitude": 76.500958,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Mumbai",
+    "market": "Mumbai APMC",
+    "latitude": 19.0592671,
+    "longitude": 72.861326,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Mumbai",
+    "market": "Mumbai- Fruit Market APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Mumbai",
+    "market": "Mumbai-Onion & Potato Market APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nagpur",
+    "market": "Agriculture Produce Market Committee Katol",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nagpur",
+    "market": "HINGNA - APMC",
+    "latitude": 20.9916033,
+    "longitude": 78.8732421,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nagpur",
+    "market": "Kalmeshwar APMC",
+    "latitude": 21.2374393,
+    "longitude": 78.9081689,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nagpur",
+    "market": "Kamthi APMC",
+    "latitude": 21.3780282,
+    "longitude": 78.8556576,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nagpur",
+    "market": "Nagpur APMC",
+    "latitude": 21.1498134,
+    "longitude": 79.0820556,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nagpur",
+    "market": "Savner APMC",
+    "latitude": 21.4320477,
+    "longitude": 78.8876381,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nanded",
+    "market": "Bhokar APMC",
+    "latitude": 19.1948254,
+    "longitude": 77.683399,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nashik",
+    "market": "AGRICULTURE PRODUCE MARKET COMITEE CHANDWAD",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nashik",
+    "market": "Devala APMC",
+    "latitude": 19.9468174,
+    "longitude": 79.2553995,
+    "geocode_status": "geo_outlier"
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nashik",
+    "market": "Ghoti APMC",
+    "latitude": 19.7167761,
+    "longitude": 73.6244742,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nashik",
+    "market": "Malegaon APMC",
+    "latitude": 20.5576062,
+    "longitude": 74.5246514,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nashik",
+    "market": "Nasik APMC",
+    "latitude": 19.9480582,
+    "longitude": 73.8420837,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Palghar",
+    "market": "Kalyan APMC",
+    "latitude": 19.2396742,
+    "longitude": 73.1366482,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Palghar",
+    "market": "Palghar APMC",
+    "latitude": 19.6978882,
+    "longitude": 72.7718888,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Parbhani",
+    "market": "Jintur APMC",
+    "latitude": 19.6109438,
+    "longitude": 76.7438258,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Parbhani",
+    "market": "Pathari APMC",
+    "latitude": 19.260569,
+    "longitude": 76.433307,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Pune",
+    "market": "Junnar(Otur) APMC",
+    "latitude": 19.2006808,
+    "longitude": 73.976819,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Pune",
+    "market": "Khed(Chakan) APMC",
+    "latitude": 18.850107,
+    "longitude": 73.8380331,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Pune",
+    "market": "Pune APMC",
+    "latitude": 18.5213738,
+    "longitude": 73.8545071,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Pune",
+    "market": "Pune(Khadiki) APMC",
+    "latitude": 18.5213738,
+    "longitude": 73.8545071,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Pune",
+    "market": "Pune(Manjri) APMC",
+    "latitude": 18.5213738,
+    "longitude": 73.8545071,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Pune",
+    "market": "Pune(Moshi) APMC",
+    "latitude": 18.5213738,
+    "longitude": 73.8545071,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Raigad",
+    "market": "Alibagh APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Raigad",
+    "market": "Panvel APMC",
+    "latitude": 18.9895249,
+    "longitude": 73.1221935,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Raigad",
+    "market": "Pen APMC",
+    "latitude": 18.735385,
+    "longitude": 73.0868161,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Ratnagiri",
+    "market": "Ratnagiri (Nachane) APMC",
+    "latitude": 16.9933521,
+    "longitude": 73.2954371,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Sangli",
+    "market": "Islampur APMC",
+    "latitude": 17.0502198,
+    "longitude": 74.2661719,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Sangli",
+    "market": "Sangli APMC",
+    "latitude": 16.8502534,
+    "longitude": 74.5948885,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Sangli",
+    "market": "Sangli(Phale, Bhajipala Market) APMC",
+    "latitude": 16.8502534,
+    "longitude": 74.5948885,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Sangli",
+    "market": "Vita APMC",
+    "latitude": 17.271977,
+    "longitude": 74.5372841,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Satara",
+    "market": "Karad APMC",
+    "latitude": 17.2852127,
+    "longitude": 74.1822147,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Satara",
+    "market": "Patan APMC",
+    "latitude": 17.3565267,
+    "longitude": 73.8634207,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Satara",
+    "market": "Satara APMC",
+    "latitude": 17.688321,
+    "longitude": 74.0041726,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Satara",
+    "market": "Vaduj APMC",
+    "latitude": 17.5950822,
+    "longitude": 74.4504661,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Solapur",
+    "market": "Akluj APMC",
+    "latitude": 17.8930069,
+    "longitude": 75.0204482,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Solapur",
+    "market": "Barshi APMC",
+    "latitude": 18.2341108,
+    "longitude": 75.6875109,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Solapur",
+    "market": "Karmala APMC",
+    "latitude": 18.321381,
+    "longitude": 75.1168773,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Solapur",
+    "market": "Mangal Wedha APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Solapur",
+    "market": "SHRI.SIDDHESHWAR APMC",
+    "latitude": 17.6120485,
+    "longitude": 75.9462795,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Washim",
+    "market": "Manora APMC",
+    "latitude": 20.2247109,
+    "longitude": 77.5502264,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Yavatmal",
+    "market": "Mahesh Krushi Utpanna Bazar, Digras, Dist Yeotmal",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Manipur",
+    "district": "Bishnupur",
+    "market": "Bishenpur APMC",
+    "latitude": 24.6267287,
+    "longitude": 93.7600454,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Manipur",
+    "district": "Imphal East",
+    "market": "Lamlong Bazaar APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Manipur",
+    "district": "Thoubal",
+    "market": "Thoubal APMC",
+    "latitude": 24.6386954,
+    "longitude": 93.996871,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Meghalaya",
+    "district": "East Khasi Hills",
+    "market": "Shillong APMC",
+    "latitude": 25.5759931,
+    "longitude": 91.8827872,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "NCT of Delhi",
+    "district": "Delhi",
+    "market": "APMC Azadpur",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "NCT of Delhi",
+    "district": "Delhi",
+    "market": "APMC Keshopur",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "NCT of Delhi",
+    "district": "Delhi",
+    "market": "Fish,Poultry & Egg Market, Gazipur APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "NCT of Delhi",
+    "district": "Delhi",
+    "market": "Flower Market,Gazipur APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Nagaland",
+    "district": "Mokokchung",
+    "market": "Mangkolemba APMC",
+    "latitude": 26.4351671,
+    "longitude": 94.4114415,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Nagaland",
+    "district": "Mokokchung",
+    "market": "Tuli APMC",
+    "latitude": 26.6492423,
+    "longitude": 94.6563894,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Nagaland",
+    "district": "Tsemenyu",
+    "market": "Tsemenyu APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Nagaland",
+    "district": "Wokha",
+    "market": "Baghty APMC",
+    "latitude": 26.2593211,
+    "longitude": 94.2045043,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Nagaland",
+    "district": "Wokha",
+    "market": "Wokha Town APMC",
+    "latitude": 26.0962958,
+    "longitude": 94.2544489,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Odisha",
+    "district": "Angul",
+    "market": "Angul APMC",
+    "latitude": 20.8602508,
+    "longitude": 85.1021043,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Odisha",
+    "district": "Balasore",
+    "market": "Jaleswar APMC",
+    "latitude": 21.7976371,
+    "longitude": 87.2200637,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Odisha",
+    "district": "Balasore",
+    "market": "Nilagiri APMC",
+    "latitude": 21.4633558,
+    "longitude": 86.775451,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Odisha",
+    "district": "Bargarh",
+    "market": "Attabira APMC",
+    "latitude": 21.4468176,
+    "longitude": 83.7671747,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Odisha",
+    "district": "Bargarh",
+    "market": "Bargarh APMC",
+    "latitude": 21.3477634,
+    "longitude": 83.657683,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Odisha",
+    "district": "Bargarh",
+    "market": "Bargarh(Barapalli) APMC",
+    "latitude": 21.3477634,
+    "longitude": 83.657683,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Odisha",
+    "district": "Bolangir",
+    "market": "Bolangir APMC",
+    "latitude": 20.7010317,
+    "longitude": 83.482981,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Odisha",
+    "district": "Bolangir",
+    "market": "Kantabaji APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Odisha",
+    "district": "Boudh",
+    "market": "Boudh APMC",
+    "latitude": 20.8415619,
+    "longitude": 84.3213321,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Odisha",
+    "district": "Cuttack",
+    "market": "Banki APMC",
+    "latitude": 20.3924025,
+    "longitude": 85.605338,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Odisha",
+    "district": "Dhenkanal",
+    "market": "Dhenkanal APMC",
+    "latitude": 20.6767247,
+    "longitude": 85.5901721,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Odisha",
+    "district": "Dhenkanal",
+    "market": "Hindol APMC",
+    "latitude": 20.6381058,
+    "longitude": 85.2128553,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Odisha",
+    "district": "Ganjam",
+    "market": "Bhanjanagar APMC",
+    "latitude": 20.0209157,
+    "longitude": 84.4864172,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Odisha",
+    "district": "Jagatsinghpur",
+    "market": "Jagatsinghpur APMC",
+    "latitude": 20.2327324,
+    "longitude": 86.1624628,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Odisha",
+    "district": "Jagatsinghpur",
+    "market": "Rahama APMC",
+    "latitude": 20.2983235,
+    "longitude": 86.404877,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Odisha",
+    "district": "Jharsuguda",
+    "market": "Jharsuguda APMC",
+    "latitude": 21.8770513,
+    "longitude": 84.0090506,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Odisha",
+    "district": "Kalahandi",
+    "market": "Bhawanipatna APMC",
+    "latitude": 19.9104952,
+    "longitude": 83.1678321,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Odisha",
+    "district": "Kalahandi",
+    "market": "Junagarh APMC",
+    "latitude": 19.8137068,
+    "longitude": 82.946796,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Odisha",
+    "district": "Kendrapara",
+    "market": "Chatta Krushak Bazar APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Odisha",
+    "district": "Kendrapara",
+    "market": "Gopa APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Odisha",
+    "district": "Khurda",
+    "market": "Jatni APMC",
+    "latitude": 20.1539194,
+    "longitude": 85.7172706,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Odisha",
+    "district": "Malkangiri",
+    "market": "Malkangiri(Korakunda) APMC",
+    "latitude": 18.3583544,
+    "longitude": 81.8982375,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Odisha",
+    "district": "Mayurbhanja",
+    "market": "Baripada APMC",
+    "latitude": 21.9342456,
+    "longitude": 86.7308825,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Odisha",
+    "district": "Mayurbhanja",
+    "market": "Betnoti APMC",
+    "latitude": 21.7418915,
+    "longitude": 86.8456965,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Odisha",
+    "district": "Mayurbhanja",
+    "market": "Karanjia APMC",
+    "latitude": 21.7863762,
+    "longitude": 86.0660529,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Odisha",
+    "district": "Mayurbhanja",
+    "market": "Narasinghpur APMC",
+    "latitude": 20.5132535,
+    "longitude": 85.019126,
+    "geocode_status": "geo_outlier"
+  },
+  {
+    "state": "Odisha",
+    "district": "Nayagarh",
+    "market": "Bahadajholla APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Odisha",
+    "district": "Nayagarh",
+    "market": "Sarankul APMC",
+    "latitude": 20.0099679,
+    "longitude": 85.1381725,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Odisha",
+    "district": "Puri",
+    "market": "Dumal APMC",
+    "latitude": 20.4286586,
+    "longitude": 85.1902116,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Odisha",
+    "district": "Puri",
+    "market": "Sakhigopal APMC",
+    "latitude": 19.9427763,
+    "longitude": 85.8160362,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Odisha",
+    "district": "Rayagada",
+    "market": "Gunpur APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Odisha",
+    "district": "Sambalpur",
+    "market": "Rairakhol APMC",
+    "latitude": 21.0462204,
+    "longitude": 84.3333106,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Odisha",
+    "district": "Sonepur",
+    "market": "Birmaharajpur APMC",
+    "latitude": 20.8681154,
+    "longitude": 84.0474915,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Odisha",
+    "district": "Sundergarh",
+    "market": "Panposh APMC",
+    "latitude": 22.2285985,
+    "longitude": 84.8053233,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Odisha",
+    "district": "Sundergarh",
+    "market": "Sargipali APMC",
+    "latitude": 21.17981,
+    "longitude": 83.5310697,
+    "geocode_status": "geo_outlier"
+  },
+  {
+    "state": "Punjab",
+    "district": "Amritsar",
+    "market": "Ajnala APMC",
+    "latitude": 31.8442334,
+    "longitude": 74.7625233,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Punjab",
+    "district": "Amritsar",
+    "market": "Chogawan APMC",
+    "latitude": 31.7052263,
+    "longitude": 74.6604646,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Punjab",
+    "district": "Amritsar",
+    "market": "Majitha APMC",
+    "latitude": 31.7565085,
+    "longitude": 74.9567976,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Punjab",
+    "district": "Amritsar",
+    "market": "Rayya APMC",
+    "latitude": 31.5400094,
+    "longitude": 75.2320334,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Punjab",
+    "district": "Bhatinda",
+    "market": "Raman APMC",
+    "latitude": 29.9496545,
+    "longitude": 74.9771404,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Punjab",
+    "district": "Bhatinda",
+    "market": "Rampuraphul(Nabha Mandi) APMC",
+    "latitude": 30.2110803,
+    "longitude": 74.9507922,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Punjab",
+    "district": "Faridkot",
+    "market": "Kotkapura APMC",
+    "latitude": 30.5842864,
+    "longitude": 74.8089127,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Punjab",
+    "district": "Fazilka",
+    "market": "Fazilka APMC",
+    "latitude": 30.4032097,
+    "longitude": 74.0310609,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Punjab",
+    "district": "Fazilka",
+    "market": "Jalalabad APMC",
+    "latitude": 30.6065977,
+    "longitude": 74.2581087,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Punjab",
+    "district": "Ferozpur",
+    "market": "Zira APMC",
+    "latitude": 30.971299,
+    "longitude": 74.9881797,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Punjab",
+    "district": "Gurdaspur",
+    "market": "Dinanagar APMC",
+    "latitude": 32.1338479,
+    "longitude": 75.4719883,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Punjab",
+    "district": "Gurdaspur",
+    "market": "Gurdaspur APMC",
+    "latitude": 32.0419134,
+    "longitude": 75.4001677,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Punjab",
+    "district": "Gurdaspur",
+    "market": "Kalanaur APMC",
+    "latitude": 32.012734,
+    "longitude": 75.1495742,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Punjab",
+    "district": "Hoshiarpur",
+    "market": "Mukerian APMC",
+    "latitude": 31.94205,
+    "longitude": 75.6121906,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Punjab",
+    "district": "Hoshiarpur",
+    "market": "Tanda Urmur APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Punjab",
+    "district": "Jalandhar",
+    "market": "Adampur APMC",
+    "latitude": 31.4310724,
+    "longitude": 75.7161526,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Punjab",
+    "district": "Jalandhar",
+    "market": "Noor Mehal APMC",
+    "latitude": 31.1278047,
+    "longitude": 75.4746463,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Punjab",
+    "district": "Ludhiana",
+    "market": "Doraha APMC",
+    "latitude": 30.7988727,
+    "longitude": 76.0372906,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Punjab",
+    "district": "Ludhiana",
+    "market": "Jagraon APMC",
+    "latitude": 30.8041704,
+    "longitude": 75.4753645,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Punjab",
+    "district": "Ludhiana",
+    "market": "Khanna APMC",
+    "latitude": 30.700625,
+    "longitude": 76.2220763,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Punjab",
+    "district": "Ludhiana",
+    "market": "Ludhiana APMC",
+    "latitude": 30.9090157,
+    "longitude": 75.851601,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Punjab",
+    "district": "Moga",
+    "market": "Baghapurana APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Punjab",
+    "district": "Moga",
+    "market": "Nihal Singh Wala APMC",
+    "latitude": 30.5896671,
+    "longitude": 75.2805144,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Punjab",
+    "district": "Mohali",
+    "market": "Banur APMC",
+    "latitude": 30.708303,
+    "longitude": 76.6575811,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Punjab",
+    "district": "Mohali",
+    "market": "Kharar APMC",
+    "latitude": 30.7401887,
+    "longitude": 76.6759342,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Punjab",
+    "district": "Mohali",
+    "market": "Lalru APMC",
+    "latitude": 30.4797102,
+    "longitude": 76.7944291,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Punjab",
+    "district": "Nawanshahr",
+    "market": "Balachaur APMC",
+    "latitude": 31.0634777,
+    "longitude": 76.2959789,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Punjab",
+    "district": "Nawanshahr",
+    "market": "Nawan Shahar(Subzi Mandi) APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Punjab",
+    "district": "Pathankot",
+    "market": "Pathankot APMC",
+    "latitude": 32.2692452,
+    "longitude": 75.6528858,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Punjab",
+    "district": "Patiala",
+    "market": "Ghanaur APMC",
+    "latitude": 30.3312684,
+    "longitude": 76.6120004,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Punjab",
+    "district": "Patiala",
+    "market": "Patiala APMC",
+    "latitude": 30.3301995,
+    "longitude": 76.4007656,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Punjab",
+    "district": "Patiala",
+    "market": "Patran APMC",
+    "latitude": 29.9554252,
+    "longitude": 76.0516968,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Punjab",
+    "district": "Sangrur",
+    "market": "Ahmedgarh APMC",
+    "latitude": 30.6772118,
+    "longitude": 75.8258147,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Punjab",
+    "district": "Sangrur",
+    "market": "Malerkotla APMC",
+    "latitude": 30.6500863,
+    "longitude": 75.883115,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Punjab",
+    "district": "Sangrur",
+    "market": "Sangrur APMC",
+    "latitude": 30.2432006,
+    "longitude": 75.8358123,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Punjab",
+    "district": "Tarntaran",
+    "market": "Bhikhiwind APMC",
+    "latitude": 31.3453907,
+    "longitude": 74.6926546,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Punjab",
+    "district": "Tarntaran",
+    "market": "Harike APMC",
+    "latitude": 31.1674771,
+    "longitude": 74.944863,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Punjab",
+    "district": "Tarntaran",
+    "market": "Naushera Pannuan APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Punjab",
+    "district": "Tarntaran",
+    "market": "Patti APMC",
+    "latitude": 31.2802361,
+    "longitude": 74.8551871,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Punjab",
+    "district": "Tarntaran",
+    "market": "Tarantaran APMC",
+    "latitude": 31.5453071,
+    "longitude": 75.0054797,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Rajasthan",
+    "district": "Alwar",
+    "market": "Kherli APMC",
+    "latitude": 27.2003038,
+    "longitude": 77.037136,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Rajasthan",
+    "district": "Baran",
+    "market": "Baran APMC",
+    "latitude": 25.0952665,
+    "longitude": 76.5070495,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Rajasthan",
+    "district": "Barmer",
+    "market": "Dhorimanna APMC",
+    "latitude": 25.2039581,
+    "longitude": 71.4385071,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Rajasthan",
+    "district": "Bharatpur",
+    "market": "Bayana APMC",
+    "latitude": 26.9059419,
+    "longitude": 77.2924498,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Rajasthan",
+    "district": "Churu",
+    "market": "Churu APMC",
+    "latitude": 28.5,
+    "longitude": 74.5,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Rajasthan",
+    "district": "Churu",
+    "market": "Sadulpur APMC",
+    "latitude": 28.6415386,
+    "longitude": 75.3852992,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Rajasthan",
+    "district": "Dausa",
+    "market": "Dausa APMC",
+    "latitude": 26.9001256,
+    "longitude": 76.3306011,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Rajasthan",
+    "district": "Ganganagar",
+    "market": "Gajsinghpur APMC",
+    "latitude": 29.6576658,
+    "longitude": 73.4404763,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Rajasthan",
+    "district": "Ganganagar",
+    "market": "Sadulshahar APMC",
+    "latitude": 29.9030191,
+    "longitude": 74.1721767,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Rajasthan",
+    "district": "Ganganagar",
+    "market": "Sriganganagar (F&V) APMC",
+    "latitude": 29.904103,
+    "longitude": 73.874544,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Rajasthan",
+    "district": "Hanumangarh",
+    "market": "Bhadara APMC",
+    "latitude": 29.1012943,
+    "longitude": 75.1675355,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Rajasthan",
+    "district": "Hanumangarh",
+    "market": "Rawatsar APMC",
+    "latitude": 29.2631,
+    "longitude": 74.4016,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Rajasthan",
+    "district": "Jaipur",
+    "market": "Bassi APMC",
+    "latitude": 26.8349177,
+    "longitude": 76.0499664,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Rajasthan",
+    "district": "Jaipur",
+    "market": "Jaipur (F&V) APMC",
+    "latitude": 26.9154576,
+    "longitude": 75.8189817,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Rajasthan",
+    "district": "Jaisalmer",
+    "market": "Jaisalmer APMC",
+    "latitude": 26.9116615,
+    "longitude": 70.9124888,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Rajasthan",
+    "district": "Jalore",
+    "market": "Jalore APMC",
+    "latitude": 25.3476006,
+    "longitude": 72.6260916,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Rajasthan",
+    "district": "Jalore",
+    "market": "Raniwara APMC",
+    "latitude": 24.7509041,
+    "longitude": 72.2046692,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Rajasthan",
+    "district": "Jhalawar",
+    "market": "Iklera APMC",
+    "latitude": 25.025923,
+    "longitude": 76.5345382,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Rajasthan",
+    "district": "Jhunjhunu",
+    "market": "Surajgarh APMC",
+    "latitude": 28.297926,
+    "longitude": 75.7311124,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Rajasthan",
+    "district": "Jodhpur",
+    "market": "Jodhpur (F&V) APMC",
+    "latitude": 26.2967719,
+    "longitude": 73.0351433,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Rajasthan",
+    "district": "Jodhpur",
+    "market": "Osiyan Mathania APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Rajasthan",
+    "district": "Kota",
+    "market": "Ramganjmandi APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Rajasthan",
+    "district": "Nagaur",
+    "market": "Degana APMC",
+    "latitude": 26.8958747,
+    "longitude": 74.3222498,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Rajasthan",
+    "district": "Pratapgarh",
+    "market": "Pratapgarh APMC",
+    "latitude": 24.0333495,
+    "longitude": 74.7801315,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Rajasthan",
+    "district": "Rajsamand",
+    "market": "Rajsamand APMC",
+    "latitude": 25.0585825,
+    "longitude": 73.8880816,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Rajasthan",
+    "district": "Swai Madhopur",
+    "market": "Gangapur City APMC",
+    "latitude": 26.4681809,
+    "longitude": 76.7266811,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Rajasthan",
+    "district": "Swai Madhopur",
+    "market": "Sawai Madhopur APMC",
+    "latitude": 26.2290186,
+    "longitude": 76.3043561,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Rajasthan",
+    "district": "Tonk",
+    "market": "Deoli APMC",
+    "latitude": 25.7600492,
+    "longitude": 75.3755879,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Rajasthan",
+    "district": "Tonk",
+    "market": "Malpura APMC",
+    "latitude": 26.2888019,
+    "longitude": 75.3729774,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Rajasthan",
+    "district": "Udaipur",
+    "market": "Fatehnagar APMC",
+    "latitude": 24.8156354,
+    "longitude": 74.0942855,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Rajasthan",
+    "district": "Udaipur",
+    "market": "Udaipur (F&V) APMC",
+    "latitude": 24.578721,
+    "longitude": 73.6862571,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Ariyalur",
+    "market": "Ariyalur(Uzhavar Sandhai)",
+    "latitude": 11.1357708,
+    "longitude": 79.0723203,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Chengalpattu",
+    "market": "Chengalpet(Uzhavar Sandhai )",
+    "latitude": 12.7174949,
+    "longitude": 79.9549584,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Chengalpattu",
+    "market": "Guduvancheri(Uzhavar Sandhai )",
+    "latitude": 12.8452303,
+    "longitude": 80.0576503,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Chengalpattu",
+    "market": "Jameenrayapettai(Uzhavar Sandhai )",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Chengalpattu",
+    "market": "Nanganallur(Uzhavar Sandhai )",
+    "latitude": 12.9801242,
+    "longitude": 80.184902,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Chengalpattu",
+    "market": "Pallavaram(Uzhavar Sandhai )",
+    "latitude": 12.9654669,
+    "longitude": 80.1451178,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Coimbatore",
+    "market": "Kurichi(Uzhavar Sandhai )",
+    "latitude": 10.9660449,
+    "longitude": 76.9636929,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Coimbatore",
+    "market": "Mettupalayam(Uzhavar Sandhai )",
+    "latitude": 11.3059363,
+    "longitude": 76.9356545,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Coimbatore",
+    "market": "RSPuram(Uzhavar Sandhai )",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Coimbatore",
+    "market": "Singanallur(Uzhavar Sandhai )",
+    "latitude": 11.0124691,
+    "longitude": 77.0391191,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Cuddalore",
+    "market": "Chidambaram(Uzhavar Sandhai )",
+    "latitude": 11.3920706,
+    "longitude": 79.703025,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Cuddalore",
+    "market": "Cuddalore APMC",
+    "latitude": 11.7426938,
+    "longitude": 79.7503064,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Cuddalore",
+    "market": "Cuddalore(Uzhavar Sandhai )",
+    "latitude": 11.7426938,
+    "longitude": 79.7503064,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Cuddalore",
+    "market": "Panruti(Uzhavar Sandhai )",
+    "latitude": 11.7722823,
+    "longitude": 79.5518978,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Cuddalore",
+    "market": "Vadalur(Uzhavar Sandhai )",
+    "latitude": 11.5551872,
+    "longitude": 79.555067,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Dharmapuri",
+    "market": "AJattihalli(Uzhavar Sandhai )",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Dharmapuri",
+    "market": "Dharmapuri(Uzhavar Sandhai )",
+    "latitude": 12.1347988,
+    "longitude": 78.1589864,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Dharmapuri",
+    "market": "Palacode(Uzhavar Sandhai )",
+    "latitude": 12.3041231,
+    "longitude": 78.0728817,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Dharmapuri",
+    "market": "Pennagaram(Uzhavar Sandhai )",
+    "latitude": 12.1125277,
+    "longitude": 77.8677247,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Dindigul",
+    "market": "Chinnalapatti(Uzhavar Sandhai )",
+    "latitude": 10.2767592,
+    "longitude": 77.9218398,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Dindigul",
+    "market": "Dindigul(Uzhavar Sandhai )",
+    "latitude": 10.365646,
+    "longitude": 77.9693256,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Dindigul",
+    "market": "Palani(Uzhavar Sandhai )",
+    "latitude": 10.4511094,
+    "longitude": 77.5154495,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Erode",
+    "market": "Gobichettipalayam(Uzhavar Sandhai )",
+    "latitude": 11.4551821,
+    "longitude": 77.4350666,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Erode",
+    "market": "Periyar Nagar(Uzhavar Sandhai )",
+    "latitude": 11.3343473,
+    "longitude": 77.7251594,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Erode",
+    "market": "Sampath Nagar(Uzhavar Sandhai )",
+    "latitude": 11.3380754,
+    "longitude": 77.7075216,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Kallakuruchi",
+    "market": "Kallakurichi(Uzhavar Sandhai )",
+    "latitude": 11.7446921,
+    "longitude": 78.9599287,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Kallakuruchi",
+    "market": "Sankarapuram(Uzhavar Sandhai )",
+    "latitude": 11.7415888,
+    "longitude": 78.9110473,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Kancheepuram",
+    "market": "Kancheepuram(Uzhavar Sandhai )",
+    "latitude": 12.88211,
+    "longitude": 79.8063903,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Kancheepuram",
+    "market": "Kundrathur(Uzhavar Sandhai )",
+    "latitude": 12.9959652,
+    "longitude": 80.0975672,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Kancheepuram",
+    "market": "Padappai(Uzhavar Sandhai )",
+    "latitude": 12.8876927,
+    "longitude": 80.0220457,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Karur",
+    "market": "Gandhigramam(Uzhavar Sandhai)",
+    "latitude": 10.9462902,
+    "longitude": 78.1073951,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Karur",
+    "market": "Kulithalai(Uzhavar Sandhai )",
+    "latitude": 10.8154548,
+    "longitude": 78.4881255,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Karur",
+    "market": "Pallapatti (Uzhavar Sandhai )",
+    "latitude": 10.7230126,
+    "longitude": 77.8916893,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Krishnagiri",
+    "market": "Avallapalli(Uzhavar Sandhai )",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Krishnagiri",
+    "market": "Denkanikottai(Uzhavar Sandhai )",
+    "latitude": 12.5128321,
+    "longitude": 77.761123,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Krishnagiri",
+    "market": "Hosur(Uzhavar Sandhai )",
+    "latitude": 12.7183361,
+    "longitude": 77.8229481,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Madurai",
+    "market": "Anaiyur(Uzhavar Sandhai )",
+    "latitude": 9.9613729,
+    "longitude": 78.1085215,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Madurai",
+    "market": "Anna nagar(Uzhavar Sandhai )",
+    "latitude": 9.9216749,
+    "longitude": 78.1481372,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Madurai",
+    "market": "Melur(Uzhavar Sandhai )",
+    "latitude": 10.0858443,
+    "longitude": 78.3560235,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Nagapattinam",
+    "market": "Mayiladuthurai(Uzhavar Sandhai )",
+    "latitude": 10.8271678,
+    "longitude": 79.6363084,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Nagapattinam",
+    "market": "Nagapattinam(Uzhavar Sandhai )",
+    "latitude": 10.7647952,
+    "longitude": 79.8430779,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Nagapattinam",
+    "market": "Sirkali(Uzhavar Sandhai )",
+    "latitude": 11.2659039,
+    "longitude": 79.7443269,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Nagercoil (Kannyiakumari)",
+    "market": "Myladi(Uzhavar Sandhai )",
+    "latitude": 10.9030573,
+    "longitude": 78.4039776,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Nagercoil (Kannyiakumari)",
+    "market": "Vadaseri APMC",
+    "latitude": 10.732691,
+    "longitude": 78.525975,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Namakkal",
+    "market": "Kumarapalayam(Uzhavar Sandhai )",
+    "latitude": 11.3882525,
+    "longitude": 77.7778376,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Namakkal",
+    "market": "Mohanur(Uzhavar Sandhai )",
+    "latitude": 11.0689318,
+    "longitude": 78.1398608,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Namakkal",
+    "market": "Namakkal(Uzhavar Sandhai )",
+    "latitude": 11.2191692,
+    "longitude": 78.16787,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Namakkal",
+    "market": "Rasipuram(Uzhavar Sandhai )",
+    "latitude": 11.4537338,
+    "longitude": 78.1784576,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Namakkal",
+    "market": "Tiruchengode APMC",
+    "latitude": 11.3786608,
+    "longitude": 77.8949223,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Perambalur",
+    "market": "Perambalur(Uzhavar Sandhai )",
+    "latitude": 11.2356695,
+    "longitude": 78.8688353,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Pudukkottai",
+    "market": "Alangudi(Uzhavar Sandhai )",
+    "latitude": 10.3603703,
+    "longitude": 78.9778724,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Pudukkottai",
+    "market": "Aranthangi(Uzhavar Sandhai )",
+    "latitude": 10.1686451,
+    "longitude": 78.9927909,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Pudukkottai",
+    "market": "Pudukottai(Uzhavar Sandhai )",
+    "latitude": 10.3826515,
+    "longitude": 78.8191259,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Ramanathapuram",
+    "market": "Kamuthi(Uzhavar Sandhai )",
+    "latitude": 9.4086134,
+    "longitude": 78.3684318,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Ramanathapuram",
+    "market": "Paramakudi(Uzhavar Sandhai )",
+    "latitude": 9.4867151,
+    "longitude": 78.6722718,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Ramanathapuram",
+    "market": "Ramanathapuram(Uzhavar Sandhai )",
+    "latitude": 9.3588632,
+    "longitude": 78.8375276,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Ranipet",
+    "market": "Arcot(Uzhavar Sandhai )",
+    "latitude": 12.9078949,
+    "longitude": 79.320393,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Ranipet",
+    "market": "Ranipettai(Uzhavar Sandhai )",
+    "latitude": 12.9292452,
+    "longitude": 79.3321712,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Salem",
+    "market": "Ammapet(Uzhavar Sandhai )",
+    "latitude": 11.6588239,
+    "longitude": 78.1809483,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Salem",
+    "market": "Athur(Uzhavar Sandhai )",
+    "latitude": 11.5219859,
+    "longitude": 78.6646553,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Salem",
+    "market": "Attayampatti(Uzhavar Sandhai )",
+    "latitude": 11.531861,
+    "longitude": 78.0508039,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Salem",
+    "market": "Edapadi (Uzhavar Sandhai )",
+    "latitude": 11.5847174,
+    "longitude": 77.8380351,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Salem",
+    "market": "Elampillai(Uzhavar Sandhai )",
+    "latitude": 11.6048762,
+    "longitude": 78.007001,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Salem",
+    "market": "Hasthampatti(Uzhavar Sandhai )",
+    "latitude": 11.6764214,
+    "longitude": 78.1581382,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Salem",
+    "market": "Thathakapatti(Uzhavar Sandhai )",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Salem",
+    "market": "Vazhapadi(Uzhavar Sandhai)",
+    "latitude": 11.7056842,
+    "longitude": 78.3573363,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Sivaganga",
+    "market": "Devakottai (Uzhavar Sandhai )",
+    "latitude": 9.9504,
+    "longitude": 78.813747,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Sivaganga",
+    "market": "Karaikudi(Uzhavar Sandhai )",
+    "latitude": 9.8637559,
+    "longitude": 78.6394956,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Sivaganga",
+    "market": "Sivagangai (Uzhavar Sandhai )",
+    "latitude": 9.7889642,
+    "longitude": 78.5174665,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Sivaganga",
+    "market": "Tirupatthur(Uzhavar Sandhai )",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Tenkasi",
+    "market": "Sankarankoil(Uzhavar Sandhai )",
+    "latitude": 9.1473292,
+    "longitude": 77.5865568,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Tenkasi",
+    "market": "Tenkasi(Uzhavar Sandhai )",
+    "latitude": 9.0318958,
+    "longitude": 77.3653612,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Thanjavur",
+    "market": "Kumbakonam (Uzhavar Sandhai )",
+    "latitude": 10.9604108,
+    "longitude": 79.3820861,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Thanjavur",
+    "market": "Thanjavur(Uzhavar Sandhai )",
+    "latitude": 10.7860267,
+    "longitude": 79.1381497,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "The Nilgiris",
+    "market": "Coonoor(Uzhavar Sandhai )",
+    "latitude": 11.4129827,
+    "longitude": 76.6912893,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "The Nilgiris",
+    "market": "Udhagamandalam(Uzhavar Sandhai )",
+    "latitude": 11.4126769,
+    "longitude": 76.7030504,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Theni",
+    "market": "Andipatti(Uzhavar Sandhai )",
+    "latitude": 9.8033616,
+    "longitude": 77.5269013,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Theni",
+    "market": "Bodinayakanur(Uzhavar Sandhai )",
+    "latitude": 10.0324451,
+    "longitude": 77.350487,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Theni",
+    "market": "Chinnamanur(Uzhavar Sandhai )",
+    "latitude": 9.8415861,
+    "longitude": 77.3849422,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Theni",
+    "market": "Devaram(Uzhavar Sandhai )",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Theni",
+    "market": "Kambam(Uzhavar Sandhai )",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Theni",
+    "market": "Theni(Uzhavar Sandhai )",
+    "latitude": 10.0108143,
+    "longitude": 77.4810104,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Thiruchirappalli",
+    "market": "KKNagar(Uzhavar Sandhai )",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Thiruchirappalli",
+    "market": "Lalgudi(Uzhavar Sandhai )",
+    "latitude": 10.8754197,
+    "longitude": 78.8153244,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Thiruchirappalli",
+    "market": "Manapparai(Uzhavar Sandhai )",
+    "latitude": 10.6082305,
+    "longitude": 78.4231246,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Thiruchirappalli",
+    "market": "Musiri(Uzhavar Sandhai )",
+    "latitude": 11.0488173,
+    "longitude": 78.5282293,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Thirunelveli",
+    "market": "Ambasamudram(Uzhavar Sandhai )",
+    "latitude": 8.7082538,
+    "longitude": 77.4382732,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Thirunelveli",
+    "market": "Kandiyaperi(Uzhavar Sandhai )",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Thirunelveli",
+    "market": "Melapalayam(Uzhavar Sandhai )",
+    "latitude": 10.9915467,
+    "longitude": 77.9846497,
+    "geocode_status": "geo_outlier"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Thirunelveli",
+    "market": "NGO Colony(Uzhavar Sandhai )",
+    "latitude": 12.9948953,
+    "longitude": 80.2077603,
+    "geocode_status": "geo_outlier"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Thirunelveli",
+    "market": "Palayamkottai(Uzhavar Sandhai )",
+    "latitude": 8.719652,
+    "longitude": 77.7644324,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Thirunelveli",
+    "market": "Sankarankovil APMC",
+    "latitude": 9.170073,
+    "longitude": 77.535369,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Thirupathur",
+    "market": "Natrampalli(Uzhavar Sandhai )",
+    "latitude": 12.5937269,
+    "longitude": 78.5140944,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Thirupathur",
+    "market": "Vaniyampadi(Uzhavar Sandhai )",
+    "latitude": 12.6482999,
+    "longitude": 78.5829651,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Thirupur",
+    "market": "Dharapuram(Uzhavar Sandhai )",
+    "latitude": 10.7369082,
+    "longitude": 77.5260968,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Thirupur",
+    "market": "Kangayam(Uzhavar Sandhai )",
+    "latitude": 11.3259133,
+    "longitude": 77.6904666,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Thirupur",
+    "market": "Palladam(Uzhavar Sandhai )",
+    "latitude": 10.9708115,
+    "longitude": 77.2817262,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Thirupur",
+    "market": "Tiruppur (South) (Uzhavar Sandhai )",
+    "latitude": 10.7915267,
+    "longitude": 77.5325466,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Thiruvannamalai",
+    "market": "Arani(Uzhavar Sandhai )",
+    "latitude": 13.3310399,
+    "longitude": 80.0835726,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Thiruvannamalai",
+    "market": "Chengam(Uzhavar Sandhai )",
+    "latitude": 12.3502311,
+    "longitude": 78.8767964,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Thiruvannamalai",
+    "market": "Keelpennathur(Uzhavar Sandhai )",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Thiruvannamalai",
+    "market": "Tamarainagar(Uzhavar Sandhai )",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Thiruvannamalai",
+    "market": "Tiruvannamalai(Uzhavar Sandhai )",
+    "latitude": 12.2259398,
+    "longitude": 79.0660738,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Thiruvannamalai",
+    "market": "Vettavalam APMC",
+    "latitude": 12.1044323,
+    "longitude": 79.2411207,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Thiruvarur",
+    "market": "Mannargudi I(Uzhavar Sandhai )",
+    "latitude": 10.6673278,
+    "longitude": 79.4443834,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Thiruvarur",
+    "market": "Tiruthuraipoondi(Uzhavar Sandhai )",
+    "latitude": 10.53,
+    "longitude": 79.643497,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Thiruvellore",
+    "market": "Ambattur(Uzhavar Sandhai )",
+    "latitude": 13.1189668,
+    "longitude": 80.150864,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Thiruvellore",
+    "market": "Naravarikuppam(Uzhavar Sandhai )",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Thiruvellore",
+    "market": "Paruthipattu(Uzhavar Sandhai )",
+    "latitude": 13.0901576,
+    "longitude": 80.1090418,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Thiruvellore",
+    "market": "Perambakkam(Uzhavar Sandhai )",
+    "latitude": 13.0377208,
+    "longitude": 79.8133227,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Thiruvellore",
+    "market": "Tiruthani(Uzhavar Sandhai )",
+    "latitude": 12.8118917,
+    "longitude": 79.7524569,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Thiruvellore",
+    "market": "Tiruvallur(Uzhavar Sandhai )",
+    "latitude": 13.1394221,
+    "longitude": 79.9070839,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Tuticorin",
+    "market": "Kovilpatti(Uzhavar Sandhai )",
+    "latitude": 9.1742024,
+    "longitude": 77.8657394,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Tuticorin",
+    "market": "Tuticorin(Uzhavar Sandhai )",
+    "latitude": 8.8061388,
+    "longitude": 78.1553023,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Vellore",
+    "market": "Gudiyatham APMC",
+    "latitude": 12.9485676,
+    "longitude": 78.8705336,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Vellore",
+    "market": "Gudiyatham(Uzhavar Sandhai )",
+    "latitude": 12.9485676,
+    "longitude": 78.8705336,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Vellore",
+    "market": "Kahithapattarai(Uzhavar Sandhai )",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Vellore",
+    "market": "Katpadi (Uzhavar Sandhai )",
+    "latitude": 13.0435051,
+    "longitude": 79.2404096,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Vellore",
+    "market": "Perampet(Uzhavar Sandhai)",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Vellore",
+    "market": "Thirupathur APMC",
+    "latitude": 12.8940925,
+    "longitude": 79.0427509,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Vellore",
+    "market": "Vellore APMC",
+    "latitude": 12.9071753,
+    "longitude": 79.1309695,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Villupuram",
+    "market": "Gingee(Uzhavar Sandhai )",
+    "latitude": 12.1089943,
+    "longitude": 79.2462106,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Villupuram",
+    "market": "Manalurpet APMC",
+    "latitude": 11.9799272,
+    "longitude": 79.1809789,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Villupuram",
+    "market": "Thirukovilur APMC",
+    "latitude": 11.9713023,
+    "longitude": 79.2108016,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Villupuram",
+    "market": "Tindivanam APMC",
+    "latitude": 12.2412041,
+    "longitude": 79.6516822,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Villupuram",
+    "market": "Ulundurpettai APMC",
+    "latitude": 11.7391848,
+    "longitude": 79.2980558,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Villupuram",
+    "market": "Villupuram(Uzhavar Sandhai )",
+    "latitude": 11.9494675,
+    "longitude": 79.4871375,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Virudhunagar",
+    "market": "Aruppukottai(Uzhavar Sandhai )",
+    "latitude": 9.5799382,
+    "longitude": 77.9538728,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Adilabad",
+    "market": "Adilabad APMC",
+    "latitude": 19.6759452,
+    "longitude": 78.5339895,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Adilabad",
+    "market": "Boath APMC",
+    "latitude": 19.360334,
+    "longitude": 78.2793388,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Hanumakonda",
+    "market": "Excise Colony,RBZ",
+    "latitude": 17.3983274,
+    "longitude": 78.5125609,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Hanumakonda",
+    "market": "Kamalapur APMC",
+    "latitude": 18.1739005,
+    "longitude": 79.5250884,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Hyderabad",
+    "market": "Gudimalkapur APMC",
+    "latitude": 17.3879203,
+    "longitude": 78.4371165,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Hyderabad",
+    "market": "RYTHU BAZAR ERRAGADDA",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Telangana",
+    "district": "Hyderabad",
+    "market": "RYTHU BAZAR FALAKNUMA",
+    "latitude": 17.3352427,
+    "longitude": 78.4680859,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Hyderabad",
+    "market": "RYTHU BAZAR MEHDIPATNAM",
+    "latitude": 17.3950891,
+    "longitude": 78.4412339,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Karimnagar",
+    "market": "Huzzurabad APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Telangana",
+    "district": "Karimnagar",
+    "market": "Karimnagar APMC",
+    "latitude": 18.4348122,
+    "longitude": 79.1328042,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Karimnagar",
+    "market": "Weekly Market Area,RBZ APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Telangana",
+    "district": "Khammam",
+    "market": "Sattupally APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Telangana",
+    "district": "Medchal Malkajgiri",
+    "market": "Kukatpally,RBZ",
+    "latitude": 17.4930841,
+    "longitude": 78.4054408,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Nagarkurnool",
+    "market": "Kalwakurthy APMC",
+    "latitude": 16.6721316,
+    "longitude": 78.4880729,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Nalgonda",
+    "market": "Venkateswarnagar APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Telangana",
+    "district": "Nirmal",
+    "market": "Bhainsa APMC",
+    "latitude": 19.107085,
+    "longitude": 77.9635656,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Nizamabad",
+    "market": "Nizamabad APMC",
+    "latitude": 18.6731912,
+    "longitude": 78.0978195,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Ranga Reddy",
+    "market": "Gaddiannaram APMC",
+    "latitude": 17.3636842,
+    "longitude": 78.523971,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Ranga Reddy",
+    "market": "Ibrahimpatnam APMC",
+    "latitude": 17.1952924,
+    "longitude": 78.6508564,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Ranga Reddy",
+    "market": "L B Nagar APMC",
+    "latitude": 17.3498071,
+    "longitude": 78.5478875,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Ranga Reddy",
+    "market": "Saroornagar,RBZ",
+    "latitude": 17.3585595,
+    "longitude": 78.5546103,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Ranga Reddy",
+    "market": "Vanasthalipuram,RBZ",
+    "latitude": 17.3303179,
+    "longitude": 78.568278,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Siddipet",
+    "market": "Bejjenki APMC",
+    "latitude": 18.2559006,
+    "longitude": 79.022105,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Siddipet",
+    "market": "Siddipet(Rythu Bazar)",
+    "latitude": 18.1017739,
+    "longitude": 78.8520128,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Siddipet",
+    "market": "Vantamamidi APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Telangana",
+    "district": "Warangal",
+    "market": "Warangal APMC",
+    "latitude": 17.9820644,
+    "longitude": 79.5970954,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tripura",
+    "district": "Dhalai",
+    "market": "Chowmanu APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Tripura",
+    "district": "Dhalai",
+    "market": "Gondatwisa APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Tripura",
+    "district": "Dhalai",
+    "market": "Kulai APMC",
+    "latitude": 23.8648599,
+    "longitude": 91.8579528,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tripura",
+    "district": "Dhalai",
+    "market": "Masli",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Tripura",
+    "district": "Khowai",
+    "market": "Kalyanpur APMC",
+    "latitude": 23.9333092,
+    "longitude": 91.6124314,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tripura",
+    "district": "North Tripura",
+    "market": "Dasda APMC",
+    "latitude": 23.9181689,
+    "longitude": 92.203005,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tripura",
+    "district": "North Tripura",
+    "market": "Kanchanpur",
+    "latitude": 23.9174023,
+    "longitude": 92.2339115,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tripura",
+    "district": "Sepahijala",
+    "market": "Melaghar APMC",
+    "latitude": 23.4947164,
+    "longitude": 91.3300645,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tripura",
+    "district": "South Tripura",
+    "market": "Barpathari APMC",
+    "latitude": 23.297425,
+    "longitude": 91.404781,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Tripura",
+    "district": "South Tripura",
+    "market": "Santir Bazar APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Tripura",
+    "district": "West District",
+    "market": "Champaknagar APMC",
+    "latitude": 23.8042948,
+    "longitude": 91.4891292,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Agra",
+    "market": "Agra APMC",
+    "latitude": 27.1752554,
+    "longitude": 78.0098161,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Agra",
+    "market": "Fatehabad APMC",
+    "latitude": 27.0276683,
+    "longitude": 78.2074341,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Agra",
+    "market": "Jagnair APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Agra",
+    "market": "Khairagarh APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Agra",
+    "market": "Samsabad APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Aligarh",
+    "market": "Aligarh APMC",
+    "latitude": 27.8815412,
+    "longitude": 78.0690216,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Aligarh",
+    "market": "Atrauli APMC",
+    "latitude": 27.9730519,
+    "longitude": 78.4005449,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Aligarh",
+    "market": "Charra APMC",
+    "latitude": 27.8640627,
+    "longitude": 78.1251799,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Aligarh",
+    "market": "Khair APMC",
+    "latitude": 27.9420637,
+    "longitude": 77.842669,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Ambedkarnagar",
+    "market": "Akbarpur APMC",
+    "latitude": 26.4200687,
+    "longitude": 82.5382541,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Amethi",
+    "market": "Jafarganj APMC",
+    "latitude": 26.4685222,
+    "longitude": 81.5859582,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Amethi",
+    "market": "Sultanpur APMC",
+    "latitude": 26.7595764,
+    "longitude": 81.1333332,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Amroha",
+    "market": "Amroha APMC",
+    "latitude": 28.8922129,
+    "longitude": 78.4744272,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Amroha",
+    "market": "Hasanpur APMC",
+    "latitude": 28.7227817,
+    "longitude": 78.2826224,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Auraiya",
+    "market": "Auraiya APMC",
+    "latitude": 26.5200503,
+    "longitude": 79.4714031,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Ayodhya",
+    "market": "Rudauli APMC",
+    "latitude": 26.7266489,
+    "longitude": 81.7113871,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Azamgarh",
+    "market": "Azamgarh APMC",
+    "latitude": 26.0654351,
+    "longitude": 83.184439,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Badaun",
+    "market": "Babrala APMC",
+    "latitude": 28.2651557,
+    "longitude": 78.4054229,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Badaun",
+    "market": "Badayoun APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Badaun",
+    "market": "Shahaswan APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Badaun",
+    "market": "Ujhani APMC",
+    "latitude": 27.9951096,
+    "longitude": 79.0153138,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Baghpat",
+    "market": "Baraut APMC",
+    "latitude": 29.1560645,
+    "longitude": 77.3064032,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Baghpat",
+    "market": "Khekda APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Bahraich",
+    "market": "Bahraich APMC",
+    "latitude": 27.5752,
+    "longitude": 81.5954,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Balrampur",
+    "market": "Balrampur APMC",
+    "latitude": 27.4156351,
+    "longitude": 82.1609777,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Balrampur",
+    "market": "Tulsipur APMC",
+    "latitude": 27.5318766,
+    "longitude": 82.4090082,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Banda",
+    "market": "Atarra APMC",
+    "latitude": 25.2589804,
+    "longitude": 80.6182217,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Banda",
+    "market": "Banda APMC",
+    "latitude": 25.4775297,
+    "longitude": 80.334921,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Barabanki",
+    "market": "Barabanki APMC",
+    "latitude": 26.9274097,
+    "longitude": 81.1948375,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Barabanki",
+    "market": "Safdarganj APMC",
+    "latitude": 26.9143164,
+    "longitude": 81.3616885,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Bareilly",
+    "market": "Bareilly APMC",
+    "latitude": 28.4582345,
+    "longitude": 79.4047452,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Bijnor",
+    "market": "Kiratpur APMC",
+    "latitude": 29.504454,
+    "longitude": 78.2027486,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Bijnor",
+    "market": "Najibabad APMC",
+    "latitude": 29.6131324,
+    "longitude": 78.3430066,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Bulandshahar",
+    "market": "Anoop Shahar APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Bulandshahar",
+    "market": "Buland Shahr APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Bulandshahar",
+    "market": "Divai APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Bulandshahar",
+    "market": "Gulavati APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Bulandshahar",
+    "market": "Jahangirabad APMC",
+    "latitude": 28.4112085,
+    "longitude": 78.1113748,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Bulandshahar",
+    "market": "Khurja APMC",
+    "latitude": 28.2474639,
+    "longitude": 77.8536782,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Chitrakut",
+    "market": "Karvi APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Chitrakut",
+    "market": "Mau(Chitrakut) APMC",
+    "latitude": 26.0390905,
+    "longitude": 83.4985846,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Etah",
+    "market": "Aliganj APMC",
+    "latitude": 27.4856878,
+    "longitude": 79.0839208,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Etah",
+    "market": "Awagarh APMC",
+    "latitude": 27.4440366,
+    "longitude": 78.4857649,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Etah",
+    "market": "Etah APMC",
+    "latitude": 27.5721659,
+    "longitude": 78.6539605,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Etawah",
+    "market": "Bharthna APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Etawah",
+    "market": "Etawah APMC",
+    "latitude": 26.8194655,
+    "longitude": 79.0601195,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Etawah",
+    "market": "Jasvantnagar APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Farukhabad",
+    "market": "Farukhabad APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Farukhabad",
+    "market": "Kayamganj APMC",
+    "latitude": 27.5525036,
+    "longitude": 79.343542,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Fatehpur",
+    "market": "Bindki APMC",
+    "latitude": 26.0421896,
+    "longitude": 80.5149166,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Fatehpur",
+    "market": "Fatehpur APMC",
+    "latitude": 25.9167524,
+    "longitude": 80.8016651,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Fatehpur",
+    "market": "Khaga APMC",
+    "latitude": 25.7196316,
+    "longitude": 81.1058945,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Firozabad",
+    "market": "Sirsaganj APMC",
+    "latitude": 27.0569981,
+    "longitude": 78.686047,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Firozabad",
+    "market": "Tundla APMC",
+    "latitude": 27.2132859,
+    "longitude": 78.2371117,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Ghaziabad",
+    "market": "Hapur APMC",
+    "latitude": 28.7299677,
+    "longitude": 77.775499,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Ghazipur",
+    "market": "Jangipura APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Gonda",
+    "market": "Colonelganj APMC",
+    "latitude": 27.1048735,
+    "longitude": 81.7035794,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Gonda",
+    "market": "Nawabganj APMC",
+    "latitude": 26.8637478,
+    "longitude": 82.1381306,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Gorakhpur",
+    "market": "Gorakhpur APMC",
+    "latitude": 26.7600217,
+    "longitude": 83.3668129,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Hamirpur",
+    "market": "Bharuasumerpur APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Hamirpur",
+    "market": "Maudaha APMC",
+    "latitude": 25.7065665,
+    "longitude": 80.0434571,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Hardoi",
+    "market": "Hardoi APMC",
+    "latitude": 27.4010619,
+    "longitude": 80.1329669,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Hardoi",
+    "market": "Madhoganj APMC",
+    "latitude": 27.1005629,
+    "longitude": 80.0548625,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Hardoi",
+    "market": "Sandila APMC",
+    "latitude": 27.1254439,
+    "longitude": 80.5414908,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Hathras",
+    "market": "Haathras APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Hathras",
+    "market": "Shadabad APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Hathras",
+    "market": "Sikandraraau APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Jalaun (Orai)",
+    "market": "Jalaun APMC",
+    "latitude": 26.0921397,
+    "longitude": 79.3655965,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Jalaun (Orai)",
+    "market": "Konch APMC",
+    "latitude": 25.9963392,
+    "longitude": 79.3331997,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Jalaun (Orai)",
+    "market": "Orai APMC",
+    "latitude": 25.9827679,
+    "longitude": 79.4597648,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Jaunpur",
+    "market": "Jaunpur APMC",
+    "latitude": 25.7472,
+    "longitude": 82.689,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Jaunpur",
+    "market": "Mugrabaadshahpur APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Jaunpur",
+    "market": "Shahganj APMC",
+    "latitude": 26.0186438,
+    "longitude": 82.6172019,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Jhansi",
+    "market": "Baruwasagar APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Jhansi",
+    "market": "Gurusarai APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Jhansi",
+    "market": "Jhansi APMC",
+    "latitude": 25.4502464,
+    "longitude": 78.5800085,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Jhansi",
+    "market": "Mauranipur APMC",
+    "latitude": 25.2964858,
+    "longitude": 79.1171152,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Jhansi",
+    "market": "Moth APMC",
+    "latitude": 25.7779968,
+    "longitude": 78.9253888,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Kannuj",
+    "market": "Chhibramau APMC",
+    "latitude": 27.0776135,
+    "longitude": 79.5856961,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Kannuj",
+    "market": "Kannauj APMC",
+    "latitude": 26.9986675,
+    "longitude": 79.6927946,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Kanpur",
+    "market": "Baripaal APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Kanpur",
+    "market": "Choubepur APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Kanpur",
+    "market": "Kanpur(Grain) APMC",
+    "latitude": 26.4609135,
+    "longitude": 80.3217588,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Kanpur",
+    "market": "Uttaripura APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Kanpur Dehat",
+    "market": "Pukharayan APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Kanpur Dehat",
+    "market": "Rura APMC",
+    "latitude": 26.489896,
+    "longitude": 79.9011355,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Kasganj",
+    "market": "Ganj Dundwara APMC",
+    "latitude": 27.7326166,
+    "longitude": 78.9410162,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Kasganj",
+    "market": "Kasganj APMC",
+    "latitude": 27.8842264,
+    "longitude": 78.6338755,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Khiri (Lakhimpur)",
+    "market": "Maigalganj APMC",
+    "latitude": 27.7175858,
+    "longitude": 80.3437067,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Khiri (Lakhimpur)",
+    "market": "Tikonia APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Kushinagar",
+    "market": "Kushinagar APMC",
+    "latitude": 26.7438272,
+    "longitude": 83.9162322,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Lakhimpur",
+    "market": "Golagokarnath APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Lakhimpur",
+    "market": "Lakhimpur APMC",
+    "latitude": 27.946309,
+    "longitude": 80.7815166,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Lakhimpur",
+    "market": "Paliakala APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Lalitpur",
+    "market": "Lalitpur APMC",
+    "latitude": 24.6935695,
+    "longitude": 78.4178866,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Lucknow",
+    "market": "Lucknow APMC",
+    "latitude": 26.8381,
+    "longitude": 80.9346001,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Maharajganj",
+    "market": "Gadaura APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Mahoba",
+    "market": "Charkhari APMC",
+    "latitude": 25.4149429,
+    "longitude": 79.7494938,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Mahoba",
+    "market": "Mahoba APMC",
+    "latitude": 25.2886851,
+    "longitude": 79.8792071,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Mainpuri",
+    "market": "Bewar APMC",
+    "latitude": 27.2183955,
+    "longitude": 79.2971696,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Mainpuri",
+    "market": "Ghiraur APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Mainpuri",
+    "market": "Mainpuri APMC",
+    "latitude": 27.2270677,
+    "longitude": 79.0271702,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Mathura",
+    "market": "Kosikalan APMC",
+    "latitude": 27.7927679,
+    "longitude": 77.4406575,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Mathura",
+    "market": "Mathura APMC",
+    "latitude": 27.4955539,
+    "longitude": 77.6855554,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Mau(Maunathbhanjan)",
+    "market": "Kopaganj APMC",
+    "latitude": 26.0205442,
+    "longitude": 83.5685545,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Meerut",
+    "market": "Meerut APMC",
+    "latitude": 28.9963296,
+    "longitude": 77.7061915,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Mirzapur",
+    "market": "Ahirora APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Muzaffarnagar",
+    "market": "Shahpur APMC",
+    "latitude": 29.3495615,
+    "longitude": 77.5511169,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Pillibhit",
+    "market": "Bishalpur APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Pillibhit",
+    "market": "Puranpur APMC",
+    "latitude": 28.5143487,
+    "longitude": 80.1512946,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Pratapgarh",
+    "market": "Pratapgarh APMC",
+    "latitude": 25.8974011,
+    "longitude": 81.9373652,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Prayagraj",
+    "market": "Ajuha APMC",
+    "latitude": 25.7026986,
+    "longitude": 81.2491912,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Prayagraj",
+    "market": "Lediyari APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Prayagraj",
+    "market": "Prayagraj APMC",
+    "latitude": 25.4381302,
+    "longitude": 81.8338005,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Prayagraj",
+    "market": "Sirsa APMC",
+    "latitude": 28.1554817,
+    "longitude": 77.5498724,
+    "geocode_status": "geo_outlier"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Raebarelli",
+    "market": "Bachranwa APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Raebarelli",
+    "market": "Jayas APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Raebarelli",
+    "market": "Lalganj APMC",
+    "latitude": 25.9929388,
+    "longitude": 81.6604115,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Rampur",
+    "market": "Bilaspur APMC",
+    "latitude": 28.868311,
+    "longitude": 79.298075,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Rampur",
+    "market": "Rampur APMC",
+    "latitude": 28.8014001,
+    "longitude": 79.0284337,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Rampur",
+    "market": "Tanda(Rampur) APMC",
+    "latitude": 28.9815589,
+    "longitude": 78.9747316,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Saharanpur",
+    "market": "Chutmalpur APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Saharanpur",
+    "market": "Saharanpur APMC",
+    "latitude": 29.9637438,
+    "longitude": 77.5427464,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Sambhal",
+    "market": "Bhehjoi APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Sambhal",
+    "market": "Chandausi APMC",
+    "latitude": 28.4480992,
+    "longitude": 78.6730205,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Sambhal",
+    "market": "Sambhal APMC",
+    "latitude": 28.585197,
+    "longitude": 78.570932,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Shahjahanpur",
+    "market": "Jalalabad APMC",
+    "latitude": 27.6762923,
+    "longitude": 79.5401879,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Shahjahanpur",
+    "market": "Shahjahanpur APMC",
+    "latitude": 27.8934038,
+    "longitude": 79.9048982,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Shamli",
+    "market": "Kairana APMC",
+    "latitude": 29.394447,
+    "longitude": 77.2052786,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Shamli",
+    "market": "Khandhla APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Shamli",
+    "market": "Shamli APMC",
+    "latitude": 29.4483494,
+    "longitude": 77.3087719,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Shravasti",
+    "market": "Bhinga APMC",
+    "latitude": 27.6633821,
+    "longitude": 81.8843703,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Siddharth Nagar",
+    "market": "Naugarh APMC",
+    "latitude": 27.2748041,
+    "longitude": 83.088518,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Sitapur",
+    "market": "Hargaon (Laharpur) APMC",
+    "latitude": 27.7682621,
+    "longitude": 80.7304448,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Sitapur",
+    "market": "Mehmoodabad APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Sitapur",
+    "market": "Mishrit APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Sitapur",
+    "market": "Sitapur APMC",
+    "latitude": 27.5615568,
+    "longitude": 80.6840082,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Sonbhadra",
+    "market": "Dudhi APMC",
+    "latitude": 24.1148157,
+    "longitude": 83.014122,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Sonbhadra",
+    "market": "Robertsganj APMC",
+    "latitude": 24.6266156,
+    "longitude": 83.2403026,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Unnao",
+    "market": "Bangarmau APMC",
+    "latitude": 26.8916447,
+    "longitude": 80.21506,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Varanasi",
+    "market": "Varanasi APMC",
+    "latitude": 25.3356491,
+    "longitude": 83.0076292,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttarakhand",
+    "district": "Dehradoon",
+    "market": "Chakrata APMC",
+    "latitude": 30.7013248,
+    "longitude": 77.8703356,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttarakhand",
+    "district": "Dehradoon",
+    "market": "Dehradoon APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Uttarakhand",
+    "district": "Dehradoon",
+    "market": "Rishikesh APMC",
+    "latitude": 30.1086537,
+    "longitude": 78.2916193,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttarakhand",
+    "district": "Dehradoon",
+    "market": "Vikasnagar APMC",
+    "latitude": 30.3881655,
+    "longitude": 77.8486162,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttarakhand",
+    "district": "Garhwal (Pauri)",
+    "market": "Kotadwara APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Uttarakhand",
+    "district": "Haridwar",
+    "market": "Bhagwanpur(Naveen Mandi Sthal) APMC",
+    "latitude": 29.9421601,
+    "longitude": 77.8137723,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttarakhand",
+    "district": "Haridwar",
+    "market": "Haridwar Union APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Uttarakhand",
+    "district": "Haridwar",
+    "market": "Manglaur APMC",
+    "latitude": 29.7921496,
+    "longitude": 77.8760645,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttarakhand",
+    "district": "Haridwar",
+    "market": "Roorkee APMC",
+    "latitude": 29.8693496,
+    "longitude": 77.8902124,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttarakhand",
+    "district": "Nanital",
+    "market": "Haldwani APMC",
+    "latitude": 29.2144809,
+    "longitude": 79.5279012,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttarakhand",
+    "district": "Udhamsinghnagar",
+    "market": "Gadarpur APMC",
+    "latitude": 29.04236,
+    "longitude": 79.24851,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttarakhand",
+    "district": "Udhamsinghnagar",
+    "market": "Jaspur(UC) APMC",
+    "latitude": 29.2787153,
+    "longitude": 78.8277072,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttarakhand",
+    "district": "Udhamsinghnagar",
+    "market": "Kashipur APMC",
+    "latitude": 29.2117573,
+    "longitude": 78.9617306,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttarakhand",
+    "district": "Udhamsinghnagar",
+    "market": "Khateema APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Uttarakhand",
+    "district": "Udhamsinghnagar",
+    "market": "Kicchha APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Uttarakhand",
+    "district": "Udhamsinghnagar",
+    "market": "Rudrapur APMC",
+    "latitude": 28.9707183,
+    "longitude": 79.3972845,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Uttarakhand",
+    "district": "Udhamsinghnagar",
+    "market": "Sitarganj APMC",
+    "latitude": 28.9277351,
+    "longitude": 79.7028923,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "West Bengal",
+    "district": "Bankura",
+    "market": "Bishnupur(Bankura) APMC",
+    "latitude": 23.0757335,
+    "longitude": 87.3146343,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "West Bengal",
+    "district": "Bankura",
+    "market": "Khatra APMC",
+    "latitude": 22.9775375,
+    "longitude": 86.8772273,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "West Bengal",
+    "district": "Darjeeling",
+    "market": "Darjeeling APMC",
+    "latitude": 27.0377554,
+    "longitude": 88.263176,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "West Bengal",
+    "district": "Darjeeling",
+    "market": "Karsiyang(Matigara) APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "West Bengal",
+    "district": "Darjeeling",
+    "market": "Siliguri APMC",
+    "latitude": 26.7164127,
+    "longitude": 88.4309916,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "West Bengal",
+    "district": "Hooghly",
+    "market": "Pandua APMC",
+    "latitude": 23.0702661,
+    "longitude": 88.2583394,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "West Bengal",
+    "district": "Jalpaiguri",
+    "market": "Dhupguri APMC",
+    "latitude": 26.5889048,
+    "longitude": 89.0069721,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "West Bengal",
+    "district": "Jalpaiguri",
+    "market": "Jalpaiguri Sadar APMC",
+    "latitude": 26.5343905,
+    "longitude": 88.721651,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "West Bengal",
+    "district": "Jhargram",
+    "market": "Jhargram APMC",
+    "latitude": 22.4538505,
+    "longitude": 86.9949477,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "West Bengal",
+    "district": "Kolkata",
+    "market": "Sealdah Koley Market APMC",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "West Bengal",
+    "district": "Malda",
+    "market": "English Bazar APMC",
+    "latitude": 25.0057449,
+    "longitude": 88.1398483,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "West Bengal",
+    "district": "Medinipur(E)",
+    "market": "Kolaghat APMC",
+    "latitude": 22.4404312,
+    "longitude": 87.8191567,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "West Bengal",
+    "district": "Medinipur(E)",
+    "market": "Tamluk (Medinipur E) APMC",
+    "latitude": 22.2896984,
+    "longitude": 87.9255933,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "West Bengal",
+    "district": "Medinipur(W)",
+    "market": "Garbeta(Medinipur) APMC",
+    "latitude": 22.844463,
+    "longitude": 87.3209023,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "West Bengal",
+    "district": "Murshidabad",
+    "market": "Jangipur APMC",
+    "latitude": 24.4561534,
+    "longitude": 88.1073968,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "West Bengal",
+    "district": "North 24 Parganas",
+    "market": "Barasat APMC",
+    "latitude": 22.7191072,
+    "longitude": 88.4826229,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "West Bengal",
+    "district": "North 24 Parganas",
+    "market": "Habra APMC",
+    "latitude": 22.8400629,
+    "longitude": 88.6630678,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "West Bengal",
+    "district": "Paschim Bardhaman",
+    "market": "Asansol APMC",
+    "latitude": 23.6871297,
+    "longitude": 86.9746587,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "West Bengal",
+    "district": "Paschim Bardhaman",
+    "market": "Durgapur APMC",
+    "latitude": 23.5350475,
+    "longitude": 87.3380425,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "West Bengal",
+    "district": "Purba Bardhaman",
+    "market": "Guskara APMC",
+    "latitude": 23.4926217,
+    "longitude": 87.7371023,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "West Bengal",
+    "district": "Purba Bardhaman",
+    "market": "Kalna APMC",
+    "latitude": 23.2211183,
+    "longitude": 88.3591889,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "West Bengal",
+    "district": "Puruliya",
+    "market": "Balarampur APMC",
+    "latitude": 23.1145293,
+    "longitude": 86.2257596,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "West Bengal",
+    "district": "Puruliya",
+    "market": "Purulia APMC",
+    "latitude": 23.3291882,
+    "longitude": 86.3672378,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "West Bengal",
+    "district": "Sounth 24 Parganas",
+    "market": "Baruipur(Canning) APMC",
+    "latitude": 22.3607154,
+    "longitude": 88.4325575,
+    "geocode_status": "ok"
+  }
+]

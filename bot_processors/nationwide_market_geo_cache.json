@@ -3757,5 +3757,213 @@
   "West Bengal|Puruliya|Purulia APMC": {
     "latitude": 23.3291882,
     "longitude": 86.3672378
+  },
+  "Andhra Pradesh|Anakapally|Chodavaram APMC": {
+    "latitude": 17.8296788,
+    "longitude": 82.9344845
+  },
+  "Andhra Pradesh|Dr.B.R.A.Konaseema|Alamuru APMC": {
+    "latitude": 16.8167423,
+    "longitude": 81.8794378
+  },
+  "Andhra Pradesh|Eluru|Bhimadole APMC": {
+    "latitude": 16.8103306,
+    "longitude": 81.2643061
+  },
+  "Andhra Pradesh|Nandyal|Banaganapalli APMC": {
+    "latitude": 15.3223031,
+    "longitude": 78.2507163
+  },
+  "Andhra Pradesh|Palnadu|Krosuru APMC": {
+    "latitude": 16.5431638,
+    "longitude": 80.1391051
+  },
+  "Andhra Pradesh|SPSR Nellore|Atmakur (SPSR Nellore District) APMC": {
+    "latitude": 14.669176,
+    "longitude": 79.5743613
+  },
+  "Andhra Pradesh|Sri Sathya Sai|Dharmavaram APMC": {
+    "latitude": 14.4138405,
+    "longitude": 77.7208432
+  },
+  "Andhra Pradesh|Tirupathi|B.N.Kandriga APMC": {
+    "latitude": 13.1765434,
+    "longitude": 79.187715
+  },
+  "Andhra Pradesh|West Godavari|Achanta APMC": {
+    "latitude": 16.604225,
+    "longitude": 81.8069411
+  },
+  "Andhra Pradesh|YSR Kadapa|Badvel APMC": {
+    "latitude": 14.7433614,
+    "longitude": 79.0610394
+  },
+  "Gujarat|Banaskanth|Vadgam APMC": {
+    "latitude": 24.0782271,
+    "longitude": 72.4891682
+  },
+  "Gujarat|Dahod|Davgadbaria(Piplod) APMC": {
+    "error": "no result"
+  },
+  "Gujarat|Morbi|Vankaner APMC": {
+    "latitude": 21.071915,
+    "longitude": 73.168471
+  },
+  "Karnataka|Bellary|Ballari APMC": {
+    "latitude": 15.1430224,
+    "longitude": 76.9173277
+  },
+  "Karnataka|Davangere|Channagiri APMC": {
+    "latitude": 14.4313535,
+    "longitude": 75.9207611
+  },
+  "Karnataka|Raichur|Manvi APMC": {
+    "latitude": 15.9967483,
+    "longitude": 77.0481181
+  },
+  "Karnataka|Uttara Kannada|Haliyala APMC": {
+    "latitude": 14.4506805,
+    "longitude": 74.8260301
+  },
+  "Keralam|Kottayam|Kottayam Market": {
+    "latitude": 9.591564,
+    "longitude": 76.5221599
+  },
+  "Madhya Pradesh|Balaghat|Balaghat APMC": {
+    "latitude": 21.8157712,
+    "longitude": 80.1777608
+  },
+  "Madhya Pradesh|Mandla|Nainpur APMC": {
+    "latitude": 22.4257867,
+    "longitude": 80.1044938
+  },
+  "Madhya Pradesh|Sagar|Khurai APMC": {
+    "latitude": 24.0521941,
+    "longitude": 78.3309666
+  },
+  "Maharashtra|Chandrapur|Mul APMC": {
+    "latitude": 20.0651224,
+    "longitude": 79.6767277
+  },
+  "Maharashtra|Chattrapati Sambhajinagar|Gangapur APMC": {
+    "latitude": 19.7954058,
+    "longitude": 75.0666582
+  },
+  "Maharashtra|Gadchiroli|Armori APMC": {
+    "latitude": 20.4711468,
+    "longitude": 79.9794563
+  },
+  "Maharashtra|Palghar|Ulhasnagar APMC": {
+    "latitude": 19.2236329,
+    "longitude": 73.1671515
+  },
+  "Maharashtra|Raigad|Mangaon APMC": {
+    "latitude": 18.247448,
+    "longitude": 73.275442
+  },
+  "Maharashtra|Raigad|Roha APMC": {
+    "latitude": 18.44658,
+    "longitude": 73.1238722
+  },
+  "Manipur|Imphal West|Imphal APMC": {
+    "latitude": 24.7991162,
+    "longitude": 93.9364419
+  },
+  "Pondicherry|Pondicherry|Madagadipet APMC": {
+    "error": "no result"
+  },
+  "Pondicherry|Pondicherry|Thattanchavady APMC": {
+    "latitude": 11.9441962,
+    "longitude": 79.8060503
+  },
+  "Rajasthan|Jaipur|Jaipur (Grain) APMC": {
+    "latitude": 26.9154576,
+    "longitude": 75.8189817
+  },
+  "Tamil Nadu|Sivaganga|Manamadurai APMC": {
+    "latitude": 9.8565738,
+    "longitude": 78.4857017
+  },
+  "Tamil Nadu|Thanjavur|Budalur APMC": {
+    "latitude": 10.788649,
+    "longitude": 78.9789575
+  },
+  "Tamil Nadu|Villupuram|Avalurpet APMC": {
+    "latitude": 12.3371411,
+    "longitude": 79.2410501
+  },
+  "Telangana|Bhadradri Kothagudem|Bhadrachalam APMC": {
+    "latitude": 17.6688019,
+    "longitude": 80.8940083
+  },
+  "Telangana|Karimnagar|Gangadhara APMC": {
+    "latitude": 18.5888465,
+    "longitude": 79.0099528
+  },
+  "Telangana|Mahabubabad|Kesamudram APMC": {
+    "latitude": 17.6903072,
+    "longitude": 79.8971365
+  },
+  "Telangana|Suryapet|Huzurnagar APMC": {
+    "latitude": 16.9003733,
+    "longitude": 79.8745838
+  },
+  "Uttar Pradesh|Badaun|Dataganj APMC": {
+    "latitude": 27.9188145,
+    "longitude": 79.3412262
+  },
+  "Uttar Pradesh|Balrampur|Utraula APMC": {
+    "latitude": 27.2389916,
+    "longitude": 82.3961845
+  },
+  "Uttar Pradesh|Ghazipur|Yusufpur APMC": {
+    "latitude": 25.622302,
+    "longitude": 83.7560438
+  },
+  "Uttar Pradesh|Gonda|Gonda APMC": {
+    "latitude": 27.1334827,
+    "longitude": 81.9619743
+  },
+  "Uttar Pradesh|Khiri (Lakhimpur)|Mohammdi APMC": {
+    "latitude": 27.9238756,
+    "longitude": 80.1638994
+  },
+  "Uttar Pradesh|Lucknow|Banthara APMC": {
+    "latitude": 26.694679,
+    "longitude": 80.8337445
+  },
+  "Uttar Pradesh|Maharajganj|Anandnagar APMC": {
+    "error": "no result"
+  },
+  "Uttar Pradesh|Pillibhit|Pilibhit APMC": {
+    "latitude": 28.4947158,
+    "longitude": 80.1076122
+  },
+  "Uttar Pradesh|Shahjahanpur|Powayan APMC": {
+    "latitude": 28.1441486,
+    "longitude": 80.115437
+  },
+  "West Bengal|Bankura|Bankura Sadar APMC": {
+    "error": "no result"
+  },
+  "West Bengal|Birbhum|Birbhum APMC": {
+    "latitude": 24.0,
+    "longitude": 87.583333
+  },
+  "West Bengal|Malda|Samsi APMC": {
+    "latitude": 25.276269,
+    "longitude": 88.0101183
+  },
+  "West Bengal|Medinipur(W)|Ghatal APMC": {
+    "latitude": 22.6645296,
+    "longitude": 87.7338573
+  },
+  "West Bengal|Nadia|Kalyani APMC": {
+    "latitude": 22.9749723,
+    "longitude": 88.4345915
+  },
+  "West Bengal|Sounth 24 Parganas|Diamond Harbour(South 24-pgs) APMC": {
+    "latitude": 22.1926886,
+    "longitude": 88.1894879
   }
 }

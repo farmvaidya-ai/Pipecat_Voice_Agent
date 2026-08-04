@@ -1,0 +1,3809 @@
+[
+  {
+    "state": "Andhra Pradesh",
+    "district": "Polavaram",
+    "market": "Rampachodvaram APMC",
+    "pincode": "533288",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Dr.B.R.A.Konaseema",
+    "market": "Alamuru APMC",
+    "pincode": "533233",
+    "latitude": 16.8167423,
+    "longitude": 81.8794378,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Dr.B.R.A.Konaseema",
+    "market": "Ambajipeta APMC",
+    "pincode": "533214",
+    "latitude": 16.6067176,
+    "longitude": 81.9478683,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Dr.B.R.A.Konaseema",
+    "market": "Mummidivaram APMC",
+    "pincode": "533216",
+    "latitude": 16.6442012,
+    "longitude": 82.1078853,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Dr.B.R.A.Konaseema",
+    "market": "Nagaram APMC",
+    "pincode": "533247",
+    "latitude": 15.9977488,
+    "longitude": 80.7174541,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Dr.B.R.A.Konaseema",
+    "market": "Ramachandrapuram APMC",
+    "pincode": "533255",
+    "latitude": 16.8185549,
+    "longitude": 82.0641497,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Dr.B.R.A.Konaseema",
+    "market": "Ravulapalem (Kothapeta APMC)",
+    "pincode": "533238",
+    "latitude": 16.7607989,
+    "longitude": 81.8435349,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Dr.B.R.A.Konaseema",
+    "market": "Razole APMC",
+    "pincode": "533242",
+    "latitude": 16.4763891,
+    "longitude": 81.8390689,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Kakinada",
+    "market": "Jaggampet APMC",
+    "pincode": "533435",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Kakinada",
+    "market": "Kakinada (Urban) APMC",
+    "pincode": "533001",
+    "latitude": 16.9437385,
+    "longitude": 82.2350607,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Kakinada",
+    "market": "Karapa APMC",
+    "pincode": "533462",
+    "latitude": 16.8886855,
+    "longitude": 82.170141,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Kakinada",
+    "market": "Peddapuram APMC",
+    "pincode": "533437",
+    "latitude": 17.0756736,
+    "longitude": 82.1433164,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Kakinada",
+    "market": "Pithapuram APMC",
+    "pincode": "533450",
+    "latitude": 17.1133426,
+    "longitude": 82.2543331,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Kakinada",
+    "market": "Prattipadu APMC",
+    "pincode": "533432",
+    "latitude": 17.1590214,
+    "longitude": 82.2674398,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Kakinada",
+    "market": "Samalkot APMC",
+    "pincode": "533440",
+    "latitude": 17.0453164,
+    "longitude": 82.1689895,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Kakinada",
+    "market": "Sampara (Kakinada Rural) APMC",
+    "pincode": "533344",
+    "latitude": 16.9089267,
+    "longitude": 82.1058532,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Kakinada",
+    "market": "Tuni APMC",
+    "pincode": "533401",
+    "latitude": 17.3614675,
+    "longitude": 82.5467956,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "NTR",
+    "market": "Jaggayyapeta APMC",
+    "pincode": "521175",
+    "latitude": 16.8930111,
+    "longitude": 80.098646,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "NTR",
+    "market": "Kanchekacherla APMC",
+    "pincode": "521180",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "NTR",
+    "market": "Mylavaram APMC",
+    "pincode": "521230",
+    "latitude": 16.7612039,
+    "longitude": 80.6418168,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "NTR",
+    "market": "Nandigama APMC",
+    "pincode": "521185",
+    "latitude": 16.7734733,
+    "longitude": 80.2855279,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "NTR",
+    "market": "Tiruvuru APMC",
+    "pincode": "521235",
+    "latitude": 17.1132968,
+    "longitude": 80.6107396,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "NTR",
+    "market": "Vijayawada APMC",
+    "pincode": "520001",
+    "latitude": 16.5115306,
+    "longitude": 80.6160469,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Markapuram",
+    "market": "Cumbum APMC",
+    "pincode": "523333",
+    "latitude": 15.5862083,
+    "longitude": 79.1148164,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Markapuram",
+    "market": "Giddalur APMC",
+    "pincode": "523357",
+    "latitude": 15.3784042,
+    "longitude": 78.9265231,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Markapuram",
+    "market": "Kanigiri APMC",
+    "pincode": "523230",
+    "latitude": 15.4066776,
+    "longitude": 79.5066808,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Markapuram",
+    "market": "Markapur APMC",
+    "pincode": "523316",
+    "latitude": 15.7406698,
+    "longitude": 79.2698502,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Markapuram",
+    "market": "Podili APMC",
+    "pincode": "523240",
+    "latitude": 15.6060134,
+    "longitude": 79.6114995,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Markapuram",
+    "market": "Yerragondapalem APMC",
+    "pincode": "523327",
+    "latitude": 15.9993268,
+    "longitude": 79.2910492,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Eluru",
+    "market": "Bhimadole APMC",
+    "pincode": "534425",
+    "latitude": 16.8103306,
+    "longitude": 81.2643061,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Eluru",
+    "market": "Chintalapudi APMC",
+    "pincode": "534460",
+    "latitude": 17.0976285,
+    "longitude": 80.9637011,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Eluru",
+    "market": "Denduluru APMC",
+    "pincode": "534432",
+    "latitude": 16.7817255,
+    "longitude": 81.1807255,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Eluru",
+    "market": "Eluru APMC",
+    "pincode": "534001",
+    "latitude": 16.7104257,
+    "longitude": 81.1153816,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Eluru",
+    "market": "Kaikaluru APMC",
+    "pincode": "521333",
+    "latitude": 16.5883257,
+    "longitude": 81.2919326,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Eluru",
+    "market": "Kalidindi APMC",
+    "pincode": "521344",
+    "latitude": 16.4886827,
+    "longitude": 81.3004063,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Eluru",
+    "market": "Nuzvid APMC",
+    "pincode": "521201",
+    "latitude": 16.7907012,
+    "longitude": 80.8476103,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Eluru",
+    "market": "Polavaram APMC",
+    "pincode": "534315",
+    "latitude": 17.3233553,
+    "longitude": 81.5777079,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Eluru",
+    "market": "Ungatur APMC",
+    "pincode": "534411",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Parvathipuram Manyam",
+    "market": "Kurupam APMC",
+    "pincode": "535524",
+    "latitude": 18.8661101,
+    "longitude": 83.5541837,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Parvathipuram Manyam",
+    "market": "Palakonda APMC",
+    "pincode": "532440",
+    "latitude": 18.6036798,
+    "longitude": 83.7559931,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Parvathipuram Manyam",
+    "market": "Parvathipuram APMC",
+    "pincode": "535501",
+    "latitude": 18.783186,
+    "longitude": 83.4278759,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Parvathipuram Manyam",
+    "market": "Saluru APMC",
+    "pincode": "535591",
+    "latitude": 18.517553,
+    "longitude": 83.2050385,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Ananthapuramu",
+    "market": "Anantapur APMC",
+    "pincode": "515001",
+    "latitude": 14.6783221,
+    "longitude": 77.6065039,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Ananthapuramu",
+    "market": "Gooti APMC",
+    "pincode": "515401",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Ananthapuramu",
+    "market": "Guntakal APMC",
+    "pincode": "515801",
+    "latitude": 15.1630454,
+    "longitude": 77.3768702,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Ananthapuramu",
+    "market": "Kalyandurg APMC",
+    "pincode": "515761",
+    "latitude": 14.5410188,
+    "longitude": 77.2157886,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Ananthapuramu",
+    "market": "RAYADURG APMC",
+    "pincode": "515865",
+    "latitude": 14.6999394,
+    "longitude": 76.850043,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Ananthapuramu",
+    "market": "Rapthadu APMC",
+    "pincode": "515721",
+    "latitude": 14.6182095,
+    "longitude": 77.6039103,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Ananthapuramu",
+    "market": "Singanamala APMC",
+    "pincode": "515731",
+    "latitude": 14.8494335,
+    "longitude": 77.7410733,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Ananthapuramu",
+    "market": "Tadipatri APMC",
+    "pincode": "515411",
+    "latitude": 14.9069559,
+    "longitude": 78.0097071,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Ananthapuramu",
+    "market": "Urvakonda APMC",
+    "pincode": "515812",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "YSR Kadapa",
+    "market": "Badvel APMC",
+    "pincode": "516227",
+    "latitude": 14.7433614,
+    "longitude": 79.0610394,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "YSR Kadapa",
+    "market": "Jammalamadugu APMC",
+    "pincode": "516434",
+    "latitude": 14.8473457,
+    "longitude": 78.382172,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "YSR Kadapa",
+    "market": "Kadapa",
+    "pincode": "516001",
+    "latitude": 14.4752936,
+    "longitude": 78.8216861,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "YSR Kadapa",
+    "market": "Kamalapuram APMC",
+    "pincode": "516289",
+    "latitude": 14.5962938,
+    "longitude": 78.6704194,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "YSR Kadapa",
+    "market": "Mydukur APMC",
+    "pincode": "516172",
+    "latitude": 14.8593734,
+    "longitude": 78.7715239,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "YSR Kadapa",
+    "market": "Proddatur APMC",
+    "pincode": "516360",
+    "latitude": 14.7555953,
+    "longitude": 78.5501531,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "YSR Kadapa",
+    "market": "Pulivendala APMC",
+    "pincode": "516390",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "YSR Kadapa",
+    "market": "Rajampet APMC",
+    "pincode": "516115",
+    "latitude": 14.1987099,
+    "longitude": 79.1110344,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "YSR Kadapa",
+    "market": "Siddavatam APMC",
+    "pincode": "516237",
+    "latitude": 14.4682526,
+    "longitude": 78.9634519,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "YSR Kadapa",
+    "market": "Simhadhripuram APMC",
+    "pincode": "516454",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "YSR Kadapa",
+    "market": "Yerraguntla APMC",
+    "pincode": "516309",
+    "latitude": 14.6435681,
+    "longitude": 78.5338218,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "SPSR Nellore",
+    "market": "Atmakur (SPSR Nellore District) APMC",
+    "pincode": "524322",
+    "latitude": 14.669176,
+    "longitude": 79.5743613,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "SPSR Nellore",
+    "market": "Gudur APMC",
+    "pincode": "524101",
+    "latitude": 14.1467154,
+    "longitude": 79.8487723,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "SPSR Nellore",
+    "market": "Kavali APMC",
+    "pincode": "524201",
+    "latitude": 14.9133894,
+    "longitude": 79.9925655,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "SPSR Nellore",
+    "market": "Kovur APMC",
+    "pincode": "524137",
+    "latitude": 14.5036085,
+    "longitude": 79.9868404,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "SPSR Nellore",
+    "market": "Nellore APMC",
+    "pincode": "524001",
+    "latitude": 14.4493717,
+    "longitude": 79.9873763,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "SPSR Nellore",
+    "market": "Rapur APMC",
+    "pincode": "524408",
+    "latitude": 14.2006961,
+    "longitude": 79.5336017,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "SPSR Nellore",
+    "market": "Sarvepalli APMC",
+    "pincode": "524321",
+    "latitude": 14.2925091,
+    "longitude": 79.9735549,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "SPSR Nellore",
+    "market": "Udayagiri APMC",
+    "pincode": "524226",
+    "latitude": 14.9383009,
+    "longitude": 79.3113579,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Chittor",
+    "market": "Bangarupalyam APMC",
+    "pincode": "517416",
+    "latitude": 14.1253251,
+    "longitude": 77.0087014,
+    "geocode_status": "geo_outlier"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Chittor",
+    "market": "Chittoor APMC",
+    "pincode": "517001",
+    "latitude": 13.325036,
+    "longitude": 79.6480611,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Chittor",
+    "market": "Kuppam APMC",
+    "pincode": "517425",
+    "latitude": 12.7452259,
+    "longitude": 78.344331,
+    "geocode_status": "geo_outlier"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Chittor",
+    "market": "Nagari APMC",
+    "pincode": "517590",
+    "latitude": 13.3206306,
+    "longitude": 79.5852938,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Chittor",
+    "market": "Palamaner APMC",
+    "pincode": "517408",
+    "latitude": 13.1490375,
+    "longitude": 78.7292763,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Chittor",
+    "market": "Penumuru APMC",
+    "pincode": "517424",
+    "latitude": 13.3697787,
+    "longitude": 79.1950067,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Chittor",
+    "market": "Rompicherla APMC",
+    "pincode": "517192",
+    "latitude": 16.2104931,
+    "longitude": 79.9091632,
+    "geocode_status": "geo_outlier"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Chittor",
+    "market": "S.R.Puram APMC",
+    "pincode": "517172",
+    "latitude": 18.2869124,
+    "longitude": 83.3622358,
+    "geocode_status": "geo_outlier"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Chittor",
+    "market": "V. Kota Sub-yard of AMC Palamaneru",
+    "pincode": "517424",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "East Godavari",
+    "market": "Anaparthy APMC",
+    "pincode": "533342",
+    "latitude": 16.900486,
+    "longitude": 81.9751745,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "East Godavari",
+    "market": "Gopalapuram APMC",
+    "pincode": "534316",
+    "latitude": 17.2388526,
+    "longitude": 81.7835263,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "East Godavari",
+    "market": "Kovvur APMC",
+    "pincode": "534350",
+    "latitude": 17.015932,
+    "longitude": 81.7109188,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "East Godavari",
+    "market": "Mandapeta APMC",
+    "pincode": "533308",
+    "latitude": 16.8634704,
+    "longitude": 81.9300945,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "East Godavari",
+    "market": "Nidadavolu APMC",
+    "pincode": "534301",
+    "latitude": 16.9100459,
+    "longitude": 81.673242,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "East Godavari",
+    "market": "Rajahmundry APMC",
+    "pincode": "533101",
+    "latitude": 17.0050454,
+    "longitude": 81.7804732,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "East Godavari",
+    "market": "Rajanagaram APMC",
+    "pincode": "533294",
+    "latitude": 17.0528716,
+    "longitude": 81.8916846,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Guntur",
+    "market": "Duggirala APMC",
+    "pincode": "522330",
+    "latitude": 16.328919,
+    "longitude": 80.6238497,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Guntur",
+    "market": "Guntur APMC",
+    "pincode": "522001",
+    "latitude": 16.2915189,
+    "longitude": 80.4541588,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Guntur",
+    "market": "Mangalagiri APMC",
+    "pincode": "522503",
+    "latitude": 16.4318209,
+    "longitude": 80.5688069,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Guntur",
+    "market": "Phirangipuram APMC",
+    "pincode": "522529",
+    "latitude": 16.2923128,
+    "longitude": 80.2618841,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Guntur",
+    "market": "Ponnur APMC",
+    "pincode": "522124",
+    "latitude": 16.0811457,
+    "longitude": 80.5369917,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Guntur",
+    "market": "Prathipadu APMC",
+    "pincode": "522019",
+    "latitude": 16.1828531,
+    "longitude": 80.3335507,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Guntur",
+    "market": "Tadikonda APMC",
+    "pincode": "522236",
+    "latitude": 16.4183389,
+    "longitude": 80.4546278,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Guntur",
+    "market": "Tenali APMC",
+    "pincode": "522201",
+    "latitude": 16.2377735,
+    "longitude": 80.6464219,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Krishna",
+    "market": "Divi (HQ-Avanigadda) APMC",
+    "pincode": "521121",
+    "latitude": 17.933364,
+    "longitude": 83.4786296,
+    "geocode_status": "geo_outlier"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Krishna",
+    "market": "Gannavaram APMC",
+    "pincode": "521101",
+    "latitude": 16.5561295,
+    "longitude": 80.7961511,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Krishna",
+    "market": "Ghantsala (HQ-Kodali) APMC",
+    "pincode": "521133",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Krishna",
+    "market": "Gudiwada APMC",
+    "pincode": "521301",
+    "latitude": 16.4347597,
+    "longitude": 80.9914406,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Krishna",
+    "market": "Gudlavalleru APMC",
+    "pincode": "521356",
+    "latitude": 16.3476368,
+    "longitude": 81.0533583,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Krishna",
+    "market": "Machilipatnam APMC",
+    "pincode": "521001",
+    "latitude": 16.1817369,
+    "longitude": 81.1348181,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Krishna",
+    "market": "Malleswaram (HQ-Bantumili) APMC",
+    "pincode": "521132",
+    "latitude": 16.355021,
+    "longitude": 81.2679183,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Krishna",
+    "market": "Movva (HQ-Kuchipudi) APMC",
+    "pincode": "521135",
+    "latitude": 16.2253146,
+    "longitude": 80.9153783,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Krishna",
+    "market": "Pamarru APMC",
+    "pincode": "521301",
+    "latitude": 16.3226443,
+    "longitude": 80.9605914,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Krishna",
+    "market": "Pedana APMC",
+    "pincode": "521366",
+    "latitude": 16.2608449,
+    "longitude": 81.1522283,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Krishna",
+    "market": "Penamaluru (HQ-Kankipadu) APMC",
+    "pincode": "521139",
+    "latitude": 16.4658874,
+    "longitude": 80.7180033,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Krishna",
+    "market": "Vuyyur APMC",
+    "pincode": "521165",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Kurnool",
+    "market": "Adoni APMC",
+    "pincode": "518301",
+    "latitude": 15.6261417,
+    "longitude": 77.2723701,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Kurnool",
+    "market": "Alur APMC",
+    "pincode": "518395",
+    "latitude": 15.4276919,
+    "longitude": 77.257826,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Kurnool",
+    "market": "Kodumur APMC",
+    "pincode": "518463",
+    "latitude": 15.6694267,
+    "longitude": 77.8743657,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Kurnool",
+    "market": "Kurnool APMC",
+    "pincode": "518001",
+    "latitude": 15.8309251,
+    "longitude": 78.0425373,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Kurnool",
+    "market": "Mantralayam APMC",
+    "pincode": "518345",
+    "latitude": 15.9413643,
+    "longitude": 77.4236981,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Kurnool",
+    "market": "Pattikonda APMC",
+    "pincode": "518380",
+    "latitude": 15.3954238,
+    "longitude": 77.5014036,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Kurnool",
+    "market": "Yemmiganur APMC",
+    "pincode": "518360",
+    "latitude": 15.7680956,
+    "longitude": 77.4819037,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Prakasam",
+    "market": "Addanki APMC",
+    "pincode": "523201",
+    "latitude": 15.8110285,
+    "longitude": 79.9737896,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Prakasam",
+    "market": "Darsi APMC",
+    "pincode": "523247",
+    "latitude": 15.7694505,
+    "longitude": 79.6776541,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Prakasam",
+    "market": "Kandukur APMC",
+    "pincode": "523105",
+    "latitude": 15.213,
+    "longitude": 79.9071,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Prakasam",
+    "market": "Kondapi APMC",
+    "pincode": "523270",
+    "latitude": 15.4151567,
+    "longitude": 79.8304845,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Prakasam",
+    "market": "Maddipadu APMC",
+    "pincode": "523211",
+    "latitude": 15.6208452,
+    "longitude": 80.0225194,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Prakasam",
+    "market": "Ongole APMC",
+    "pincode": "523001",
+    "latitude": 15.5058714,
+    "longitude": 80.0499454,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Prakasam",
+    "market": "Santhamaguluru APMC",
+    "pincode": "523302",
+    "latitude": 16.0735993,
+    "longitude": 79.9578663,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Srikakulam",
+    "market": "Amadalavalasa APMC",
+    "pincode": "532185",
+    "latitude": 18.4111443,
+    "longitude": 83.8993345,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Srikakulam",
+    "market": "Etcherla APMC",
+    "pincode": "532410",
+    "latitude": 18.2434441,
+    "longitude": 83.864398,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Srikakulam",
+    "market": "Hiramandalam APMC",
+    "pincode": "532459",
+    "latitude": 18.6782742,
+    "longitude": 83.9454797,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Srikakulam",
+    "market": "Ichapuram APMC",
+    "pincode": "532312",
+    "latitude": 19.0925044,
+    "longitude": 84.6758228,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Srikakulam",
+    "market": "Jalumuru APMC",
+    "pincode": "532432",
+    "latitude": 18.5341112,
+    "longitude": 84.037989,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Srikakulam",
+    "market": "Kanchili APMC",
+    "pincode": "532290",
+    "latitude": 18.9988544,
+    "longitude": 84.557699,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Srikakulam",
+    "market": "Kothabommali APMC",
+    "pincode": "532241",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Srikakulam",
+    "market": "Narasannapet APMC",
+    "pincode": "532421",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Srikakulam",
+    "market": "Palasa APMC",
+    "pincode": "532221",
+    "latitude": 18.7719133,
+    "longitude": 84.4096945,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Srikakulam",
+    "market": "Pathapatnam APMC",
+    "pincode": "532213",
+    "latitude": 18.7487284,
+    "longitude": 84.0888676,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Srikakulam",
+    "market": "Ponduru APMC",
+    "pincode": "532168",
+    "latitude": 18.362788,
+    "longitude": 83.7767868,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Srikakulam",
+    "market": "Srikakulam APMC",
+    "pincode": "532001",
+    "latitude": 18.2949307,
+    "longitude": 83.8938844,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Vijayanagaram",
+    "market": "Bobbili APMC",
+    "pincode": "535558",
+    "latitude": 18.5748202,
+    "longitude": 83.3522594,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Vijayanagaram",
+    "market": "Chipurupalli APMC",
+    "pincode": "535128",
+    "latitude": 18.3234341,
+    "longitude": 83.5737985,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Vijayanagaram",
+    "market": "Gajapathinagaram APMC",
+    "pincode": "535270",
+    "latitude": 18.2991873,
+    "longitude": 83.3488837,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Vijayanagaram",
+    "market": "Kothavalasa APMC",
+    "pincode": "535183",
+    "latitude": 17.8958429,
+    "longitude": 83.1837095,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Vijayanagaram",
+    "market": "Merakamudidam APMC",
+    "pincode": "535128",
+    "latitude": 18.3899283,
+    "longitude": 83.4823308,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Vijayanagaram",
+    "market": "Pusapatirega APMC",
+    "pincode": "535204",
+    "latitude": 18.0854293,
+    "longitude": 83.5850135,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Vijayanagaram",
+    "market": "Rajam APMC",
+    "pincode": "532127",
+    "latitude": 18.4497559,
+    "longitude": 83.6564679,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Vijayanagaram",
+    "market": "Vijayanagaram APMC",
+    "pincode": "535001",
+    "latitude": 18.1141255,
+    "longitude": 83.4114389,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Visakhapatnam",
+    "market": "Bhimunipatnam APMC",
+    "pincode": "531163",
+    "latitude": 17.8907979,
+    "longitude": 83.4557924,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Visakhapatnam",
+    "market": "Pendurthi APMC",
+    "pincode": "531173",
+    "latitude": 17.821358,
+    "longitude": 83.206582,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Visakhapatnam",
+    "market": "Visakhapatnam APMC",
+    "pincode": "530001",
+    "latitude": 17.6935526,
+    "longitude": 83.2921297,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "West Godavari",
+    "market": "Achanta APMC",
+    "pincode": "534269",
+    "latitude": 16.604225,
+    "longitude": 81.8069411,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "West Godavari",
+    "market": "Akiveedu APMC",
+    "pincode": "534235",
+    "latitude": 16.5813292,
+    "longitude": 81.3822301,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "West Godavari",
+    "market": "Attili APMC",
+    "pincode": "534134",
+    "latitude": 16.6716486,
+    "longitude": 81.6013033,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "West Godavari",
+    "market": "Bhimavaram APMC",
+    "pincode": "534201",
+    "latitude": 16.4818104,
+    "longitude": 81.5329358,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "West Godavari",
+    "market": "Narsapuram APMC",
+    "pincode": "534275",
+    "latitude": 16.6854859,
+    "longitude": 81.6021529,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "West Godavari",
+    "market": "Palakole APMC",
+    "pincode": "534260",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "West Godavari",
+    "market": "Penugonda APMC",
+    "pincode": "534320",
+    "latitude": 16.6539593,
+    "longitude": 81.744602,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "West Godavari",
+    "market": "Tadepalligudem APMC",
+    "pincode": "534101",
+    "latitude": 16.8102437,
+    "longitude": 81.526592,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "West Godavari",
+    "market": "Tanuku APMC",
+    "pincode": "534211",
+    "latitude": 16.7529179,
+    "longitude": 81.6760463,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "West Godavari",
+    "market": "Undi APMC",
+    "pincode": "534199",
+    "latitude": 16.6102286,
+    "longitude": 81.4633941,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Annamayya",
+    "market": "B.Kothakota H/Q Angallu",
+    "pincode": "517325",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Annamayya",
+    "market": "Guramkonda Sub-yard of AMC Valmikipuram",
+    "pincode": "517297",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Annamayya",
+    "market": "Kalikiri APMC",
+    "pincode": "517234",
+    "latitude": 13.6823499,
+    "longitude": 78.8032948,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Annamayya",
+    "market": "Lakkireddipally APMC",
+    "pincode": "516257",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Annamayya",
+    "market": "Madanapalli APMC",
+    "pincode": "517325",
+    "latitude": 13.5821585,
+    "longitude": 78.5315181,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Annamayya",
+    "market": "Mulakalacheruvu APMC",
+    "pincode": "517390",
+    "latitude": 13.8149782,
+    "longitude": 78.2916682,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Annamayya",
+    "market": "Piler APMC",
+    "pincode": "517214",
+    "latitude": 13.6625987,
+    "longitude": 78.9280785,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Annamayya",
+    "market": "Punganur APMC",
+    "pincode": "517247",
+    "latitude": 13.4042835,
+    "longitude": 78.5567022,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Annamayya",
+    "market": "Rayachoti APMC",
+    "pincode": "516269",
+    "latitude": 14.0629873,
+    "longitude": 78.7153227,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Annamayya",
+    "market": "Somala APMC",
+    "pincode": "517257",
+    "latitude": 13.4498348,
+    "longitude": 78.8471389,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Annamayya",
+    "market": "Valmikipuram APMC",
+    "pincode": "517277",
+    "latitude": 13.6573509,
+    "longitude": 78.6974067,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Tirupathi",
+    "market": "B.N.Kandriga APMC",
+    "pincode": "517640",
+    "latitude": 13.1765434,
+    "longitude": 79.187715,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Tirupathi",
+    "market": "Chandragiri APMC",
+    "pincode": "517101",
+    "latitude": 13.5842501,
+    "longitude": 79.3166721,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Tirupathi",
+    "market": "Nagalapuram APMC",
+    "pincode": "516289",
+    "latitude": 13.3853083,
+    "longitude": 79.7981355,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Tirupathi",
+    "market": "Naidupet APMC",
+    "pincode": "524123",
+    "latitude": 13.9289179,
+    "longitude": 79.8327094,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Tirupathi",
+    "market": "Pakala APMC",
+    "pincode": "517112",
+    "latitude": 13.4490487,
+    "longitude": 79.1148903,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Tirupathi",
+    "market": "Puttur APMC",
+    "pincode": "517583",
+    "latitude": 13.4381418,
+    "longitude": 79.5522138,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Tirupathi",
+    "market": "Railway Koduru APMC",
+    "pincode": "516101",
+    "latitude": 13.9573959,
+    "longitude": 79.3487522,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Tirupathi",
+    "market": "Srikalahasti APMC",
+    "pincode": "517644",
+    "latitude": 13.7518033,
+    "longitude": 79.7002288,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Tirupathi",
+    "market": "Sullurpet APMC",
+    "pincode": "524121",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Tirupathi",
+    "market": "Thiruchanur APMC",
+    "pincode": "517503",
+    "latitude": 13.6199511,
+    "longitude": 79.4578616,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Tirupathi",
+    "market": "Vakadu APMC",
+    "pincode": "524415",
+    "latitude": 13.9388286,
+    "longitude": 80.1703443,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Tirupathi",
+    "market": "Venkatagiri APMC",
+    "pincode": "524132",
+    "latitude": 13.957582,
+    "longitude": 79.5809332,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Palnadu",
+    "market": "Chilakaluripet APMC",
+    "pincode": "522616",
+    "latitude": 16.0949502,
+    "longitude": 80.1658779,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Palnadu",
+    "market": "Durgi APMC",
+    "pincode": "522612",
+    "latitude": 16.4232437,
+    "longitude": 79.5431139,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Palnadu",
+    "market": "Gurazala APMC",
+    "pincode": "522415",
+    "latitude": 16.5589293,
+    "longitude": 79.6368235,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Palnadu",
+    "market": "Ipur APMC",
+    "pincode": "522658",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Palnadu",
+    "market": "Krosuru APMC",
+    "pincode": "522410",
+    "latitude": 16.5431638,
+    "longitude": 80.1391051,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Palnadu",
+    "market": "Macharla APMC",
+    "pincode": "522426",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Palnadu",
+    "market": "Narasaraopet APMC",
+    "pincode": "522601",
+    "latitude": 16.2389242,
+    "longitude": 80.0472879,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Palnadu",
+    "market": "Pidugurala APMC",
+    "pincode": "522413",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Palnadu",
+    "market": "Rajupalem APMC",
+    "pincode": "522413",
+    "latitude": 16.4265252,
+    "longitude": 79.9846258,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Palnadu",
+    "market": "Rompicherla APMC",
+    "pincode": "522617",
+    "latitude": 16.2104931,
+    "longitude": 79.9091632,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Palnadu",
+    "market": "Sattenapalli APMC",
+    "pincode": "522403",
+    "latitude": 16.4049995,
+    "longitude": 80.1529972,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Palnadu",
+    "market": "Vinukonda APMC",
+    "pincode": "522647",
+    "latitude": 16.0522252,
+    "longitude": 79.7421271,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Sri Sathya Sai",
+    "market": "Dharmavaram APMC",
+    "pincode": "515671",
+    "latitude": 14.4138405,
+    "longitude": 77.7208432,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Sri Sathya Sai",
+    "market": "Gorantla APMC",
+    "pincode": "515231",
+    "latitude": 13.9950176,
+    "longitude": 77.7798757,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Sri Sathya Sai",
+    "market": "Hindupur APMC",
+    "pincode": "515201",
+    "latitude": 13.8306127,
+    "longitude": 77.492635,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Sri Sathya Sai",
+    "market": "Kadiri APMC",
+    "pincode": "515591",
+    "latitude": 14.1082305,
+    "longitude": 78.161069,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Sri Sathya Sai",
+    "market": "Madakasira APMC",
+    "pincode": "515301",
+    "latitude": 13.9405457,
+    "longitude": 77.272588,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Sri Sathya Sai",
+    "market": "Penukonda APMC",
+    "pincode": "515110",
+    "latitude": 14.0846808,
+    "longitude": 77.5966537,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Sri Sathya Sai",
+    "market": "Puttaparthi APMC",
+    "pincode": "515134",
+    "latitude": 14.1636778,
+    "longitude": 77.8124982,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Sri Sathya Sai",
+    "market": "Tenakallu APMC",
+    "pincode": "515571",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Nandyal",
+    "market": "Allagadda APMC",
+    "pincode": "518543",
+    "latitude": 15.1333484,
+    "longitude": 78.51254,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Nandyal",
+    "market": "Atmakur (Nandyal District) APMC",
+    "pincode": "518422",
+    "latitude": 15.9149208,
+    "longitude": 78.7079658,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Nandyal",
+    "market": "Banaganapalli APMC",
+    "pincode": "518124",
+    "latitude": 15.3223031,
+    "longitude": 78.2507163,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Nandyal",
+    "market": "Dhone APMC",
+    "pincode": "518222",
+    "latitude": 15.3969719,
+    "longitude": 77.8718482,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Nandyal",
+    "market": "Koilkunta APMC",
+    "pincode": "518134",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Nandyal",
+    "market": "Nandikotkur APMC",
+    "pincode": "518401",
+    "latitude": 15.8562,
+    "longitude": 78.27,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Nandyal",
+    "market": "Nandyal APMC",
+    "pincode": "518501",
+    "latitude": 15.4736293,
+    "longitude": 78.4806592,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Nandyal",
+    "market": "Panyam APMC",
+    "pincode": "518112",
+    "latitude": 15.5067587,
+    "longitude": 78.318409,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Bapatla",
+    "market": "Bapatla APMC",
+    "pincode": "522101",
+    "latitude": 15.9052608,
+    "longitude": 80.4680501,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Bapatla",
+    "market": "Chirala APMC",
+    "pincode": "523155",
+    "latitude": 15.8309139,
+    "longitude": 80.3543618,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Bapatla",
+    "market": "Kuchinapudi APMC",
+    "pincode": "522262",
+    "latitude": 15.9621623,
+    "longitude": 80.7488726,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Bapatla",
+    "market": "Parchur APMC",
+    "pincode": "523169",
+    "latitude": 15.9838408,
+    "longitude": 80.3359897,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Bapatla",
+    "market": "Repalli APMC",
+    "pincode": "522265",
+    "latitude": 15.547683,
+    "longitude": 78.0802823,
+    "geocode_status": "geo_outlier"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Bapatla",
+    "market": "Vemuru APMC",
+    "pincode": "522261",
+    "latitude": 16.1775335,
+    "longitude": 80.7427306,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Alluri Sitharama Raju",
+    "market": "Araku Valley APMC",
+    "pincode": "531149",
+    "latitude": 18.323442,
+    "longitude": 82.8805825,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Alluri Sitharama Raju",
+    "market": "Chintapally APMC",
+    "pincode": "531111",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Alluri Sitharama Raju",
+    "market": "Paderu APMC",
+    "pincode": "531024",
+    "latitude": 18.0791533,
+    "longitude": 82.6632234,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Anakapally",
+    "market": "Anakapally APMC",
+    "pincode": "531001",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Anakapally",
+    "market": "Chodavaram APMC",
+    "pincode": "531036",
+    "latitude": 17.8296788,
+    "longitude": 82.9344845,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Anakapally",
+    "market": "Madugula APMC",
+    "pincode": "531027",
+    "latitude": 17.9155283,
+    "longitude": 82.8145453,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Anakapally",
+    "market": "Narsipatnam APMC",
+    "pincode": "531116",
+    "latitude": 17.6711811,
+    "longitude": 82.6124371,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Anakapally",
+    "market": "Payakaraopeta APMC",
+    "pincode": "533401",
+    "latitude": 17.3642403,
+    "longitude": 82.5572144,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Anakapally",
+    "market": "Yellamanchili APMC",
+    "pincode": "531055",
+    "latitude": 17.5464898,
+    "longitude": 82.8564262,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Jagtial",
+    "market": "Dharmapuri APMC",
+    "pincode": "505425",
+    "latitude": 18.9492756,
+    "longitude": 79.0954665,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Jagtial",
+    "market": "Gollapally APMC",
+    "pincode": "505532",
+    "latitude": 18.7902126,
+    "longitude": 79.0581885,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Jagtial",
+    "market": "Ibrahimpatnam APMC",
+    "pincode": "505460",
+    "latitude": 18.9057181,
+    "longitude": 78.5832738,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Jagtial",
+    "market": "Jagtial APMC",
+    "pincode": "505327",
+    "latitude": 18.7957081,
+    "longitude": 78.9161959,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Jagtial",
+    "market": "Kathalapur APMC",
+    "pincode": "505325",
+    "latitude": 18.7495555,
+    "longitude": 78.6866207,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Jagtial",
+    "market": "Koratla APMC",
+    "pincode": "505326",
+    "latitude": 18.823632,
+    "longitude": 78.717897,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Jagtial",
+    "market": "Mallapur APMC",
+    "pincode": "505331",
+    "latitude": 18.9700102,
+    "longitude": 78.7053522,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Jagtial",
+    "market": "Medipally APMC",
+    "pincode": "505325",
+    "latitude": 18.8005515,
+    "longitude": 78.8167818,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Jagtial",
+    "market": "Metpally APMC",
+    "pincode": "505325",
+    "latitude": 18.8475412,
+    "longitude": 78.6335998,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Jagtial",
+    "market": "Pegadapally APMC",
+    "pincode": "505532",
+    "latitude": 18.7047713,
+    "longitude": 79.0650202,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Jagtial",
+    "market": "Raikal APMC",
+    "pincode": "505460",
+    "latitude": 18.9047907,
+    "longitude": 78.8080213,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Jagtial",
+    "market": "Velgatoor APMC",
+    "pincode": "505526",
+    "latitude": 18.845208,
+    "longitude": 79.1715911,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Asifabad",
+    "market": "Asifabad APMC",
+    "pincode": "504293",
+    "latitude": 19.3593461,
+    "longitude": 79.2960404,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Asifabad",
+    "market": "Kagaznagar APMC",
+    "pincode": "504296",
+    "latitude": 19.3465635,
+    "longitude": 79.489989,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Jogulamba Gadwal",
+    "market": "Alampur APMC",
+    "pincode": "509152",
+    "latitude": 15.8799583,
+    "longitude": 78.1350753,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Jogulamba Gadwal",
+    "market": "Gadwal APMC",
+    "pincode": "509125",
+    "latitude": 16.2347032,
+    "longitude": 77.7946371,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Mahabubabad",
+    "market": "Kesamudram APMC",
+    "pincode": "506112",
+    "latitude": 17.6903072,
+    "longitude": 79.8971365,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Mahabubabad",
+    "market": "Mahabubabad APMC",
+    "pincode": "506101",
+    "latitude": 17.595749,
+    "longitude": 79.9999224,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Mahabubabad",
+    "market": "Thorrur APMC",
+    "pincode": "506163",
+    "latitude": 17.582996,
+    "longitude": 79.6589492,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Medchal Malkajgiri",
+    "market": "Kukatpally,RBZ",
+    "pincode": "500072",
+    "latitude": 17.4930841,
+    "longitude": 78.4054408,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Medchal Malkajgiri",
+    "market": "Medchal APMC",
+    "pincode": "501401",
+    "latitude": 17.6339929,
+    "longitude": 78.4843146,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Mulugu",
+    "market": "Mulugu APMC",
+    "pincode": "506343",
+    "latitude": 18.1932372,
+    "longitude": 79.9413676,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Nagarkurnool",
+    "market": "Achampet APMC",
+    "pincode": "509375",
+    "latitude": 16.3999846,
+    "longitude": 78.6379866,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Nagarkurnool",
+    "market": "Amrabad APMC",
+    "pincode": "509355",
+    "latitude": 16.3767064,
+    "longitude": 78.833257,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Nagarkurnool",
+    "market": "Kalwakurthy APMC",
+    "pincode": "509324",
+    "latitude": 16.6721316,
+    "longitude": 78.4880729,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Nagarkurnool",
+    "market": "Kollapur APMC",
+    "pincode": "509102",
+    "latitude": 16.1061268,
+    "longitude": 78.3194833,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Nagarkurnool",
+    "market": "Kosgi APMC",
+    "pincode": null,
+    "latitude": 16.9884481,
+    "longitude": 77.7164865,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Nagarkurnool",
+    "market": "Nagarkurnool APMC",
+    "pincode": "509208",
+    "latitude": 16.4870296,
+    "longitude": 78.3169003,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Narayanpet",
+    "market": "Makthal APMC",
+    "pincode": "509208",
+    "latitude": 16.5010823,
+    "longitude": 77.5133174,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Narayanpet",
+    "market": "Narayanpet APMC",
+    "pincode": "509210",
+    "latitude": 16.7477612,
+    "longitude": 77.4949954,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Nirmal",
+    "market": "Bhainsa APMC",
+    "pincode": "504103",
+    "latitude": 19.107085,
+    "longitude": 77.9635656,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Nirmal",
+    "market": "Khanapur APMC",
+    "pincode": "504203",
+    "latitude": 19.0442198,
+    "longitude": 78.6447209,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Nirmal",
+    "market": "Kuber APMC",
+    "pincode": "504103",
+    "latitude": 17.4440657,
+    "longitude": 78.2557944,
+    "geocode_status": "geo_outlier"
+  },
+  {
+    "state": "Telangana",
+    "district": "Nirmal",
+    "market": "Nirmal APMC",
+    "pincode": "504106",
+    "latitude": 19.0924602,
+    "longitude": 78.3486041,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Nirmal",
+    "market": "Sarangapur APMC",
+    "pincode": "504110",
+    "latitude": 19.0398413,
+    "longitude": 78.7223074,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Peddapalli",
+    "market": "Dharmaram APMC",
+    "pincode": "505416",
+    "latitude": 18.7341149,
+    "longitude": 79.1913388,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Peddapalli",
+    "market": "Manthani APMC",
+    "pincode": "505184",
+    "latitude": 18.6512469,
+    "longitude": 79.665771,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Peddapalli",
+    "market": "Peddapalli APMC",
+    "pincode": "505172",
+    "latitude": 18.6177235,
+    "longitude": 79.3868069,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Suryapet",
+    "market": "Kodad APMC",
+    "pincode": "508206",
+    "latitude": 16.9947802,
+    "longitude": 79.9749826,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Suryapet",
+    "market": "Neredcherla APMC",
+    "pincode": null,
+    "latitude": 16.8870753,
+    "longitude": 79.6934155,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Suryapet",
+    "market": "Suryapeta APMC",
+    "pincode": "508213",
+    "latitude": 17.1511996,
+    "longitude": 79.6213754,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Suryapet",
+    "market": "Thungathurthy APMC",
+    "pincode": "508280",
+    "latitude": 17.4135938,
+    "longitude": 79.5871429,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Suryapet",
+    "market": "Tirumalagiri APMC",
+    "pincode": "508223",
+    "latitude": 17.4681198,
+    "longitude": 79.4502758,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Yadadri Bhuvanagiri",
+    "market": "Aler APMC",
+    "pincode": "508101",
+    "latitude": 17.6456262,
+    "longitude": 79.0488953,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Yadadri Bhuvanagiri",
+    "market": "Bhongir APMC",
+    "pincode": "508116",
+    "latitude": 17.5172789,
+    "longitude": 78.8863383,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Yadadri Bhuvanagiri",
+    "market": "Choutuppal APMC",
+    "pincode": null,
+    "latitude": 17.2526027,
+    "longitude": 78.8964038,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Yadadri Bhuvanagiri",
+    "market": "Mothkur APMC",
+    "pincode": "508277",
+    "latitude": 17.4278329,
+    "longitude": 79.2642694,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Yadadri Bhuvanagiri",
+    "market": "Valigonda APMC",
+    "pincode": "508112",
+    "latitude": 17.3772563,
+    "longitude": 79.0209072,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Adilabad",
+    "market": "Adilabad (Rythu Bazar)",
+    "pincode": "504001",
+    "latitude": 19.6759452,
+    "longitude": 78.5339895,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Adilabad",
+    "market": "Adilabad APMC",
+    "pincode": "504001",
+    "latitude": 19.6759452,
+    "longitude": 78.5339895,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Adilabad",
+    "market": "Boath APMC",
+    "pincode": null,
+    "latitude": 19.360334,
+    "longitude": 78.2793388,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Adilabad",
+    "market": "Echoda APMC",
+    "pincode": "504307",
+    "latitude": 19.4307005,
+    "longitude": 78.4487993,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Adilabad",
+    "market": "Jainath APMC",
+    "pincode": "504309",
+    "latitude": 19.73276,
+    "longitude": 78.6426862,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Hyderabad",
+    "market": "Alwal,RBZ",
+    "pincode": "500010",
+    "latitude": 17.5022292,
+    "longitude": 78.5088584,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Hyderabad",
+    "market": "Bowenpally APMC",
+    "pincode": "500011",
+    "latitude": 17.4755371,
+    "longitude": 78.4792282,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Hyderabad",
+    "market": "Gudimalkapur APMC",
+    "pincode": "500028",
+    "latitude": 17.3879203,
+    "longitude": 78.4371165,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Hyderabad",
+    "market": "Mahboob Manison APMC",
+    "pincode": null,
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Telangana",
+    "district": "Hyderabad",
+    "market": "Rythu Bazar Erragadda",
+    "pincode": "500018",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Telangana",
+    "district": "Hyderabad",
+    "market": "Rythu Bazar Falaknuma",
+    "pincode": "500053",
+    "latitude": 17.3352427,
+    "longitude": 78.4680859,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Hyderabad",
+    "market": "Rythu Bazar Mehdipatnam",
+    "pincode": "500028",
+    "latitude": 17.3950891,
+    "longitude": 78.4412339,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Kamareddy",
+    "market": "Bhiknoor APMC",
+    "pincode": null,
+    "latitude": 18.1678992,
+    "longitude": 78.0435026,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Kamareddy",
+    "market": "Bichkunda APMC",
+    "pincode": "503306",
+    "latitude": 18.401589,
+    "longitude": 77.7077969,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Kamareddy",
+    "market": "Birkur APMC",
+    "pincode": "503321",
+    "latitude": 18.5229559,
+    "longitude": 77.7948307,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Kamareddy",
+    "market": "Gandhari APMC",
+    "pincode": "503114",
+    "latitude": 18.3962963,
+    "longitude": 78.1168914,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Kamareddy",
+    "market": "Kamareddy APMC",
+    "pincode": "503111",
+    "latitude": 18.3222091,
+    "longitude": 78.3387118,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Kamareddy",
+    "market": "Madnoor APMC",
+    "pincode": "503309",
+    "latitude": 18.5021779,
+    "longitude": 77.6251363,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Kamareddy",
+    "market": "Pitlam APMC",
+    "pincode": "503310",
+    "latitude": 18.2232522,
+    "longitude": 77.8239617,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Kamareddy",
+    "market": "Sadashivnagar APMC",
+    "pincode": "503145",
+    "latitude": 18.4104291,
+    "longitude": 78.2743169,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Kamareddy",
+    "market": "Yellareddy APMC",
+    "pincode": "503122",
+    "latitude": 18.2136013,
+    "longitude": 78.0323875,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Karimnagar",
+    "market": "Choppadandi APMC",
+    "pincode": "505415",
+    "latitude": 18.5773287,
+    "longitude": 79.1675524,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Karimnagar",
+    "market": "Gangadhara APMC",
+    "pincode": "505445",
+    "latitude": 18.5888465,
+    "longitude": 79.0099528,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Karimnagar",
+    "market": "Gopalraopet APMC",
+    "pincode": "505401",
+    "latitude": 18.6405688,
+    "longitude": 79.0972565,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Karimnagar",
+    "market": "Husnabad APMC",
+    "pincode": "505467",
+    "latitude": 18.1266495,
+    "longitude": 79.2111468,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Karimnagar",
+    "market": "Huzzurabad APMC",
+    "pincode": "505468",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Telangana",
+    "district": "Karimnagar",
+    "market": "Jammikunta APMC",
+    "pincode": "505122",
+    "latitude": 18.2897332,
+    "longitude": 79.4739441,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Karimnagar",
+    "market": "Karimnagar APMC",
+    "pincode": "505001",
+    "latitude": 18.4348122,
+    "longitude": 79.1328042,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Karimnagar",
+    "market": "Mallial(Cheppial) APMC",
+    "pincode": "505452",
+    "latitude": 18.2589712,
+    "longitude": 79.5367596,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Karimnagar",
+    "market": "Manakodur APMC",
+    "pincode": "505469",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Telangana",
+    "district": "Karimnagar",
+    "market": "Sultanabad APMC",
+    "pincode": "505185",
+    "latitude": 18.521544,
+    "longitude": 79.3183856,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Karimnagar",
+    "market": "V.Saidapur APMC",
+    "pincode": "505480",
+    "latitude": 18.1981597,
+    "longitude": 79.3134862,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Karimnagar",
+    "market": "Weekly Market Area,RBZ APMC",
+    "pincode": "505001",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Telangana",
+    "district": "Khammam",
+    "market": "Enkoor APMC",
+    "pincode": "507168",
+    "latitude": 17.3284346,
+    "longitude": 80.4406512,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Khammam",
+    "market": "Kallur APMC",
+    "pincode": "507209",
+    "latitude": 17.2001667,
+    "longitude": 80.5473275,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Khammam",
+    "market": "Khammam APMC",
+    "pincode": "507001",
+    "latitude": 17.2465351,
+    "longitude": 80.1500326,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Khammam",
+    "market": "Maddulapally APMC",
+    "pincode": "507303",
+    "latitude": 17.393644,
+    "longitude": 80.3220289,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Khammam",
+    "market": "Madhira APMC",
+    "pincode": "507203",
+    "latitude": 16.9234629,
+    "longitude": 80.3629315,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Khammam",
+    "market": "Nelakondapally APMC",
+    "pincode": "507160",
+    "latitude": 17.073074,
+    "longitude": 80.0536353,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Khammam",
+    "market": "Pavilion Ground,Khammam,RBZ",
+    "pincode": null,
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Telangana",
+    "district": "Khammam",
+    "market": "Sattupalli (Ramalayam),RBZ",
+    "pincode": "507303",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Telangana",
+    "district": "Khammam",
+    "market": "Sattupally APMC",
+    "pincode": "507303",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Telangana",
+    "district": "Khammam",
+    "market": "Wyra APMC",
+    "pincode": "507165",
+    "latitude": 17.1936232,
+    "longitude": 80.3594327,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Mahbubnagar",
+    "market": "Badepally APMC",
+    "pincode": "509301",
+    "latitude": 16.7539981,
+    "longitude": 78.1371754,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Mahbubnagar",
+    "market": "Balanagar APMC",
+    "pincode": "509202",
+    "latitude": 16.9511727,
+    "longitude": 78.1843736,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Mahbubnagar",
+    "market": "Devarakadra APMC",
+    "pincode": "509204",
+    "latitude": 16.6213936,
+    "longitude": 77.8412086,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Mahbubnagar",
+    "market": "Mahabubabad(Rythu Bazar)",
+    "pincode": "509001",
+    "latitude": 17.7138983,
+    "longitude": 80.0413425,
+    "geocode_status": "geo_outlier"
+  },
+  {
+    "state": "Telangana",
+    "district": "Mahbubnagar",
+    "market": "Mahbubnagar APMC",
+    "pincode": "509001",
+    "latitude": 16.7577914,
+    "longitude": 78.0000755,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Mahbubnagar",
+    "market": "Nagarkurnool(Talkapalli) APMC",
+    "pincode": null,
+    "latitude": 16.5007831,
+    "longitude": 78.2869976,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Mahbubnagar",
+    "market": "Nawabpet APMC",
+    "pincode": null,
+    "latitude": 16.8940443,
+    "longitude": 78.0296542,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Medak",
+    "market": "Chegunta APMC",
+    "pincode": "502255",
+    "latitude": 17.9709103,
+    "longitude": 78.4631576,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Medak",
+    "market": "Medak APMC",
+    "pincode": "502110",
+    "latitude": 18.0458792,
+    "longitude": 78.2651993,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Medak",
+    "market": "Narsapur APMC",
+    "pincode": "502313",
+    "latitude": 17.7384006,
+    "longitude": 78.279637,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Medak",
+    "market": "Papannapet APMC",
+    "pincode": "502159",
+    "latitude": 18.0366896,
+    "longitude": 78.0886904,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Medak",
+    "market": "Ramayampet APMC",
+    "pincode": "502159",
+    "latitude": 18.1163712,
+    "longitude": 78.4307212,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Medak",
+    "market": "Toopran APMC",
+    "pincode": "502334",
+    "latitude": 17.830515,
+    "longitude": 78.478218,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Nalgonda",
+    "market": "Chandur APMC",
+    "pincode": "508254",
+    "latitude": 16.9794401,
+    "longitude": 79.0584117,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Nalgonda",
+    "market": "Chandur(Mungodu) APMC",
+    "pincode": "508244",
+    "latitude": 16.9794401,
+    "longitude": 79.0584117,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Nalgonda",
+    "market": "Chityal APMC",
+    "pincode": "508114",
+    "latitude": 17.2314588,
+    "longitude": 79.1293471,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Nalgonda",
+    "market": "Devarakonda APMC",
+    "pincode": "508248",
+    "latitude": 16.6931795,
+    "longitude": 78.9147252,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Nalgonda",
+    "market": "Devarakonda(Dindi) APMC",
+    "pincode": "508248",
+    "latitude": 16.6931795,
+    "longitude": 78.9147252,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Nalgonda",
+    "market": "Devarakonda(Mallepalli) APMC",
+    "pincode": "508248",
+    "latitude": 16.6931795,
+    "longitude": 78.9147252,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Nalgonda",
+    "market": "Halia APMC",
+    "pincode": "508202",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Telangana",
+    "district": "Nalgonda",
+    "market": "Miryalaguda APMC",
+    "pincode": "508207",
+    "latitude": 16.8710119,
+    "longitude": 79.5617353,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Nalgonda",
+    "market": "Miryalguda(Rythu Bazar)",
+    "pincode": "508207",
+    "latitude": 16.8702377,
+    "longitude": 79.5562492,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Nalgonda",
+    "market": "Nakrekal APMC",
+    "pincode": "508211",
+    "latitude": 17.1647574,
+    "longitude": 79.4274007,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Nalgonda",
+    "market": "Nalgonda APMC",
+    "pincode": "508001",
+    "latitude": 17.0504406,
+    "longitude": 79.2669235,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Nalgonda",
+    "market": "Nidamanoor APMC",
+    "pincode": "508278",
+    "latitude": 16.8215148,
+    "longitude": 79.3651133,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Nalgonda",
+    "market": "Shaligowraram APMC",
+    "pincode": "508210",
+    "latitude": 17.2978274,
+    "longitude": 79.382485,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Nalgonda",
+    "market": "Venkateswarnagar APMC",
+    "pincode": null,
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Telangana",
+    "district": "Nizamabad",
+    "market": "Armoor APMC",
+    "pincode": "503224",
+    "latitude": 18.7904482,
+    "longitude": 78.2907202,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Nizamabad",
+    "market": "Banswada APMC",
+    "pincode": null,
+    "latitude": 18.3806583,
+    "longitude": 77.8767653,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Nizamabad",
+    "market": "Bodhan APMC",
+    "pincode": "503185",
+    "latitude": 18.6536941,
+    "longitude": 77.8936802,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Nizamabad",
+    "market": "Kammarpally APMC",
+    "pincode": "503308",
+    "latitude": 18.8318996,
+    "longitude": 78.5069181,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Nizamabad",
+    "market": "Kotagiri APMC",
+    "pincode": "503321",
+    "latitude": 18.5729602,
+    "longitude": 77.8236852,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Nizamabad",
+    "market": "NGOs Colony,RBZ",
+    "pincode": null,
+    "latitude": 17.3254318,
+    "longitude": 78.566579,
+    "geocode_status": "geo_outlier"
+  },
+  {
+    "state": "Telangana",
+    "district": "Nizamabad",
+    "market": "Nizamabad APMC",
+    "pincode": "503001",
+    "latitude": 18.6731912,
+    "longitude": 78.0978195,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Nizamabad",
+    "market": "Pullanga X Road,RBZ",
+    "pincode": null,
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Telangana",
+    "district": "Nizamabad",
+    "market": "Varni APMC",
+    "pincode": "503201",
+    "latitude": 18.53257,
+    "longitude": 77.8958328,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Nizamabad",
+    "market": "Velpur APMC",
+    "pincode": "503311",
+    "latitude": 18.7651179,
+    "longitude": 78.3932958,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Ranga Reddy",
+    "market": "Amangal APMC",
+    "pincode": "509321",
+    "latitude": 16.8497797,
+    "longitude": 78.5325679,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Ranga Reddy",
+    "market": "Babbuguda APMC",
+    "pincode": null,
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Telangana",
+    "district": "Ranga Reddy",
+    "market": "Chevella APMC",
+    "pincode": "501503",
+    "latitude": 17.3062296,
+    "longitude": 78.1370079,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Ranga Reddy",
+    "market": "Gaddiannaram APMC",
+    "pincode": null,
+    "latitude": 17.3636842,
+    "longitude": 78.523971,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Ranga Reddy",
+    "market": "Ibrahimpatnam APMC",
+    "pincode": "501506",
+    "latitude": 17.1952924,
+    "longitude": 78.6508564,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Ranga Reddy",
+    "market": "L B Nagar APMC",
+    "pincode": "500074",
+    "latitude": 17.3498071,
+    "longitude": 78.5478875,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Ranga Reddy",
+    "market": "Maheshwaram APMC",
+    "pincode": "501359",
+    "latitude": 17.1350798,
+    "longitude": 78.4338212,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Ranga Reddy",
+    "market": "Narsingi APMC",
+    "pincode": "500075",
+    "latitude": 17.3915187,
+    "longitude": 78.3598924,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Ranga Reddy",
+    "market": "Sardarnagar APMC",
+    "pincode": "500059",
+    "latitude": 17.0934624,
+    "longitude": 78.1658874,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Ranga Reddy",
+    "market": "Saroornagar,RBZ",
+    "pincode": "500059",
+    "latitude": 17.3585595,
+    "longitude": 78.5546103,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Ranga Reddy",
+    "market": "Shadnagar APMC",
+    "pincode": "509216",
+    "latitude": 17.0671702,
+    "longitude": 78.2045948,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Ranga Reddy",
+    "market": "Shankarapally APMC",
+    "pincode": "501203",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Telangana",
+    "district": "Ranga Reddy",
+    "market": "Vanasthalipuram,RBZ",
+    "pincode": null,
+    "latitude": 17.3303179,
+    "longitude": 78.568278,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Siddipet",
+    "market": "Bejjenki APMC",
+    "pincode": "505528",
+    "latitude": 18.2559006,
+    "longitude": 79.022105,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Siddipet",
+    "market": "Chinnakodur APMC",
+    "pincode": null,
+    "latitude": 18.1613649,
+    "longitude": 78.8994489,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Siddipet",
+    "market": "Doulthabad APMC",
+    "pincode": null,
+    "latitude": 17.9880104,
+    "longitude": 78.5697904,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Siddipet",
+    "market": "Dubbak APMC",
+    "pincode": "502108",
+    "latitude": 18.1737336,
+    "longitude": 78.6657035,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Siddipet",
+    "market": "Gajwel APMC",
+    "pincode": "502278",
+    "latitude": 17.8456745,
+    "longitude": 78.6828741,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Siddipet",
+    "market": "Koheda APMC",
+    "pincode": null,
+    "latitude": 18.1710494,
+    "longitude": 79.0930528,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Siddipet",
+    "market": "Kondapaka APMC",
+    "pincode": "502372",
+    "latitude": 17.973531,
+    "longitude": 78.8591995,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Siddipet",
+    "market": "Mirdoddi APMC",
+    "pincode": "502102",
+    "latitude": 18.0789173,
+    "longitude": 78.6774945,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Siddipet",
+    "market": "Nangunoor APMC",
+    "pincode": null,
+    "latitude": 18.0629294,
+    "longitude": 79.0361182,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Siddipet",
+    "market": "Siddipet APMC",
+    "pincode": "502103",
+    "latitude": 18.1017739,
+    "longitude": 78.8520128,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Siddipet",
+    "market": "Siddipet(Rythu Bazar)",
+    "pincode": "502103",
+    "latitude": 18.1017739,
+    "longitude": 78.8520128,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Siddipet",
+    "market": "Thoguta APMC",
+    "pincode": "502301",
+    "latitude": 18.0135898,
+    "longitude": 78.713243,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Siddipet",
+    "market": "Vantamamidi APMC",
+    "pincode": null,
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Telangana",
+    "district": "Warangal",
+    "market": "Cherial APMC",
+    "pincode": null,
+    "latitude": 17.9248452,
+    "longitude": 78.9711548,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Warangal",
+    "market": "Narsampet APMC",
+    "pincode": "506132",
+    "latitude": 17.9305758,
+    "longitude": 79.893639,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Warangal",
+    "market": "Nekkonda APMC",
+    "pincode": "506122",
+    "latitude": 17.7959905,
+    "longitude": 79.8019946,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Warangal",
+    "market": "Warangal APMC",
+    "pincode": "506006",
+    "latitude": 17.9820644,
+    "longitude": 79.5970954,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Warangal",
+    "market": "Wardhannapet APMC",
+    "pincode": "506313",
+    "latitude": 17.7733267,
+    "longitude": 79.5761394,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Sangareddy",
+    "market": "APMC PATANCHERU",
+    "pincode": "502319",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Telangana",
+    "district": "Sangareddy",
+    "market": "Jogipet APMC",
+    "pincode": "502270",
+    "latitude": 17.8368269,
+    "longitude": 78.0731499,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Sangareddy",
+    "market": "Narayankhed APMC",
+    "pincode": "502286",
+    "latitude": 18.0347921,
+    "longitude": 77.7772967,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Sangareddy",
+    "market": "Raikode APMC",
+    "pincode": null,
+    "latitude": 17.8382386,
+    "longitude": 77.747213,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Sangareddy",
+    "market": "Sadasivpet APMC",
+    "pincode": "502291",
+    "latitude": 17.6211902,
+    "longitude": 77.9503264,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Sangareddy",
+    "market": "Sangareddy APMC",
+    "pincode": "502001",
+    "latitude": 17.6155151,
+    "longitude": 78.0817225,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Sangareddy",
+    "market": "Vatpally APMC",
+    "pincode": "502267",
+    "latitude": 17.8770725,
+    "longitude": 77.9003354,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Sangareddy",
+    "market": "Zaheerabad APMC",
+    "pincode": "502220",
+    "latitude": 17.679403,
+    "longitude": 77.6153076,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Jangaon",
+    "market": "Jangaon APMC",
+    "pincode": "506167",
+    "latitude": 17.7243771,
+    "longitude": 79.1570824,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Bhadradri Kothagudem",
+    "market": "Bhadrachalam APMC",
+    "pincode": "507111",
+    "latitude": 17.6688019,
+    "longitude": 80.8940083,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Bhadradri Kothagudem",
+    "market": "Burgampadu APMC",
+    "pincode": "507114",
+    "latitude": 17.6438002,
+    "longitude": 80.8694168,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Bhadradri Kothagudem",
+    "market": "Dammapet APMC",
+    "pincode": "507306",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Telangana",
+    "district": "Bhadradri Kothagudem",
+    "market": "Kothagudem APMC",
+    "pincode": "507101",
+    "latitude": 17.5512916,
+    "longitude": 80.6144535,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Bhadradri Kothagudem",
+    "market": "Nuguru Charla APMC",
+    "pincode": null,
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Telangana",
+    "district": "Bhadradri Kothagudem",
+    "market": "Yellandu APMC",
+    "pincode": "507123",
+    "latitude": 17.5915639,
+    "longitude": 80.3216885,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Rajanna Sircilla",
+    "market": "Boinpalli APMC",
+    "pincode": null,
+    "latitude": 18.4873756,
+    "longitude": 78.9361971,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Rajanna Sircilla",
+    "market": "Ellanthakunta APMC",
+    "pincode": "505402",
+    "latitude": 18.3096226,
+    "longitude": 78.9547779,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Rajanna Sircilla",
+    "market": "Konraraopet APMC",
+    "pincode": "505304",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Telangana",
+    "district": "Rajanna Sircilla",
+    "market": "Pothgal APMC",
+    "pincode": null,
+    "latitude": 18.2825582,
+    "longitude": 78.7074146,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Rajanna Sircilla",
+    "market": "Racharla Boppapur APMC",
+    "pincode": null,
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Telangana",
+    "district": "Rajanna Sircilla",
+    "market": "Rudrangi APMC",
+    "pincode": null,
+    "latitude": 18.6260498,
+    "longitude": 78.7026701,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Rajanna Sircilla",
+    "market": "Sircilla APMC",
+    "pincode": "505301",
+    "latitude": 18.3897573,
+    "longitude": 78.8085973,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Rajanna Sircilla",
+    "market": "Veernapalli APMC",
+    "pincode": null,
+    "latitude": 18.4752742,
+    "longitude": 78.6021781,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Rajanna Sircilla",
+    "market": "Vemulawada APMC",
+    "pincode": "505302",
+    "latitude": 18.4674786,
+    "longitude": 78.8699,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Mancherial",
+    "market": "Bellampally APMC",
+    "pincode": "504251",
+    "latitude": 19.07529,
+    "longitude": 79.476587,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Mancherial",
+    "market": "Chennur APMC",
+    "pincode": "504201",
+    "latitude": 18.8555246,
+    "longitude": 79.7904908,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Mancherial",
+    "market": "Jannaram APMC",
+    "pincode": "504205",
+    "latitude": 19.1219171,
+    "longitude": 78.9959894,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Mancherial",
+    "market": "Luxettipet APMC",
+    "pincode": "504215",
+    "latitude": 18.9192283,
+    "longitude": 79.2328067,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Mancherial",
+    "market": "Mancherial APMC",
+    "pincode": "504208",
+    "latitude": 18.8761795,
+    "longitude": 79.4449696,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Wanaparthy",
+    "market": "Atmakur APMC",
+    "pincode": null,
+    "latitude": 16.3373241,
+    "longitude": 77.805459,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Wanaparthy",
+    "market": "Pebbair APMC",
+    "pincode": "509104",
+    "latitude": 16.2052789,
+    "longitude": 77.9941964,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Wanaparthy",
+    "market": "Wanaparthy Road APMC",
+    "pincode": "509103",
+    "latitude": 16.3584227,
+    "longitude": 78.0600642,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Wanaparthy",
+    "market": "Wanaparthy town APMC",
+    "pincode": "509103",
+    "latitude": 16.3617799,
+    "longitude": 78.0610836,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Vikarabad",
+    "market": "Basheerabad APMC",
+    "pincode": "501101",
+    "latitude": 17.2198527,
+    "longitude": 77.4246474,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Vikarabad",
+    "market": "Dharur APMC",
+    "pincode": "501121",
+    "latitude": 17.3095811,
+    "longitude": 77.7788084,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Vikarabad",
+    "market": "Kulkacherla APMC",
+    "pincode": "501502",
+    "latitude": 17.0150535,
+    "longitude": 77.8755632,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Vikarabad",
+    "market": "Marapally APMC",
+    "pincode": "501105",
+    "latitude": null,
+    "longitude": null,
+    "geocode_status": "unresolved"
+  },
+  {
+    "state": "Telangana",
+    "district": "Vikarabad",
+    "market": "Pargi APMC",
+    "pincode": "501501",
+    "latitude": 17.1685198,
+    "longitude": 77.8797905,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Vikarabad",
+    "market": "Tanduru APMC",
+    "pincode": "501141",
+    "latitude": 17.2575144,
+    "longitude": 77.5874075,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Vikarabad",
+    "market": "Vikarabad APMC",
+    "pincode": "501101",
+    "latitude": 17.3379216,
+    "longitude": 77.9039857,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Hanamkonda",
+    "market": "Excise Colony,RBZ",
+    "pincode": null,
+    "latitude": 17.3983274,
+    "longitude": 78.5125609,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Hanamkonda",
+    "market": "Kamalapur APMC",
+    "pincode": null,
+    "latitude": 18.1739005,
+    "longitude": 79.5250884,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Hanamkonda",
+    "market": "Parkal APMC",
+    "pincode": "506164",
+    "latitude": 18.1983314,
+    "longitude": 79.7010601,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Bhupalapally",
+    "market": "Bhupalapally APMC",
+    "pincode": "506169",
+    "latitude": 18.4396558,
+    "longitude": 79.8629343,
+    "geocode_status": "ok"
+  },
+  {
+    "state": "Telangana",
+    "district": "Bhupalapally",
+    "market": "Kataram APMC",
+    "pincode": "505503",
+    "latitude": 18.6275596,
+    "longitude": 79.938122,
+    "geocode_status": "ok"
+  }
+]

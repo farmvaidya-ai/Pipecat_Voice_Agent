@@ -14,6 +14,9 @@ bot_processors/scraper_daemon_log.txt
 bot_processors/scraper_daemon_log.txt.err
 bot_processors/scraper_log.txt
 bot_processors/*_run.log
+bot_processors/*_retry*.log
+bot_processors/pincode_village_counts.xlsx
+geo_validator/output/
 ~$*.xlsx
 *_archive_*.zip
 

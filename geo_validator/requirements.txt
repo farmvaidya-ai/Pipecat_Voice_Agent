@@ -1,0 +1,7 @@
+pandas
+requests
+geopy
+rapidfuzz
+openpyxl
+loguru
+python-dotenv

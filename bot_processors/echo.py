@@ -7,6 +7,8 @@ import unicodedata
 from loguru import logger
 
 from pipecat.frames.frames import (
+    BotStartedSpeakingFrame,
+    BotStoppedSpeakingFrame,
     Frame,
     InterimTranscriptionFrame,
     TranscriptionFrame,
@@ -46,8 +48,13 @@ class EchoBuffer:
         Return True if ≥ threshold fraction of the transcript's words
         appear in recent bot speech.
 
-        threshold=0.70 means 70% word overlap → marked as echo.
-        Keeps false positives low while catching most real echoes.
+        threshold=0.70 means 70% word overlap → marked as echo. Keeps false
+        positives low while catching most real echoes. EchoFilter passes a
+        lower threshold here while the bot is actively speaking (see
+        _BOT_SPEAKING_ECHO_THRESHOLD) — phone-line echo of the bot's own
+        current utterance is the single most likely source of a transcript
+        arriving in that exact window, so less textual overlap is needed to
+        treat it as suspect than during ordinary silence.
         """
         now = time.monotonic()
         self._entries = [(t, txt) for t, txt in self._entries if now - t < self._ttl]
@@ -115,17 +122,44 @@ class EchoFilter(FrameProcessor):
     """
     Sits between STT and context_aggregator.user().
 
-    Two jobs:
+    Three jobs:
     1. Watches TTSSpeakFrame flowing downstream (greeting) → adds text to EchoBuffer.
-    2. Checks every TranscriptionFrame against EchoBuffer → drops if it looks like echo.
+    2. Watches BotStartedSpeakingFrame/BotStoppedSpeakingFrame — pushed by the
+       output transport in both directions, so the upstream copy reaches this
+       processor — to track whether the bot's TTS audio is actively playing
+       right now.
+    3. Checks every TranscriptionFrame against EchoBuffer → drops if it looks like echo.
 
     LLMTextFrame tokens (bot responses) are fed into the same buffer by CallCostTracker
     because those frames appear AFTER this processor in the pipeline.
+
+    Why bot-speaking state matters: a transcript that finalizes while the
+    bot's own TTS audio is still going out is disproportionately likely to be
+    that same audio leaking back through the phone line (weak/no echo
+    cancellation on the carrier's side) rather than a deliberate interruption
+    — confirmed live (call_919390427476_7c2bd950.log, 2026-08-07): several
+    turns' worth of unrelated Telugu fragments got transcribed and answered
+    back-to-back, all landing while the bot's own greeting/reply was still
+    playing, with essentially zero word overlap against the original text
+    (STT badly mangles phone-quality echo, it doesn't cleanly repeat it) — so
+    the flat 70% threshold below never caught them. A caller genuinely trying
+    to interrupt is a real, wanted case (allow_interruptions=True) — so bot
+    speech never blocks transcripts outright — but it does lower the bar for
+    "looks enough like an echo to drop", since real interruptions and echo
+    leakage aren't symmetric risks in that window.
     """
+
+    # Applied only while _bot_speaking is True. Well below the normal 70% —
+    # deliberately generous about calling something an echo in this window,
+    # since the cost of a false drop (an actual interruption gets dropped and
+    # the caller just repeats themselves a beat later) is much lower here
+    # than a false drop during ordinary silence would be.
+    _BOT_SPEAKING_ECHO_THRESHOLD = 0.35
 
     def __init__(self, echo_buffer: EchoBuffer, **kwargs):
         super().__init__(**kwargs)
         self._buf = echo_buffer
+        self._bot_speaking = False
 
     async def process_frame(self, frame: Frame, direction: FrameDirection):
         await super().process_frame(frame, direction)
@@ -134,9 +168,19 @@ class EchoFilter(FrameProcessor):
             # Greeting flows through here as TTSSpeakFrame — store it so echo can be caught
             self._buf.add(frame.text)
 
+        elif isinstance(frame, BotStartedSpeakingFrame):
+            self._bot_speaking = True
+
+        elif isinstance(frame, BotStoppedSpeakingFrame):
+            self._bot_speaking = False
+
         elif isinstance(frame, TranscriptionFrame) and frame.text.strip():
-            if self._buf.is_echo(frame.text):
-                logger.warning(f"🔇 ECHO DROPPED | \"{frame.text}\"")
+            threshold = self._BOT_SPEAKING_ECHO_THRESHOLD if self._bot_speaking else 0.70
+            if self._buf.is_echo(frame.text, threshold=threshold):
+                logger.warning(
+                    f"🔇 ECHO DROPPED | \"{frame.text}\" "
+                    f"(threshold={threshold}, bot_speaking={self._bot_speaking})"
+                )
                 return  # Drop the frame — LLM never sees it
 
         await self.push_frame(frame, direction)

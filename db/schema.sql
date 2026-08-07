@@ -8,9 +8,16 @@
 -- INTEGER CHECK (0/1).
 
 -- Caller registry — tracks which phone numbers have called before, their
--- name (if known), how many times, and (once verbally confirmed via the
--- location-capture flow — see bot_processors/location_lookup.py) which
--- Agmarknet district they farm in, so later calls don't need to ask again.
+-- name (if known), how many times, and (once verbally captured via the
+-- metadata-capture flow — see bot_processors/location_lookup.py) their
+-- state/district/mandal/village/pincode, so later calls don't need to ask
+-- again. confirmed_market is the specific Agmarknet mandi the caller
+-- recognized by name, when that's separately been confirmed for pricing
+-- (most precise); confirmed_district is what get_price/get_weather actually
+-- key off of. confirmed_mandal/confirmed_village are the caller's own plain
+-- location words, spoken as part of the metadata-capture sequence
+-- (name -> state -> district -> mandal -> village -> pincode) and stored
+-- as-is, independent of the market-yard flow.
 CREATE TABLE IF NOT EXISTS dim_contacts (
     phone_number          TEXT PRIMARY KEY,
     name                  TEXT,
@@ -19,6 +26,9 @@ CREATE TABLE IF NOT EXISTS dim_contacts (
     call_count            INTEGER NOT NULL DEFAULT 0,
     confirmed_state       TEXT,
     confirmed_district    TEXT,
+    confirmed_mandal      TEXT,
+    confirmed_village     TEXT,
+    confirmed_market      TEXT,
     confirmed_pincode     TEXT,
     location_confirmed_at TIMESTAMPTZ
 );
@@ -28,6 +38,9 @@ CREATE TABLE IF NOT EXISTS dim_contacts (
 -- (CREATE TABLE IF NOT EXISTS above is a no-op once the table already exists).
 ALTER TABLE dim_contacts ADD COLUMN IF NOT EXISTS confirmed_state TEXT;
 ALTER TABLE dim_contacts ADD COLUMN IF NOT EXISTS confirmed_district TEXT;
+ALTER TABLE dim_contacts ADD COLUMN IF NOT EXISTS confirmed_mandal TEXT;
+ALTER TABLE dim_contacts ADD COLUMN IF NOT EXISTS confirmed_village TEXT;
+ALTER TABLE dim_contacts ADD COLUMN IF NOT EXISTS confirmed_market TEXT;
 ALTER TABLE dim_contacts ADD COLUMN IF NOT EXISTS confirmed_pincode TEXT;
 ALTER TABLE dim_contacts ADD COLUMN IF NOT EXISTS location_confirmed_at TIMESTAMPTZ;
 

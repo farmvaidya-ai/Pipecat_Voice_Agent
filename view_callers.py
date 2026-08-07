@@ -18,7 +18,8 @@ async def main() -> None:
     pool = get_pool()
     async with pool.acquire() as conn:
         rows = await conn.fetch(
-            "SELECT phone_number, call_count, first_seen, last_seen "
+            "SELECT phone_number, name, call_count, first_seen, last_seen, "
+            "confirmed_state, confirmed_district, confirmed_mandal, confirmed_village, confirmed_pincode "
             "FROM dim_contacts ORDER BY last_seen DESC"
         )
     await close_pool()
@@ -27,10 +28,20 @@ async def main() -> None:
         print("No callers recorded yet.")
         return
 
-    print(f"{'Phone Number':<15} {'Calls':>5}  {'First Seen':<25} {'Last Seen':<25}")
-    print("-" * 75)
+    header = (
+        f"{'Name':<15} {'Phone Number':<15} {'First Seen':<20} {'Last Seen':<20} {'Calls':>5}  "
+        f"{'State':<15} {'District':<15} {'Mandal':<15} {'Village':<15} {'Pincode':<8}"
+    )
+    print(header)
+    print("-" * len(header))
     for row in rows:
-        print(f"{row['phone_number']:<15} {row['call_count']:>5}  {str(row['first_seen']):<25} {str(row['last_seen']):<25}")
+        print(
+            f"{(row['name'] or '-'):<15} {row['phone_number']:<15} "
+            f"{str(row['first_seen'])[:19]:<20} {str(row['last_seen'])[:19]:<20} {row['call_count']:>5}  "
+            f"{(row['confirmed_state'] or '-'):<15} {(row['confirmed_district'] or '-'):<15} "
+            f"{(row['confirmed_mandal'] or '-'):<15} {(row['confirmed_village'] or '-'):<15} "
+            f"{(row['confirmed_pincode'] or '-'):<8}"
+        )
     print(f"\n{len(rows)} caller(s) total.")
 
 

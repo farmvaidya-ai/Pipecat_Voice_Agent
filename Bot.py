@@ -68,7 +68,7 @@ _gatr.Request = _PatchedGAuthRequest
 from dotenv import load_dotenv
 from loguru import logger
 
-from pipecat.frames.frames import TTSSpeakFrame
+from pipecat.frames.frames import LLMMessagesAppendFrame, TTSSpeakFrame
 from pipecat.pipeline.pipeline import Pipeline
 from pipecat.pipeline.runner import PipelineRunner
 from pipecat.pipeline.task import PipelineParams, PipelineTask
@@ -116,9 +116,15 @@ from bot_processors.tts_switcher import MultilingualTTSSwitcher
 from bot_processors.echo import EchoBuffer, EchoFilter, TranscriptCorrector
 from bot_processors.rag import RAGInjector
 from bot_processors.context_trimmer import ContextTrimmer
-from bot_processors.price_lookup import make_get_price
+from bot_processors.price_lookup import make_get_price, make_get_price_all_markets
 from bot_processors.weather_lookup import make_get_weather
-from bot_processors.location_lookup import make_confirm_location, make_save_caller_location
+from bot_processors.location_lookup import (
+    make_collect_pincode_digits,
+    make_confirm_location,
+    make_lookup_place_by_pincode,
+    make_save_caller_location,
+    make_save_caller_name,
+)
 from bot_processors.outbound_call import trigger_customer_first_call
 from bot_processors.caller_memory import load_latest_summary, note_from_summary, build_template_greeting
 from bot_processors.caller_summarizer import summarize_and_save_call, build_llm_greeting
@@ -244,6 +250,11 @@ IDLE_WARNING_TEXT = os.getenv(
     "మీరు అక్కడ ఉన్నారా? మీరు బిజీగా ఉంటే, నేను కాల్ ముగించమంటారా?",
 )
 IDLE_WARNING_GRACE_SECS = float(os.getenv("IDLE_WARNING_GRACE_SECS", "12"))
+
+# Upper bound on _run_finalize's summary/DB-write gather (see its own
+# comment) — normal completion is ~1s (confirmed live), so this is a wide
+# margin for a slow-but-working network, not a tight budget.
+FINALIZE_TIMEOUT_SECS = float(os.getenv("FINALIZE_TIMEOUT_SECS", "20"))
 
 # Spoken immediately when a user turn is force-stopped with no transcript at
 # all (STT never returned anything for that turn — e.g. the caller's speech
@@ -602,23 +613,52 @@ async def run_bot(websocket: WebSocket, session_id: str, sink_ref: list):
         # automatically when TTSSpeakFrame is spoken, so adding it here caused a
         # duplicate model turn that confused the LLM.
     ]
-    # get_weather/get_price/confirm_location/save_caller_location are real
-    # LLM tool calls (see bot_processors/weather_lookup.py,
-    # bot_processors/price_lookup.py, bot_processors/location_lookup.py) —
-    # each closed over this call's serializer purely so tool-call outcomes
-    # can still be logged with the right call_id; the LLM only ever sees
-    # get_weather(location: str) / get_price(commodity, state, district) /
-    # confirm_location(pincode, place, state) / save_caller_location(district, state, pincode).
+    # context is built with no tools yet, then set_tools() right after —
+    # save_caller_location needs a reference to inject a system message
+    # straight into context the instant a location save succeeds (see
+    # make_save_caller_location's context arg below), which means context
+    # has to exist before that closure is built, not after.
+    context = LLMContext(messages, tools=[])
+
+    # get_weather/get_price/get_price_all_markets/confirm_location/
+    # save_caller_location/save_caller_name/lookup_place_by_pincode/
+    # collect_pincode_digits are real LLM tool calls (see
+    # bot_processors/weather_lookup.py, bot_processors/price_lookup.py,
+    # bot_processors/location_lookup.py) — each closed over this call's
+    # serializer purely so tool-call outcomes can still be logged with the
+    # right call_id; the LLM only ever sees get_weather(location: str) /
+    # get_price(commodity, state, district) / get_price_all_markets(
+    # commodity, state) / confirm_location(pincode, place, state) /
+    # save_caller_location(state, district, pincode, mandal, village,
+    # market) / save_caller_name(name) / lookup_place_by_pincode(pincode) /
+    # collect_pincode_digits(digits, reset). collect_pincode_digits is also
+    # what gives lookup_place_by_pincode/confirm_location a reliably-complete
+    # 6-digit pincode in the first place — see its docstring in
+    # location_lookup.py for why the digit-counting moved out of the prompt.
     get_weather = make_get_weather(serializer)
     get_price = make_get_price(serializer)
+    get_price_all_markets = make_get_price_all_markets(serializer)
     confirm_location = make_confirm_location(serializer)
-    save_caller_location = make_save_caller_location(serializer)
-    context = LLMContext(messages, tools=[get_weather, get_price, confirm_location, save_caller_location])
+    save_caller_location = make_save_caller_location(serializer, context)
+    save_caller_name = make_save_caller_name(serializer)
+    lookup_place_by_pincode = make_lookup_place_by_pincode(serializer)
+    collect_pincode_digits = make_collect_pincode_digits(serializer)
+    context.set_tools([
+        get_weather, get_price, get_price_all_markets, confirm_location,
+        save_caller_location, save_caller_name, lookup_place_by_pincode,
+        collect_pincode_digits,
+    ])
 
     # Pending "are you there?" grace-period task, set while we're waiting to
     # see if the caller responds to the idle warning (see on_idle_timeout
     # below). Cancelled the moment the caller starts speaking again.
     _idle_warning_task: asyncio.Task | None = None
+
+    # Monotonic timestamp of the current user turn's start, used by
+    # on_user_turn_stopped to decide whether _lat_state.last_final_text was
+    # captured during THIS turn (safe to recover) vs. a stale leftover from
+    # an earlier, already-handled turn.
+    _turn_start_monotonic: float = 0.0
 
     # Set once in _greet_and_inject_memory, read in on_client_disconnected to
     # compute duration_seconds for the calls table row.
@@ -692,8 +732,9 @@ async def run_bot(websocket: WebSocket, session_id: str, sink_ref: list):
 
     @user_aggregator.event_handler("on_user_turn_started")
     async def on_user_turn_started(_aggregator, strategy):
-        nonlocal _idle_warning_task
+        nonlocal _idle_warning_task, _turn_start_monotonic
         logger.info(f"🗣️  Turn START  | start_strategy={type(strategy).__name__}")
+        _turn_start_monotonic = time.monotonic()
         # Reset RAG's turn buffer here rather than on the raw
         # VADUserStartedSpeakingFrame — that frame fires on VAD's own
         # start_secs/stop_secs hangover timing and can flicker mid-utterance
@@ -711,8 +752,35 @@ async def run_bot(websocket: WebSocket, session_id: str, sink_ref: list):
         strategy_name = type(strategy).__name__ if strategy else "timeout"
         logger.info(f"🛑 Turn STOP   | stop_strategy={strategy_name} | text={message.content!r}")
         if strategy is None and not message.content.strip():
-            logger.info("🔁 Empty forced turn-stop — re-prompting caller instead of leaving dead air")
-            await task.queue_frame(TTSSpeakFrame(text=EMPTY_TURN_REPROMPT_TEXT))
+            # The aggregator's own buffer came back empty, but that doesn't
+            # necessarily mean the caller was silent — confirmed live
+            # (call_919390427476_0ccb2fd9.log, 2026-08-05) that a real,
+            # correctly-transcribed answer can still get wiped from the
+            # aggregator's `_full_user_turn_aggregation` before this forced
+            # timeout flushes it (VAD restarting mid-utterance resets that
+            # buffer — see the on_user_turn_started comment above). Recover
+            # from _lat_state's independent copy of the last final transcript
+            # when it was captured during this same turn and hasn't already
+            # been used for a reply.
+            if (
+                _lat_state.last_final_text
+                and not _lat_state.last_final_consumed
+                and _lat_state.last_final_ts >= _turn_start_monotonic
+            ):
+                recovered_text = _lat_state.last_final_text
+                _lat_state.last_final_consumed = True
+                logger.info(
+                    f"♻️  Recovered lost turn text from latency tracker: {recovered_text!r}"
+                )
+                await task.queue_frame(
+                    LLMMessagesAppendFrame(
+                        messages=[{"role": "user", "content": recovered_text}],
+                        run_llm=True,
+                    )
+                )
+            else:
+                logger.info("🔁 Empty forced turn-stop — re-prompting caller instead of leaving dead air")
+                await task.queue_frame(TTSSpeakFrame(text=EMPTY_TURN_REPROMPT_TEXT))
 
     @user_aggregator.event_handler("on_user_turn_stop_timeout")
     async def on_user_turn_stop_timeout(_aggregator):
@@ -796,6 +864,18 @@ async def run_bot(websocket: WebSocket, session_id: str, sink_ref: list):
         params=PipelineParams(
             allow_interruptions=True,
             enable_metrics=True,
+            # Separate flag from enable_metrics above — pipecat gates
+            # STTUsageMetricsData/LLMUsageMetricsData/TTSUsageMetricsData
+            # behind BOTH FrameProcessor.can_generate_metrics() (tied to
+            # enable_metrics) AND FrameProcessor.usage_metrics_enabled (tied
+            # to THIS flag) — see pipecat/processors/frame_processor.py's
+            # start_llm_usage_metrics/start_stt_usage_metrics. Without this,
+            # bot_processors/latency.py's STT/LLM cost tracking (the "🎙️
+            # CALL END"/"🧠 CALL END" summary lines) never fires: confirmed
+            # live, a real call had enable_metrics=True the whole time and
+            # still logged zero STT/LLM usage events, only TTS (which is
+            # tracked from real PCM frames, not this metrics path).
+            enable_usage_metrics=True,
         ),
         idle_timeout_secs=pipeline_idle_timeout_secs,
         # Speak a warning first (see on_idle_timeout below) instead of
@@ -811,12 +891,37 @@ async def run_bot(websocket: WebSocket, session_id: str, sink_ref: list):
         end_dt = datetime.now(timezone.utc)
         duration_seconds = int((end_dt - _call_start_dt).total_seconds()) if _call_start_dt else None
         turns = [m for m in context.messages if m.get("role") in ("user", "assistant")]
-        await asyncio.gather(
-            summarize_and_save_call(llm, context, serializer.caller_number, serializer.call_id),
-            end_call(serializer.call_id, end_dt, duration_seconds, reason, _lat_state.detected_language),
-            save_conversation_messages(serializer.call_id, turns, _lat_state.turn_latencies_ms),
-            return_exceptions=True,
-        )
+        try:
+            # summarize_and_save_call makes a live LLM call — return_exceptions=True
+            # below only protects against one of these three raising, it does
+            # NOT bound how long a hung network call can block this gather.
+            # Confirmed live (call_919390427476_345979fe.log, 2026-08-07): a
+            # real DNS/network outage took down Soniox and Bakbak mid-call,
+            # and the same outage evidently stalled this LLM summarization
+            # call too — _finalize_call() (which every caller of this,
+            # including _end_call_if_still_idle's own task.cancel() right
+            # after it, awaits) never returned, so the idle-timeout
+            # auto-hangup — the one mechanism meant to end an unresponsive
+            # call — never actually cancelled the pipeline. The "are you
+            # there?" warning re-fired two more times, ~60s apart, before the
+            # call finally closed only because Smartflow's own side hung up.
+            # A bounded wait here guarantees _finalize_call always returns
+            # and task.cancel() always eventually runs, network outage or not.
+            await asyncio.wait_for(
+                asyncio.gather(
+                    summarize_and_save_call(llm, context, serializer.caller_number, serializer.call_id),
+                    end_call(serializer.call_id, end_dt, duration_seconds, reason, _lat_state.detected_language),
+                    save_conversation_messages(serializer.call_id, turns, _lat_state.turn_latencies_ms),
+                    return_exceptions=True,
+                ),
+                timeout=FINALIZE_TIMEOUT_SECS,
+            )
+        except asyncio.TimeoutError:
+            logger.warning(
+                f"⚠️ _run_finalize: summary/DB writes didn't complete within "
+                f"{FINALIZE_TIMEOUT_SECS:.0f}s (reason={reason!r}) — giving up on them "
+                "so call teardown isn't blocked; this call's memory/transcript may be incomplete"
+            )
 
     async def _finalize_call(reason: str) -> None:
         """Summarizes+saves this call's memory, logs it to the calls table,
@@ -910,20 +1015,24 @@ async def run_bot(websocket: WebSocket, session_id: str, sink_ref: list):
             )
 
         if location:
+            village_note = f", village {location['village']}" if location.get("village") else ""
+            mandal_note = f", mandal {location['mandal']}" if location.get("mandal") else ""
             pincode_note = f" (pincode {location['pincode']})" if location.get("pincode") else ""
+            market_note = f", nearest market yard {location['market']}" if location.get("market") else ""
             context.add_message({
                 "role": "system",
                 "content": (
                     f"This caller's confirmed farming location is {location['district']}, "
-                    f"{location['state']}{pincode_note}. Use this automatically as the "
-                    "district/state for get_price and get_weather whenever the caller doesn't "
-                    "name a different place this turn — do not run the location-capture flow "
-                    "or ask for their location again unless they mention a different place."
+                    f"{location['state']}{mandal_note}{village_note}{pincode_note}{market_note}. "
+                    "This caller's name and location metadata are already known — do not ask for "
+                    "their name, state, district, mandal, village, or pincode again this call. "
+                    "Use this district/state automatically for get_price and get_weather whenever "
+                    "the caller doesn't name a different place this turn."
                 ),
             })
             logger.info(
                 f"📍 Injected confirmed location for {serializer.caller_number}: "
-                f"{location['district']}, {location['state']}"
+                f"{location.get('market') or location['district']}, {location['state']}"
             )
 
     @transport.event_handler("on_client_connected")

@@ -94,7 +94,26 @@ def create_llm():
 # ──────────────────────────────────────────────────────────────────────────────
 
 def _create_vertex():
+    from google.genai.types import HarmBlockThreshold, HarmCategory, SafetySetting
     from pipecat.services.google.vertex.llm import GoogleVertexLLMService as _VertexService
+
+    # Explicit content-safety thresholds (pipecat-ai>=1.7.0's
+    # GoogleLLMService.Settings.safety_settings) — a public phone line taking
+    # unscreened calls from farmers is exactly the kind of open input surface
+    # worth setting deliberately rather than leaving to Gemini's implicit
+    # defaults. Left at BLOCK_MEDIUM_AND_ABOVE (Gemini's own normal default)
+    # rather than tightened further: this is an agricultural pest-control
+    # bot, so words like "poison", "kill", "spray" are routine domain
+    # vocabulary, not something a stricter threshold should be flagging.
+    _VERTEX_SAFETY_SETTINGS = [
+        SafetySetting(category=cat, threshold=HarmBlockThreshold.BLOCK_MEDIUM_AND_ABOVE)
+        for cat in (
+            HarmCategory.HARM_CATEGORY_HARASSMENT,
+            HarmCategory.HARM_CATEGORY_HATE_SPEECH,
+            HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT,
+            HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT,
+        )
+    ]
 
     class _FastVertexLLMService(_VertexService):
         # Override the credentials lookup only — everything else (client
@@ -141,6 +160,7 @@ def _create_vertex():
                 settings=_VertexService.Settings(
                     model=model,
                     thinking=_VertexService.ThinkingConfig(thinking_budget=0),
+                    safety_settings=_VERTEX_SAFETY_SETTINGS,
                 ),
             )
             logger.debug(

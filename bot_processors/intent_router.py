@@ -10,6 +10,15 @@ also checks whether the caller has actually named a location/commodity/
 state/district. A "other" verdict here just means "don't skip RAG" — it is
 not a claim that the turn isn't a price/weather question.
 
+A caller dictating a pincode digit-by-digit ("5, 3, 3" then "4, 0, 1") also
+skips RAG, same as weather/price — confirmed live 2026-08-04
+(call_919390427476, CAGE3-T9-1785836414.599878): fragments like "533.",
+"40.", "0, 1." classified as "other" and each fired a real Qdrant search;
+one of those (on generic filler text between pincode fragments) surfaced an
+unrelated chunk about mango sticky traps, which the LLM then hallucinated
+the caller had asked about. Digit-dominant fragments carry no topical
+content a KB search could meaningfully match anyway.
+
 Deliberately keyword-based rather than another LLM call: this has to run
 synchronously on every interim STT fragment (see rag.py's speculative
 search), so it needs to be near-instant, not add its own inference latency.
@@ -74,10 +83,35 @@ def _contains_any(text: str, keywords: set[str]) -> bool:
     return any(kw in text or kw.lower() in lowered for kw in keywords)
 
 
+# Punctuation/separators a caller's dictated digits commonly get STT-split
+# with ("533-401", "5, 3, 3", "0, 1.") — stripped before checking whether
+# what's left is just digits.
+_DIGIT_SEPARATORS = " .,-—/"
+
+
+def _is_digit_fragment(text: str) -> bool:
+    """True for short utterances that are mostly/only digits — a caller
+    reciting a pincode a few digits at a time, not a real question."""
+    stripped = text.strip()
+    if not stripped or len(stripped) > 20:
+        return False
+    core = "".join(ch for ch in stripped if ch not in _DIGIT_SEPARATORS)
+    if not core:
+        return False
+    digit_count = sum(ch.isdigit() for ch in core)
+    return digit_count >= max(1, len(core) - 1)  # allow one stray misheard char, e.g. "I-33"
+
+
 def classify_intent(text: str) -> str:
-    """Returns "weather", "price", or "other" for a caller's turn text."""
+    """Returns "weather", "price", "location", or "other" for a caller's
+    turn text. "location" (a caller dictating pincode digits) is treated
+    identically to "weather"/"price" by rag.py — all three skip the RAG
+    search."""
     if not text or not text.strip():
         return "other"
+
+    if _is_digit_fragment(text):
+        return "location"
 
     if _contains_any(text, _WEATHER_KEYWORDS):
         return "weather"

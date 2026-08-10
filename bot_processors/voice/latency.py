@@ -21,6 +21,7 @@ from pipecat.processors.frame_processor import FrameDirection, FrameProcessor
 
 from bot_processors.calls.call_db import backfill_llm_total_ms, log_performance_metric
 from bot_processors.core.task_tracker import track_task
+from bot_processors.voice.echo import EchoBuffer
 
 
 class _LatencyState:
@@ -279,7 +280,7 @@ class CallCostTracker(FrameProcessor):
     LLM_PRICE_PER_1M_OUTPUT_TOKENS = float(os.getenv("LLM_PRICE_PER_1M_OUTPUT_TOKENS") or "0")
 
     def __init__(
-        self, state: _LatencyState, echo_buffer: "EchoBuffer | None" = None,
+        self, state: _LatencyState, echo_buffer: EchoBuffer | None = None,
         serializer=None, **kwargs,
     ):
         super().__init__(**kwargs)

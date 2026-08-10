@@ -105,7 +105,7 @@ def _read_postoffice_rows(xlsx_path: str) -> list[dict]:
     rows = list(ws.iter_rows(min_row=2, values_only=True))
     out = []
     for r in rows:
-        pin, po, btype, taluk, district, state = r[0], r[1], r[2], r[3], r[4], r[5]
+        pin, po, _, taluk, district, state = r[0], r[1], r[2], r[3], r[4], r[5]
         if not pin or not taluk or not state:
             continue
         out.append({

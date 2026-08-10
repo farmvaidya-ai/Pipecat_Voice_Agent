@@ -370,8 +370,8 @@ async def main():
     logger.info(f"  TTS        : {TTS_PROVIDER.upper()} [{_tts_lang_display}]")
     logger.info(f"  Port       : {PORT}")
     logger.info("=" * 60)
-    logger.info(f"  STT mode   : SENTENCE-LEVEL (full sentence per turn)")
-    logger.info(f"  Latency    : STT ~200-400ms | LLM varies | TTS ~300ms")
+    logger.info("  STT mode   : SENTENCE-LEVEL (full sentence per turn)")
+    logger.info("  Latency    : STT ~200-400ms | LLM varies | TTS ~300ms")
     logger.info("=" * 60)
 
     # ── Provider key validation hints (actual validation happens in factories) ─
@@ -893,7 +893,16 @@ async def run_bot(websocket: WebSocket, session_id: str, sink_ref: list):
     task = PipelineTask(
         pipeline,
         params=PipelineParams(
-            allow_interruptions=True,
+            # No allow_interruptions field here (unlike older pipecat) --
+            # confirmed by grepping the whole installed pipecat 1.7.0 source
+            # tree, the string doesn't appear anywhere in the package at
+            # all. Passing it used to silently no-op (PipelineParams is a
+            # pydantic model that drops unknown kwargs rather than raising),
+            # so removing it changes nothing behaviorally. Interruptions are
+            # on by default in this version and are governed per-frame by
+            # UninterruptibleFrame (see frame_processor.py's
+            # _start_interruption) plus the VAD/speech-timeout turn
+            # strategies already wired up below, not a global toggle here.
             enable_metrics=True,
             # Separate flag from enable_metrics above — pipecat gates
             # STTUsageMetricsData/LLMUsageMetricsData/TTSUsageMetricsData

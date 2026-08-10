@@ -483,7 +483,11 @@ def scrape_all(resume: bool = False) -> dict[str, dict]:
 
             scraped.update(commodity_scraped)
             if commodity_scraped:
-                save_scraped(commodity_scraped)
+                # JSON-only checkpoint (see _merge_into_last_known_json's
+                # docstring) -- NOT save_scraped() itself, which is async
+                # and would silently no-op here since this loop has no
+                # event loop to await it into.
+                _merge_into_last_known_json(commodity_scraped)
             done_count += 1
             logger.info(f"📊 agmarknet_scraper: {done_count}/{len(targets)} commodities done")
             time.sleep(1.5)  # be polite between form submissions
@@ -615,6 +619,28 @@ def load_state_reference() -> list[str]:
     return json.loads(_STATE_REFERENCE_PATH.read_text(encoding="utf-8"))
 
 
+def _merge_into_last_known_json(scraped: dict[str, dict]) -> None:
+    """The JSON-only half of save_scraped(), split out so scrape_all()'s
+    per-commodity incremental checkpoint (see its docstring) can call it
+    directly — scrape_all() runs synchronous Playwright code with no event
+    loop to await save_scraped()'s DB half into. Calling save_scraped()
+    itself there would silently no-op (an un-awaited coroutine is just
+    created and discarded, not run), which is exactly the bug this split
+    fixes: it used to make scrape_all(resume=True)'s "already done today"
+    detection see nothing, because last_known_prices.json was never
+    actually updated mid-run despite the docstring's claim that it was."""
+    if not scraped:
+        return
+    existing: dict[str, dict] = {}
+    if _LAST_KNOWN_PATH.exists():
+        existing = json.loads(_LAST_KNOWN_PATH.read_text(encoding="utf-8"))
+    existing.update(scraped)
+    _LAST_KNOWN_PATH.write_text(
+        json.dumps(dict(sorted(existing.items())), indent=2, ensure_ascii=False),
+        encoding="utf-8",
+    )
+
+
 async def save_scraped(scraped: dict[str, dict]) -> None:
     """Upserts freshly scraped results into fact_market_prices (db/schema.sql)
     — one row per (state, district, crop_keyword, arrival_date) — which is
@@ -626,14 +652,15 @@ async def save_scraped(scraped: dict[str, dict]) -> None:
     JSON-overwrite approach did — see the table's own comment in
     db/schema.sql.
 
-    Still ALSO writes last_known_prices.json (unchanged merge-in-place
-    behavior) — not for price lookups anymore, but because
-    enrich_prices_with_geo.py and export_prices_xlsx.py both read/write
-    that exact file for their own separate jobs (geo-coordinate enrichment
-    for bot_processors/location/location_lookup.py's nearby-market search, and the human-readable
-    xlsx snapshot) and haven't been migrated to the DB. Dropping this write
-    would silently freeze both of those on stale data with no error to
-    notice it by — revisit only once those two are migrated too.
+    Still ALSO writes last_known_prices.json (via _merge_into_last_known_json)
+    — not for price lookups anymore, but because enrich_prices_with_geo.py
+    and export_prices_xlsx.py both read/write that exact file for their own
+    separate jobs (geo-coordinate enrichment for
+    bot_processors/location/location_lookup.py's nearby-market search, and
+    the human-readable xlsx snapshot) and haven't been migrated to the DB.
+    Dropping this write would silently freeze both of those on stale data
+    with no error to notice it by — revisit only once those two are
+    migrated too.
 
     Requires bot_processors.core.db_pool.init_pool() to already have run in this
     process — true for the bot itself (Bot.py's main()) and for
@@ -641,14 +668,7 @@ async def save_scraped(scraped: dict[str, dict]) -> None:
     if not scraped:
         return
 
-    existing: dict[str, dict] = {}
-    if _LAST_KNOWN_PATH.exists():
-        existing = json.loads(_LAST_KNOWN_PATH.read_text(encoding="utf-8"))
-    existing.update(scraped)
-    _LAST_KNOWN_PATH.write_text(
-        json.dumps(dict(sorted(existing.items())), indent=2, ensure_ascii=False),
-        encoding="utf-8",
-    )
+    _merge_into_last_known_json(scraped)
 
     pool = get_pool()
     rows = []

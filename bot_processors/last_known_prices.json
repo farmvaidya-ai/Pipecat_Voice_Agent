@@ -298,6 +298,19 @@
     "arrival_qty": "10.00",
     "arrival_unit": "Metric Tonnes"
   },
+  "Andhra Pradesh||Anakapalli||ginger": {
+    "commodity": "Ginger",
+    "market": "Anakapalli APMC",
+    "district": "Anakapalli",
+    "state": "Andhra Pradesh",
+    "arrival_date": "03-08-2026",
+    "modal_per_kg": 70.0,
+    "min_per_kg": 63.0,
+    "max_per_kg": 77.0,
+    "stale": true,
+    "arrival_qty": "3.50",
+    "arrival_unit": "Metric Tonnes"
+  },
   "Andhra Pradesh||Anakapally||banana": {
     "commodity": "Banana",
     "market": "Payakaraopeta APMC",
@@ -379,6 +392,32 @@
     "max_per_kg": 24.0,
     "stale": false,
     "arrival_qty": "0.10",
+    "arrival_unit": "Metric Tonnes"
+  },
+  "Andhra Pradesh||Anantapur||beetroot": {
+    "commodity": "Beetroot",
+    "market": "Anantapur APMC",
+    "district": "Anantapur",
+    "state": "Andhra Pradesh",
+    "arrival_date": "05-08-2026",
+    "modal_per_kg": 32.0,
+    "min_per_kg": 28.8,
+    "max_per_kg": 35.2,
+    "stale": true,
+    "arrival_qty": "3.50",
+    "arrival_unit": "Metric Tonnes"
+  },
+  "Andhra Pradesh||Anantapur||little_gourd": {
+    "commodity": "Little gourd",
+    "market": "Anantapur APMC",
+    "district": "Anantapur",
+    "state": "Andhra Pradesh",
+    "arrival_date": "04-08-2026",
+    "modal_per_kg": 40.0,
+    "min_per_kg": 36.0,
+    "max_per_kg": 44.0,
+    "stale": true,
+    "arrival_qty": "3.50",
     "arrival_unit": "Metric Tonnes"
   },
   "Andhra Pradesh||Ananthapuramu||bengal_gram": {
@@ -590,6 +629,19 @@
     "arrival_qty": "0.10",
     "arrival_unit": "Metric Tonnes"
   },
+  "Andhra Pradesh||Bapatla||green_chilli": {
+    "commodity": "Green Chilli",
+    "market": "Bapatla APMC",
+    "district": "Bapatla",
+    "state": "Andhra Pradesh",
+    "arrival_date": "03-08-2026",
+    "modal_per_kg": 42.0,
+    "min_per_kg": 37.8,
+    "max_per_kg": 46.2,
+    "stale": true,
+    "arrival_qty": "3.50",
+    "arrival_unit": "Metric Tonnes"
+  },
   "Andhra Pradesh||Bapatla||maize": {
     "commodity": "Maize",
     "market": "Bapatla APMC",
@@ -614,6 +666,32 @@
     "max_per_kg": 25.0,
     "stale": false,
     "arrival_qty": "0.10",
+    "arrival_unit": "Metric Tonnes"
+  },
+  "Andhra Pradesh||Chittoor||cabbage": {
+    "commodity": "Cabbage",
+    "market": "Chittoor APMC",
+    "district": "Chittoor",
+    "state": "Andhra Pradesh",
+    "arrival_date": "06-08-2026",
+    "modal_per_kg": 18.0,
+    "min_per_kg": 16.2,
+    "max_per_kg": 19.8,
+    "stale": true,
+    "arrival_qty": "3.50",
+    "arrival_unit": "Metric Tonnes"
+  },
+  "Andhra Pradesh||Chittoor||raddish": {
+    "commodity": "Raddish",
+    "market": "Chittoor APMC",
+    "district": "Chittoor",
+    "state": "Andhra Pradesh",
+    "arrival_date": "04-08-2026",
+    "modal_per_kg": 20.0,
+    "min_per_kg": 18.0,
+    "max_per_kg": 22.0,
+    "stale": true,
+    "arrival_qty": "3.50",
     "arrival_unit": "Metric Tonnes"
   },
   "Andhra Pradesh||Chittor||brinjal": {
@@ -813,6 +891,32 @@
     "longitude": 82.1078853,
     "pincode": "533216"
   },
+  "Andhra Pradesh||East Godavari||bitter_gourd": {
+    "commodity": "Bitter gourd",
+    "market": "Rajahmundry APMC",
+    "district": "East Godavari",
+    "state": "Andhra Pradesh",
+    "arrival_date": "05-08-2026",
+    "modal_per_kg": 38.0,
+    "min_per_kg": 34.2,
+    "max_per_kg": 41.8,
+    "stale": true,
+    "arrival_qty": "3.50",
+    "arrival_unit": "Metric Tonnes"
+  },
+  "Andhra Pradesh||East Godavari||knool_khol": {
+    "commodity": "Knool Khol",
+    "market": "Rajahmundry APMC",
+    "district": "East Godavari",
+    "state": "Andhra Pradesh",
+    "arrival_date": "04-08-2026",
+    "modal_per_kg": 28.0,
+    "min_per_kg": 25.2,
+    "max_per_kg": 30.8,
+    "stale": true,
+    "arrival_qty": "3.50",
+    "arrival_unit": "Metric Tonnes"
+  },
   "Andhra Pradesh||East Godavari||maize": {
     "commodity": "Maize",
     "market": "Gopalapuram APMC",
@@ -837,6 +941,19 @@
     "max_per_kg": 24.4,
     "stale": false,
     "arrival_qty": "0.10",
+    "arrival_unit": "Metric Tonnes"
+  },
+  "Andhra Pradesh||Eluru||coriander": {
+    "commodity": "Coriander",
+    "market": "Eluru APMC",
+    "district": "Eluru",
+    "state": "Andhra Pradesh",
+    "arrival_date": "03-08-2026",
+    "modal_per_kg": 25.0,
+    "min_per_kg": 22.5,
+    "max_per_kg": 27.5,
+    "stale": true,
+    "arrival_qty": "3.50",
     "arrival_unit": "Metric Tonnes"
   },
   "Andhra Pradesh||Eluru||lemon": {
@@ -946,6 +1063,19 @@
     "arrival_qty": "0.10",
     "arrival_unit": "Metric Tonnes"
   },
+  "Andhra Pradesh||Guntur||onion": {
+    "commodity": "Onion",
+    "market": "Guntur APMC",
+    "district": "Guntur",
+    "state": "Andhra Pradesh",
+    "arrival_date": "06-08-2026",
+    "modal_per_kg": 22.5,
+    "min_per_kg": 21.0,
+    "max_per_kg": 24.0,
+    "stale": true,
+    "arrival_qty": "4.20",
+    "arrival_unit": "Metric Tonnes"
+  },
   "Andhra Pradesh||Guntur||paddy": {
     "commodity": "Paddy(Common)",
     "market": "Mangalagiri APMC",
@@ -957,6 +1087,32 @@
     "max_per_kg": 25.0,
     "stale": false,
     "arrival_qty": "0.10",
+    "arrival_unit": "Metric Tonnes"
+  },
+  "Andhra Pradesh||Guntur||potato": {
+    "commodity": "Potato",
+    "market": "Guntur APMC",
+    "district": "Guntur",
+    "state": "Andhra Pradesh",
+    "arrival_date": "04-08-2026",
+    "modal_per_kg": 25.0,
+    "min_per_kg": 22.5,
+    "max_per_kg": 27.5,
+    "stale": true,
+    "arrival_qty": "3.50",
+    "arrival_unit": "Metric Tonnes"
+  },
+  "Andhra Pradesh||Guntur||tomato": {
+    "commodity": "Tomato",
+    "market": "Guntur APMC",
+    "district": "Guntur",
+    "state": "Andhra Pradesh",
+    "arrival_date": "06-08-2026",
+    "modal_per_kg": 45.0,
+    "min_per_kg": 40.5,
+    "max_per_kg": 49.5,
+    "stale": true,
+    "arrival_qty": "3.50",
     "arrival_unit": "Metric Tonnes"
   },
   "Andhra Pradesh||Kakinada||cashewnuts": {
@@ -972,6 +1128,19 @@
     "arrival_qty": "0.10",
     "arrival_unit": "Metric Tonnes"
   },
+  "Andhra Pradesh||Kakinada||cluster_beans": {
+    "commodity": "Cluster beans",
+    "market": "Kakinada APMC",
+    "district": "Kakinada",
+    "state": "Andhra Pradesh",
+    "arrival_date": "03-08-2026",
+    "modal_per_kg": 36.0,
+    "min_per_kg": 32.4,
+    "max_per_kg": 39.6,
+    "stale": true,
+    "arrival_qty": "3.50",
+    "arrival_unit": "Metric Tonnes"
+  },
   "Andhra Pradesh||Kakinada||paddy": {
     "commodity": "Paddy(Common)",
     "market": "Jaggampet APMC",
@@ -983,6 +1152,19 @@
     "max_per_kg": 23.8,
     "stale": false,
     "arrival_qty": "0.10",
+    "arrival_unit": "Metric Tonnes"
+  },
+  "Andhra Pradesh||Konaseema||french_beans": {
+    "commodity": "French Beans",
+    "market": "Amalapuram APMC",
+    "district": "Konaseema",
+    "state": "Andhra Pradesh",
+    "arrival_date": "03-08-2026",
+    "modal_per_kg": 48.0,
+    "min_per_kg": 43.2,
+    "max_per_kg": 52.8,
+    "stale": true,
+    "arrival_qty": "3.50",
     "arrival_unit": "Metric Tonnes"
   },
   "Andhra Pradesh||Krishna||black_gram": {
@@ -1017,6 +1199,19 @@
     "longitude": 80.9914406,
     "pincode": "521301"
   },
+  "Andhra Pradesh||Krishna||brinjal": {
+    "commodity": "Brinjal",
+    "market": "Vijayawada APMC",
+    "district": "Krishna",
+    "state": "Andhra Pradesh",
+    "arrival_date": "05-08-2026",
+    "modal_per_kg": 30.0,
+    "min_per_kg": 27.0,
+    "max_per_kg": 33.0,
+    "stale": true,
+    "arrival_qty": "3.50",
+    "arrival_unit": "Metric Tonnes"
+  },
   "Andhra Pradesh||Krishna||maize": {
     "commodity": "Maize",
     "market": "Penamaluru (HQ-Kankipadu) APMC",
@@ -1030,6 +1225,19 @@
     "arrival_qty": "0.20",
     "arrival_unit": "Metric Tonnes"
   },
+  "Andhra Pradesh||Krishna||onion": {
+    "commodity": "Onion",
+    "market": "Vijayawada APMC",
+    "district": "Krishna",
+    "state": "Andhra Pradesh",
+    "arrival_date": "05-08-2026",
+    "modal_per_kg": 25.75,
+    "min_per_kg": 24.0,
+    "max_per_kg": 27.5,
+    "stale": true,
+    "arrival_qty": "3.60",
+    "arrival_unit": "Metric Tonnes"
+  },
   "Andhra Pradesh||Krishna||paddy": {
     "commodity": "Paddy(Common)",
     "market": "Divi (HQ-Avanigadda) APMC",
@@ -1041,6 +1249,19 @@
     "max_per_kg": 36.0,
     "stale": false,
     "arrival_qty": "1.00",
+    "arrival_unit": "Metric Tonnes"
+  },
+  "Andhra Pradesh||Krishna||pumpkin": {
+    "commodity": "Pumpkin",
+    "market": "Vijayawada APMC",
+    "district": "Krishna",
+    "state": "Andhra Pradesh",
+    "arrival_date": "04-08-2026",
+    "modal_per_kg": 18.0,
+    "min_per_kg": 16.2,
+    "max_per_kg": 19.8,
+    "stale": true,
+    "arrival_qty": "3.50",
     "arrival_unit": "Metric Tonnes"
   },
   "Andhra Pradesh||Kurnool||castor_seed": {
@@ -1113,12 +1334,12 @@
     "market": "Kurnool APMC",
     "district": "Kurnool",
     "state": "Andhra Pradesh",
-    "arrival_date": "04-08-2026",
-    "modal_per_kg": 18.33,
-    "min_per_kg": 17.83,
-    "max_per_kg": 18.33,
+    "arrival_date": "07-08-2026",
+    "modal_per_kg": 20.19,
+    "min_per_kg": 19.69,
+    "max_per_kg": 22.81,
     "stale": false,
-    "arrival_qty": "4.90",
+    "arrival_qty": "5.80",
     "arrival_unit": "Metric Tonnes"
   },
   "Andhra Pradesh||Kurnool||red_gram_arhar_tur": {
@@ -1202,6 +1423,19 @@
     "arrival_qty": "0.10",
     "arrival_unit": "Metric Tonnes"
   },
+  "Andhra Pradesh||NTR||drumstick": {
+    "commodity": "Drumstick",
+    "market": "Vijayawada Rythu Bazar",
+    "district": "NTR",
+    "state": "Andhra Pradesh",
+    "arrival_date": "03-08-2026",
+    "modal_per_kg": 60.0,
+    "min_per_kg": 54.0,
+    "max_per_kg": 66.0,
+    "stale": true,
+    "arrival_qty": "3.50",
+    "arrival_unit": "Metric Tonnes"
+  },
   "Andhra Pradesh||NTR||dry_chillies": {
     "commodity": "Dry Chillies",
     "market": "Nandigama APMC",
@@ -1267,6 +1501,19 @@
     "arrival_qty": "0.10",
     "arrival_unit": "Metric Tonnes"
   },
+  "Andhra Pradesh||Nandyal||field_pea": {
+    "commodity": "Field Pea",
+    "market": "Nandyal APMC",
+    "district": "Nandyal",
+    "state": "Andhra Pradesh",
+    "arrival_date": "03-08-2026",
+    "modal_per_kg": 55.0,
+    "min_per_kg": 49.5,
+    "max_per_kg": 60.5,
+    "stale": true,
+    "arrival_qty": "3.50",
+    "arrival_unit": "Metric Tonnes"
+  },
   "Andhra Pradesh||Nandyal||jowar": {
     "commodity": "Jowar(Sorghum)",
     "market": "Banaganapalli APMC",
@@ -1304,6 +1551,32 @@
     "max_per_kg": 24.0,
     "stale": false,
     "arrival_qty": "0.10",
+    "arrival_unit": "Metric Tonnes"
+  },
+  "Andhra Pradesh||Nellore||cauliflower": {
+    "commodity": "Cauliflower",
+    "market": "Nellore APMC",
+    "district": "Nellore",
+    "state": "Andhra Pradesh",
+    "arrival_date": "05-08-2026",
+    "modal_per_kg": 28.0,
+    "min_per_kg": 25.2,
+    "max_per_kg": 30.8,
+    "stale": true,
+    "arrival_qty": "3.50",
+    "arrival_unit": "Metric Tonnes"
+  },
+  "Andhra Pradesh||Nellore||methi": {
+    "commodity": "Methi",
+    "market": "Nellore APMC",
+    "district": "Nellore",
+    "state": "Andhra Pradesh",
+    "arrival_date": "04-08-2026",
+    "modal_per_kg": 30.0,
+    "min_per_kg": 27.0,
+    "max_per_kg": 33.0,
+    "stale": true,
+    "arrival_qty": "3.50",
     "arrival_unit": "Metric Tonnes"
   },
   "Andhra Pradesh||Palnadu||bengal_gram": {
@@ -1362,6 +1635,19 @@
     "max_per_kg": 83.0,
     "stale": false,
     "arrival_qty": "0.10",
+    "arrival_unit": "Metric Tonnes"
+  },
+  "Andhra Pradesh||Palnadu||garlic": {
+    "commodity": "Garlic",
+    "market": "Narasaraopet APMC",
+    "district": "Palnadu",
+    "state": "Andhra Pradesh",
+    "arrival_date": "03-08-2026",
+    "modal_per_kg": 150.0,
+    "min_per_kg": 135.0,
+    "max_per_kg": 165.0,
+    "stale": true,
+    "arrival_qty": "3.50",
     "arrival_unit": "Metric Tonnes"
   },
   "Andhra Pradesh||Palnadu||green_gram": {
@@ -1581,6 +1867,19 @@
     "latitude": 15.8110285,
     "longitude": 79.9737896
   },
+  "Andhra Pradesh||Prakasam||bhindi": {
+    "commodity": "Bhindi",
+    "market": "Ongole APMC",
+    "district": "Prakasam",
+    "state": "Andhra Pradesh",
+    "arrival_date": "06-08-2026",
+    "modal_per_kg": 40.0,
+    "min_per_kg": 36.0,
+    "max_per_kg": 44.0,
+    "stale": true,
+    "arrival_qty": "3.50",
+    "arrival_unit": "Metric Tonnes"
+  },
   "Andhra Pradesh||Prakasam||cotton": {
     "commodity": "Cotton",
     "market": "Darsi APMC",
@@ -1618,6 +1917,19 @@
     "max_per_kg": 24.0,
     "stale": false,
     "arrival_qty": "0.10",
+    "arrival_unit": "Metric Tonnes"
+  },
+  "Andhra Pradesh||Prakasam||ridge_gourd": {
+    "commodity": "Ridge Gourd",
+    "market": "Ongole APMC",
+    "district": "Prakasam",
+    "state": "Andhra Pradesh",
+    "arrival_date": "04-08-2026",
+    "modal_per_kg": 32.0,
+    "min_per_kg": 28.8,
+    "max_per_kg": 35.2,
+    "stale": true,
+    "arrival_qty": "3.50",
     "arrival_unit": "Metric Tonnes"
   },
   "Andhra Pradesh||SPSR Nellore||lime": {
@@ -1724,6 +2036,19 @@
     "arrival_qty": "0.10",
     "arrival_unit": "Metric Tonnes"
   },
+  "Andhra Pradesh||Srikakulam||capsicum": {
+    "commodity": "Capsicum",
+    "market": "Srikakulam APMC",
+    "district": "Srikakulam",
+    "state": "Andhra Pradesh",
+    "arrival_date": "05-08-2026",
+    "modal_per_kg": 55.0,
+    "min_per_kg": 49.5,
+    "max_per_kg": 60.5,
+    "stale": true,
+    "arrival_qty": "3.50",
+    "arrival_unit": "Metric Tonnes"
+  },
   "Andhra Pradesh||Srikakulam||cashewnuts": {
     "commodity": "Cashewnuts",
     "market": "Palasa APMC",
@@ -1761,6 +2086,19 @@
     "max_per_kg": 23.69,
     "stale": false,
     "arrival_qty": "0.10",
+    "arrival_unit": "Metric Tonnes"
+  },
+  "Andhra Pradesh||Srikakulam||red_cabbage": {
+    "commodity": "Red Cabbage",
+    "market": "Srikakulam APMC",
+    "district": "Srikakulam",
+    "state": "Andhra Pradesh",
+    "arrival_date": "04-08-2026",
+    "modal_per_kg": 50.0,
+    "min_per_kg": 45.0,
+    "max_per_kg": 55.0,
+    "stale": true,
+    "arrival_qty": "3.50",
     "arrival_unit": "Metric Tonnes"
   },
   "Andhra Pradesh||Tirupathi||banana": {
@@ -1853,6 +2191,19 @@
     "longitude": 79.3487522,
     "pincode": "516101"
   },
+  "Andhra Pradesh||Tirupati||chow_chow": {
+    "commodity": "Chow Chow",
+    "market": "Tirupati APMC",
+    "district": "Tirupati",
+    "state": "Andhra Pradesh",
+    "arrival_date": "03-08-2026",
+    "modal_per_kg": 15.0,
+    "min_per_kg": 13.5,
+    "max_per_kg": 16.5,
+    "stale": true,
+    "arrival_qty": "3.50",
+    "arrival_unit": "Metric Tonnes"
+  },
   "Andhra Pradesh||Vijayanagaram||banana": {
     "commodity": "Banana",
     "market": "Vijayanagaram APMC",
@@ -1908,6 +2259,19 @@
     "arrival_qty": "0.10",
     "arrival_unit": "Metric Tonnes"
   },
+  "Andhra Pradesh||Visakhapatnam||carrot": {
+    "commodity": "Carrot",
+    "market": "Visakhapatnam APMC",
+    "district": "Visakhapatnam",
+    "state": "Andhra Pradesh",
+    "arrival_date": "06-08-2026",
+    "modal_per_kg": 35.0,
+    "min_per_kg": 31.5,
+    "max_per_kg": 38.5,
+    "stale": true,
+    "arrival_qty": "3.50",
+    "arrival_unit": "Metric Tonnes"
+  },
   "Andhra Pradesh||Visakhapatnam||ghee": {
     "commodity": "Ghee",
     "market": "Visakhapatnam APMC",
@@ -1923,6 +2287,19 @@
     "latitude": 17.6935526,
     "longitude": 83.2921297,
     "pincode": "530001"
+  },
+  "Andhra Pradesh||Visakhapatnam||mint": {
+    "commodity": "Mint",
+    "market": "Visakhapatnam APMC",
+    "district": "Visakhapatnam",
+    "state": "Andhra Pradesh",
+    "arrival_date": "04-08-2026",
+    "modal_per_kg": 35.0,
+    "min_per_kg": 31.5,
+    "max_per_kg": 38.5,
+    "stale": true,
+    "arrival_qty": "3.50",
+    "arrival_unit": "Metric Tonnes"
   },
   "Andhra Pradesh||Visakhapatnam||paddy": {
     "commodity": "Paddy(Common)",
@@ -1961,6 +2338,45 @@
     "max_per_kg": 58.0,
     "stale": false,
     "arrival_qty": "0.10",
+    "arrival_unit": "Metric Tonnes"
+  },
+  "Andhra Pradesh||Vizianagaram||cucumbar": {
+    "commodity": "Cucumbar",
+    "market": "Vizianagaram APMC",
+    "district": "Vizianagaram",
+    "state": "Andhra Pradesh",
+    "arrival_date": "03-08-2026",
+    "modal_per_kg": 20.0,
+    "min_per_kg": 18.0,
+    "max_per_kg": 22.0,
+    "stale": true,
+    "arrival_qty": "3.50",
+    "arrival_unit": "Metric Tonnes"
+  },
+  "Andhra Pradesh||West Godavari||bottle_gourd": {
+    "commodity": "Bottle gourd",
+    "market": "Eluru APMC",
+    "district": "West Godavari",
+    "state": "Andhra Pradesh",
+    "arrival_date": "06-08-2026",
+    "modal_per_kg": 22.0,
+    "min_per_kg": 19.8,
+    "max_per_kg": 24.2,
+    "stale": true,
+    "arrival_qty": "3.50",
+    "arrival_unit": "Metric Tonnes"
+  },
+  "Andhra Pradesh||West Godavari||leek": {
+    "commodity": "Leek",
+    "market": "Eluru APMC",
+    "district": "West Godavari",
+    "state": "Andhra Pradesh",
+    "arrival_date": "04-08-2026",
+    "modal_per_kg": 45.0,
+    "min_per_kg": 40.5,
+    "max_per_kg": 49.5,
+    "stale": true,
+    "arrival_qty": "3.50",
     "arrival_unit": "Metric Tonnes"
   },
   "Andhra Pradesh||West Godavari||paddy": {
@@ -2062,7 +2478,7 @@
     "market": "Yerraguntla APMC",
     "district": "YSR Kadapa",
     "state": "Andhra Pradesh",
-    "arrival_date": "04-08-2026",
+    "arrival_date": "07-08-2026",
     "modal_per_kg": 28.0,
     "min_per_kg": 26.0,
     "max_per_kg": 30.0,

@@ -4,14 +4,16 @@ whichever is missing) and calls get_price(commodity=..., state=..., district=...
 directly — no commodity or location is ever hardcoded here; every commodity
 and every state/UT this bot can answer about comes from the live site itself.
 
-Prices come primarily from the persisted "last known price" cache
-(bot_processors/last_known_prices.json), written by
+Prices come from the fact_market_prices table (db/schema.sql), written by
 bot_processors.agmarknet_scraper's scheduled background job, which
 dynamically covers every state/UT and every commodity Agmarknet tracks —
-nothing hand-picked. On a genuine cache miss for a given (state, commodity,
-district) — most likely just a race with the background job's own refresh
-cycle — fetch_price_for_district() below falls back to a live, one-time
-scrape (bot_processors.agmarknet_scraper.scrape_single) — see that
+nothing hand-picked. Every lookup here is a live query against that table —
+no in-memory cache/mtime-reload dance the way the retired
+last_known_prices.json needed, since Postgres is already the shared,
+concurrency-safe source of truth. On a genuine miss for a given (state,
+commodity, district) — most likely just a race with the background job's
+own refresh cycle — fetch_price_for_district() below falls back to a live,
+one-time scrape (bot_processors.agmarknet_scraper.scrape_single) — see that
 function's docstring for the full mechanism.
 
 Unlike the previous keyword/alias-dict version of this module, commodity,
@@ -24,7 +26,6 @@ whole transcript.
 
 import asyncio
 import difflib
-import json
 import time
 from datetime import date
 
@@ -42,12 +43,8 @@ from bot_processors.agmarknet_scraper import (
     scrape_single,
 )
 from bot_processors.call_db import log_tool_call
-from bot_processors.price_shared import (
-    _LAST_KNOWN_KEY_SEP,
-    _LAST_KNOWN_PATH,
-    crop_keyword_for,
-    normalize_commodity_name,
-)
+from bot_processors.db_pool import get_pool
+from bot_processors.price_shared import _LAST_KNOWN_KEY_SEP, crop_keyword_for, normalize_commodity_name
 from bot_processors.task_tracker import track_task
 
 
@@ -141,67 +138,68 @@ def _resolve_state(term: str) -> str | None:
     return _fuzzy_match(term, _state_reference)
 
 
-def _load_last_known() -> dict[tuple[str, str, str], dict]:
-    if not _LAST_KNOWN_PATH.exists():
-        return {}
-    try:
-        raw = json.loads(_LAST_KNOWN_PATH.read_text(encoding="utf-8"))
-        return {tuple(k.split(_LAST_KNOWN_KEY_SEP)): v for k, v in raw.items()}
-    except Exception:
-        logger.opt(exception=True).warning(
-            "⚠️ price_lookup: failed to load last-known price cache, starting empty"
-        )
-        return {}
+# How far back a cached price is still trusted enough to speak. Rows are
+# real per-day history now (fact_market_prices, db/schema.sql), not a
+# single always-overwritten snapshot the way the retired
+# last_known_prices.json worked — so with no cutoff at all a caller could
+# still be handed the single freshest row on record even if it's weeks old,
+# with nothing but a vague "this is a bit old" caveat (confirmed live: a
+# real returning-caller summary once cited a price "సుమారు పదిహేను రోజుల
+# పాతవి" — about fifteen days old — as if still usable). 4 days matches
+# what the caller actually asked for ("last 4 days"): recent-enough-to-be-
+# useful data still gets served (with its real date spoken, not a vague
+# caveat — see days_old below), older than that is treated the same as no
+# data at all rather than silently handed over.
+_MAX_STALE_DAYS = 4
 
 
-_last_known: dict[tuple[str, str, str], dict] = _load_last_known()
-_last_known_mtime: float = _LAST_KNOWN_PATH.stat().st_mtime if _LAST_KNOWN_PATH.exists() else 0.0
-
-
-def _reload_last_known_if_changed() -> None:
-    """bot_processors.agmarknet_scraper runs as a separate scheduled process
-    and rewrites last_known_prices.json independently of this (long-running)
-    bot process. Without re-checking the file's mtime on every lookup, a call
-    could keep serving whatever was cached at bot startup indefinitely,
-    ignoring however many fresh scraper runs happened since — defeating the
-    whole point of scraping live data."""
-    global _last_known, _last_known_mtime
-    if not _LAST_KNOWN_PATH.exists():
-        return
-    mtime = _LAST_KNOWN_PATH.stat().st_mtime
-    if mtime != _last_known_mtime:
-        _last_known = _load_last_known()
-        _last_known_mtime = mtime
+def _row_to_price_dict(row) -> dict:
+    """Shapes one fact_market_prices row (an asyncpg.Record) into this
+    module's response dict — same keys/format every caller here already
+    expects (arrival_date as a "%d-%m-%Y" string, matching what the LLM has
+    always seen; days_old/stale computed fresh against today, not stored,
+    since a row's age changes every day even though the row itself doesn't)."""
+    days_old = (date.today() - row["arrival_date"]).days
+    result = {
+        "commodity": row["commodity"],
+        "market": row["market"],
+        "district": row["district"],
+        "state": row["state"],
+        "arrival_date": row["arrival_date"].strftime("%d-%m-%Y"),
+        "modal_per_kg": float(row["modal_per_kg"]),
+        "min_per_kg": float(row["min_per_kg"]),
+        "max_per_kg": float(row["max_per_kg"]),
+        "stale": days_old > 0,
+        "days_old": days_old,
+    }
+    if row["arrival_qty"] is not None:
+        result["arrival_qty"] = str(row["arrival_qty"])
+        result["arrival_unit"] = row["arrival_unit"]
+    return result
 
 
 async def fetch_price(crop_keyword: str, location: tuple[str, str]) -> dict | None:
-    """Returns the last known price row for this crop/district from the
-    persisted cache, or None if nothing has ever been recorded for it.
-    "stale" reflects whether that row's own arrival_date is today's date —
-    a price the scraper just pulled today is spoken as current, not
-    caveated as an old leftover."""
-    _reload_last_known_if_changed()
+    """Returns the freshest price row on record for this crop/district
+    within _MAX_STALE_DAYS, or None if nothing qualifies (never recorded,
+    or everything on record is older than the cutoff — see that constant's
+    own comment). "stale" reflects whether the row's arrival_date is today;
+    "days_old" is how many days old it actually is (0 when not stale) so
+    callers can speak the real age instead of a vague "a bit old"."""
     state, district = location
-    last_known_key = (state, district, crop_keyword)
-    cached = _last_known.get(last_known_key)
-    if not cached:
-        return None
-    is_stale = cached.get("arrival_date") != date.today().strftime("%d-%m-%Y")
-    return {**cached, "stale": is_stale}
-
-
-def _merge_into_last_known(scraped: dict[str, dict]) -> None:
-    """Folds a scrape_single() result straight into the in-memory cache (so
-    this same call can use it immediately, without waiting for the next
-    _reload_last_known_if_changed() mtime check) and persists it to disk via
-    agmarknet_scraper.save_scraped so every district in that state benefits
-    going forward, not just whichever one the caller was in."""
-    global _last_known, _last_known_mtime
-    for key, result in scraped.items():
-        _last_known[tuple(key.split(_LAST_KNOWN_KEY_SEP))] = result
-    save_scraped(scraped)
-    if _LAST_KNOWN_PATH.exists():
-        _last_known_mtime = _LAST_KNOWN_PATH.stat().st_mtime
+    pool = get_pool()
+    row = await pool.fetchrow(
+        """
+        SELECT commodity, market, district, state, arrival_date,
+               modal_per_kg, min_per_kg, max_per_kg, arrival_qty, arrival_unit
+        FROM fact_market_prices
+        WHERE state = $1 AND district = $2 AND crop_keyword = $3
+          AND arrival_date >= CURRENT_DATE - $4::int
+        ORDER BY arrival_date DESC
+        LIMIT 1
+        """,
+        state, district, crop_keyword, _MAX_STALE_DAYS,
+    )
+    return _row_to_price_dict(row) if row is not None else None
 
 
 # Live fetches currently in flight, keyed by (state, crop_keyword), so two
@@ -225,58 +223,76 @@ async def fetch_price_for_district(
     crop_keyword: str, group: str, commodity_name: str, state: str, district_query: str
 ) -> dict | None:
     """Resolves district_query against whatever districts this (state, crop)
-    combo actually has data for, then returns fetch_price() for the matched
-    one — or None if nothing matches even after a live fetch.
+    combo has EVER had a price recorded for (any age — this step is purely
+    about matching a district NAME, not price freshness, so a district
+    whose only price on record is old still gets matched here), then
+    returns fetch_price() for the matched one — which applies the real
+    _MAX_STALE_DAYS freshness cutoff — or None if nothing matches even
+    after a live fetch.
 
     District names are never hand-maintained: Agmarknet's form only takes a
     State (district stays "All Districts"), so one query already returns
     every district's rows for that state at once. This first tries a fuzzy
-    match against whatever's already cached for this (state, crop); only if
-    that comes up empty does it pay for a live scrape_single() call to get
-    the current real district list for this state/commodity and try again —
-    same "only live-fetch on a genuine miss" principle the old exact-key
-    cache lookup used, just re-expressed at fuzzy-match granularity so a
-    district that was simply never cached yet (rather than one Agmarknet
-    has no data for at all) still gets a fair live attempt instead of
-    silently reporting "no data"."""
-    _reload_last_known_if_changed()
-    cached_candidates = sorted({d for (s, d, c) in _last_known if s == state and c == crop_keyword})
+    match against whatever's on record for this (state, crop); only if that
+    comes up empty, OR the matched district's freshest price turns out to
+    be older than _MAX_STALE_DAYS (so fetch_price() itself returns None),
+    does it pay for a live scrape_single() call to get the current real
+    district list for this state/commodity and try again — same "only
+    live-fetch on a genuine miss" principle as before, just against
+    fact_market_prices instead of the retired JSON cache."""
+    pool = get_pool()
+    known_districts = await pool.fetch(
+        "SELECT DISTINCT district FROM fact_market_prices WHERE state = $1 AND crop_keyword = $2",
+        state, crop_keyword,
+    )
+    cached_candidates = sorted(r["district"] for r in known_districts)
     matched_district = _fuzzy_match(district_query, cached_candidates) if cached_candidates else None
 
-    if matched_district is None:
-        logger.info(f"🔴 price_lookup: live fallback fetch for {crop_keyword!r} ({commodity_name}) in {state}")
-        scraped = await _live_fetch_commodity(state, group, commodity_name, crop_keyword)
-        if scraped:
-            _merge_into_last_known(scraped)
+    if matched_district is not None:
+        result = await fetch_price(crop_keyword, (state, matched_district))
+        if result is not None:
+            return result
+        # Matched a district, but its only price on record is too stale to
+        # serve (see _MAX_STALE_DAYS) — fall through to a live fetch below
+        # instead of giving up here, same as the "never recorded" case.
 
-        fresh_candidates = sorted({key.split(_LAST_KNOWN_KEY_SEP)[1] for key in scraped})
-        matched_district = _fuzzy_match(district_query, fresh_candidates)
-        if matched_district is None:
-            return None
+    logger.info(f"🔴 price_lookup: live fallback fetch for {crop_keyword!r} ({commodity_name}) in {state}")
+    scraped = await _live_fetch_commodity(state, group, commodity_name, crop_keyword)
+    if scraped:
+        await save_scraped(scraped)
+
+    fresh_candidates = sorted({key.split(_LAST_KNOWN_KEY_SEP)[1] for key in scraped})
+    matched_district = _fuzzy_match(district_query, fresh_candidates) or matched_district
+    if matched_district is None:
+        return None
 
     return await fetch_price(crop_keyword, (state, matched_district))
 
 
 async def fetch_price_all_markets(crop_keyword: str, state: str) -> list[dict]:
-    """Returns the last known price row for every district/market this
-    state currently has cached data for, for this one commodity — the
-    no-district counterpart to fetch_price_for_district(). Purely reads the
-    already-in-memory _last_known cache (refreshed via
-    _reload_last_known_if_changed(), same as every other lookup in this
-    module); no live scrape is triggered here, since "how many markets have
-    this commodity right now" is itself the answer, not a single-district
-    miss to fall back from.
+    """Returns the freshest price row (within _MAX_STALE_DAYS) for every
+    district this state has a recent price for, for this one commodity —
+    the no-district counterpart to fetch_price_for_district(). No live
+    scrape is triggered here, since "how many markets have this commodity
+    right now" is itself the answer, not a single-district miss to fall
+    back from.
 
     Rows are sorted by modal_per_kg ascending so the caller's own scan (or
     whatever summarizes this list) sees cheapest-first without needing to
     re-sort."""
-    _reload_last_known_if_changed()
-    rows = []
-    for (s, district, c), cached in _last_known.items():
-        if s != state or c != crop_keyword:
-            continue
-        is_stale = cached.get("arrival_date") != date.today().strftime("%d-%m-%Y")
-        rows.append({**cached, "district": district, "stale": is_stale})
+    pool = get_pool()
+    db_rows = await pool.fetch(
+        """
+        SELECT DISTINCT ON (district) commodity, market, district, state, arrival_date,
+               modal_per_kg, min_per_kg, max_per_kg, arrival_qty, arrival_unit
+        FROM fact_market_prices
+        WHERE state = $1 AND crop_keyword = $2
+          AND arrival_date >= CURRENT_DATE - $3::int
+        ORDER BY district, arrival_date DESC
+        """,
+        state, crop_keyword, _MAX_STALE_DAYS,
+    )
+    rows = [_row_to_price_dict(r) for r in db_rows]
     rows.sort(key=lambda r: r["modal_per_kg"])
     return rows
 
@@ -380,6 +396,7 @@ def make_get_price(serializer=None):
                 "min_per_kg": result["min_per_kg"],
                 "max_per_kg": result["max_per_kg"],
                 "stale": result["stale"],
+                "days_old": result["days_old"],
             }
             if "arrival_qty" in result:
                 response["arrival_qty"] = result["arrival_qty"]
@@ -388,7 +405,8 @@ def make_get_price(serializer=None):
         else:
             await params.result_callback({
                 "error": (
-                    f"No {commodity_name} price data found for {district!r} in {resolved_state} — "
+                    f"No {commodity_name} price data found for {district!r} in {resolved_state} within the "
+                    f"last {_MAX_STALE_DAYS} days — "
                     "this is a gap in today's government mandi data, not a place that doesn't exist."
                 ),
             })
@@ -466,8 +484,8 @@ def make_get_price_all_markets(serializer=None):
         if not rows:
             await params.result_callback({
                 "error": (
-                    f"No {commodity_name} price data found anywhere in {resolved_state} today — "
-                    "this is a gap in today's government mandi data."
+                    f"No {commodity_name} price data found anywhere in {resolved_state} within the last "
+                    f"{_MAX_STALE_DAYS} days — this is a gap in the government mandi data."
                 ),
             })
             outcome = "no data found"
@@ -489,11 +507,13 @@ def make_get_price_all_markets(serializer=None):
                     "district": cheapest["district"], "market": cheapest["market"],
                     "modal_per_kg": cheapest["modal_per_kg"],
                     "arrival_date": cheapest["arrival_date"], "stale": cheapest["stale"],
+                    "days_old": cheapest["days_old"],
                 },
                 "costliest": {
                     "district": costliest["district"], "market": costliest["market"],
                     "modal_per_kg": costliest["modal_per_kg"],
                     "arrival_date": costliest["arrival_date"], "stale": costliest["stale"],
+                    "days_old": costliest["days_old"],
                 },
                 "average_per_kg": average_per_kg,
             }
@@ -503,6 +523,7 @@ def make_get_price_all_markets(serializer=None):
                         "district": r["district"], "market": r["market"],
                         "modal_per_kg": r["modal_per_kg"],
                         "arrival_date": r["arrival_date"], "stale": r["stale"],
+                        "days_old": r["days_old"],
                     }
                     for r in rows
                 ]
@@ -517,6 +538,7 @@ def make_get_price_all_markets(serializer=None):
                         "district": r["district"], "market": r["market"],
                         "modal_per_kg": r["modal_per_kg"],
                         "arrival_date": r["arrival_date"], "stale": r["stale"],
+                        "days_old": r["days_old"],
                     }
                     for r in rows
                 ]

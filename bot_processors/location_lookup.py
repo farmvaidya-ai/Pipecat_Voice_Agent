@@ -689,7 +689,7 @@ def make_confirm_location(serializer=None):
     return confirm_location
 
 
-def make_save_caller_location(serializer=None, context=None):
+def make_save_caller_location(serializer=None, context=None, confirmed_location_state=None):
     """Builds the save_caller_location direct-function tool.
 
     context, if given, gets a "confirmed farming location" system message
@@ -704,10 +704,16 @@ def make_save_caller_location(serializer=None, context=None):
     never happened, forcing the caller to repeat themselves ("మీకు ఆల్రెడీ నా
     ప్రాంతమే చెప్పాను కదా"). A system-prompt instruction alone
     (system_prompt.txt's "the instant save_caller_location succeeds...")
-    didn't fix this reliably — a plain system-message injection is the same
-    already-proven-reliable mechanism the returning-caller path uses, so a
-    new caller's mid-call save gets the identical strong signal instead of a
-    weaker "remember what a tool told you a few turns ago" one."""
+    didn't fix this reliably.
+
+    confirmed_location_state, if given, is a mutable dict (Bot.py's
+    _confirmed_location) that this populates on success too — even the
+    one-time context injection above turned out insufficient on its own
+    (confirmed live, call_919390427476_03c11c0d.log, 2026-08-07: the LLM
+    ignored that exact injected message and asked for district again just
+    one turn later). Bot.py's on_user_turn_started reads this dict to
+    re-inject a short reminder on EVERY subsequent turn instead of just
+    once — see its own comment for why that's the more reliable fix."""
 
     async def save_caller_location(
         params: FunctionCallParams,
@@ -864,6 +870,10 @@ def make_save_caller_location(serializer=None, context=None):
                         "Use this district/state automatically for get_price and get_weather whenever "
                         "the caller doesn't name a different place this turn."
                     ),
+                })
+            if confirmed_location_state is not None:
+                confirmed_location_state.update({
+                    "district": district, "state": resolved_state, "village": village,
                 })
         else:
             await params.result_callback({"error": "Could not save the location right now."})

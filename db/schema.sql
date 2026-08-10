@@ -125,3 +125,44 @@ CREATE TABLE IF NOT EXISTS fact_conversation_summary (
 );
 
 CREATE INDEX IF NOT EXISTS idx_fact_conversation_summary_phone_number ON fact_conversation_summary (phone_number, created_at DESC);
+
+-- Mandi (market) prices scraped from Agmarknet — one row per (state,
+-- district, commodity, arrival_date). Replaces bot_processors/
+-- last_known_prices.json (retired): that file overwrote each key in place
+-- and kept only the single latest value, so an older price was gone the
+-- moment a fresher one came in. Here a new arrival_date is always a NEW
+-- row — genuine history, nothing lost — and only a same-day re-scrape
+-- (same arrival_date) updates that day's row instead of duplicating it.
+-- crop_keyword is the normalized lookup key bot_processors/price_shared.py's
+-- crop_keyword_for() derives from commodity (e.g. "Onion" -> "onion") —
+-- what get_price/get_price_all_markets actually filter on; commodity is
+-- the display name spoken to the caller. See bot_processors/price_lookup.py
+-- for the read path (a get_price/get_price_all_markets lookup is a plain
+-- "latest row per district within the last N days" query against this
+-- table) and bot_processors/agmarknet_scraper.py for the write path (one
+-- upsert per scraped row, each scrape cycle).
+CREATE TABLE IF NOT EXISTS fact_market_prices (
+    id             BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    state          TEXT NOT NULL,
+    district       TEXT NOT NULL,
+    market         TEXT NOT NULL,                  -- specific Agmarknet mandi, e.g. "Kurnool APMC"
+    commodity      TEXT NOT NULL,                  -- display name, e.g. "Onion"
+    crop_keyword   TEXT NOT NULL,                  -- normalized lookup key, e.g. "onion"
+    arrival_date   DATE NOT NULL,                  -- the date this price was reported for
+    modal_per_kg   NUMERIC(10, 2) NOT NULL,
+    min_per_kg     NUMERIC(10, 2) NOT NULL,
+    max_per_kg     NUMERIC(10, 2) NOT NULL,
+    arrival_qty    NUMERIC(10, 2),                 -- NULL when the site didn't report one
+    arrival_unit   TEXT,
+    scraped_at     TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+    UNIQUE (state, district, crop_keyword, arrival_date)
+);
+
+-- Covers get_price_all_markets: "every district's latest row for this
+-- (state, crop) within the cutoff window" — district isn't known yet.
+CREATE INDEX IF NOT EXISTS idx_fact_market_prices_state_crop
+    ON fact_market_prices (state, crop_keyword, arrival_date DESC);
+
+-- Covers get_price: "this exact district's latest row for this (state, crop)".
+CREATE INDEX IF NOT EXISTS idx_fact_market_prices_state_district_crop
+    ON fact_market_prices (state, district, crop_keyword, arrival_date DESC);

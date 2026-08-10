@@ -620,6 +620,24 @@ async def run_bot(websocket: WebSocket, session_id: str, sink_ref: list):
     # has to exist before that closure is built, not after.
     context = LLMContext(messages, tools=[])
 
+    # Populated either by _greet_and_inject_memory (returning caller, from
+    # get_location()) or by save_caller_location's success path (new caller,
+    # mid-call) — read on_user_turn_started, below, to re-inject a short
+    # location reminder into context on EVERY turn once known, not just
+    # once. A single one-time injection right after the location becomes
+    # known was tried first and wasn't reliable enough on its own: confirmed
+    # live (call_919390427476_03c11c0d.log, 2026-08-07) the LLM still asked
+    # "which district?" for a price question just ONE turn after that exact
+    # system message was injected, plainly visible right above it in
+    # context. Re-stating it fresh on every subsequent turn — maximally
+    # recent, right next to whatever the caller just said — is the blunt
+    # but much more reliable fix; the extra prompt tokens this costs are
+    # negligible next to what a single call's context already runs (see
+    # bot_processors/latency.py's per-call LLM cost logging).
+    # Declared before the tool closures below since save_caller_location
+    # needs a reference to populate it.
+    _confirmed_location: dict = {}
+
     # get_weather/get_price/get_price_all_markets/confirm_location/
     # save_caller_location/save_caller_name/lookup_place_by_pincode/
     # collect_pincode_digits are real LLM tool calls (see
@@ -639,7 +657,7 @@ async def run_bot(websocket: WebSocket, session_id: str, sink_ref: list):
     get_price = make_get_price(serializer)
     get_price_all_markets = make_get_price_all_markets(serializer)
     confirm_location = make_confirm_location(serializer)
-    save_caller_location = make_save_caller_location(serializer, context)
+    save_caller_location = make_save_caller_location(serializer, context, _confirmed_location)
     save_caller_name = make_save_caller_name(serializer)
     lookup_place_by_pincode = make_lookup_place_by_pincode(serializer)
     collect_pincode_digits = make_collect_pincode_digits(serializer)
@@ -746,6 +764,19 @@ async def run_bot(websocket: WebSocket, session_id: str, sink_ref: list):
             logger.info("✅ Caller responded to idle warning — call continues")
             _idle_warning_task.cancel()
             _idle_warning_task = None
+        if _confirmed_location:
+            loc = _confirmed_location
+            village_bit = f", village {loc['village']}" if loc.get("village") else ""
+            context.add_message({
+                "role": "system",
+                "content": (
+                    f"(Reminder: this caller's confirmed location is {loc['district']}, "
+                    f"{loc['state']}{village_bit} — already known, never ask for district/"
+                    "state/village/pincode again. Use it directly for get_price/"
+                    "get_price_all_markets/get_weather whenever they don't name a "
+                    "different place this turn.)"
+                ),
+            })
 
     @user_aggregator.event_handler("on_user_turn_stopped")
     async def on_user_turn_stopped(_aggregator, strategy, message):
@@ -1034,6 +1065,14 @@ async def run_bot(websocket: WebSocket, session_id: str, sink_ref: list):
                 f"📍 Injected confirmed location for {serializer.caller_number}: "
                 f"{location.get('market') or location['district']}, {location['state']}"
             )
+            # Also feeds on_user_turn_started's per-turn reminder (see
+            # _confirmed_location's own comment above, near its declaration)
+            # — this one-time injection alone wasn't reliable enough even
+            # for the already-known-at-call-start case.
+            _confirmed_location.update({
+                "district": location["district"], "state": location["state"],
+                "village": location.get("village", ""),
+            })
 
     @transport.event_handler("on_client_connected")
     async def on_client_connected(_transport, _websocket):

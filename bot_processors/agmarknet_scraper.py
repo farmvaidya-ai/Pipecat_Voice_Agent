@@ -4,11 +4,11 @@ Group/Commodity dropdowns and clicking the same "Go" button a human would —
 and reads today's prices out of the rendered results table.
 
 scrape_all() is the background job: it's meant to be run periodically
-(bot_processors/scraper_daemon.py) and writes straight into
-bot_processors/last_known_prices.json — the same cache file
-bot_processors.price_lookup.fetch_price() reads from — so calls always see
-whatever this job most recently scraped. Nothing about what it scrapes is
-hand-picked: every state/UT (via the "All States/UTs" option) and every
+(bot_processors/scraper_daemon.py) and writes straight into the
+fact_market_prices table (db/schema.sql) — the same table
+bot_processors.price_lookup.fetch_price() queries from — so calls always
+see whatever this job most recently scraped. Nothing about what it scrapes
+is hand-picked: every state/UT (via the "All States/UTs" option) and every
 commodity (from load_commodity_reference(), harvested from the site's own
 dropdowns) is walked dynamically.
 
@@ -32,6 +32,7 @@ from pathlib import Path
 from loguru import logger
 from playwright.sync_api import Locator, Page, sync_playwright
 
+from bot_processors.db_pool import get_pool
 from bot_processors.price_shared import _LAST_KNOWN_KEY_SEP, _LAST_KNOWN_PATH, crop_keyword_for
 
 _USER_AGENT = (
@@ -614,28 +615,105 @@ def load_state_reference() -> list[str]:
     return json.loads(_STATE_REFERENCE_PATH.read_text(encoding="utf-8"))
 
 
-def save_scraped(scraped: dict[str, dict]) -> None:
-    """Merges freshly scraped results into last_known_prices.json, keeping
-    any existing keys this run didn't touch (e.g. a crop/state combo that
-    came back empty today) rather than discarding them."""
+async def save_scraped(scraped: dict[str, dict]) -> None:
+    """Upserts freshly scraped results into fact_market_prices (db/schema.sql)
+    — one row per (state, district, crop_keyword, arrival_date) — which is
+    now the bot's own price lookup source of truth (bot_processors.price_lookup
+    queries it directly; last_known_prices.json is retired as a read path).
+    A same-day re-scrape (same arrival_date) updates that day's row via ON
+    CONFLICT; any other day's arrival_date is a genuinely new row, so real
+    history accumulates instead of being discarded the way the old
+    JSON-overwrite approach did — see the table's own comment in
+    db/schema.sql.
+
+    Still ALSO writes last_known_prices.json (unchanged merge-in-place
+    behavior) — not for price lookups anymore, but because
+    enrich_prices_with_geo.py and export_prices_xlsx.py both read/write
+    that exact file for their own separate jobs (geo-coordinate enrichment
+    for location_lookup.py's nearby-market search, and the human-readable
+    xlsx snapshot) and haven't been migrated to the DB. Dropping this write
+    would silently freeze both of those on stale data with no error to
+    notice it by — revisit only once those two are migrated too.
+
+    Requires bot_processors.db_pool.init_pool() to already have run in this
+    process — true for the bot itself (Bot.py's main()) and for
+    scraper_daemon.py (calls it once at startup, see run_forever())."""
+    if not scraped:
+        return
+
     existing: dict[str, dict] = {}
     if _LAST_KNOWN_PATH.exists():
         existing = json.loads(_LAST_KNOWN_PATH.read_text(encoding="utf-8"))
-
     existing.update(scraped)
     _LAST_KNOWN_PATH.write_text(
         json.dumps(dict(sorted(existing.items())), indent=2, ensure_ascii=False),
         encoding="utf-8",
     )
-    logger.info(f"💾 agmarknet_scraper: wrote {len(scraped)} fresh entries to {_LAST_KNOWN_PATH}")
+
+    pool = get_pool()
+    rows = []
+    for key, result in scraped.items():
+        state, district, crop_keyword = key.split(_LAST_KNOWN_KEY_SEP)
+        # arrival_qty comes straight from the site's own rendered text
+        # (_row_to_result) and can carry a thousands separator on larger
+        # quantities, e.g. "1,024.00" — float() rejects that outright.
+        arrival_qty = result.get("arrival_qty")
+        rows.append((
+            state, district, result["market"], result["commodity"], crop_keyword,
+            result["arrival_date"], result["modal_per_kg"], result["min_per_kg"],
+            result["max_per_kg"], float(arrival_qty.replace(",", "")) if arrival_qty else None,
+            result.get("arrival_unit"),
+        ))
+    async with pool.acquire() as conn:
+        await conn.executemany(
+            """
+            INSERT INTO fact_market_prices
+                (state, district, market, commodity, crop_keyword, arrival_date,
+                 modal_per_kg, min_per_kg, max_per_kg, arrival_qty, arrival_unit)
+            VALUES ($1, $2, $3, $4, $5, to_date($6, 'DD-MM-YYYY'), $7, $8, $9, $10, $11)
+            ON CONFLICT (state, district, crop_keyword, arrival_date) DO UPDATE SET
+                market = EXCLUDED.market,
+                commodity = EXCLUDED.commodity,
+                modal_per_kg = EXCLUDED.modal_per_kg,
+                min_per_kg = EXCLUDED.min_per_kg,
+                max_per_kg = EXCLUDED.max_per_kg,
+                arrival_qty = EXCLUDED.arrival_qty,
+                arrival_unit = EXCLUDED.arrival_unit,
+                scraped_at = NOW()
+            """,
+            rows,
+        )
+    logger.info(
+        f"💾 agmarknet_scraper: upserted {len(scraped)} fresh entries into fact_market_prices "
+        f"(and last_known_prices.json, for enrich_prices_with_geo.py/export_prices_xlsx.py)"
+    )
 
 
 if __name__ == "__main__":
+    import asyncio
     import sys
+
+    from dotenv import load_dotenv
+
+    # Only needed for this standalone-run path (python -m
+    # bot_processors.agmarknet_scraper) — every other caller (Bot.py,
+    # price_lookup.py, scraper_daemon.py) already loads .env itself before
+    # importing this module. db_pool.py reads DATABASE_URL at import time,
+    # so this must run before the db_pool import right below it.
+    load_dotenv(override=True)
+
+    from bot_processors.db_pool import close_pool, init_pool
 
     if "--harvest-commodities" in sys.argv:
         harvest_commodity_reference()
     elif "--harvest-states" in sys.argv:
         harvest_state_reference()
     else:
-        save_scraped(scrape_all(resume="--resume" in sys.argv))
+        async def _run():
+            await init_pool()
+            try:
+                await save_scraped(scrape_all(resume="--resume" in sys.argv))
+            finally:
+                await close_pool()
+
+        asyncio.run(_run())

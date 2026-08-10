@@ -105,34 +105,34 @@ from chonkie_rag.search import warmup as rag_warmup
 
 # ── Per-call pipeline processors (split from this file for maintainability) ──
 # Positioned after the chonkie_rag import above: chonkie_rag/config.py calls
-# load_dotenv() as an import-time side effect, and bot_processors.escalation
+# load_dotenv() as an import-time side effect, and bot_processors.calls.escalation
 # reads os.getenv(...) at module level — it needs that env already loaded.
-from bot_processors.serializer import SmartflowFrameSerializer
-from bot_processors.latency import _LatencyState, LatencyLogger, CallCostTracker
-from bot_processors.escalation import EscalationDetector
-from bot_processors.call_ender import CallEndDetector
-from bot_processors.number_words import TTSTextSanitizer
-from bot_processors.tts_switcher import MultilingualTTSSwitcher
-from bot_processors.echo import EchoBuffer, EchoFilter, TranscriptCorrector
-from bot_processors.rag import RAGInjector
-from bot_processors.context_trimmer import ContextTrimmer
-from bot_processors.price_lookup import make_get_price, make_get_price_all_markets
-from bot_processors.weather_lookup import make_get_weather
-from bot_processors.location_lookup import (
+from bot_processors.calls.serializer import SmartflowFrameSerializer
+from bot_processors.voice.latency import _LatencyState, LatencyLogger, CallCostTracker
+from bot_processors.calls.escalation import EscalationDetector
+from bot_processors.calls.call_ender import CallEndDetector
+from bot_processors.voice.number_words import TTSTextSanitizer
+from bot_processors.voice.tts_switcher import MultilingualTTSSwitcher
+from bot_processors.voice.echo import EchoBuffer, EchoFilter, TranscriptCorrector
+from bot_processors.rag.rag import RAGInjector
+from bot_processors.core.context_trimmer import ContextTrimmer
+from bot_processors.pricing.price_lookup import make_get_price, make_get_price_all_markets
+from bot_processors.location.weather_lookup import make_get_weather
+from bot_processors.location.location_lookup import (
     make_collect_pincode_digits,
     make_confirm_location,
     make_lookup_place_by_pincode,
     make_save_caller_location,
     make_save_caller_name,
 )
-from bot_processors.outbound_call import trigger_customer_first_call
-from bot_processors.caller_memory import load_latest_summary, note_from_summary, build_template_greeting
-from bot_processors.caller_summarizer import summarize_and_save_call, build_llm_greeting
-from bot_processors.caller_db import record_call, update_contact_name, get_location
-from bot_processors.db_pool import init_pool, close_pool
-from bot_processors.voice_agent_db import init_schema
-from bot_processors.call_db import start_call, end_call, save_conversation_messages
-from bot_processors.task_tracker import track_task
+from bot_processors.calls.outbound_call import trigger_customer_first_call
+from bot_processors.calls.caller_memory import load_latest_summary, note_from_summary, build_template_greeting
+from bot_processors.calls.caller_summarizer import summarize_and_save_call, build_llm_greeting
+from bot_processors.calls.caller_db import record_call, update_contact_name, get_location
+from bot_processors.core.db_pool import init_pool, close_pool
+from bot_processors.core.voice_agent_db import init_schema
+from bot_processors.calls.call_db import start_call, end_call, save_conversation_messages
+from bot_processors.core.task_tracker import track_task
 
 # =========================
 # WINDOWS FIX

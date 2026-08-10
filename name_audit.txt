@@ -1,6 +1,0 @@
-total distinct: 9
-latin-script names: 4
-918065063280 | Nitin Kumar
-919154708539 | Koushik
-919705899222 | Kavitha
-919948111186 | Vishnu

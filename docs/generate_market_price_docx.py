@@ -174,7 +174,7 @@ def build():
     )
     add_body(
         doc,
-        "CLI: python -m bot_processors.agmarknet_scraper (add --resume, "
+        "CLI: python -m bot_processors.pricing.agmarknet_scraper (add --resume, "
         "--harvest-commodities, or --harvest-states).",
     )
 
@@ -330,7 +330,7 @@ def build():
         "kept getting auto-disabled, likely flagged by antivirus heuristics for "
         "launching a headless browser). Every 8 hours (3x/day): "
         "save_scraped(scrape_all()) then re-exports the .xlsx. Run with "
-        "python -m bot_processors.scraper_daemon; stop by closing its console or "
+        "python -m bot_processors.pricing.scraper_daemon; stop by closing its console or "
         "taskkill /PID <pid> /F.",
     )
 

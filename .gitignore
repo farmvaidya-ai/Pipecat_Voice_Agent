@@ -9,13 +9,18 @@ session_log*.log
 .claude/settings.local.json
 caller_memory/
 chonkie_rag/cache/
-bot_processors/scraper_daemon.pid
-bot_processors/scraper_daemon_log.txt
-bot_processors/scraper_daemon_log.txt.err
-bot_processors/scraper_log.txt
-bot_processors/*_run.log
-bot_processors/*_retry*.log
-bot_processors/pincode_village_counts.xlsx
+# bot_processors/ was reorganized into pricing/location/calls/voice/rag/core
+# subpackages (2026-08-10) — scraper_daemon.py/agmarknet_scraper.py and the
+# runtime files they generate now live under pricing/, not directly in
+# bot_processors/, so these patterns need to match both the new location
+# and anywhere else a stray copy might still land.
+bot_processors/**/scraper_daemon.pid
+bot_processors/**/scraper_daemon_log.txt
+bot_processors/**/scraper_daemon_log.txt.err
+bot_processors/**/scraper_log.txt
+bot_processors/**/*_run.log
+bot_processors/**/*_retry*.log
+bot_processors/data/pincode_village_counts.xlsx
 geo_validator/output/
 ~$*.xlsx
 *_archive_*.zip

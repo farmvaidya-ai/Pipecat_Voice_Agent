@@ -61,7 +61,7 @@ Drives Agmarknet's "Daily Price and Arrival Report" with Playwright
   the new keys, writes the whole file back. A key this run didn't touch
   (e.g. a crop/state combo that came back empty today) is left as-is.
 
-CLI: `python -m bot_processors.agmarknet_scraper` (add `--resume`,
+CLI: `python -m bot_processors.pricing.agmarknet_scraper` (add `--resume`,
 `--harvest-commodities`, or `--harvest-states`).
 
 ## 2. Storage — `last_known_prices.json` / `bot_processors/price_shared.py`
@@ -175,7 +175,7 @@ A plain long-running loop (replaces a Windows Task Scheduler entry that kept
 getting auto-disabled, likely flagged by antivirus heuristics for launching
 a headless browser). Every 8 hours (3x/day): `save_scraped(scrape_all())`
 then re-exports the `.xlsx`. Run with
-`python -m bot_processors.scraper_daemon`; stop by closing its console or
+`python -m bot_processors.pricing.scraper_daemon`; stop by closing its console or
 `taskkill /PID <pid> /F`.
 
 ## 7. Human-readable export — `bot_processors/export_prices_xlsx.py`

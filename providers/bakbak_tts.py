@@ -50,7 +50,16 @@ _DEFAULT_MAX_CHARS = 60  # safe for Telugu/Hindi (60 × 3 UTF-8 bytes = 180 byte
 # Per-request timeout and retry budget for the Bakbak HTTP call. Without an
 # explicit timeout, aiohttp defaults to 300s — a network blip would otherwise
 # stall the call for up to 5 minutes before erroring.
-_REQUEST_TIMEOUT = aiohttp.ClientTimeout(total=12)
+#
+# Was 12s until 2026-08-10, when a live call's logs showed attempt 1 eating
+# the full ~12s before failing over to a successful attempt 2 -- 15.487s of
+# dead-air TTFB for one turn (session_log.log, BakbakTTSService#1). Healthy
+# Bakbak responses land well under 2s (historical call logs: median
+# 0.3-0.45s), and STT/LLM TTFB never exceeds ~2.3s either, so a stalled
+# request has nothing legitimate left to wait for by 5s -- shortening this
+# makes a bad request fail over to retry in 5s instead of 12s, capping
+# worst-case silence at roughly 5s + backoff instead of 12s + backoff.
+_REQUEST_TIMEOUT = aiohttp.ClientTimeout(total=5)
 _MAX_RETRIES = 3
 
 # Module-level (not instance-level) cache of pre-synthesized PCM audio for

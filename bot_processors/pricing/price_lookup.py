@@ -27,7 +27,7 @@ whole transcript.
 import asyncio
 import difflib
 import time
-from datetime import date
+from datetime import date, datetime
 
 from loguru import logger
 
@@ -178,27 +178,46 @@ def _row_to_price_dict(row) -> dict:
     return result
 
 
-async def fetch_price(crop_keyword: str, location: tuple[str, str]) -> dict | None:
+async def fetch_price(
+    crop_keyword: str, location: tuple[str, str], arrival_date: date | None = None
+) -> dict | None:
     """Returns the freshest price row on record for this crop/district
     within _MAX_STALE_DAYS, or None if nothing qualifies (never recorded,
     or everything on record is older than the cutoff — see that constant's
     own comment). "stale" reflects whether the row's arrival_date is today;
     "days_old" is how many days old it actually is (0 when not stale) so
-    callers can speak the real age instead of a vague "a bit old"."""
+    callers can speak the real age instead of a vague "a bit old".
+
+    arrival_date, when given, looks up that exact calendar day instead —
+    used when a caller asks about a specific date rather than "the current
+    price". Never falls back to a different day on a miss: a caller who
+    named a specific day should be told that day has no data, not silently
+    handed a different day's price without realizing it."""
     state, district = location
     pool = get_pool()
-    row = await pool.fetchrow(
-        """
-        SELECT commodity, market, district, state, arrival_date,
-               modal_per_kg, min_per_kg, max_per_kg, arrival_qty, arrival_unit
-        FROM fact_market_prices
-        WHERE state = $1 AND district = $2 AND crop_keyword = $3
-          AND arrival_date >= CURRENT_DATE - $4::int
-        ORDER BY arrival_date DESC
-        LIMIT 1
-        """,
-        state, district, crop_keyword, _MAX_STALE_DAYS,
-    )
+    if arrival_date is not None:
+        row = await pool.fetchrow(
+            """
+            SELECT commodity, market, district, state, arrival_date,
+                   modal_per_kg, min_per_kg, max_per_kg, arrival_qty, arrival_unit
+            FROM fact_market_prices
+            WHERE state = $1 AND district = $2 AND crop_keyword = $3 AND arrival_date = $4
+            """,
+            state, district, crop_keyword, arrival_date,
+        )
+    else:
+        row = await pool.fetchrow(
+            """
+            SELECT commodity, market, district, state, arrival_date,
+                   modal_per_kg, min_per_kg, max_per_kg, arrival_qty, arrival_unit
+            FROM fact_market_prices
+            WHERE state = $1 AND district = $2 AND crop_keyword = $3
+              AND arrival_date >= CURRENT_DATE - $4::int
+            ORDER BY arrival_date DESC
+            LIMIT 1
+            """,
+            state, district, crop_keyword, _MAX_STALE_DAYS,
+        )
     return _row_to_price_dict(row) if row is not None else None
 
 
@@ -220,7 +239,8 @@ async def _live_fetch_commodity(state: str, group: str, commodity: str, crop_key
 
 
 async def fetch_price_for_district(
-    crop_keyword: str, group: str, commodity_name: str, state: str, district_query: str
+    crop_keyword: str, group: str, commodity_name: str, state: str, district_query: str,
+    arrival_date: date | None = None,
 ) -> dict | None:
     """Resolves district_query against whatever districts this (state, crop)
     combo has EVER had a price recorded for (any age — this step is purely
@@ -239,7 +259,14 @@ async def fetch_price_for_district(
     does it pay for a live scrape_single() call to get the current real
     district list for this state/commodity and try again — same "only
     live-fetch on a genuine miss" principle as before, just against
-    fact_market_prices instead of the retired JSON cache."""
+    fact_market_prices instead of the retired JSON cache.
+
+    arrival_date, when given, skips the live-fetch fallback entirely on a
+    miss — scrape_single() drives the same live form agmarknet_scraper.py
+    does everywhere else, which has no date field and always returns
+    today's data (see _install_date_override's docstring), so a live fetch
+    can never answer a past-date question and would silently return the
+    wrong day's price if it were allowed to run here."""
     pool = get_pool()
     known_districts = await pool.fetch(
         "SELECT DISTINCT district FROM fact_market_prices WHERE state = $1 AND crop_keyword = $2",
@@ -247,6 +274,11 @@ async def fetch_price_for_district(
     )
     cached_candidates = sorted(r["district"] for r in known_districts)
     matched_district = _fuzzy_match(district_query, cached_candidates) if cached_candidates else None
+
+    if arrival_date is not None:
+        if matched_district is None:
+            return None
+        return await fetch_price(crop_keyword, (state, matched_district), arrival_date)
 
     if matched_district is not None:
         result = await fetch_price(crop_keyword, (state, matched_district))
@@ -321,8 +353,12 @@ def make_get_price(serializer=None):
     # so there's never a fabricated negative answer to give in the first
     # place.
     @tool_options(cancel_on_interruption=False)
-    async def get_price(params: FunctionCallParams, commodity: str, state: str, district: str) -> None:
-        """Get the current mandi (market) price for a commodity.
+    async def get_price(
+        params: FunctionCallParams, commodity: str, state: str, district: str, date: str = ""
+    ) -> None:
+        """Get the mandi (market) price for a commodity — either the
+        current price, or a specific past day's price if the caller asked
+        about one.
 
         Call this whenever the caller asks what a crop, vegetable, fruit,
         spice, or other agricultural commodity is currently selling for, or
@@ -345,6 +381,16 @@ def make_get_price(serializer=None):
                 calling from (for example "Andhra Pradesh", "Maharashtra").
             district: The district or nearby town/city the caller named
                 (for example "Guntur", "Nashik").
+            date: Only pass this when the caller explicitly asks about a
+                specific past day (e.g. "what was the price on the 9th",
+                "the day before yesterday"). Leave empty for the normal
+                case of just wanting the current price — leaving it empty
+                already returns the most recent price on record, you never
+                need to ask which day they mean unless they bring one up
+                themselves. Format as DD-MM-YYYY, computed from today's
+                real date (given at the top of this system prompt) plus
+                whatever the caller said — never guess a date you can't
+                actually compute this way.
         """
         _t0 = time.monotonic()
 
@@ -363,8 +409,20 @@ def make_get_price(serializer=None):
             })
             return
 
+        parsed_date = None
+        if date:
+            try:
+                parsed_date = datetime.strptime(date, "%d-%m-%Y").date()
+            except ValueError:
+                await params.result_callback({
+                    "error": f"{date!r} isn't a valid DD-MM-YYYY date — recompute it from today's real date, or drop it to get the current price instead.",
+                })
+                return
+
         try:
-            result = await fetch_price_for_district(crop_keyword, group, commodity_name, resolved_state, district)
+            result = await fetch_price_for_district(
+                crop_keyword, group, commodity_name, resolved_state, district, parsed_date
+            )
         except Exception:
             # fetch_price_for_district's live-scrape fallback (scrape_single,
             # a real Playwright browser launch) can fail for reasons that
@@ -402,6 +460,18 @@ def make_get_price(serializer=None):
                 response["arrival_qty"] = result["arrival_qty"]
                 response["arrival_unit"] = result["arrival_unit"]
             await params.result_callback(response)
+        elif parsed_date is not None:
+            # A specific day was asked about and missed — tell the caller
+            # that day has no data, never silently substitute a different
+            # day's price (see fetch_price's own docstring on why).
+            await params.result_callback({
+                "error": (
+                    f"No {commodity_name} price recorded for {district!r} in {resolved_state} on "
+                    f"{date} — this is a gap in that day's government mandi data, not a place that "
+                    "doesn't exist. Tell the caller that specific day has no data on record, and "
+                    "offer to check the current price instead if they'd like."
+                ),
+            })
         else:
             await params.result_callback({
                 "error": (

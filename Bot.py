@@ -41,7 +41,7 @@ import ssl
 import sys
 import time
 import uuid
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "service-account.json"
 
@@ -225,6 +225,14 @@ _ALL_LANGS = [Language.TE, Language.HI, Language.TA, Language.KN, Language.EN]
 # Prefix used to find-and-remove a previous turn's confirmed-location
 # reminder before adding this turn's — see on_user_turn_started below.
 _LOCATION_REMINDER_PREFIX = "(Reminder: this caller's confirmed location is"
+
+# Every caller is in India; the process itself isn't guaranteed to be —
+# the same bot code now also runs deployable on a UTC VM (see
+# bot_processors/pricing's own Azure deployment). Computing "today" with a
+# fixed IST offset instead of naive local time means get_price's date
+# argument (system_prompt.txt / price_lookup.py) resolves the same
+# "today" a caller means regardless of the server's own timezone.
+_IST = timezone(timedelta(hours=5, minutes=30))
 
 LANGUAGE = os.getenv("LANGUAGE", "auto").lower()
 
@@ -610,8 +618,14 @@ async def run_bot(websocket: WebSocket, session_id: str, sink_ref: list):
     tts_sanitizer = TTSTextSanitizer(lang_switcher=lang_switcher, default_language=TTS_INITIAL_LANG)
 
     # ── Context ──────────────────────────────────────────────────────────────
+    # Computed fresh per call (not once at process start, since this process
+    # can run for days) — needed for get_price's optional date argument:
+    # the LLM has no other way to turn "the day before yesterday" or "the
+    # 9th" into a real DD-MM-YYYY date to pass it (see price_lookup.py's
+    # get_price docstring).
+    todays_date_line = f"Today's date is {datetime.now(_IST).strftime('%d-%m-%Y')} (DD-MM-YYYY)."
     messages = [
-        {"role": "system", "content": SYSTEM_PROMPT},
+        {"role": "system", "content": f"{SYSTEM_PROMPT}\n\n{todays_date_line}"},
         {"role": "user",   "content": SEED_GREETING},
         # BOT_GREETING removed here — context_aggregator.assistant() captures it
         # automatically when TTSSpeakFrame is spoken, so adding it here caused a

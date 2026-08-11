@@ -222,6 +222,10 @@ _LANG_TO_PIPECAT = {
 
 _ALL_LANGS = [Language.TE, Language.HI, Language.TA, Language.KN, Language.EN]
 
+# Prefix used to find-and-remove a previous turn's confirmed-location
+# reminder before adding this turn's — see on_user_turn_started below.
+_LOCATION_REMINDER_PREFIX = "(Reminder: this caller's confirmed location is"
+
 LANGUAGE = os.getenv("LANGUAGE", "auto").lower()
 
 # System prompt loaded from plain-text file for easy editing (no JSON escaping needed)
@@ -767,10 +771,32 @@ async def run_bot(websocket: WebSocket, session_id: str, sink_ref: list):
         if _confirmed_location:
             loc = _confirmed_location
             village_bit = f", village {loc['village']}" if loc.get("village") else ""
+            # Drop any reminder injected for a previous turn before adding
+            # this turn's — added fresh every turn once location is
+            # confirmed, so without this it silently piles up one near-
+            # identical copy per turn for the rest of the call. Same fix
+            # RAGInjector already needed for its own passage injection (see
+            # bot_processors/rag/rag.py) — role="system" collapses to a
+            # fake "user" turn for Gemini/Vertex (it has no inline system
+            # role — see gemini_adapter.py's _from_standard_message), and
+            # several near-identical stacked fake user turns is exactly
+            # what led the model to echo a literal fragment of this
+            # reminder back as spoken output instead of the real answer
+            # (confirmed live 2026-08-11, call_919949070894_3032625a.log —
+            # TTS spoke "Use it directly for get_price/get_price_all_markets/
+            # get_weather whenever they" verbatim to the caller).
+            context._messages[:] = [
+                m for m in context._messages
+                if not (
+                    m.get("role") == "system"
+                    and isinstance(m.get("content"), str)
+                    and m["content"].startswith(_LOCATION_REMINDER_PREFIX)
+                )
+            ]
             context.add_message({
                 "role": "system",
                 "content": (
-                    f"(Reminder: this caller's confirmed location is {loc['district']}, "
+                    f"{_LOCATION_REMINDER_PREFIX} {loc['district']}, "
                     f"{loc['state']}{village_bit} — already known, never ask for district/"
                     "state/village/pincode again. Use it directly for get_price/"
                     "get_price_all_markets/get_weather whenever they don't name a "

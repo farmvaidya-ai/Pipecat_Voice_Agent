@@ -1,13 +1,18 @@
-\
 # systemd equivalent of start_scraper_daemon.vbs (Windows-only — WScript.Shell
 # doesn't exist on Linux). Runs scraper_daemon.py as a real supervised
 # service instead of a console window: auto-restarts on crash, starts on
 # boot, logs to `journalctl` instead of a hand-rolled log file.
 #
-# Paths below (/opt/pipecat, the "pipecat" user) are placeholders — edit
-# User/Group/WorkingDirectory/ExecStart to match wherever the repo actually
-# lives and whichever user should own the process (a dedicated non-root
-# user is recommended over running this as root).
+# Deployed live on sethu-admin1 (Azure VM, agmarknet-scraper-vm on
+# Tailscale) 2026-08-11 with these exact values — User/Group/
+# WorkingDirectory/ExecStart below reflect that real deployment, not
+# placeholders. Adjust if deploying elsewhere.
+#
+# DATABASE_URL in that VM's .env points back at Postgres on the dev
+# Windows PC (100.109.45.19 on Tailscale), not a local or cloud DB —
+# pg_hba.conf there restricts that IP to just the farmvaidya database/
+# farmvaidya_app user, and Windows Firewall restricts inbound 5432 to the
+# Tailscale subnet (100.64.0.0/10) only.
 #
 # Install:
 #   sudo cp bot_processors/pricing/agmarknet-scraper.service /etc/systemd/system/
@@ -20,18 +25,18 @@
 
 [Unit]
 Description=Agmarknet price scraper daemon
-After=network-online.target
+After=network-online.target tailscaled.service
 Wants=network-online.target
 
 [Service]
 Type=simple
-User=pipecat
-Group=pipecat
-WorkingDirectory=/opt/pipecat
+User=azureuser
+Group=azureuser
+WorkingDirectory=/home/azureuser/projects/pipecat
 # WorkingDirectory must be the repo root — scraper_daemon.py's own
 # load_dotenv() call finds .env by searching upward from the current
 # working directory, same as it does today on Windows.
-ExecStart=/opt/pipecat/venv/bin/python -m bot_processors.pricing.scraper_daemon
+ExecStart=/home/azureuser/projects/pipecat/venv/bin/python -m bot_processors.pricing.scraper_daemon
 Restart=on-failure
 RestartSec=30
 # scraper_daemon.py already has its own internal retry loop (8h cycle,

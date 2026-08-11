@@ -1,19 +1,22 @@
-"""One-off script: renders docs/agmarknet_scraper_vm_deployment.md as a PDF.
+"""One-off script: renders a docs/*.md file as a PDF.
 
 Uses markdown -> styled HTML -> Playwright's page.pdf(), rather than adding
 a new PDF-rendering dependency (reportlab/weasyprint/fpdf) — both `markdown`
 and `playwright` are already installed for other parts of this project.
 
-Run: python docs/generate_deployment_report_pdf.py
+Run: python docs/generate_deployment_report_pdf.py [source.md]
+Defaults to agmarknet_scraper_vm_deployment.md if no argument is given.
 """
 
+import sys
 from pathlib import Path
 
 import markdown
 from playwright.sync_api import sync_playwright
 
-SRC_PATH = Path(__file__).parent / "agmarknet_scraper_vm_deployment.md"
-OUT_PATH = Path(__file__).parent / "agmarknet_scraper_vm_deployment.pdf"
+_DEFAULT_SRC = "agmarknet_scraper_vm_deployment.md"
+SRC_PATH = Path(__file__).parent / (sys.argv[1] if len(sys.argv) > 1 else _DEFAULT_SRC)
+OUT_PATH = SRC_PATH.with_suffix(".pdf")
 
 ACCENT = "#1F5C3D"  # dark green, agri-themed — matches generate_market_price_docx.py
 

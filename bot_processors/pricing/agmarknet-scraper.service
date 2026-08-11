@@ -1,0 +1,43 @@
+\
+# systemd equivalent of start_scraper_daemon.vbs (Windows-only — WScript.Shell
+# doesn't exist on Linux). Runs scraper_daemon.py as a real supervised
+# service instead of a console window: auto-restarts on crash, starts on
+# boot, logs to `journalctl` instead of a hand-rolled log file.
+#
+# Paths below (/opt/pipecat, the "pipecat" user) are placeholders — edit
+# User/Group/WorkingDirectory/ExecStart to match wherever the repo actually
+# lives and whichever user should own the process (a dedicated non-root
+# user is recommended over running this as root).
+#
+# Install:
+#   sudo cp bot_processors/pricing/agmarknet-scraper.service /etc/systemd/system/
+#   sudo systemctl daemon-reload
+#   sudo systemctl enable --now agmarknet-scraper
+# Logs:
+#   journalctl -u agmarknet-scraper -f
+# Stop:
+#   sudo systemctl stop agmarknet-scraper
+
+[Unit]
+Description=Agmarknet price scraper daemon
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=pipecat
+Group=pipecat
+WorkingDirectory=/opt/pipecat
+# WorkingDirectory must be the repo root — scraper_daemon.py's own
+# load_dotenv() call finds .env by searching upward from the current
+# working directory, same as it does today on Windows.
+ExecStart=/opt/pipecat/venv/bin/python -m bot_processors.pricing.scraper_daemon
+Restart=on-failure
+RestartSec=30
+# scraper_daemon.py already has its own internal retry loop (8h cycle,
+# catches and logs exceptions per cycle) — this is the outer safety net
+# for the process dying outright (e.g. an unhandled crash, OOM), not the
+# primary recovery mechanism.
+
+[Install]
+WantedBy=multi-user.target

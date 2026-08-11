@@ -1,0 +1,25 @@
+# Lean dependency set for running just the Agmarknet scraper/daemon
+# (agmarknet_scraper.py, scraper_daemon.py, enrich_prices_with_geo.py,
+# export_prices_xlsx.py, nationwide_market_geo_reference.py) on its own
+# VM, without pulling in the full voice-bot stack from
+# requirements_frozen_2026-08-05.txt (Pipecat, STT/TTS/LLM SDKs, RAG deps,
+# etc. — none of which scraper_daemon.py's own import chain touches).
+#
+# Versions pinned to match requirements_frozen_2026-08-05.txt for the
+# packages actually imported directly by this subsystem. easyocr's own
+# dependencies (torch, torchvision, opencv-python-headless, scipy, numpy,
+# Pillow, scikit-image, python-bidi, PyYAML, Shapely, pyclipper, ninja —
+# notably NOT torchaudio, which is voice-pipeline-only) are left unpinned
+# here and resolved by pip at install time; torch/torchvision are the slow
+# part of this install regardless of pinning.
+#
+# Install: pip install -r requirements-scraper.txt
+# Then (one-time, downloads the actual browser binary + Linux system libs):
+#   playwright install --with-deps chromium
+
+playwright==1.61.0
+easyocr==1.7.2
+asyncpg==0.31.0
+openpyxl==3.1.5
+python-dotenv==1.2.2
+loguru==0.7.3

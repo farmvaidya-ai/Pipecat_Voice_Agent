@@ -28,8 +28,20 @@ import json
 import time
 from datetime import date
 
+from dotenv import load_dotenv
 from loguru import logger
 from playwright.sync_api import Locator, Page, sync_playwright
+
+# db_pool.py reads DATABASE_URL from the environment at import time (a
+# top-level statement, not inside a function), so .env has to already be
+# loaded before the import right below this. Every other entry point that
+# imports this module (Bot.py, scraper_daemon.py, price_lookup.py) already
+# loads .env itself first, so this is a no-op there (load_dotenv() doesn't
+# override already-set vars by default) — it only matters for this file's
+# own standalone `python -m bot_processors.pricing.agmarknet_scraper` path,
+# which used to load .env too late, inside __main__, well after this import
+# had already run and left DATABASE_URL empty.
+load_dotenv()
 
 from bot_processors.core.db_pool import get_pool
 from bot_processors.paths import DATA_DIR
@@ -295,17 +307,59 @@ def _row_to_result(row: dict[str, str]) -> dict | None:
     return result
 
 
+def _install_date_override(page: Page, target_date: date) -> None:
+    """Rewrites the from_date/to_date the site's own "Go" query submits to
+    api.agmarknet.gov.in/v1/daily-price-arrival/report before it's sent.
+
+    The form itself has no date field — every query it fires hardcodes
+    both from_date and to_date to today (there's no picker to change them
+    from the UI at all) — but the backend honors whatever date the request
+    actually carries: overriding these to a past date (confirmed against
+    2026-08-09, mid-outage while the site itself only exposed today)
+    returned real rows dated that day, not today's. This is the only way
+    to query a day other than today, since nothing in the rendered page
+    offers it.
+
+    A no-op for target_date == today, so the normal scrape_all()/
+    scrape_single() call (today, implicitly) doesn't pay for rewriting a
+    request that would already carry the right dates."""
+    if target_date == date.today():
+        return
+
+    target_iso = target_date.strftime("%Y-%m-%d")
+
+    def handle(route, request):
+        if request.method != "POST":
+            route.continue_()
+            return
+        body = json.loads(request.post_data or "{}")
+        body["from_date"] = target_iso
+        body["to_date"] = target_iso
+        route.continue_(post_data=json.dumps(body))
+
+    page.route("**/daily-price-arrival/report", handle)
+
+
 def _open_daily_price_form(page: Page, mode: str = "Price") -> None:
     """Navigation shared by every entry point that drives the live form:
     scrape_all(), scrape_single(), and harvest_commodity_reference(). mode
     is one of the "Price/Arrivals*" dropdown's own three options: "Price",
     "Arrival", or "Both" (a combined table with both price and arrival
-    columns per row)."""
-    page.goto("https://agmarknet.gov.in/home", wait_until="networkidle", timeout=60000)
-    page.wait_for_timeout(1500)
-    page.click("text=Price & Arrival Reports")
-    page.wait_for_timeout(1500)
-    page.click("text=Daily Price and Arrival")
+    columns per row).
+
+    Goes straight to the form's own URL rather than clicking through the
+    homepage nav (as of 2026-08-10 that nav no longer has a "Price &
+    Arrival Reports" link — the site was restructured to a "Reports" hover
+    menu whose one live-report item's label includes that day's date, e.g.
+    "Daily Price and Arrival Report as on 11/August/2026", and is also
+    animated/unstable enough that Playwright's normal click needs `force`
+    to land — so the direct URL is both simpler and more robust than
+    reproducing that hover+force-click path)."""
+    page.goto(
+        "https://agmarknet.gov.in/daily-price-and-arrival-report",
+        wait_until="networkidle",
+        timeout=60000,
+    )
     page.wait_for_timeout(3000)
     _pick(page, "Price/Arrivals*", mode)
 
@@ -398,7 +452,7 @@ def _scrape_crop_all_states(page: Page, group: str, commodity: str, crop_keyword
     return scraped
 
 
-def scrape_all(resume: bool = False) -> dict[str, dict]:
+def scrape_all(resume: bool = False, target_date: date | None = None) -> dict[str, dict]:
     """Runs every commodity Agmarknet tracks (~604, from
     load_commodity_reference() — not a hand-picked list) against every
     state/UT at once (via the "All States/UTs" option, one query per
@@ -410,6 +464,12 @@ def scrape_all(resume: bool = False) -> dict[str, dict]:
     matches what this just wrote. One row per key is kept (first seen
     wins) — good enough for an approximate fallback price, not exact
     market analytics.
+
+    target_date defaults to today (the only date the site's own form ever
+    queries). Pass a past date to backfill it instead — see
+    _install_date_override for how that's actually done (the rendered form
+    has no date field at all; the override rewrites the request the "Go"
+    click fires, underneath the UI).
 
     Drives the form in "Both" mode (price + arrival columns in one query)
     so each cached entry also gets arrival_qty/arrival_unit alongside the
@@ -425,27 +485,28 @@ def scrape_all(resume: bool = False) -> dict[str, dict]:
     the whole run.
 
     resume=True skips any crop_keyword that already has at least one entry
-    dated today in last_known_prices.json — for relaunching after a crash
-    without re-querying commodities this run already got to today. Not the
+    dated target_date in last_known_prices.json — for relaunching after a
+    crash without re-querying commodities this run already got to. Not the
     default: the scheduled daemon (scraper_daemon.py) wants every cycle to
     be a full unconditional refresh, not skip a commodity just because an
-    earlier cycle today already touched it."""
+    earlier cycle already touched it."""
+    target_date = target_date or date.today()
     targets: dict[str, tuple[str, str]] = {}
     for group, commodities in load_commodity_reference().items():
         for commodity in commodities:
             targets[crop_keyword_for(commodity)] = (group, commodity)
 
-    today = date.today().strftime("%d-%m-%Y")
+    target_date_str = target_date.strftime("%d-%m-%Y")
     done_today: set[str] = set()
     if resume and _LAST_KNOWN_PATH.exists():
         existing = json.loads(_LAST_KNOWN_PATH.read_text(encoding="utf-8"))
         for key, entry in existing.items():
-            if entry.get("arrival_date") == today:
+            if entry.get("arrival_date") == target_date_str:
                 done_today.add(key.split(_LAST_KNOWN_KEY_SEP)[-1])
         if done_today:
             logger.info(
                 f"⏭️ agmarknet_scraper: resuming — {len(done_today)}/{len(targets)} "
-                "commodities already have today's data"
+                f"commodities already have {target_date_str}'s data"
             )
 
     scraped: dict[str, dict] = {}
@@ -458,6 +519,7 @@ def scrape_all(resume: bool = False) -> dict[str, dict]:
             ignore_https_errors=True,
             user_agent=_USER_AGENT,
         )
+        _install_date_override(page, target_date)
         _open_daily_price_form(page, mode="Both")
         _pick(page, "State/UT*", "All States/UTs")
 
@@ -713,15 +775,8 @@ if __name__ == "__main__":
     import asyncio
     import sys
 
-    from dotenv import load_dotenv
-
-    # Only needed for this standalone-run path (python -m
-    # bot_processors.pricing.agmarknet_scraper) — every other caller (Bot.py,
-    # price_lookup.py, scraper_daemon.py) already loads .env itself before
-    # importing this module. db_pool.py reads DATABASE_URL at import time,
-    # so this must run before the db_pool import right below it.
-    load_dotenv(override=True)
-
+    # .env is already loaded at module import time (see load_dotenv() call
+    # up top) — nothing else needed here for that.
     from bot_processors.core.db_pool import close_pool, init_pool
 
     if "--harvest-commodities" in sys.argv:
@@ -729,10 +784,27 @@ if __name__ == "__main__":
     elif "--harvest-states" in sys.argv:
         harvest_state_reference()
     else:
+        # --date=YYYY-MM-DD backfills that specific past day instead of
+        # today (see scrape_all's target_date / _install_date_override) —
+        # the site's own form has no date field, so this is otherwise
+        # unreachable from the UI.
+        target_date = None
+        for arg in sys.argv[1:]:
+            if arg.startswith("--date="):
+                target_date = date.fromisoformat(arg.split("=", 1)[1])
+
         async def _run():
             await init_pool()
             try:
-                await save_scraped(scrape_all(resume="--resume" in sys.argv))
+                # scrape_all() is sync (drives a real sync_playwright
+                # browser) and Playwright's sync API refuses to run inside
+                # a thread that already has an active asyncio loop — same
+                # reason scraper_daemon.py awaits it via to_thread rather
+                # than calling it directly.
+                scraped = await asyncio.to_thread(
+                    scrape_all, resume="--resume" in sys.argv, target_date=target_date
+                )
+                await save_scraped(scraped)
             finally:
                 await close_pool()
 

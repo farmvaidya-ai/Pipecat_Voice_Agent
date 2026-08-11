@@ -166,3 +166,18 @@ CREATE INDEX IF NOT EXISTS idx_fact_market_prices_state_crop
 -- Covers get_price: "this exact district's latest row for this (state, crop)".
 CREATE INDEX IF NOT EXISTS idx_fact_market_prices_state_district_crop
     ON fact_market_prices (state, district, crop_keyword, arrival_date DESC);
+
+-- Plain tables have no inherent row order — a bare `SELECT * FROM
+-- fact_market_prices` (e.g. pgAdmin's default "View/Edit Data → All Rows")
+-- returns rows in whatever order Postgres happens to scan them in, which
+-- looks shuffled since scrape_all() upserts one commodity/state combo at a
+-- time, not one calendar day at a time. This view exists purely so
+-- browsing the table by hand comes back sorted without having to remember
+-- to type ORDER BY. Not read by any application code — bot_processors'
+-- own queries already specify their own ORDER BY (see the indexes above).
+-- Note: a view's own ORDER BY is a convenience for simple browsing, not an
+-- SQL-standard guarantee — a query that wraps this view in something else
+-- (a JOIN, its own ORDER BY, etc.) can still reorder it.
+CREATE OR REPLACE VIEW fact_market_prices_ordered AS
+    SELECT * FROM fact_market_prices
+    ORDER BY arrival_date, state, district, commodity;

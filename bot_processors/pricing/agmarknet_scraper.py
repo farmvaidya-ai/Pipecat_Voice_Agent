@@ -25,6 +25,8 @@ Run manually with:  python -m bot_processors.pricing.agmarknet_scraper
 
 import base64
 import json
+import msvcrt
+import os
 import time
 from datetime import date
 
@@ -681,6 +683,9 @@ def load_state_reference() -> list[str]:
     return json.loads(_STATE_REFERENCE_PATH.read_text(encoding="utf-8"))
 
 
+_LAST_KNOWN_LOCK_PATH = _LAST_KNOWN_PATH.with_suffix(".lock")
+
+
 def _merge_into_last_known_json(scraped: dict[str, dict]) -> None:
     """The JSON-only half of save_scraped(), split out so scrape_all()'s
     per-commodity incremental checkpoint (see its docstring) can call it
@@ -690,17 +695,48 @@ def _merge_into_last_known_json(scraped: dict[str, dict]) -> None:
     created and discarded, not run), which is exactly the bug this split
     fixes: it used to make scrape_all(resume=True)'s "already done today"
     detection see nothing, because last_known_prices.json was never
-    actually updated mid-run despite the docstring's claim that it was."""
+    actually updated mid-run despite the docstring's claim that it was.
+
+    Locked (via an exclusive OS lock on a sidecar .lock file) and written
+    atomically (temp file + os.replace, never an in-place write) — this
+    function runs on every single commodity scraped, hundreds of times over
+    a multi-hour run, so with two backfill dates running concurrently a
+    collision here isn't a rare edge case, it's near-certain. Confirmed
+    live (2026-08-13): running 2026-08-02 and 2026-08-03 in parallel with
+    no locking here, their unsynchronized read-modify-write cycles
+    eventually interleaved, leaving a dangling half-written JSON fragment
+    appended after an otherwise-valid file. Every subsequent read anywhere
+    (both those runs' remaining retry attempts, and 2026-08-01 and
+    2026-08-12's runs right after) then crashed on the corrupt file with an
+    uncaught JSONDecodeError — silently discarding an entire night's worth
+    of otherwise-successful scraping with zero rows actually saved for any
+    of the four affected dates, since this crash happens before
+    scrape_all() ever reaches its own save_scraped() DB write."""
     if not scraped:
         return
-    existing: dict[str, dict] = {}
-    if _LAST_KNOWN_PATH.exists():
-        existing = json.loads(_LAST_KNOWN_PATH.read_text(encoding="utf-8"))
-    existing.update(scraped)
-    _LAST_KNOWN_PATH.write_text(
-        json.dumps(dict(sorted(existing.items())), indent=2, ensure_ascii=False),
-        encoding="utf-8",
-    )
+    lock_path = _LAST_KNOWN_LOCK_PATH
+    lock_path.touch(exist_ok=True)
+    with open(lock_path, "r+b") as lock_file:
+        while True:
+            try:
+                msvcrt.locking(lock_file.fileno(), msvcrt.LK_NBLCK, 1)
+                break
+            except OSError:
+                time.sleep(0.1)
+        try:
+            existing: dict[str, dict] = {}
+            if _LAST_KNOWN_PATH.exists():
+                existing = json.loads(_LAST_KNOWN_PATH.read_text(encoding="utf-8"))
+            existing.update(scraped)
+            tmp_path = _LAST_KNOWN_PATH.with_suffix(".json.tmp")
+            tmp_path.write_text(
+                json.dumps(dict(sorted(existing.items())), indent=2, ensure_ascii=False),
+                encoding="utf-8",
+            )
+            os.replace(tmp_path, _LAST_KNOWN_PATH)
+        finally:
+            lock_file.seek(0)
+            msvcrt.locking(lock_file.fileno(), msvcrt.LK_UNLCK, 1)
 
 
 async def save_scraped(scraped: dict[str, dict]) -> None:
@@ -712,7 +748,12 @@ async def save_scraped(scraped: dict[str, dict]) -> None:
     CONFLICT; any other day's arrival_date is a genuinely new row, so real
     history accumulates instead of being discarded the way the old
     JSON-overwrite approach did — see the table's own comment in
-    db/schema.sql.
+    db/schema.sql. The INSERT below names the public schema explicitly
+    (not a bare fact_market_prices) for the same reason price_lookup.py's
+    queries do — see fetch_price()'s docstring — since this function is
+    also called from price_lookup.py's live-fetch fallback, which on a
+    schema-isolated test deployment would otherwise save a freshly-scraped
+    row where no read path (now pinned to public too) would ever see it.
 
     Still ALSO writes last_known_prices.json (via _merge_into_last_known_json)
     — not for price lookups anymore, but because enrich_prices_with_geo.py
@@ -749,7 +790,7 @@ async def save_scraped(scraped: dict[str, dict]) -> None:
     async with pool.acquire() as conn:
         await conn.executemany(
             """
-            INSERT INTO fact_market_prices
+            INSERT INTO public.fact_market_prices
                 (state, district, market, commodity, crop_keyword, arrival_date,
                  modal_per_kg, min_per_kg, max_per_kg, arrival_qty, arrival_unit)
             VALUES ($1, $2, $3, $4, $5, to_date($6, 'DD-MM-YYYY'), $7, $8, $9, $10, $11)

@@ -1,5 +1,10 @@
 .env
 service-account.json
+bot_processors/data/*.lock
+bot_processors/data/*.corrupt-backup-*
+bot_processors/pricing/backfill_logs/
+scripts/*.ogg
+scripts/*.wav
 venv/
 __pycache__/
 **/__pycache__/
@@ -24,4 +29,5 @@ bot_processors/data/pincode_village_counts.xlsx
 geo_validator/output/
 ~$*.xlsx
 *_archive_*.zip
+scripts/voice_samples/
 

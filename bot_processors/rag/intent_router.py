@@ -37,6 +37,12 @@ _WEATHER_KEYWORDS = {
     # Telugu
     "వాతావరణం", "వాతావరణం", "వర్షం", "వర్షాలు", "వాన", "వానలు", "ఎండ", "గాలి",
     "తుఫాను", "తుఫానులు", "ఉష్ణోగ్రత", "మేఘం", "మేఘాలు",
+    # Telugu-script transliteration of the English word — callers code-switch
+    # and say this at least as often as వాతావరణం itself. Confirmed live
+    # 2026-08-05 through 2026-08-11 across 6 separate calls (e.g.
+    # call_919390427476_2f3119bd.log: "సరే, అక్కడ వెదర్ ఎట్లుంది?"), every one
+    # of which fell through to "other" and fired a real Qdrant search.
+    "వెదర్",
     # Hindi
     "मौसम", "बारिश", "बरसात", "आंधी", "तूफान", "तापमान", "हवा",
     # Tamil
@@ -50,6 +56,11 @@ _WEATHER_KEYWORDS = {
 _PRICE_KEYWORDS = {
     # Telugu
     "ధర", "ధరలు", "రేటు", "రేట్లు", "మార్కెట్", "బజారు", "క్వింటాల్", "మండి",
+    # Telugu-script transliteration of the English word, same rationale as
+    # వెదర్ above — confirmed live 2026-08-11 (call_919949070894_a3fc5ca5.log:
+    # "కాటన్ ప్రైస్ చెప్పండి." and call_919390427476_e8ba8f16.log: "...బ్రింజాల
+    # ప్రైస్ ఎంత అనుకుని."), both fell through to "other".
+    "ప్రైస్",
     # Colloquial "how much, tell me" phrasing that skips ధర/రేటు entirely
     # (e.g. "గ్రీన్ చిల్లీ ఎంత చెప్తావా?") — confirmed live 2026-08-03
     # (call_919390427476_244b1ab7.log): this fell through to "other", which
@@ -102,11 +113,50 @@ def _is_digit_fragment(text: str) -> bool:
     return digit_count >= max(1, len(core) - 1)  # allow one stray misheard char, e.g. "I-33"
 
 
+# A short caller turn with this few words is either backchannel/filler
+# ("సరే.", "ఓకే."), a bare confirmation ("దాన్ని కావాలి." — "I want that"), a
+# short context-dependent follow-up ("అదే, ఎప్పుడు?" — "that, when?"), a bare
+# commodity name given on its own ("రాగిది." — "that's ragi"), or trailing
+# off mid-thought ("ఆ, నాకు—" — "uh, I—") — none of these carry distinct
+# topical content of their own for a KB search to meaningfully match against.
+_LOW_CONTENT_MAX_WORDS = 4
+
+
+def _is_low_content_fragment(text: str) -> bool:
+    """True for a short utterance unlikely to be a real, self-contained
+    question — searching it anyway risks a spurious match on whatever
+    generic word is left over. Product questions ("ట్రాప్ ధర ఎంత?") are
+    exempted via _PRODUCT_KEYWORDS even when short, since those do need a
+    real search.
+
+    Confirmed live 2026-08-11 (call_919949070894_a3fc5ca5.log): in one
+    ~7-minute price-lookup call — entirely about mandi prices by date, never
+    once actually asking about a product — 7 separate short filler/
+    follow-up turns ("సరే.", "ఓకే.", "దాన్ని కావాలి.", "అదే, ఎప్పుడు?",
+    "రాగిది.", "ఓకే. అలా అయితే నాకు—", "సరే, బాయ్.") each independently fired
+    a real Qdrant search and injected 1-3 KB chunks (including product
+    chunks — mango-fruit-fly-trap and sticky-roll pricing details — the
+    caller never asked about in that turn or anywhere else in the call),
+    landing in context right before the bot's next reply and surfacing as
+    the bot bringing up things unprompted."""
+    words = [w for w in text.strip().replace(",", " ").split() if w]
+    if not words or len(words) > _LOW_CONTENT_MAX_WORDS:
+        return False
+    return not _contains_any(text, _PRODUCT_KEYWORDS)
+
+
 def classify_intent(text: str) -> str:
-    """Returns "weather", "price", "location", or "other" for a caller's
-    turn text. "location" (a caller dictating pincode digits) is treated
-    identically to "weather"/"price" by rag.py — all three skip the RAG
-    search."""
+    """Returns "weather", "price", "location", "fragment", or "other" for a
+    caller's turn text. "location" (a caller dictating pincode digits) and
+    "fragment" (a short, low-content utterance — filler, a bare
+    confirmation, or trailing off mid-thought) are treated identically to
+    "weather"/"price" by rag.py — all four skip the RAG search.
+
+    Weather/price keywords are checked before the low-content fragment
+    check so a short-but-real question ("ధర ఎంత?") is still labeled by
+    what it actually is rather than falling into the generic "fragment"
+    bucket — both skip RAG the same way either way, this is purely so the
+    logs stay legible."""
     if not text or not text.strip():
         return "other"
 
@@ -118,5 +168,8 @@ def classify_intent(text: str) -> str:
 
     if _contains_any(text, _PRICE_KEYWORDS) and not _contains_any(text, _PRODUCT_KEYWORDS):
         return "price"
+
+    if _is_low_content_fragment(text):
+        return "fragment"
 
     return "other"

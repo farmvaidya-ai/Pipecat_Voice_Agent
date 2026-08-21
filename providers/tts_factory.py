@@ -8,6 +8,11 @@ Supported providers (set TTS_PROVIDER= in .env):
     bakbak    → BakbakTTSService     (custom HTTP client — not in pipecat)
     soniox    → SonioxTTSService     (WebSocket streaming, 60+ languages)
     murf      → MurfTTSService       (pipecat-murf-tts pkg, WebSocket, Falcon 2)
+    svara     → SvaraTTSService      (custom HTTP client — svara-voice SDK's
+                                       own pipecat wrapper targets an older
+                                       TTSService contract, see providers/svara_tts.py)
+    elevenlabs → ElevenLabsTTSService (official pipecat integration, WebSocket
+                                       streaming, model=eleven_flash_v2_5 by default)
 
 Adding a new provider:
     1. Add its env vars to .env (e.g. NEWPROVIDER_TTS_API_KEY=, NEWPROVIDER_TTS_MODEL=)
@@ -59,10 +64,14 @@ def create_tts(
         return _create_soniox_tts(voice_id, language)
     if provider == "murf":
         return _create_murf(voice_id, language)
+    if provider == "svara":
+        return _create_svara(voice_id, language)
+    if provider == "elevenlabs":
+        return _create_elevenlabs(voice_id, language)
 
     raise ValueError(
         f"[TTS Factory] Unsupported TTS_PROVIDER='{provider}'. "
-        "Valid values: cartesia, sarvam, xai, grok, bakbak, soniox, murf"
+        "Valid values: cartesia, sarvam, xai, grok, bakbak, soniox, murf, svara, elevenlabs"
     )
 
 
@@ -275,8 +284,12 @@ def _create_soniox_tts(_voice_id: Optional[str], language: Optional[Language]):
             "[TTS Factory] Neither SONIOX_TTS_API_KEY nor SONIOX_API_KEY is set in .env"
         )
 
-    # Only model available: tts-rt-v1
-    model = os.getenv("SONIOX_TTS_MODEL", "tts-rt-v1")
+    # tts-rt-v2 is the current production model (launched 2026-08): better voice
+    # quality, audio-tag emotion/delivery control, voice cloning, in-sentence
+    # language switching. Fully backward-compatible with tts-rt-v1's API/settings
+    # (model name is the only thing that changes). tts-rt-v1 is deprecated and
+    # will be removed 2026-08-31, after which it auto-routes to v2 anyway.
+    model = os.getenv("SONIOX_TTS_MODEL", "tts-rt-v2")
 
     # Voice name — see console.soniox.com for full gallery
     resolved_voice = os.getenv("SONIOX_TTS_VOICE", "Adrian")
@@ -358,4 +371,169 @@ def _create_murf(_voice_id: Optional[str], _language: Optional[Language]):
             format=audio_format,
             multi_native_locale=resolved_locale,
         ),
+    )
+
+
+# ──────────────────────────────────────────────────────────────────────────────
+# Svara (Kenpath Labs)
+# ──────────────────────────────────────────────────────────────────────────────
+
+def _create_svara(_voice_id: Optional[str], _language: Optional[Language]):
+    try:
+        from providers.svara_tts import SvaraTTSService
+    except ImportError as exc:
+        raise ImportError(
+            "[TTS Factory] svara-voice not installed. Run: "
+            "pip install git+https://github.com/kenpath-labs/svara-python.git"
+        ) from exc
+
+    api_key = os.getenv("SVARA_API_KEY")
+    if not api_key:
+        raise ValueError("[TTS Factory] SVARA_API_KEY is not set in .env")
+
+    # Optional — defaults to https://api.kenpathlabs.com inside AsyncSvara if unset.
+    # Must be the bare origin, NOT ending in /v1 — AsyncSvara's own internal
+    # calls already target paths like /v1/audio/speech, and httpx's base_url
+    # merging APPENDS rather than replacing on a leading "/" (unlike plain
+    # urljoin), so a base_url of ".../v1" plus "/v1/audio/speech" silently
+    # doubles up into ".../v1/v1/audio/speech" and 404s. Stripped defensively
+    # here in case .env ever gets a doc-pasted URL with /v1 on the end again.
+    base_url = (os.getenv("SVARA_BASE_URL") or "").strip().rstrip("/")
+    if base_url.endswith("/v1"):
+        base_url = base_url[: -len("/v1")]
+    base_url = base_url or None
+
+    # _voice_id may carry a leftover Cartesia UUID from Bot.py's shared
+    # VOICE_ID env var — intentionally ignored here, same as Sarvam/Bakbak/Murf.
+    resolved_voice = os.getenv("SVARA_TTS_VOICE", "sv_enhdbrj5")  # Aanya (Hindi native, speaks all 80 langs)
+    # Display-only, for the startup log line below — same VOICE_ID/VOICE_NAME
+    # pairing Bakbak uses, since Svara's own IDs (sv_xxxxxxxx) aren't readable
+    # on their own. Not sent to the API; keep in sync by hand if you change
+    # SVARA_TTS_VOICE (see docs/svara_voice_roster.pdf for the full roster).
+    resolved_voice_name = os.getenv("SVARA_TTS_VOICE_NAME", "")
+
+    model = os.getenv("SVARA_TTS_MODEL", "svara-1")
+
+    # Any of mp3/opus/aac/flac/wav/pcm/ulaw/alaw — pcm is headerless s16le,
+    # cheapest to stream straight into the pipeline (see providers/svara_tts.py).
+    response_format = os.getenv("SVARA_TTS_FORMAT", "pcm")
+
+    _speed_env = os.getenv("SVARA_TTS_SPEED", "").strip()
+    speed = None
+    if _speed_env:
+        try:
+            speed = float(_speed_env)
+        except ValueError:
+            logger.warning(
+                f"[TTS Factory] SVARA_TTS_SPEED={_speed_env!r} is not a valid number, "
+                "falling back to Svara's server default (1.0)"
+            )
+
+    # Startup language hint (ISO code, e.g. "te", "hi") — "auto"/unset lets
+    # Svara auto-detect from the text itself. MultilingualTTSSwitcher updates
+    # this per-turn once a caller's language is detected (see tts_switcher.py).
+    _lang_env = os.getenv("SVARA_TTS_LANGUAGE", "").strip().lower()
+    startup_language = None if _lang_env in ("", "auto") else _lang_env
+
+    _voice_display = f"{resolved_voice_name} ({resolved_voice})" if resolved_voice_name else resolved_voice
+    logger.info(
+        f"[TTS Factory] Svara TTS voice={_voice_display} model={model} "
+        f"format={response_format} startup_language={startup_language or 'auto'}"
+    )
+
+    return SvaraTTSService(
+        api_key=api_key,
+        base_url=base_url,
+        voice=resolved_voice,
+        model=model,
+        language=startup_language,
+        response_format=response_format,
+        speed=speed,
+    )
+
+
+# ──────────────────────────────────────────────────────────────────────────────
+# ElevenLabs
+# ──────────────────────────────────────────────────────────────────────────────
+
+def _create_elevenlabs(_voice_id: Optional[str], language: Optional[Language]):
+    try:
+        from pipecat.services.elevenlabs.tts import ElevenLabsTTSService
+    except ImportError as exc:
+        raise ImportError(
+            "[TTS Factory] ElevenLabs TTS service not found in installed pipecat. "
+            "Run: pip install pipecat-ai[elevenlabs]"
+        ) from exc
+
+    api_key = os.getenv("ELEVENLABS_API_KEY")
+    if not api_key:
+        raise ValueError("[TTS Factory] ELEVENLABS_API_KEY is not set in .env")
+
+    # eleven_flash_v2_5: lowest-latency ElevenLabs model (~75ms), multilingual
+    # (supports language_code — see ELEVENLABS_MULTILINGUAL_MODELS in
+    # pipecat's elevenlabs/tts.py; eleven_flash_v2 and eleven_turbo_v2 do NOT).
+    model = os.getenv("ELEVENLABS_TTS_MODEL", "eleven_flash_v2_5")
+
+    # ElevenLabs voice IDs are account-specific (no public default like
+    # Bakbak/Soniox). _voice_id may carry a leftover Cartesia UUID from
+    # Bot.py's shared VOICE_ID env var — intentionally ignored here, same as
+    # Sarvam/Bakbak/Murf/Svara — always read from ELEVENLABS_TTS_VOICE_ID.
+    resolved_voice = os.getenv("ELEVENLABS_TTS_VOICE_ID") or ""
+    if not resolved_voice:
+        raise ValueError(
+            "[TTS Factory] No voice_id supplied and ELEVENLABS_TTS_VOICE_ID is not set "
+            "in .env. Set ELEVENLABS_TTS_VOICE_ID to a voice ID from your ElevenLabs "
+            "account (Voice Library → copy Voice ID)."
+        )
+    # Display-only, for the startup log line below — ElevenLabs' own IDs
+    # aren't readable on their own, same VOICE_ID/VOICE_NAME pairing
+    # Bakbak/Svara use. Not sent to the API; keep in sync by hand if you
+    # change ELEVENLABS_TTS_VOICE_ID.
+    resolved_voice_name = os.getenv("ELEVENLABS_TTS_VOICE_NAME", "")
+
+    # Language: ISO code (en, hi, ta — ElevenLabs' language_code list only
+    # covers these three among this project's Indian languages, see
+    # ELEVENLABS_MULTILINGUAL_MODELS in pipecat/services/elevenlabs/tts.py)
+    # or "auto" → EN startup, then MultilingualTTSSwitcher switches per
+    # detected language at runtime (falling back to EN for unsupported ones).
+    _lang_env = os.getenv("ELEVENLABS_TTS_LANGUAGE", "").strip().lower()
+    effective_language = language or (Language.EN if _lang_env in ("", "auto") else _lang_env)
+
+    # Optional voice-character knobs — left NOT_GIVEN (ElevenLabs server
+    # defaults) unless explicitly set in .env.
+    def _opt_float(name: str) -> Optional[float]:
+        raw = os.getenv(name, "").strip()
+        if not raw:
+            return None
+        try:
+            return float(raw)
+        except ValueError:
+            logger.warning(f"[TTS Factory] {name}={raw!r} is not a valid number, ignoring")
+            return None
+
+    stability = _opt_float("ELEVENLABS_TTS_STABILITY")
+    similarity_boost = _opt_float("ELEVENLABS_TTS_SIMILARITY_BOOST")
+    speed = _opt_float("ELEVENLABS_TTS_SPEED")
+
+    settings_kwargs = {
+        "model": model,
+        "voice": resolved_voice,
+        "language": effective_language,
+    }
+    if stability is not None:
+        settings_kwargs["stability"] = stability
+    if similarity_boost is not None:
+        settings_kwargs["similarity_boost"] = similarity_boost
+    if speed is not None:
+        settings_kwargs["speed"] = speed
+
+    _voice_display = f"{resolved_voice_name} ({resolved_voice})" if resolved_voice_name else resolved_voice
+    logger.info(
+        f"[TTS Factory] ElevenLabs TTS voice={_voice_display} model={model} "
+        f"language={effective_language}"
+    )
+
+    return ElevenLabsTTSService(
+        api_key=api_key,
+        settings=ElevenLabsTTSService.Settings(**settings_kwargs),
     )

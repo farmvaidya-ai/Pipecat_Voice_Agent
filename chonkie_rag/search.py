@@ -15,7 +15,22 @@ from . import session_log
 from loguru import logger
 
 COLLECTION = RAG_COLLECTION
-SCORE_THRESHOLD = 0.7
+
+# Was a hard SCORE_THRESHOLD=0.7 dense-cosine gate until 2026-08-18 — dropped
+# because it had no safe value for this embedding model on this corpus: real
+# queries confirmed live (chonkie_rag/cache/dense_retrievals.jsonl,
+# 2026-08-18) show true and false matches landing in the same score band —
+# e.g. "who are the founders of your company" scored 0.52-0.64 against the
+# real founders chunk, while an unrelated weather/pincode query scored 0.59-
+# 0.61 against a random chunk. No cutoff separates them, so instead of
+# gating on a raw number, the top DENSE_TOP_N dense hits are always surfaced
+# (regardless of score) and handed to the LLM as plain passages — relevance
+# filtering happens there instead, via system_prompt.txt's existing "only
+# use the part of the passages that directly answers what the caller asked
+# THIS turn" instruction, which reads the actual chunk text rather than a
+# similarity number. BM25 keyword hits (a real term-overlap signal, unlike
+# raw cosine here) still admit candidates independently, same as before.
+DENSE_TOP_N = 2
 
 # Reciprocal Rank Fusion constant (Cormack et al. 2009) — the widely-used
 # default; larger values flatten the influence of exact rank position.
@@ -270,12 +285,16 @@ def search(question: str, top_k: int = 6) -> list[dict]:
     Hybrid retrieval: dense (meaning) search + BM25 (exact keyword) search,
     combined via Reciprocal Rank Fusion.
 
-    A chunk is kept as a candidate if EITHER its dense score clears
-    SCORE_THRESHOLD (today's behavior) OR it has a nonzero BM25 score (a real
-    keyword overlap) — so BM25 rescues exact-term matches that dense search
-    under-scores (e.g. short "who are the founders"-style queries), while
-    genuinely out-of-scope questions (no dense confidence, no keyword
-    overlap) still come back empty, same as before.
+    A chunk is kept as a candidate if EITHER it's in the top DENSE_TOP_N dense
+    hits (regardless of raw score — see DENSE_TOP_N's comment for why a score
+    cutoff doesn't work here) OR it has a real BM25 keyword overlap. This
+    means search() basically never comes back empty for a non-gibberish
+    question anymore — that's intentional; the LLM sees the actual passage
+    text and decides relevance itself (system_prompt.txt: "only use the part
+    of the passages that directly answers what the caller asked THIS turn"),
+    which reads the content instead of trusting an unreliable similarity
+    number. A genuinely blank/gibberish query still comes back empty since
+    there's nothing for dense search to even rank.
     """
     stripped = question.strip()
     candidate_k = top_k
@@ -375,17 +394,18 @@ def search(question: str, top_k: int = 6) -> list[dict]:
 
     candidate_ids = {
         cid for cid in set(dense_rank) | set(bm25_rank)
-        if dense_score.get(cid, 0.0) >= SCORE_THRESHOLD or cid in bm25_rank
+        if dense_rank.get(cid, 999) <= DENSE_TOP_N or cid in bm25_rank
     }
 
-    # A chunk only counts as dense-confirmed for the overlap check below if it
-    # actually cleared SCORE_THRESHOLD — otherwise a chunk admitted purely on
-    # a weak one-word BM25 match that also happened to land somewhere in the
-    # (unfiltered) dense top-k would get treated as "Dense+BM25 fused", the
-    # strongest selection tier, despite having no real dense confidence at
-    # all. This was the root cause of low-relevance chunks (e.g. a single
-    # incidental keyword overlap) outranking genuinely relevant ones.
-    dense_confirmed = {cid for cid in dense_rank if dense_score.get(cid, 0.0) >= SCORE_THRESHOLD}
+    # A chunk only counts as dense-confirmed for the overlap check below if
+    # it's actually in the top DENSE_TOP_N dense hits — otherwise a chunk
+    # admitted purely on a weak one-word BM25 match that also happened to
+    # land somewhere further down the (unfiltered) dense top-k would get
+    # treated as "Dense+BM25 fused", the strongest selection tier, despite
+    # dense search barely ranking it at all. This was the root cause of
+    # low-relevance chunks (e.g. a single incidental keyword overlap)
+    # outranking genuinely relevant ones.
+    dense_confirmed = {cid for cid in dense_rank if dense_rank[cid] <= DENSE_TOP_N}
 
     fused = []
     for cid in candidate_ids:

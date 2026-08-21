@@ -236,6 +236,15 @@ _IST = timezone(timedelta(hours=5, minutes=30))
 
 LANGUAGE = os.getenv("LANGUAGE", "auto").lower()
 
+# Returning-caller greeting/summary language (caller_summarizer.py's LLM
+# prompts, caller_memory.py's template greeting) — same LANGUAGE value this
+# call's TTS/STT are pinned to, so the greeting never comes out in a
+# different language than the rest of the call. "auto" mode has no single
+# fixed language at greeting time, so this falls back to Telugu — same
+# fallback TTS_INITIAL_LANG itself uses further below (Language.TE).
+GREETING_LANGUAGE = LANGUAGE if LANGUAGE in _LANG_TO_PIPECAT else "telugu"
+GREETING_LANGUAGE_NAME = GREETING_LANGUAGE.capitalize()
+
 # System prompt loaded from plain-text file for easy editing (no JSON escaping needed)
 _PROMPT_TXT = os.path.join(os.path.dirname(__file__), "system_prompt.txt")
 with open(_PROMPT_TXT, encoding="utf-8") as _f:
@@ -369,6 +378,7 @@ async def main():
         "grok":     f"{os.getenv('XAI_TTS_VOICE', 'cove')}  model={os.getenv('XAI_TTS_MODEL', 'default')}",
         "bakbak":   f"{_bakbak_name} ({_bakbak_id})  model={os.getenv('BAKBAK_TTS_MODEL', 'standard')}",
         "soniox":   f"{os.getenv('SONIOX_TTS_VOICE', 'Adrian')}  model={os.getenv('SONIOX_TTS_MODEL', 'tts-rt-v1')}",
+        "elevenlabs": f"{os.getenv('ELEVENLABS_TTS_VOICE_NAME') or os.getenv('ELEVENLABS_TTS_VOICE_ID', 'NOT SET')}  model={os.getenv('ELEVENLABS_TTS_MODEL', 'eleven_flash_v2_5')}",
     }.get(TTS_PROVIDER, VOICE_NAME)
 
     logger.info("=" * 60)
@@ -396,6 +406,7 @@ async def main():
         "cartesia": "CARTESIA_API_KEY", "sarvam": "SARVAM_TTS_API_KEY",
         "xai": "XAI_API_KEY", "grok": "XAI_API_KEY",
         "bakbak": "BAKBAK_API_KEY", "soniox": "SONIOX_API_KEY",
+        "elevenlabs": "ELEVENLABS_API_KEY",
     }.get(TTS_PROVIDER, "")
     if _stt_key_env:
         logger.info(f"STT key     : {'✅ set' if os.getenv(_stt_key_env) else '❌ MISSING'}  ({_stt_key_env})")
@@ -989,7 +1000,10 @@ async def run_bot(websocket: WebSocket, session_id: str, sink_ref: list):
             # and task.cancel() always eventually runs, network outage or not.
             await asyncio.wait_for(
                 asyncio.gather(
-                    summarize_and_save_call(llm, context, serializer.caller_number, serializer.call_id),
+                    summarize_and_save_call(
+                        llm, context, serializer.caller_number, serializer.call_id,
+                        language=GREETING_LANGUAGE_NAME,
+                    ),
                     end_call(serializer.call_id, end_dt, duration_seconds, reason, _lat_state.detected_language),
                     save_conversation_messages(serializer.call_id, turns, _lat_state.turn_latencies_ms),
                     return_exceptions=True,
@@ -1079,10 +1093,11 @@ async def run_bot(websocket: WebSocket, session_id: str, sink_ref: list):
             _track_task(update_contact_name(serializer.caller_number, name))
             if RETURNING_CALLER_GREETING_MODE == "llm":
                 greeting_text = await build_llm_greeting(
-                    llm, name, latest.get("summary", ""), latest.get("last_topic", "")
-                ) or build_template_greeting(name)
+                    llm, name, latest.get("summary", ""), latest.get("last_topic", ""),
+                    language=GREETING_LANGUAGE_NAME,
+                ) or build_template_greeting(name, language=GREETING_LANGUAGE)
             else:
-                greeting_text = build_template_greeting(name)
+                greeting_text = build_template_greeting(name, language=GREETING_LANGUAGE)
 
         await task.queue_frame(TTSSpeakFrame(text=greeting_text))
 

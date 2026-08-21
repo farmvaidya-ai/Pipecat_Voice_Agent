@@ -80,16 +80,37 @@ async def save_summary(
         logger.opt(exception=True).warning(f"⚠️ caller_memory: failed to save summary for {caller_number}")
 
 
-def build_template_greeting(name: str) -> str:
+# One per language Bot.py's LANGUAGE env var can be set to (_LANG_TO_PIPECAT).
+# Keyed lowercase to match LANGUAGE's own os.getenv(...).lower(). Telugu is
+# the fallback for "auto" mode (no single fixed language at greeting time)
+# and any language without a template below — matches TTS_INITIAL_LANG's own
+# auto-mode default (Language.TE) elsewhere in Bot.py.
+_TEMPLATE_GREETINGS = {
+    "telugu": "{name} గారు, మిమ్మల్ని మళ్ళీ కలవడం సంతోషంగా ఉంది. "
+              "గత సారి మనం మాట్లాడుకున్న విషయం ఎలా ఉంది? ఈరోజు మీకు ఎలా సహాయపడగలను?",
+    "hindi": "{name} जी, आपसे फिर से बात करके अच्छा लगा। "
+             "पिछली बार हमने जिस विषय पर बात की थी, वह कैसा चल रहा है? आज मैं आपकी कैसे मदद कर सकता हूँ?",
+    "tamil": "{name} அவர்களே, உங்களை மீண்டும் சந்திப்பதில் மகிழ்ச்சி. "
+             "கடந்த முறை நாம் பேசிய விஷயம் எப்படி நடக்கிறது? இன்று நான் உங்களுக்கு எப்படி உதவலாம்?",
+    "kannada": "{name} ಅವರೇ, ನಿಮ್ಮನ್ನು ಮತ್ತೆ ಭೇಟಿಯಾಗಿದ್ದಕ್ಕೆ ಸಂತೋಷವಾಗಿದೆ. "
+               "ಕಳೆದ ಬಾರಿ ನಾವು ಮಾತನಾಡಿದ ವಿಷಯ ಹೇಗಿದೆ? ಇಂದು ನಾನು ನಿಮಗೆ ಹೇಗೆ ಸಹಾಯ ಮಾಡಬಹುದು?",
+    "english": "Hello {name}, it's great to talk to you again. "
+               "How did things go with what we discussed last time? How can I help you today?",
+}
+
+
+def build_template_greeting(name: str, language: str = "telugu") -> str:
     """Fast, deterministic opening line for a known returning caller — no LLM
     round-trip, so it adds no latency beyond TTS itself (unlike
     caller_summarizer.build_llm_greeting). Doesn't restate the specific past
     topic (that would mean reading the stored summary aloud); just
-    acknowledges there was one and asks how to help today."""
-    return (
-        f"{name} గారు, మిమ్మల్ని మళ్ళీ కలవడం సంతోషంగా ఉంది. "
-        "గత సారి మనం మాట్లాడుకున్న విషయం ఎలా ఉంది? ఈరోజు మీకు ఎలా సహాయపడగలను?"
-    )
+    acknowledges there was one and asks how to help today.
+
+    language: Bot.py's LANGUAGE env var (e.g. "hindi") — picks which
+    hardcoded template to speak; falls back to Telugu for "auto" or any
+    language without a template above."""
+    template = _TEMPLATE_GREETINGS.get(language.lower(), _TEMPLATE_GREETINGS["telugu"])
+    return template.format(name=name)
 
 
 def note_from_summary(latest: dict) -> str:

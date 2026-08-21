@@ -101,10 +101,10 @@ class RAGInjector(FrameProcessor):
     answer those directly, so there's no reason to also inject a KB passage
     that's at best redundant and at worst an unrelated chunk sitting in
     context next to the tool result. Turns classified as "location" (a
-    caller dictating pincode digits a few at a time) also skip — those
-    fragments carry no topical content a KB search could meaningfully match,
-    and searching them anyway is what caused a live hallucination (see
-    intent_router.py's docstring).
+    caller dictating pincode digits a few at a time) or "fragment" (a caller
+    trailing off mid-thought) also skip — those carry no topical content a
+    KB search could meaningfully match, and searching them anyway is what
+    caused live hallucinations (see intent_router.py's docstring).
     """
 
     def __init__(self, context: LLMContext, serializer=None, **kwargs):
@@ -136,7 +136,7 @@ class RAGInjector(FrameProcessor):
         self._pending_text = text
         speculative_intent = classify_intent(text)
         logger.debug(f"🧭 intent_router[speculative]: \"{text}\" -> {speculative_intent}")
-        if speculative_intent in ("weather", "price", "location"):
+        if speculative_intent in ("weather", "price", "location", "fragment"):
             self._pending_task = None
             return
         self._pending_task = asyncio.create_task(asyncio.to_thread(rag_search, text))
@@ -167,17 +167,19 @@ class RAGInjector(FrameProcessor):
             intent = classify_intent(query_text)
             logger.info(f"🧭 intent_router[final]: \"{query_text}\" -> {intent}")
             _t0 = time.monotonic()
-            if intent in ("weather", "price", "location"):
+            if intent in ("weather", "price", "location", "fragment"):
                 # get_weather/get_price (bot_processors/location/weather_lookup.py,
                 # pricing/price_lookup.py) will answer this turn directly — skip the
                 # search entirely rather than risk an incidental, unrelated
                 # KB passage (or the "none found" marker, whose out-of-scope
                 # framing doesn't apply here anyway) sitting in context
                 # alongside the tool result. "location" (pincode digit
-                # fragments) skips for a different reason: no topical content
-                # a KB search could meaningfully match — confirmed live
-                # 2026-08-04 (call_919390427476, CAGE3-T9-1785836414.599878),
-                # see intent_router.py's docstring.
+                # fragments) and "fragment" (trailing off mid-thought) skip
+                # for a different reason: no topical content a KB search
+                # could meaningfully match — confirmed live 2026-08-04
+                # (call_919390427476, CAGE3-T9-1785836414.599878) and
+                # 2026-08-11 (call_919949070894_a3fc5ca5.log), see
+                # intent_router.py's docstrings.
                 if self._pending_task and not self._pending_task.done():
                     self._pending_task.cancel()
                 self._pending_task = None

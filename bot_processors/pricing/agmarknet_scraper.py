@@ -683,6 +683,113 @@ def load_state_reference() -> list[str]:
     return json.loads(_STATE_REFERENCE_PATH.read_text(encoding="utf-8"))
 
 
+# Full state -> district -> [market, ...] taxonomy, harvested from the same
+# form's "District" and "Market" fields (both present alongside State/UT,
+# Commodity Group and Commodity — see _open_daily_price_form's docstring;
+# neither is ever picked by the scraping path itself, which always leaves
+# District at its "All Districts" default so one query covers every
+# district in a state at once). Nothing else in this file reads these two
+# fields, so this is purely a reference-data harvest for comparing against
+# dbo.MarketPrices' real coverage (see the verification dashboard's
+# /api/filters/commodity-coverage for the equivalent on the commodity side)
+# — not used by scrape_all()/scrape_single().
+_DISTRICT_MARKET_REFERENCE_PATH = DATA_DIR / "agmarknet_districts_markets.json"
+
+
+def harvest_district_market_reference() -> dict[str, dict[str, list[str]]]:
+    """Walks every state's District dropdown and, for each district inside
+    it, that district's Market dropdown — same "read the dropdown's own
+    rendered options" approach as harvest_commodity_reference(), just one
+    level deeper (state -> district -> market instead of group ->
+    commodity). With ~36 states and ~600 districts total this is a much
+    longer walk than the commodity harvest (expect on the order of an hour,
+    not a minute) and hits a live government site the rest of this file's
+    own comments already document as flaky (stale renders, silent click
+    failures, transient empty results) — so unlike the commodity/state
+    harvesters, this one tolerates a single state or district failing
+    outright (logs and moves on) rather than letting one bad pick abort the
+    entire run, and writes its progress to disk after every state so a
+    crash partway through doesn't lose everything already harvested.
+    Re-running is safe and resumes coverage rather than starting over: any
+    state already present in the on-disk reference is skipped."""
+    reference: dict[str, dict[str, list[str]]] = {}
+    if _DISTRICT_MARKET_REFERENCE_PATH.exists():
+        reference = json.loads(_DISTRICT_MARKET_REFERENCE_PATH.read_text(encoding="utf-8"))
+
+    states = [s for s in load_state_reference() if s != "All States/UTs"]
+    if not states:
+        states = [s for s in harvest_state_reference() if s != "All States/UTs"]
+
+    def _save() -> None:
+        _DISTRICT_MARKET_REFERENCE_PATH.write_text(
+            json.dumps(reference, indent=2, ensure_ascii=False), encoding="utf-8"
+        )
+
+    with sync_playwright() as p:
+        browser = p.chromium.launch(headless=True, args=["--ignore-certificate-errors"])
+        page = browser.new_page(
+            viewport={"width": 1400, "height": 1000},
+            ignore_https_errors=True,
+            user_agent=_USER_AGENT,
+        )
+        _open_daily_price_form(page)
+
+        for state in states:
+            if state in reference:
+                logger.info(f"📚 agmarknet_scraper: {state} already harvested, skipping")
+                continue
+            try:
+                _pick(page, "State/UT*", state)
+                district_trigger = _open_dropdown(page, "District")
+                districts = [
+                    d for d in _enumerate_dropdown_options(page, district_trigger)
+                    if not d.lower().startswith("all ")
+                ]
+                page.keyboard.press("Escape")
+                page.wait_for_timeout(300)
+            except Exception:
+                logger.exception(f"⚠️ agmarknet_scraper: failed reading districts for {state}, skipping state")
+                continue
+
+            state_districts: dict[str, list[str]] = {}
+            for district in districts:
+                try:
+                    _pick(page, "District", district)
+                    market_trigger = _open_dropdown(page, "Market")
+                    markets = [
+                        m for m in _enumerate_dropdown_options(page, market_trigger)
+                        if not m.lower().startswith("all ")
+                    ]
+                    page.keyboard.press("Escape")
+                    page.wait_for_timeout(300)
+                    state_districts[district] = markets
+                except Exception:
+                    logger.exception(
+                        f"⚠️ agmarknet_scraper: failed reading markets for {state}/{district}, skipping district"
+                    )
+
+            reference[state] = state_districts
+            total_markets = sum(len(v) for v in state_districts.values())
+            logger.info(
+                f"📚 agmarknet_scraper: {state} -> {len(state_districts)} districts, "
+                f"{total_markets} markets"
+            )
+            _save()
+
+        browser.close()
+
+    logger.info(
+        f"💾 agmarknet_scraper: wrote {len(reference)} states to {_DISTRICT_MARKET_REFERENCE_PATH}"
+    )
+    return reference
+
+
+def load_district_market_reference() -> dict[str, dict[str, list[str]]]:
+    if not _DISTRICT_MARKET_REFERENCE_PATH.exists():
+        return {}
+    return json.loads(_DISTRICT_MARKET_REFERENCE_PATH.read_text(encoding="utf-8"))
+
+
 _LAST_KNOWN_LOCK_PATH = _LAST_KNOWN_PATH.with_suffix(".lock")
 
 
@@ -824,6 +931,8 @@ if __name__ == "__main__":
         harvest_commodity_reference()
     elif "--harvest-states" in sys.argv:
         harvest_state_reference()
+    elif "--harvest-districts-markets" in sys.argv:
+        harvest_district_market_reference()
     else:
         # --date=YYYY-MM-DD backfills that specific past day instead of
         # today (see scrape_all's target_date / _install_date_override) —

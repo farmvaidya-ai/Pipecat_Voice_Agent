@@ -19,12 +19,43 @@ _SUPPORTED_TTS_LANGS = {
 # coverage, unlike Bakbak — so Murf gets its own wider supported-langs set.
 _MURF_SUPPORTED_TTS_LANGS = _SUPPORTED_TTS_LANGS | {Language.OR, Language.AS}
 
-# ElevenLabs' language_code param (eleven_flash_v2_5 / eleven_turbo_v2_5 only)
-# covers just hi and ta among this project's Indian languages — see
-# ELEVENLABS_MULTILINGUAL_MODELS / language_to_elevenlabs_language in
-# pipecat/services/elevenlabs/tts.py. Any other detected language falls back
-# to English rather than sending an unsupported code.
-_ELEVENLABS_SUPPORTED_TTS_LANGS = {Language.EN, Language.HI, Language.TA}
+# Bakbak/Raya has zero Punjabi voices in its catalog (confirmed via
+# GET /v1/voices, 2026-08-28 — same endpoint _LANG_TO_BAKBAK_VOICE below was
+# built from) — unlike OR/AS above, this isn't "lower quality", there's
+# nothing to select at all. Any PA transcription falls back to Language.EN.
+_BAKBAK_SUPPORTED_TTS_LANGS = _SUPPORTED_TTS_LANGS - {Language.PA}
+
+# Bakbak uses short ISO codes: en, hi, te, …
+_LANG_TO_BAKBAK_SHORT: dict[Language, str] = {
+    Language.EN: "en", Language.HI: "hi", Language.TE: "te",
+    Language.TA: "ta", Language.KN: "kn", Language.ML: "ml",
+    Language.MR: "mr", Language.BN: "bn", Language.GU: "gu",
+}
+
+# Raya validates that the TTS request's `language` field matches the
+# *voice's own* registered language (confirmed 2026-08-28 — a mismatch, e.g.
+# voice_id=Tanvi (registered te-only) + language="en", now gets rejected
+# outright with a generic HTTP 422 "The request is malformed or invalid.",
+# where it apparently used to be tolerated). Swapping only `language` on a
+# detected-language change — the old behavior — broke TTS entirely the
+# instant a caller spoke anything but Telugu. Every voice_id here was
+# verified live (GET /v1/voices, then a real POST /v1/text-to-speech per
+# language, all 200 OK) — model matters too, since Raya's voices are split
+# across model tiers with mostly-disjoint catalogs per language; "standard"
+# is used everywhere it exists (matching this project's configured default)
+# except bare "en", which currently has no "standard"-tier voice at all —
+# only "m1" ("Alice M1").
+_LANG_TO_BAKBAK_VOICE: dict[Language, tuple[str, str]] = {
+    Language.EN: ("7e04362e-096f-47ad-a3b3-3a2efcbe62bc", "m1"),        # Alice M1
+    Language.HI: ("07308011-d790-4187-8ad9-afe7425627e9", "standard"),  # Neha
+    Language.TE: ("25a7c7d9-57b3-488a-a880-33edf6642902", "standard"),  # Tanvi (this project's configured default voice)
+    Language.TA: ("ab17f0d3-3202-4344-8d6c-98c1bea5e518", "standard"),  # Vignesh
+    Language.KN: ("522e4587-6611-4442-afdb-59f20ad5e420", "standard"),  # Rohan
+    Language.ML: ("42710cb4-fad8-48b9-b89c-960824b485f8", "standard"),  # Abirami ml
+    Language.MR: ("0c48e416-d0d8-4518-a778-384172c987fe", "standard"),  # Kavya
+    Language.BN: ("145c9da5-96ef-4ad0-ba3b-2fafb3a63d87", "standard"),  # Ritu
+    Language.GU: ("9a01bcde-2345-6789-abc1-123456abcdef", "standard"),  # Jignesh
+}
 
 # Sarvam TTS requires BCP-47 strings (e.g. "en-IN"), not Language enum objects.
 # Cartesia accepts Language enums directly.
@@ -100,26 +131,14 @@ class MultilingualTTSSwitcher(FrameProcessor):
         except ImportError:
             self._is_murf = False
 
-        try:
-            from providers.svara_tts import SvaraTTSService
-            self._is_svara = isinstance(tts_service, SvaraTTSService)
-        except ImportError:
-            self._is_svara = False
-
-        try:
-            from pipecat.services.elevenlabs.tts import ElevenLabsTTSService
-            self._is_elevenlabs = isinstance(tts_service, ElevenLabsTTSService)
-        except ImportError:
-            self._is_elevenlabs = False
-
     async def process_frame(self, frame: Frame, direction: FrameDirection):
         await super().process_frame(frame, direction)
 
         if isinstance(frame, TranscriptionFrame) and frame.language:
             if self._is_murf:
                 allowed_langs = _MURF_SUPPORTED_TTS_LANGS
-            elif self._is_elevenlabs:
-                allowed_langs = _ELEVENLABS_SUPPORTED_TTS_LANGS
+            elif self._is_bakbak:
+                allowed_langs = _BAKBAK_SUPPORTED_TTS_LANGS
             else:
                 allowed_langs = _SUPPORTED_TTS_LANGS
             new_lang = frame.language if frame.language in allowed_langs else Language.EN
@@ -130,33 +149,16 @@ class MultilingualTTSSwitcher(FrameProcessor):
                         # Sarvam needs a BCP-47 string; enum value causes rejection
                         self._tts._settings.language = _LANG_TO_SARVAM_CODE.get(new_lang, "en-IN")
                     elif self._is_bakbak:
-                        # Bakbak uses short ISO codes: en, hi, te, …
-                        _LANG_TO_BAKBAK_SHORT = {
-                            Language.EN: "en", Language.HI: "hi", Language.TE: "te",
-                            Language.TA: "ta", Language.KN: "kn", Language.ML: "ml",
-                            Language.MR: "mr", Language.BN: "bn", Language.GU: "gu", Language.PA: "pa",
-                        }
-                        self._tts._settings.language = _LANG_TO_BAKBAK_SHORT.get(new_lang, "en")
-                    elif self._is_svara:
-                        # Svara uses short ISO codes via its `lang` field (en, hi,
-                        # te, ...) — same short-code set as Bakbak. Every Svara
-                        # voice can speak all 80 supported languages (the voice_id
-                        # itself just fixes the accent), so unlike Murf this only
-                        # needs to swap the language, never the voice.
-                        _LANG_TO_SVARA_SHORT = {
-                            Language.EN: "en", Language.HI: "hi", Language.TE: "te",
-                            Language.TA: "ta", Language.KN: "kn", Language.ML: "ml",
-                            Language.MR: "mr", Language.BN: "bn", Language.GU: "gu", Language.PA: "pa",
-                        }
-                        self._tts._settings.language = _LANG_TO_SVARA_SHORT.get(new_lang, "en")
-                    elif self._is_elevenlabs:
-                        # ElevenLabs' Settings.language wants its own service
-                        # code (set via language_to_service_language, which
-                        # also handles the hi/ta-only fallback+warning) rather
-                        # than a raw Language enum or BCP-47 string.
-                        self._tts._settings.language = (
-                            self._tts.language_to_service_language(new_lang) or "en"
+                        # Raya validates language against the voice's own
+                        # registered language — voice_id and model have to
+                        # move together with language, not just language
+                        # alone (see _LANG_TO_BAKBAK_VOICE above).
+                        voice_id, model = _LANG_TO_BAKBAK_VOICE.get(
+                            new_lang, _LANG_TO_BAKBAK_VOICE[Language.EN]
                         )
+                        self._tts._settings.voice = voice_id
+                        self._tts._settings.model = model
+                        self._tts._settings.language = _LANG_TO_BAKBAK_SHORT.get(new_lang, "en")
                     elif self._is_murf:
                         # No public setter for either of these — _settings.voice
                         # is read fresh in _build_voice_config_message, and

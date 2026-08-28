@@ -683,6 +683,73 @@ def load_state_reference() -> list[str]:
     return json.loads(_STATE_REFERENCE_PATH.read_text(encoding="utf-8"))
 
 
+def _open_dropdown_scoped(page: Page, label_text: str) -> tuple[Locator, Locator]:
+    """Field-scoped variant of _open_dropdown(), for District/Market only —
+    see harvest_district_market_reference()'s docstring for why these two
+    fields can't safely share _open_dropdown/_pick with the rest of this
+    file. Returns (trigger, container) — container is the field's own
+    wrapper (trigger's parent), scoped to hold the search box lookup
+    below the way _enumerate_dropdown_options() already scopes its own
+    panel lookup ("the panel is a sibling of the trigger's own parent, not
+    a descendant of the trigger itself")."""
+    trigger = page.locator(f"label:text-is('{label_text}')").locator("..")
+    container = trigger.locator("..")
+    search_box = container.locator("input[placeholder='Search...']")
+
+    for _ in range(5):
+        trigger.click(force=True)
+        page.wait_for_timeout(500)
+        if search_box.count() > 0 and search_box.last.is_visible():
+            return trigger, container
+    raise RuntimeError(f"agmarknet_scraper: dropdown for {label_text!r} never opened")
+
+
+def _pick_scoped(page: Page, label_text: str, option_text: str) -> None:
+    """Field-scoped variant of _pick(), for District/Market only.
+
+    _pick()/_open_dropdown() locate the option's search box via a bare
+    page.locator("input[placeholder='Search...']").last — a page-wide
+    match across every dropdown's search box, not scoped to the field
+    actually being opened. That's harmless for every field the rest of
+    this file scripts (Price/Arrivals*, Commodity Group*, Commodity*,
+    State/UT*), because State/UT* used to be the last such field in the
+    form's DOM order, so ".last" always happened to resolve to the field
+    just opened. District and Market sit after State/UT* in the DOM —
+    picking "District" this way can silently resolve to Market's own
+    (closed) search box instead, which explains the harvest's real-world
+    failure pattern: district enumeration (_enumerate_dropdown_options,
+    which locates via the trigger it's already holding, not ".last") read
+    every district name correctly, but _pick()'s re-selection of that same
+    district failed almost every time. Scoping every lookup to this
+    field's own container instead of the whole page is what fixes that.
+
+    Also more patient than _pick() (5 attempts and longer waits, not 3) —
+    District/Market are newly-scripted fields with no track record of the
+    hardening scrape_all()'s existing fields have from real production
+    runs, and this harvest is a long, resumable, one-off job where an
+    extra few seconds of retrying costs nothing."""
+    for attempt in range(1, 6):
+        trigger, container = _open_dropdown_scoped(page, label_text)
+        box = container.locator("input[placeholder='Search...']").last
+        box.fill(option_text)
+        page.wait_for_timeout(900)
+        container.locator(f"text='{option_text}'").last.click(force=True)
+        page.wait_for_timeout(700)
+
+        if option_text in trigger.inner_text():
+            return
+        logger.warning(
+            f"⚠️ agmarknet_scraper: {label_text!r} still doesn't show "
+            f"{option_text!r} after selecting it (attempt {attempt}/5), retrying"
+        )
+        page.keyboard.press("Escape")
+        page.wait_for_timeout(500)
+
+    raise RuntimeError(
+        f"agmarknet_scraper: failed to select {option_text!r} for {label_text!r} after 5 attempts"
+    )
+
+
 # Full state -> district -> [market, ...] taxonomy, harvested from the same
 # form's "District" and "Market" fields (both present alongside State/UT,
 # Commodity Group and Commodity — see _open_daily_price_form's docstring;
@@ -735,18 +802,22 @@ def harvest_district_market_reference() -> dict[str, dict[str, list[str]]]:
         _open_daily_price_form(page)
 
         for state in states:
-            if state in reference:
+            # An empty dict means every district in that state failed last
+            # run (see the district loop below) — not a real "done", so
+            # don't let it block a retry the way a genuinely populated
+            # entry should.
+            if reference.get(state):
                 logger.info(f"📚 agmarknet_scraper: {state} already harvested, skipping")
                 continue
             try:
-                _pick(page, "State/UT*", state)
-                district_trigger = _open_dropdown(page, "District")
+                _pick_scoped(page, "State/UT*", state)
+                district_trigger, _ = _open_dropdown_scoped(page, "District")
                 districts = [
                     d for d in _enumerate_dropdown_options(page, district_trigger)
                     if not d.lower().startswith("all ")
                 ]
                 page.keyboard.press("Escape")
-                page.wait_for_timeout(300)
+                page.wait_for_timeout(500)
             except Exception:
                 logger.exception(f"⚠️ agmarknet_scraper: failed reading districts for {state}, skipping state")
                 continue
@@ -754,14 +825,14 @@ def harvest_district_market_reference() -> dict[str, dict[str, list[str]]]:
             state_districts: dict[str, list[str]] = {}
             for district in districts:
                 try:
-                    _pick(page, "District", district)
-                    market_trigger = _open_dropdown(page, "Market")
+                    _pick_scoped(page, "District", district)
+                    market_trigger, _ = _open_dropdown_scoped(page, "Market")
                     markets = [
                         m for m in _enumerate_dropdown_options(page, market_trigger)
                         if not m.lower().startswith("all ")
                     ]
                     page.keyboard.press("Escape")
-                    page.wait_for_timeout(300)
+                    page.wait_for_timeout(500)
                     state_districts[district] = markets
                 except Exception:
                     logger.exception(
